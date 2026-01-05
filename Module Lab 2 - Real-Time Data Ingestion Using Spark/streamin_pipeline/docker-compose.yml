@@ -1,0 +1,50 @@
+version: '3.8'
+
+services:
+  postgres:
+    image: postgres:15
+    container_name: postgres_db
+    environment:
+      POSTGRES_USER: myuser
+      POSTGRES_PASSWORD: mypassword
+      POSTGRES_DB: ecommerce_db
+    ports:
+      - "5433:5432"
+    volumes:
+      - pg_data:/var/lib/postgresql/data
+      - ./sql/postgres_setup.sql:/docker-entrypoint-initdb.d/postgres_setup.sql
+    networks:
+      - data-network
+
+  spark-master:
+    build: .
+    container_name: spark_master
+    # Command to start Master
+    command: /opt/spark/bin/spark-class org.apache.spark.deploy.master.Master
+    ports:
+      - "8080:8080"
+      - "7077:7077"
+    volumes:
+      - ./src:/app/src
+      - ./data:/app/data
+    networks:
+      - data-network
+
+  spark-worker:
+    build: .
+    container_name: spark_worker
+    # Command to start Worker and point to Master
+    command: /opt/spark/bin/spark-class org.apache.spark.deploy.worker.Worker spark://spark-master:7077
+    depends_on:
+      - spark-master
+    volumes:
+      - ./data:/app/data
+    networks:
+      - data-network
+
+networks:
+  data-network:
+    driver: bridge
+
+volumes:
+  pg_data:
