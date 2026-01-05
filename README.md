@@ -1,7 +1,3 @@
-# Real-Time Data Ingestion Pipeline
-
-**Author:** Courage Dei  
-**Role:** Data Engineering Trainee  
 **Module:** DE05: Lab 2 - Real-Time Data Ingestion Using Spark & PostgreSQL
 
 ---
@@ -66,7 +62,7 @@ graph TD
 ##  Project Structure
 
 ```text
-streaming_pipeline/
+module lab 2/
 ├── data/
 │   ├── input/             # Hot folder for new CSV files (Shared Volume)
 │   └── checkpoints/       # Spark metadata for fault tolerance
@@ -169,11 +165,5 @@ To stop the pipeline and remove containers:
 
 ```bash
     docker-compose down
-
-```
-
-*(Data in the database is persisted in the Docker Volume `pg_data`).*
-
-```
 
 ```
