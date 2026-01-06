@@ -1,7 +1,0 @@
-Host: localhost (mapped via Docker)
-Port: 5433 (External Windows Port)
-Database: ecommerce_db
-User: myuser
-Password: mypassword
-Table: user_activity
-JDBC URL (Internal): jdbc:postgresql://postgres:5432/ecommerce_db
