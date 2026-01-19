@@ -5,6 +5,7 @@ import random
 import os
 import shutil
 import logging
+import sys
 from datetime import datetime
 from faker import Faker
 
@@ -25,9 +26,11 @@ logging.basicConfig(
     level=logging.INFO,
     format='%(asctime)s - %(levelname)s - %(message)s',
     handlers=[
-        logging.FileHandler(LOG_FILE),      # Write to file for history
-        logging.StreamHandler()             # Write to console so you see output live
-    ]
+        # Added mode='a' (append) and encoding='utf-8' for safety
+        logging.FileHandler(LOG_FILE, mode='a', encoding='utf-8'),
+        logging.StreamHandler()  # Write to console
+    ],
+    force=True  # <--- CRITICAL: Forces this config to override any previous defaults
 )
 logger = logging.getLogger(__name__)
 
@@ -81,6 +84,9 @@ def generate_batch(batch_id):
         logger.error(f"Failed to generate batch #{batch_id}: {e}", exc_info=True)
 
 if __name__ == "__main__":
+    # Force unbuffered output for the console so logs appear instantly in Docker
+    sys.stdout.reconfigure(line_buffering=True) # type: ignore
+
     logger.info("Starting Data Generator...")
     logger.info(f"Writing data to: {INPUT_DIR}")
     

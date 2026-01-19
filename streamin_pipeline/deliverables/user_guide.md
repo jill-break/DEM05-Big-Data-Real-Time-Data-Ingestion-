@@ -16,6 +16,8 @@
 3. **Start the Data Generator (Terminal 1)**
     ```bash
     docker exec -it spark_master python3 /app/src/data_generator.py
+    --------------------------------------------------------------
+    docker exec -u 0 -e PYTHONUNBUFFERED=1 -it spark_master python3 -u /app/src/data_generator.py
 
 4. **Submit the Spark Job (Terminal 2)**
     ```bash
@@ -23,6 +25,8 @@
     --jars /opt/spark/jars/postgresql-42.6.0.jar \
     /app/src/spark_streaming_to_postgres.py
     
+    ---------------------------------------------------------------
+    docker exec -u 0 -it spark_master /opt/spark/bin/spark-submit --jars /opt/spark/jars/postgresql-42.6.0.jar /app/src/spark_streaming_to_postgres.py
 
 5. **Verify Data Ingestion Check the row count in the database:**
     ```bash
