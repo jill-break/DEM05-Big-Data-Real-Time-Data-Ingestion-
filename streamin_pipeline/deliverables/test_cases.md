@@ -7,3 +7,9 @@
 | **TC-003** | Spark Job Execution | 1. Submit Spark job.<br>2. Check terminal logs. | Logs show "Processing Batch ID: X". | Logs confirmed batch processing. | PASS |
 | **TC-004** | Data Persistence | 1. Query Postgres count.<br>2. Wait 10 seconds.<br>3. Query count again. | Row count should increase. | Count increased from 0 to 2012. | PASS |
 | **TC-005** | Data Integrity | 1. Select one row from DB.<br>2. Compare `event_type`. | `event_type` should be 'view' or 'purchase'. | Valid data found. | PASS |
+
+
+### Test command
+```bash
+    pytest tests/test_end_to_end.py -v -s
+```
