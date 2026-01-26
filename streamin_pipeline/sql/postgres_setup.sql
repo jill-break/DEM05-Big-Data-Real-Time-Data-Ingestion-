@@ -14,7 +14,24 @@ CREATE TABLE IF NOT EXISTS user_activity (
 CREATE INDEX idx_event_time ON user_activity(event_time);
 
 -- 3. Verification message (will show in logs)
+    RAISE NOTICE 'Table user_activity created successfully.';
+END $$;
+
+-- 4. Create the Dead Letter Queue (DLQ) table for invalid rows
+CREATE TABLE IF NOT EXISTS user_activity_errors (
+    error_id SERIAL PRIMARY KEY,
+    event_id VARCHAR(50),
+    event_time VARCHAR(50), -- Store as string since it might be malformed
+    event_type VARCHAR(20),
+    product_id VARCHAR(20), -- Store as string
+    price VARCHAR(20),      -- Store as string
+    user_id VARCHAR(20),    -- Store as string
+    session_id VARCHAR(50),
+    error_message TEXT,
+    ingestion_time TIMESTAMP DEFAULT CURRENT_TIMESTAMP
+);
+
 DO $$
 BEGIN
-    RAISE NOTICE 'Table user_activity created successfully.';
+    RAISE NOTICE 'Table user_activity_errors created successfully.';
 END $$;

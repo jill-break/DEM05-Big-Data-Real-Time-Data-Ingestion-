@@ -1,0 +1,101 @@
+2026-01-26 16:12:23,174 - INFO - Starting Archiver Service...
+2026-01-26 16:12:23,179 - INFO - Monitoring: /app/data/input
+2026-01-26 16:12:23,191 - INFO - Archiving to: /app/data/archive
+2026-01-26 16:12:23,209 - INFO - Scanning for files older than 1 minutes (before 2026-01-26 16:11:23.209043)...
+2026-01-26 16:12:23,294 - INFO - Archived: bad_data_3598ab97-7086-4727-af7f-f7b6024ef945.csv
+2026-01-26 16:12:23,327 - INFO - Archived: events_1.csv
+2026-01-26 16:12:23,381 - INFO - Archived: events_10.csv
+2026-01-26 16:12:23,407 - INFO - Archived: events_11.csv
+2026-01-26 16:12:23,541 - INFO - Archived: events_12.csv
+2026-01-26 16:12:23,579 - INFO - Archived: events_13.csv
+2026-01-26 16:12:23,602 - INFO - Archived: events_14.csv
+2026-01-26 16:12:23,625 - INFO - Archived: events_15.csv
+2026-01-26 16:12:23,770 - INFO - Archived: events_16.csv
+2026-01-26 16:12:24,123 - INFO - Archived: events_17.csv
+2026-01-26 16:12:24,295 - INFO - Archived: events_18.csv
+2026-01-26 16:12:24,634 - INFO - Archived: events_19.csv
+2026-01-26 16:12:24,952 - INFO - Archived: events_2.csv
+2026-01-26 16:12:25,315 - INFO - Archived: events_20.csv
+2026-01-26 16:12:25,960 - INFO - Archived: events_21.csv
+2026-01-26 16:12:26,118 - INFO - Archived: events_22.csv
+2026-01-26 16:12:26,205 - INFO - Archived: events_23.csv
+2026-01-26 16:12:26,740 - INFO - Archived: events_24.csv
+2026-01-26 16:12:26,814 - INFO - Archived: events_25.csv
+2026-01-26 16:12:27,024 - INFO - Archived: events_26.csv
+2026-01-26 16:12:27,333 - INFO - Archived: events_27.csv
+2026-01-26 16:12:27,381 - INFO - Archived: events_28.csv
+2026-01-26 16:12:27,877 - INFO - Archived: events_29.csv
+2026-01-26 16:12:27,928 - INFO - Archived: events_3.csv
+2026-01-26 16:12:28,039 - INFO - Archived: events_30.csv
+2026-01-26 16:12:28,095 - INFO - Archived: events_31.csv
+2026-01-26 16:12:28,180 - INFO - Archived: events_32.csv
+2026-01-26 16:12:28,404 - INFO - Archived: events_33.csv
+2026-01-26 16:12:28,695 - INFO - Archived: events_4.csv
+2026-01-26 16:12:29,064 - INFO - Archived: events_5.csv
+2026-01-26 16:12:29,221 - INFO - Archived: events_6.csv
+2026-01-26 16:12:29,283 - INFO - Archived: events_7.csv
+2026-01-26 16:12:29,319 - INFO - Archived: events_8.csv
+2026-01-26 16:12:29,349 - INFO - Archived: events_9.csv
+2026-01-26 16:12:29,353 - INFO - Run Complete: Archived 34 files.
+2026-01-26 16:13:29,573 - INFO - Scanning for files older than 1 minutes (before 2026-01-26 16:12:29.568952)...
+2026-01-26 16:13:29,626 - INFO - Archived: bad_data_3d136492-65cf-4e05-af07-f8a734e148ae.csv
+2026-01-26 16:13:29,680 - INFO - Archived: events_34.csv
+2026-01-26 16:13:29,707 - INFO - Archived: events_35.csv
+2026-01-26 16:13:29,724 - INFO - Archived: events_36.csv
+2026-01-26 16:13:29,741 - INFO - Archived: events_37.csv
+2026-01-26 16:13:29,755 - INFO - Archived: events_38.csv
+2026-01-26 16:13:29,771 - INFO - Archived: events_39.csv
+2026-01-26 16:13:29,783 - INFO - Archived: events_40.csv
+2026-01-26 16:13:29,799 - INFO - Archived: events_41.csv
+2026-01-26 16:13:29,815 - INFO - Archived: events_42.csv
+2026-01-26 16:13:29,839 - INFO - Archived: events_43.csv
+2026-01-26 16:13:29,839 - INFO - Run Complete: Archived 11 files.
+2026-01-26 16:14:30,055 - INFO - Scanning for files older than 1 minutes (before 2026-01-26 16:13:30.055636)...
+2026-01-26 16:14:30,062 - INFO - No files to archive.
+2026-01-26 16:15:30,171 - INFO - Scanning for files older than 1 minutes (before 2026-01-26 16:14:30.171458)...
+2026-01-26 16:15:30,178 - INFO - No files to archive.
+2026-01-26 23:01:25,374 - INFO - Starting Archiver Service...
+2026-01-26 23:01:25,375 - INFO - Monitoring: /app/data/input
+2026-01-26 23:01:25,378 - INFO - Archiving to: /app/data/archive
+2026-01-26 23:01:25,399 - INFO - Scanning for files older than 1 minutes (before 2026-01-26 23:00:25.399652)...
+2026-01-26 23:01:25,409 - INFO - No files to archive.
+2026-01-26 23:02:28,259 - INFO - Scanning for files older than 1 minutes (before 2026-01-26 23:01:28.259632)...
+2026-01-26 23:02:28,267 - INFO - No files to archive.
+2026-01-26 23:03:30,821 - INFO - Scanning for files older than 1 minutes (before 2026-01-26 23:02:30.821486)...
+2026-01-26 23:03:30,917 - INFO - No files to archive.
+2026-01-26 23:04:34,169 - INFO - Scanning for files older than 1 minutes (before 2026-01-26 23:03:34.169494)...
+2026-01-26 23:04:34,248 - INFO - No files to archive.
+2026-01-26 23:05:37,375 - INFO - Scanning for files older than 1 minutes (before 2026-01-26 23:04:37.374954)...
+2026-01-26 23:05:37,411 - INFO - Archived: events_1.csv
+2026-01-26 23:05:37,488 - INFO - Archived: events_2.csv
+2026-01-26 23:05:37,598 - INFO - Archived: events_3.csv
+2026-01-26 23:05:37,683 - INFO - Archived: events_4.csv
+2026-01-26 23:05:37,710 - INFO - Run Complete: Archived 4 files.
+2026-01-26 23:06:40,793 - INFO - Scanning for files older than 1 minutes (before 2026-01-26 23:05:40.793204)...
+2026-01-26 23:06:40,815 - INFO - Archived: events_10.csv
+2026-01-26 23:06:40,833 - INFO - Archived: events_11.csv
+2026-01-26 23:06:40,852 - INFO - Archived: events_12.csv
+2026-01-26 23:06:40,870 - INFO - Archived: events_13.csv
+2026-01-26 23:06:40,890 - INFO - Archived: events_14.csv
+2026-01-26 23:06:40,913 - INFO - Archived: events_15.csv
+2026-01-26 23:06:40,944 - INFO - Archived: events_16.csv
+2026-01-26 23:06:41,030 - INFO - Archived: events_5.csv
+2026-01-26 23:06:41,053 - INFO - Archived: events_6.csv
+2026-01-26 23:06:41,081 - INFO - Archived: events_7.csv
+2026-01-26 23:06:41,108 - INFO - Archived: events_8.csv
+2026-01-26 23:06:41,125 - INFO - Archived: events_9.csv
+2026-01-26 23:06:41,126 - INFO - Run Complete: Archived 12 files.
+2026-01-26 23:07:44,511 - INFO - Scanning for files older than 1 minutes (before 2026-01-26 23:06:44.511458)...
+2026-01-26 23:07:44,545 - INFO - Archived: events_17.csv
+2026-01-26 23:07:44,572 - INFO - Archived: events_18.csv
+2026-01-26 23:07:44,599 - INFO - Archived: events_19.csv
+2026-01-26 23:07:44,627 - INFO - Archived: events_20.csv
+2026-01-26 23:07:44,655 - INFO - Archived: events_21.csv
+2026-01-26 23:07:44,687 - INFO - Archived: events_22.csv
+2026-01-26 23:07:44,713 - INFO - Archived: events_23.csv
+2026-01-26 23:07:44,740 - INFO - Archived: events_24.csv
+2026-01-26 23:07:44,758 - INFO - Archived: events_25.csv
+2026-01-26 23:07:44,778 - INFO - Archived: events_26.csv
+2026-01-26 23:07:44,799 - INFO - Archived: events_27.csv
+2026-01-26 23:07:44,819 - INFO - Archived: events_28.csv
+2026-01-26 23:07:44,898 - INFO - Run Complete: Archived 12 files.

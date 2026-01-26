@@ -1,0 +1,1443 @@
+2026-01-26 14:24:51,421 - INFO - >>> Spark Session Initialized. Starting Stream...
+2026-01-26 14:24:51,423 - INFO - Monitoring input directory: /app/data/input
+2026-01-26 14:25:26,915 - INFO - Processing Batch ID: 0 with 82 records.
+2026-01-26 14:25:35,469 - INFO - Batch ID: 0 written successfully.
+2026-01-26 14:25:42,509 - INFO - Processing Batch ID: 1 with 92 records.
+2026-01-26 14:25:43,339 - INFO - Batch ID: 1 written successfully.
+2026-01-26 14:25:46,735 - INFO - Processing Batch ID: 2 with 65 records.
+2026-01-26 14:25:47,993 - INFO - Batch ID: 2 written successfully.
+2026-01-26 14:25:53,069 - INFO - Processing Batch ID: 3 with 52 records.
+2026-01-26 14:25:54,434 - INFO - Batch ID: 3 written successfully.
+2026-01-26 14:26:02,146 - INFO - Processing Batch ID: 4 with 100 records.
+2026-01-26 14:26:02,819 - INFO - Batch ID: 4 written successfully.
+2026-01-26 14:26:07,349 - INFO - Processing Batch ID: 5 with 51 records.
+2026-01-26 14:26:08,277 - INFO - Batch ID: 5 written successfully.
+2026-01-26 14:26:12,118 - INFO - Processing Batch ID: 6 with 84 records.
+2026-01-26 14:26:12,755 - INFO - Batch ID: 6 written successfully.
+2026-01-26 14:26:15,577 - INFO - Processing Batch ID: 7 with 100 records.
+2026-01-26 14:26:16,217 - INFO - Batch ID: 7 written successfully.
+2026-01-26 14:26:22,788 - INFO - Processing Batch ID: 8 with 63 records.
+2026-01-26 14:26:24,493 - INFO - Batch ID: 8 written successfully.
+2026-01-26 14:26:30,670 - INFO - Processing Batch ID: 9 with 91 records.
+2026-01-26 14:26:31,288 - INFO - Batch ID: 9 written successfully.
+2026-01-26 14:26:34,338 - INFO - Processing Batch ID: 10 with 93 records.
+2026-01-26 14:26:34,910 - INFO - Batch ID: 10 written successfully.
+2026-01-26 14:26:39,513 - INFO - Processing Batch ID: 11 with 98 records.
+2026-01-26 14:26:40,202 - INFO - Batch ID: 11 written successfully.
+2026-01-26 14:26:44,260 - INFO - Processing Batch ID: 12 with 74 records.
+2026-01-26 14:26:44,927 - INFO - Batch ID: 12 written successfully.
+2026-01-26 14:26:50,537 - INFO - Processing Batch ID: 13 with 62 records.
+2026-01-26 14:26:51,053 - INFO - Batch ID: 13 written successfully.
+2026-01-26 14:26:54,228 - INFO - Processing Batch ID: 14 with 86 records.
+2026-01-26 14:26:54,720 - INFO - Batch ID: 14 written successfully.
+2026-01-26 14:26:59,970 - INFO - Processing Batch ID: 15 with 96 records.
+2026-01-26 14:27:00,672 - INFO - Batch ID: 15 written successfully.
+2026-01-26 14:27:03,687 - INFO - Processing Batch ID: 16 with 97 records.
+2026-01-26 14:27:04,083 - INFO - Batch ID: 16 written successfully.
+2026-01-26 14:27:09,550 - INFO - Processing Batch ID: 17 with 81 records.
+2026-01-26 14:27:10,410 - INFO - Batch ID: 17 written successfully.
+2026-01-26 14:27:14,213 - INFO - Processing Batch ID: 18 with 73 records.
+2026-01-26 14:27:14,501 - INFO - Batch ID: 18 written successfully.
+2026-01-26 14:27:17,361 - INFO - Processing Batch ID: 19 with 64 records.
+2026-01-26 14:27:18,774 - INFO - Batch ID: 19 written successfully.
+2026-01-26 14:27:22,874 - INFO - Processing Batch ID: 20 with 51 records.
+2026-01-26 14:27:23,307 - INFO - Batch ID: 20 written successfully.
+2026-01-26 14:27:26,068 - INFO - Processing Batch ID: 21 with 91 records.
+2026-01-26 14:27:26,638 - INFO - Batch ID: 21 written successfully.
+2026-01-26 14:27:34,648 - INFO - Processing Batch ID: 22 with 73 records.
+2026-01-26 14:27:35,078 - INFO - Batch ID: 22 written successfully.
+2026-01-26 14:27:41,318 - INFO - Processing Batch ID: 23 with 61 records.
+2026-01-26 14:27:42,098 - INFO - Batch ID: 23 written successfully.
+2026-01-26 14:27:45,818 - INFO - Processing Batch ID: 24 with 64 records.
+2026-01-26 14:27:46,364 - INFO - Batch ID: 24 written successfully.
+2026-01-26 14:27:49,871 - INFO - Processing Batch ID: 25 with 58 records.
+2026-01-26 14:27:50,294 - INFO - Batch ID: 25 written successfully.
+2026-01-26 14:27:55,096 - INFO - Processing Batch ID: 26 with 88 records.
+2026-01-26 14:27:55,407 - INFO - Batch ID: 26 written successfully.
+2026-01-26 14:27:58,749 - INFO - Processing Batch ID: 27 with 92 records.
+2026-01-26 14:27:59,156 - INFO - Batch ID: 27 written successfully.
+2026-01-26 14:28:03,958 - INFO - Processing Batch ID: 28 with 59 records.
+2026-01-26 14:28:04,397 - INFO - Batch ID: 28 written successfully.
+2026-01-26 14:28:07,114 - INFO - Processing Batch ID: 29 with 74 records.
+2026-01-26 14:28:07,432 - INFO - Batch ID: 29 written successfully.
+2026-01-26 14:28:09,790 - INFO - Processing Batch ID: 30 with 64 records.
+2026-01-26 14:28:10,127 - INFO - Batch ID: 30 written successfully.
+2026-01-26 14:28:13,982 - INFO - Processing Batch ID: 31 with 80 records.
+2026-01-26 14:28:14,535 - INFO - Batch ID: 31 written successfully.
+2026-01-26 14:28:17,245 - INFO - Processing Batch ID: 32 with 66 records.
+2026-01-26 14:28:17,589 - INFO - Batch ID: 32 written successfully.
+2026-01-26 14:28:21,278 - INFO - Processing Batch ID: 33 with 57 records.
+2026-01-26 14:28:22,158 - INFO - Batch ID: 33 written successfully.
+2026-01-26 14:28:29,956 - INFO - Processing Batch ID: 34 with 56 records.
+2026-01-26 14:28:30,259 - INFO - Batch ID: 34 written successfully.
+2026-01-26 14:28:35,829 - INFO - Processing Batch ID: 35 with 77 records.
+2026-01-26 14:28:36,487 - INFO - Batch ID: 35 written successfully.
+2026-01-26 14:28:42,513 - INFO - Processing Batch ID: 36 with 75 records.
+2026-01-26 14:28:43,209 - INFO - Batch ID: 36 written successfully.
+2026-01-26 14:28:46,118 - INFO - Processing Batch ID: 37 with 64 records.
+2026-01-26 14:28:46,583 - INFO - Batch ID: 37 written successfully.
+2026-01-26 14:28:49,875 - INFO - Processing Batch ID: 38 with 90 records.
+2026-01-26 14:28:50,180 - INFO - Batch ID: 38 written successfully.
+2026-01-26 14:28:54,492 - INFO - Processing Batch ID: 39 with 91 records.
+2026-01-26 14:28:55,079 - INFO - Batch ID: 39 written successfully.
+2026-01-26 14:28:58,281 - INFO - Processing Batch ID: 40 with 71 records.
+2026-01-26 14:28:58,701 - INFO - Batch ID: 40 written successfully.
+2026-01-26 14:29:01,714 - INFO - Processing Batch ID: 41 with 78 records.
+2026-01-26 14:29:02,102 - INFO - Batch ID: 41 written successfully.
+2026-01-26 14:29:07,127 - INFO - Processing Batch ID: 42 with 100 records.
+2026-01-26 14:29:07,678 - INFO - Batch ID: 42 written successfully.
+2026-01-26 14:29:11,431 - INFO - Processing Batch ID: 43 with 100 records.
+2026-01-26 14:29:11,766 - INFO - Batch ID: 43 written successfully.
+2026-01-26 14:29:15,504 - INFO - Processing Batch ID: 44 with 78 records.
+2026-01-26 14:29:16,001 - INFO - Batch ID: 44 written successfully.
+2026-01-26 14:29:19,346 - INFO - Processing Batch ID: 45 with 82 records.
+2026-01-26 14:29:19,752 - INFO - Batch ID: 45 written successfully.
+2026-01-26 14:29:24,819 - INFO - Processing Batch ID: 46 with 95 records.
+2026-01-26 14:29:25,073 - INFO - Batch ID: 46 written successfully.
+2026-01-26 14:29:28,777 - INFO - Processing Batch ID: 47 with 88 records.
+2026-01-26 14:29:29,161 - INFO - Batch ID: 47 written successfully.
+2026-01-26 14:29:34,546 - INFO - Processing Batch ID: 48 with 92 records.
+2026-01-26 14:29:35,134 - INFO - Batch ID: 48 written successfully.
+2026-01-26 14:29:45,731 - INFO - Processing Batch ID: 49 with 52 records.
+2026-01-26 14:29:46,201 - INFO - Batch ID: 49 written successfully.
+2026-01-26 14:29:52,158 - INFO - Processing Batch ID: 50 with 92 records.
+2026-01-26 14:29:52,829 - INFO - Batch ID: 50 written successfully.
+2026-01-26 14:29:58,173 - INFO - Processing Batch ID: 51 with 91 records.
+2026-01-26 14:29:58,619 - INFO - Batch ID: 51 written successfully.
+2026-01-26 14:30:05,098 - INFO - Processing Batch ID: 52 with 70 records.
+2026-01-26 14:30:05,826 - INFO - Batch ID: 52 written successfully.
+2026-01-26 14:30:10,039 - INFO - Processing Batch ID: 53 with 91 records.
+2026-01-26 14:30:10,623 - INFO - Batch ID: 53 written successfully.
+2026-01-26 14:30:17,246 - INFO - Processing Batch ID: 54 with 82 records.
+2026-01-26 14:30:17,864 - INFO - Batch ID: 54 written successfully.
+2026-01-26 14:30:22,172 - INFO - Processing Batch ID: 55 with 58 records.
+2026-01-26 14:30:23,126 - INFO - Batch ID: 55 written successfully.
+2026-01-26 14:30:27,996 - INFO - Processing Batch ID: 56 with 64 records.
+2026-01-26 14:30:28,384 - INFO - Batch ID: 56 written successfully.
+2026-01-26 14:30:30,809 - INFO - Processing Batch ID: 57 with 53 records.
+2026-01-26 14:30:31,149 - INFO - Batch ID: 57 written successfully.
+2026-01-26 14:30:35,888 - INFO - Processing Batch ID: 58 with 81 records.
+2026-01-26 14:30:36,164 - INFO - Batch ID: 58 written successfully.
+2026-01-26 14:30:39,073 - INFO - Processing Batch ID: 59 with 80 records.
+2026-01-26 14:30:39,322 - INFO - Batch ID: 59 written successfully.
+2026-01-26 14:30:40,823 - INFO - Processing Batch ID: 60 with 82 records.
+2026-01-26 14:30:41,019 - INFO - Batch ID: 60 written successfully.
+2026-01-26 14:30:44,183 - INFO - Processing Batch ID: 61 with 50 records.
+2026-01-26 14:30:44,341 - INFO - Batch ID: 61 written successfully.
+2026-01-26 14:30:45,932 - INFO - Processing Batch ID: 62 with 87 records.
+2026-01-26 14:30:46,949 - INFO - Batch ID: 62 written successfully.
+2026-01-26 14:30:51,336 - INFO - Processing Batch ID: 63 with 99 records.
+2026-01-26 14:30:51,853 - INFO - Batch ID: 63 written successfully.
+2026-01-26 14:30:54,783 - INFO - Processing Batch ID: 64 with 78 records.
+2026-01-26 14:30:54,988 - INFO - Batch ID: 64 written successfully.
+2026-01-26 14:30:56,617 - INFO - Processing Batch ID: 65 with 92 records.
+2026-01-26 14:30:56,830 - INFO - Batch ID: 65 written successfully.
+2026-01-26 14:30:58,467 - INFO - Processing Batch ID: 66 with 69 records.
+2026-01-26 14:30:58,706 - INFO - Batch ID: 66 written successfully.
+2026-01-26 14:31:01,240 - INFO - Processing Batch ID: 67 with 87 records.
+2026-01-26 14:31:01,457 - INFO - Batch ID: 67 written successfully.
+2026-01-26 14:31:03,934 - INFO - Processing Batch ID: 68 with 77 records.
+2026-01-26 14:31:04,246 - INFO - Batch ID: 68 written successfully.
+2026-01-26 14:31:06,315 - INFO - Processing Batch ID: 69 with 72 records.
+2026-01-26 14:31:06,572 - INFO - Batch ID: 69 written successfully.
+2026-01-26 14:31:08,219 - INFO - Processing Batch ID: 70 with 91 records.
+2026-01-26 14:31:08,430 - INFO - Batch ID: 70 written successfully.
+2026-01-26 14:31:10,150 - INFO - Processing Batch ID: 71 with 100 records.
+2026-01-26 14:31:10,473 - INFO - Batch ID: 71 written successfully.
+2026-01-26 14:31:12,076 - INFO - Processing Batch ID: 72 with 88 records.
+2026-01-26 14:31:12,314 - INFO - Batch ID: 72 written successfully.
+2026-01-26 14:31:17,202 - INFO - Processing Batch ID: 73 with 59 records.
+2026-01-26 14:31:17,507 - INFO - Batch ID: 73 written successfully.
+2026-01-26 14:31:19,154 - INFO - Processing Batch ID: 74 with 79 records.
+2026-01-26 14:31:19,394 - INFO - Batch ID: 74 written successfully.
+2026-01-26 14:31:21,297 - INFO - Processing Batch ID: 75 with 96 records.
+2026-01-26 14:31:21,684 - INFO - Batch ID: 75 written successfully.
+2026-01-26 14:31:24,957 - INFO - Processing Batch ID: 76 with 100 records.
+2026-01-26 14:31:25,236 - INFO - Batch ID: 76 written successfully.
+2026-01-26 14:31:27,403 - INFO - Processing Batch ID: 77 with 71 records.
+2026-01-26 14:31:27,779 - INFO - Batch ID: 77 written successfully.
+2026-01-26 14:31:29,672 - INFO - Processing Batch ID: 78 with 91 records.
+2026-01-26 14:31:29,931 - INFO - Batch ID: 78 written successfully.
+2026-01-26 14:31:31,978 - INFO - Processing Batch ID: 79 with 88 records.
+2026-01-26 14:31:32,158 - INFO - Batch ID: 79 written successfully.
+2026-01-26 14:31:35,523 - INFO - Processing Batch ID: 80 with 82 records.
+2026-01-26 14:31:35,771 - INFO - Batch ID: 80 written successfully.
+2026-01-26 14:31:37,310 - INFO - Processing Batch ID: 81 with 62 records.
+2026-01-26 14:31:37,591 - INFO - Batch ID: 81 written successfully.
+2026-01-26 14:31:39,066 - INFO - Processing Batch ID: 82 with 76 records.
+2026-01-26 14:31:39,251 - INFO - Batch ID: 82 written successfully.
+2026-01-26 14:31:40,899 - INFO - Processing Batch ID: 83 with 73 records.
+2026-01-26 14:31:41,192 - INFO - Batch ID: 83 written successfully.
+2026-01-26 14:31:45,457 - INFO - Processing Batch ID: 84 with 74 records.
+2026-01-26 14:31:45,690 - INFO - Batch ID: 84 written successfully.
+2026-01-26 14:31:48,599 - INFO - Processing Batch ID: 85 with 66 records.
+2026-01-26 14:31:48,828 - INFO - Batch ID: 85 written successfully.
+2026-01-26 14:31:52,626 - INFO - Processing Batch ID: 86 with 74 records.
+2026-01-26 14:31:53,030 - INFO - Batch ID: 86 written successfully.
+2026-01-26 14:31:57,390 - INFO - Processing Batch ID: 87 with 61 records.
+2026-01-26 14:31:57,765 - INFO - Batch ID: 87 written successfully.
+2026-01-26 14:32:00,661 - INFO - Processing Batch ID: 88 with 51 records.
+2026-01-26 14:32:01,059 - INFO - Batch ID: 88 written successfully.
+2026-01-26 14:32:06,920 - INFO - Processing Batch ID: 89 with 86 records.
+2026-01-26 14:32:07,104 - INFO - Batch ID: 89 written successfully.
+2026-01-26 14:32:10,935 - INFO - Processing Batch ID: 90 with 96 records.
+2026-01-26 14:32:11,374 - INFO - Batch ID: 90 written successfully.
+2026-01-26 14:32:16,090 - INFO - Processing Batch ID: 91 with 70 records.
+2026-01-26 14:32:16,516 - INFO - Batch ID: 91 written successfully.
+2026-01-26 14:32:20,240 - INFO - Processing Batch ID: 92 with 93 records.
+2026-01-26 14:32:20,415 - INFO - Batch ID: 92 written successfully.
+2026-01-26 14:32:26,413 - INFO - Processing Batch ID: 93 with 57 records.
+2026-01-26 14:32:26,572 - INFO - Batch ID: 93 written successfully.
+2026-01-26 14:32:30,773 - INFO - Processing Batch ID: 94 with 73 records.
+2026-01-26 14:32:31,106 - INFO - Batch ID: 94 written successfully.
+2026-01-26 14:32:36,282 - INFO - Processing Batch ID: 95 with 62 records.
+2026-01-26 14:32:36,531 - INFO - Batch ID: 95 written successfully.
+2026-01-26 14:32:40,635 - INFO - Processing Batch ID: 96 with 86 records.
+2026-01-26 14:32:40,812 - INFO - Batch ID: 96 written successfully.
+2026-01-26 14:32:46,889 - INFO - Processing Batch ID: 97 with 81 records.
+2026-01-26 14:32:47,144 - INFO - Batch ID: 97 written successfully.
+2026-01-26 14:32:51,238 - INFO - Processing Batch ID: 98 with 55 records.
+2026-01-26 14:32:51,515 - INFO - Batch ID: 98 written successfully.
+2026-01-26 14:32:56,434 - INFO - Processing Batch ID: 99 with 68 records.
+2026-01-26 14:32:56,639 - INFO - Batch ID: 99 written successfully.
+2026-01-26 14:33:01,862 - INFO - Processing Batch ID: 100 with 53 records.
+2026-01-26 14:33:02,089 - INFO - Batch ID: 100 written successfully.
+2026-01-26 14:33:07,053 - INFO - Processing Batch ID: 101 with 97 records.
+2026-01-26 14:33:07,292 - INFO - Batch ID: 101 written successfully.
+2026-01-26 14:33:11,513 - INFO - Processing Batch ID: 102 with 70 records.
+2026-01-26 14:33:11,663 - INFO - Batch ID: 102 written successfully.
+2026-01-26 14:33:16,526 - INFO - Processing Batch ID: 103 with 63 records.
+2026-01-26 14:33:16,887 - INFO - Batch ID: 103 written successfully.
+2026-01-26 14:33:20,884 - INFO - Processing Batch ID: 104 with 68 records.
+2026-01-26 14:33:21,320 - INFO - Batch ID: 104 written successfully.
+2026-01-26 14:33:26,750 - INFO - Processing Batch ID: 105 with 54 records.
+2026-01-26 14:33:27,034 - INFO - Batch ID: 105 written successfully.
+2026-01-26 14:33:31,273 - INFO - Processing Batch ID: 106 with 62 records.
+2026-01-26 14:33:31,481 - INFO - Batch ID: 106 written successfully.
+2026-01-26 14:33:37,389 - INFO - Processing Batch ID: 107 with 87 records.
+2026-01-26 14:33:37,587 - INFO - Batch ID: 107 written successfully.
+2026-01-26 14:33:42,341 - INFO - Processing Batch ID: 108 with 54 records.
+2026-01-26 14:33:42,558 - INFO - Batch ID: 108 written successfully.
+2026-01-26 14:33:52,618 - INFO - Processing Batch ID: 109 with 74 records.
+2026-01-26 14:33:52,961 - INFO - Batch ID: 109 written successfully.
+2026-01-26 14:34:02,590 - INFO - Processing Batch ID: 110 with 76 records.
+2026-01-26 14:34:02,924 - INFO - Batch ID: 110 written successfully.
+2026-01-26 14:34:12,111 - INFO - Processing Batch ID: 111 with 57 records.
+2026-01-26 14:34:12,282 - INFO - Batch ID: 111 written successfully.
+2026-01-26 14:34:23,339 - INFO - Processing Batch ID: 112 with 100 records.
+2026-01-26 14:34:24,036 - INFO - Batch ID: 112 written successfully.
+2026-01-26 14:34:32,434 - INFO - Processing Batch ID: 113 with 97 records.
+2026-01-26 14:34:32,793 - INFO - Batch ID: 113 written successfully.
+2026-01-26 14:34:44,715 - INFO - Processing Batch ID: 114 with 75 records.
+2026-01-26 14:34:44,993 - INFO - Batch ID: 114 written successfully.
+2026-01-26 14:34:55,194 - INFO - Processing Batch ID: 115 with 100 records.
+2026-01-26 14:34:55,393 - INFO - Batch ID: 115 written successfully.
+2026-01-26 14:35:04,524 - INFO - Processing Batch ID: 116 with 70 records.
+2026-01-26 14:35:04,828 - INFO - Batch ID: 116 written successfully.
+2026-01-26 14:35:13,367 - INFO - Processing Batch ID: 117 with 99 records.
+2026-01-26 14:35:13,817 - INFO - Batch ID: 117 written successfully.
+2026-01-26 14:35:22,437 - INFO - Processing Batch ID: 118 with 54 records.
+2026-01-26 14:35:22,614 - INFO - Batch ID: 118 written successfully.
+2026-01-26 14:35:31,674 - INFO - Processing Batch ID: 119 with 72 records.
+2026-01-26 14:35:31,904 - INFO - Batch ID: 119 written successfully.
+2026-01-26 14:35:40,903 - INFO - Processing Batch ID: 120 with 97 records.
+2026-01-26 14:35:41,088 - INFO - Batch ID: 120 written successfully.
+2026-01-26 14:35:50,372 - INFO - Processing Batch ID: 121 with 61 records.
+2026-01-26 14:35:50,613 - INFO - Batch ID: 121 written successfully.
+2026-01-26 14:36:01,504 - INFO - Processing Batch ID: 122 with 69 records.
+2026-01-26 14:36:01,718 - INFO - Batch ID: 122 written successfully.
+2026-01-26 14:36:10,983 - INFO - Processing Batch ID: 123 with 59 records.
+2026-01-26 14:36:11,118 - INFO - Batch ID: 123 written successfully.
+2026-01-26 14:36:19,945 - INFO - Processing Batch ID: 124 with 81 records.
+2026-01-26 14:36:20,221 - INFO - Batch ID: 124 written successfully.
+2026-01-26 14:36:31,119 - INFO - Processing Batch ID: 125 with 58 records.
+2026-01-26 14:36:31,378 - INFO - Batch ID: 125 written successfully.
+2026-01-26 14:36:40,149 - INFO - Processing Batch ID: 126 with 70 records.
+2026-01-26 14:36:40,302 - INFO - Batch ID: 126 written successfully.
+2026-01-26 14:36:49,281 - INFO - Processing Batch ID: 127 with 79 records.
+2026-01-26 14:36:49,481 - INFO - Batch ID: 127 written successfully.
+2026-01-26 14:36:59,314 - INFO - Processing Batch ID: 128 with 91 records.
+2026-01-26 14:36:59,567 - INFO - Batch ID: 128 written successfully.
+2026-01-26 14:37:08,738 - INFO - Processing Batch ID: 129 with 100 records.
+2026-01-26 14:37:08,961 - INFO - Batch ID: 129 written successfully.
+2026-01-26 14:37:17,492 - INFO - Processing Batch ID: 130 with 94 records.
+2026-01-26 14:37:17,644 - INFO - Batch ID: 130 written successfully.
+2026-01-26 14:37:27,104 - INFO - Processing Batch ID: 131 with 96 records.
+2026-01-26 14:37:27,279 - INFO - Batch ID: 131 written successfully.
+2026-01-26 14:37:36,846 - INFO - Processing Batch ID: 132 with 55 records.
+2026-01-26 14:37:37,040 - INFO - Batch ID: 132 written successfully.
+2026-01-26 14:37:45,511 - INFO - Processing Batch ID: 133 with 64 records.
+2026-01-26 14:37:45,817 - INFO - Batch ID: 133 written successfully.
+2026-01-26 14:37:55,397 - INFO - Processing Batch ID: 134 with 80 records.
+2026-01-26 14:37:55,714 - INFO - Batch ID: 134 written successfully.
+2026-01-26 14:38:08,113 - INFO - Processing Batch ID: 135 with 72 records.
+2026-01-26 14:38:08,246 - INFO - Batch ID: 135 written successfully.
+2026-01-26 14:38:16,698 - INFO - Processing Batch ID: 136 with 72 records.
+2026-01-26 14:38:16,904 - INFO - Batch ID: 136 written successfully.
+2026-01-26 14:38:25,419 - INFO - Processing Batch ID: 137 with 82 records.
+2026-01-26 14:38:25,641 - INFO - Batch ID: 137 written successfully.
+2026-01-26 14:38:33,484 - INFO - Processing Batch ID: 138 with 85 records.
+2026-01-26 14:38:34,091 - INFO - Batch ID: 138 written successfully.
+2026-01-26 14:38:42,557 - INFO - Processing Batch ID: 139 with 85 records.
+2026-01-26 14:38:42,725 - INFO - Batch ID: 139 written successfully.
+2026-01-26 14:38:50,864 - INFO - Processing Batch ID: 140 with 53 records.
+2026-01-26 14:38:51,218 - INFO - Batch ID: 140 written successfully.
+2026-01-26 14:38:59,846 - INFO - Processing Batch ID: 141 with 58 records.
+2026-01-26 14:39:00,149 - INFO - Batch ID: 141 written successfully.
+2026-01-26 14:39:09,593 - INFO - Processing Batch ID: 142 with 85 records.
+2026-01-26 14:39:09,806 - INFO - Batch ID: 142 written successfully.
+2026-01-26 14:39:17,427 - INFO - Processing Batch ID: 143 with 90 records.
+2026-01-26 14:39:17,582 - INFO - Batch ID: 143 written successfully.
+2026-01-26 14:39:26,398 - INFO - Processing Batch ID: 144 with 96 records.
+2026-01-26 14:39:26,637 - INFO - Batch ID: 144 written successfully.
+2026-01-26 14:39:34,942 - INFO - Processing Batch ID: 145 with 100 records.
+2026-01-26 14:39:35,166 - INFO - Batch ID: 145 written successfully.
+2026-01-26 14:39:44,813 - INFO - Processing Batch ID: 146 with 69 records.
+2026-01-26 14:39:45,077 - INFO - Batch ID: 146 written successfully.
+2026-01-26 14:39:54,488 - INFO - Processing Batch ID: 147 with 73 records.
+2026-01-26 14:39:54,669 - INFO - Batch ID: 147 written successfully.
+2026-01-26 14:40:03,583 - INFO - Processing Batch ID: 148 with 97 records.
+2026-01-26 14:40:04,052 - INFO - Batch ID: 148 written successfully.
+2026-01-26 14:40:14,793 - INFO - Processing Batch ID: 149 with 50 records.
+2026-01-26 14:40:15,089 - INFO - Batch ID: 149 written successfully.
+2026-01-26 14:40:23,146 - INFO - Processing Batch ID: 150 with 100 records.
+2026-01-26 14:40:23,573 - INFO - Batch ID: 150 written successfully.
+2026-01-26 14:40:30,996 - INFO - Processing Batch ID: 151 with 95 records.
+2026-01-26 14:40:31,251 - INFO - Batch ID: 151 written successfully.
+2026-01-26 14:40:39,510 - INFO - Processing Batch ID: 152 with 52 records.
+2026-01-26 14:40:39,650 - INFO - Batch ID: 152 written successfully.
+2026-01-26 14:40:47,412 - INFO - Processing Batch ID: 153 with 79 records.
+2026-01-26 14:40:47,743 - INFO - Batch ID: 153 written successfully.
+2026-01-26 14:40:55,378 - INFO - Processing Batch ID: 154 with 83 records.
+2026-01-26 14:40:55,598 - INFO - Batch ID: 154 written successfully.
+2026-01-26 14:41:03,320 - INFO - Processing Batch ID: 155 with 88 records.
+2026-01-26 14:41:03,735 - INFO - Batch ID: 155 written successfully.
+2026-01-26 14:41:11,393 - INFO - Processing Batch ID: 156 with 56 records.
+2026-01-26 14:41:11,685 - INFO - Batch ID: 156 written successfully.
+2026-01-26 14:41:20,834 - INFO - Processing Batch ID: 157 with 77 records.
+2026-01-26 14:41:21,087 - INFO - Batch ID: 157 written successfully.
+2026-01-26 14:41:30,147 - INFO - Processing Batch ID: 158 with 83 records.
+2026-01-26 14:41:30,348 - INFO - Batch ID: 158 written successfully.
+2026-01-26 14:41:39,769 - INFO - Processing Batch ID: 159 with 58 records.
+2026-01-26 14:41:40,035 - INFO - Batch ID: 159 written successfully.
+2026-01-26 14:41:51,647 - INFO - Processing Batch ID: 160 with 52 records.
+2026-01-26 14:41:51,878 - INFO - Batch ID: 160 written successfully.
+2026-01-26 14:42:00,706 - INFO - Processing Batch ID: 161 with 77 records.
+2026-01-26 14:42:00,988 - INFO - Batch ID: 161 written successfully.
+2026-01-26 14:42:09,231 - INFO - Processing Batch ID: 162 with 64 records.
+2026-01-26 14:42:09,383 - INFO - Batch ID: 162 written successfully.
+2026-01-26 14:42:17,900 - INFO - Processing Batch ID: 163 with 83 records.
+2026-01-26 14:42:18,107 - INFO - Batch ID: 163 written successfully.
+2026-01-26 14:42:26,695 - INFO - Processing Batch ID: 164 with 54 records.
+2026-01-26 14:42:26,922 - INFO - Batch ID: 164 written successfully.
+2026-01-26 14:42:34,709 - INFO - Processing Batch ID: 165 with 57 records.
+2026-01-26 14:42:34,865 - INFO - Batch ID: 165 written successfully.
+2026-01-26 14:42:42,054 - INFO - Processing Batch ID: 166 with 55 records.
+2026-01-26 14:42:42,193 - INFO - Batch ID: 166 written successfully.
+2026-01-26 14:42:50,104 - INFO - Processing Batch ID: 167 with 84 records.
+2026-01-26 14:42:50,251 - INFO - Batch ID: 167 written successfully.
+2026-01-26 14:42:58,240 - INFO - Processing Batch ID: 168 with 97 records.
+2026-01-26 14:42:58,443 - INFO - Batch ID: 168 written successfully.
+2026-01-26 14:43:07,852 - INFO - Processing Batch ID: 169 with 87 records.
+2026-01-26 14:43:08,048 - INFO - Batch ID: 169 written successfully.
+2026-01-26 14:43:15,469 - INFO - Processing Batch ID: 170 with 84 records.
+2026-01-26 14:43:15,714 - INFO - Batch ID: 170 written successfully.
+2026-01-26 14:43:25,011 - INFO - Processing Batch ID: 171 with 55 records.
+2026-01-26 14:43:25,197 - INFO - Batch ID: 171 written successfully.
+2026-01-26 14:43:32,612 - INFO - Processing Batch ID: 172 with 77 records.
+2026-01-26 14:43:32,770 - INFO - Batch ID: 172 written successfully.
+2026-01-26 14:43:41,056 - INFO - Processing Batch ID: 173 with 91 records.
+2026-01-26 14:43:41,248 - INFO - Batch ID: 173 written successfully.
+2026-01-26 14:43:49,651 - INFO - Processing Batch ID: 174 with 60 records.
+2026-01-26 14:43:49,939 - INFO - Batch ID: 174 written successfully.
+2026-01-26 14:43:59,158 - INFO - Processing Batch ID: 175 with 100 records.
+2026-01-26 14:43:59,461 - INFO - Batch ID: 175 written successfully.
+2026-01-26 14:44:08,503 - INFO - Processing Batch ID: 176 with 72 records.
+2026-01-26 14:44:08,818 - INFO - Batch ID: 176 written successfully.
+2026-01-26 14:44:17,305 - INFO - Processing Batch ID: 177 with 99 records.
+2026-01-26 14:44:17,483 - INFO - Batch ID: 177 written successfully.
+2026-01-26 14:44:26,804 - INFO - Processing Batch ID: 178 with 70 records.
+2026-01-26 14:44:27,034 - INFO - Batch ID: 178 written successfully.
+2026-01-26 14:44:37,350 - INFO - Processing Batch ID: 179 with 60 records.
+2026-01-26 14:44:37,545 - INFO - Batch ID: 179 written successfully.
+2026-01-26 14:44:45,091 - INFO - Processing Batch ID: 180 with 85 records.
+2026-01-26 14:44:45,384 - INFO - Batch ID: 180 written successfully.
+2026-01-26 14:44:52,275 - INFO - Processing Batch ID: 181 with 83 records.
+2026-01-26 14:44:52,470 - INFO - Batch ID: 181 written successfully.
+2026-01-26 14:45:00,220 - INFO - Processing Batch ID: 182 with 92 records.
+2026-01-26 14:45:00,460 - INFO - Batch ID: 182 written successfully.
+2026-01-26 14:45:08,094 - INFO - Processing Batch ID: 183 with 71 records.
+2026-01-26 14:45:08,343 - INFO - Batch ID: 183 written successfully.
+2026-01-26 14:45:15,316 - INFO - Processing Batch ID: 184 with 97 records.
+2026-01-26 14:45:15,456 - INFO - Batch ID: 184 written successfully.
+2026-01-26 14:45:23,550 - INFO - Processing Batch ID: 185 with 81 records.
+2026-01-26 14:45:23,859 - INFO - Batch ID: 185 written successfully.
+2026-01-26 14:45:31,267 - INFO - Processing Batch ID: 186 with 95 records.
+2026-01-26 14:45:31,469 - INFO - Batch ID: 186 written successfully.
+2026-01-26 14:45:39,808 - INFO - Processing Batch ID: 187 with 95 records.
+2026-01-26 14:45:39,940 - INFO - Batch ID: 187 written successfully.
+2026-01-26 14:45:48,574 - INFO - Processing Batch ID: 188 with 55 records.
+2026-01-26 14:45:48,847 - INFO - Batch ID: 188 written successfully.
+2026-01-26 14:45:59,056 - INFO - Processing Batch ID: 189 with 76 records.
+2026-01-26 14:45:59,266 - INFO - Batch ID: 189 written successfully.
+2026-01-26 14:46:08,177 - INFO - Processing Batch ID: 190 with 87 records.
+2026-01-26 14:46:08,408 - INFO - Batch ID: 190 written successfully.
+2026-01-26 14:46:16,857 - INFO - Processing Batch ID: 191 with 60 records.
+2026-01-26 14:46:17,057 - INFO - Batch ID: 191 written successfully.
+2026-01-26 14:46:27,289 - INFO - Processing Batch ID: 192 with 86 records.
+2026-01-26 14:46:27,463 - INFO - Batch ID: 192 written successfully.
+2026-01-26 14:46:36,784 - INFO - Processing Batch ID: 193 with 77 records.
+2026-01-26 14:46:37,086 - INFO - Batch ID: 193 written successfully.
+2026-01-26 14:46:45,661 - INFO - Processing Batch ID: 194 with 63 records.
+2026-01-26 14:46:45,846 - INFO - Batch ID: 194 written successfully.
+2026-01-26 14:46:53,230 - INFO - Processing Batch ID: 195 with 91 records.
+2026-01-26 14:46:53,649 - INFO - Batch ID: 195 written successfully.
+2026-01-26 14:47:01,681 - INFO - Processing Batch ID: 196 with 73 records.
+2026-01-26 14:47:01,837 - INFO - Batch ID: 196 written successfully.
+2026-01-26 14:47:10,183 - INFO - Processing Batch ID: 197 with 53 records.
+2026-01-26 14:47:10,319 - INFO - Batch ID: 197 written successfully.
+2026-01-26 14:47:18,768 - INFO - Processing Batch ID: 198 with 92 records.
+2026-01-26 14:47:18,988 - INFO - Batch ID: 198 written successfully.
+2026-01-26 14:47:29,143 - INFO - Processing Batch ID: 199 with 86 records.
+2026-01-26 14:47:29,507 - INFO - Batch ID: 199 written successfully.
+2026-01-26 14:47:37,811 - INFO - Processing Batch ID: 200 with 64 records.
+2026-01-26 14:47:37,956 - INFO - Batch ID: 200 written successfully.
+2026-01-26 14:47:47,370 - INFO - Processing Batch ID: 201 with 100 records.
+2026-01-26 14:47:47,562 - INFO - Batch ID: 201 written successfully.
+2026-01-26 14:47:56,693 - INFO - Processing Batch ID: 202 with 97 records.
+2026-01-26 14:47:56,961 - INFO - Batch ID: 202 written successfully.
+2026-01-26 14:48:06,444 - INFO - Processing Batch ID: 203 with 87 records.
+2026-01-26 14:48:06,727 - INFO - Batch ID: 203 written successfully.
+2026-01-26 14:48:19,803 - INFO - Processing Batch ID: 204 with 83 records.
+2026-01-26 14:48:19,979 - INFO - Batch ID: 204 written successfully.
+2026-01-26 14:48:28,929 - INFO - Processing Batch ID: 205 with 89 records.
+2026-01-26 14:48:29,084 - INFO - Batch ID: 205 written successfully.
+2026-01-26 14:48:37,432 - INFO - Processing Batch ID: 206 with 53 records.
+2026-01-26 14:48:37,691 - INFO - Batch ID: 206 written successfully.
+2026-01-26 14:48:45,665 - INFO - Processing Batch ID: 207 with 76 records.
+2026-01-26 14:48:45,898 - INFO - Batch ID: 207 written successfully.
+2026-01-26 14:48:54,209 - INFO - Processing Batch ID: 208 with 94 records.
+2026-01-26 14:48:54,587 - INFO - Batch ID: 208 written successfully.
+2026-01-26 14:49:03,253 - INFO - Processing Batch ID: 209 with 74 records.
+2026-01-26 14:49:03,406 - INFO - Batch ID: 209 written successfully.
+2026-01-26 14:49:11,230 - INFO - Processing Batch ID: 210 with 65 records.
+2026-01-26 14:49:11,416 - INFO - Batch ID: 210 written successfully.
+2026-01-26 14:49:19,464 - INFO - Processing Batch ID: 211 with 59 records.
+2026-01-26 14:49:19,653 - INFO - Batch ID: 211 written successfully.
+2026-01-26 14:49:27,980 - INFO - Processing Batch ID: 212 with 73 records.
+2026-01-26 14:49:28,200 - INFO - Batch ID: 212 written successfully.
+2026-01-26 14:49:36,588 - INFO - Processing Batch ID: 213 with 63 records.
+2026-01-26 14:49:36,817 - INFO - Batch ID: 213 written successfully.
+2026-01-26 14:49:45,654 - INFO - Processing Batch ID: 214 with 84 records.
+2026-01-26 14:49:45,826 - INFO - Batch ID: 214 written successfully.
+2026-01-26 14:49:55,816 - INFO - Processing Batch ID: 215 with 71 records.
+2026-01-26 14:49:55,986 - INFO - Batch ID: 215 written successfully.
+2026-01-26 14:50:05,340 - INFO - Processing Batch ID: 216 with 56 records.
+2026-01-26 14:50:05,559 - INFO - Batch ID: 216 written successfully.
+2026-01-26 14:50:13,137 - INFO - Processing Batch ID: 217 with 64 records.
+2026-01-26 14:50:13,272 - INFO - Batch ID: 217 written successfully.
+2026-01-26 14:50:23,168 - INFO - Processing Batch ID: 218 with 98 records.
+2026-01-26 14:50:23,314 - INFO - Batch ID: 218 written successfully.
+2026-01-26 14:50:32,871 - INFO - Processing Batch ID: 219 with 91 records.
+2026-01-26 14:50:33,016 - INFO - Batch ID: 219 written successfully.
+2026-01-26 14:50:40,998 - INFO - Processing Batch ID: 220 with 56 records.
+2026-01-26 14:50:41,237 - INFO - Batch ID: 220 written successfully.
+2026-01-26 14:50:49,420 - INFO - Processing Batch ID: 221 with 89 records.
+2026-01-26 14:50:49,587 - INFO - Batch ID: 221 written successfully.
+2026-01-26 14:50:58,585 - INFO - Processing Batch ID: 222 with 87 records.
+2026-01-26 14:50:58,844 - INFO - Batch ID: 222 written successfully.
+2026-01-26 14:51:06,865 - INFO - Processing Batch ID: 223 with 86 records.
+2026-01-26 14:51:07,055 - INFO - Batch ID: 223 written successfully.
+2026-01-26 14:51:15,363 - INFO - Processing Batch ID: 224 with 90 records.
+2026-01-26 14:51:15,522 - INFO - Batch ID: 224 written successfully.
+2026-01-26 14:51:25,175 - INFO - Processing Batch ID: 225 with 94 records.
+2026-01-26 14:51:25,351 - INFO - Batch ID: 225 written successfully.
+2026-01-26 14:51:32,717 - INFO - Processing Batch ID: 226 with 52 records.
+2026-01-26 14:51:33,048 - INFO - Batch ID: 226 written successfully.
+2026-01-26 14:51:41,088 - INFO - Processing Batch ID: 227 with 68 records.
+2026-01-26 14:51:41,345 - INFO - Batch ID: 227 written successfully.
+2026-01-26 14:51:50,459 - INFO - Processing Batch ID: 228 with 71 records.
+2026-01-26 14:51:50,667 - INFO - Batch ID: 228 written successfully.
+2026-01-26 14:52:02,170 - INFO - Processing Batch ID: 229 with 71 records.
+2026-01-26 14:52:02,372 - INFO - Batch ID: 229 written successfully.
+2026-01-26 14:52:11,471 - INFO - Processing Batch ID: 230 with 70 records.
+2026-01-26 14:52:11,719 - INFO - Batch ID: 230 written successfully.
+2026-01-26 14:52:20,517 - INFO - Processing Batch ID: 231 with 68 records.
+2026-01-26 14:52:20,767 - INFO - Batch ID: 231 written successfully.
+2026-01-26 14:52:29,982 - INFO - Processing Batch ID: 232 with 96 records.
+2026-01-26 14:52:30,331 - INFO - Batch ID: 232 written successfully.
+2026-01-26 14:52:42,116 - INFO - Processing Batch ID: 233 with 81 records.
+2026-01-26 14:52:42,487 - INFO - Batch ID: 233 written successfully.
+2026-01-26 14:52:52,330 - INFO - Processing Batch ID: 234 with 88 records.
+2026-01-26 14:52:52,487 - INFO - Batch ID: 234 written successfully.
+2026-01-26 14:53:01,384 - INFO - Processing Batch ID: 235 with 89 records.
+2026-01-26 14:53:01,551 - INFO - Batch ID: 235 written successfully.
+2026-01-26 14:53:10,714 - INFO - Processing Batch ID: 236 with 91 records.
+2026-01-26 14:53:10,861 - INFO - Batch ID: 236 written successfully.
+2026-01-26 14:53:18,987 - INFO - Processing Batch ID: 237 with 98 records.
+2026-01-26 14:53:19,181 - INFO - Batch ID: 237 written successfully.
+2026-01-26 14:53:28,473 - INFO - Processing Batch ID: 238 with 64 records.
+2026-01-26 14:53:28,664 - INFO - Batch ID: 238 written successfully.
+2026-01-26 14:53:38,829 - INFO - Processing Batch ID: 239 with 78 records.
+2026-01-26 14:53:39,022 - INFO - Batch ID: 239 written successfully.
+2026-01-26 14:53:47,416 - INFO - Processing Batch ID: 240 with 98 records.
+2026-01-26 14:53:47,579 - INFO - Batch ID: 240 written successfully.
+2026-01-26 14:53:57,224 - INFO - Processing Batch ID: 241 with 53 records.
+2026-01-26 14:53:57,450 - INFO - Batch ID: 241 written successfully.
+2026-01-26 14:54:07,086 - INFO - Processing Batch ID: 242 with 55 records.
+2026-01-26 14:54:07,273 - INFO - Batch ID: 242 written successfully.
+2026-01-26 14:54:15,993 - INFO - Processing Batch ID: 243 with 60 records.
+2026-01-26 14:54:16,301 - INFO - Batch ID: 243 written successfully.
+2026-01-26 14:54:25,792 - INFO - Processing Batch ID: 244 with 85 records.
+2026-01-26 14:54:26,036 - INFO - Batch ID: 244 written successfully.
+2026-01-26 14:54:34,097 - INFO - Processing Batch ID: 245 with 65 records.
+2026-01-26 14:54:34,610 - INFO - Batch ID: 245 written successfully.
+2026-01-26 14:54:43,101 - INFO - Processing Batch ID: 246 with 53 records.
+2026-01-26 14:54:43,280 - INFO - Batch ID: 246 written successfully.
+2026-01-26 14:54:51,528 - INFO - Processing Batch ID: 247 with 91 records.
+2026-01-26 14:54:51,815 - INFO - Batch ID: 247 written successfully.
+2026-01-26 14:55:00,053 - INFO - Processing Batch ID: 248 with 81 records.
+2026-01-26 14:55:00,220 - INFO - Batch ID: 248 written successfully.
+2026-01-26 14:55:11,528 - INFO - Processing Batch ID: 249 with 99 records.
+2026-01-26 14:55:11,695 - INFO - Batch ID: 249 written successfully.
+2026-01-26 14:55:50,592 - INFO - Processing Batch ID: 250 with 52 records.
+2026-01-26 14:55:51,265 - INFO - Batch ID: 250 written successfully.
+2026-01-26 14:56:13,926 - INFO - Processing Batch ID: 251 with 88 records.
+2026-01-26 14:56:14,258 - INFO - Batch ID: 251 written successfully.
+2026-01-26 14:56:51,589 - INFO - Processing Batch ID: 252 with 97 records.
+2026-01-26 14:56:52,135 - INFO - Batch ID: 252 written successfully.
+2026-01-26 14:57:12,457 - INFO - Processing Batch ID: 253 with 94 records.
+2026-01-26 14:57:12,786 - INFO - Batch ID: 253 written successfully.
+2026-01-26 14:57:38,477 - INFO - Processing Batch ID: 254 with 87 records.
+2026-01-26 14:57:38,931 - INFO - Batch ID: 254 written successfully.
+2026-01-26 14:58:01,834 - INFO - Processing Batch ID: 255 with 62 records.
+2026-01-26 14:58:02,110 - INFO - Batch ID: 255 written successfully.
+2026-01-26 14:58:23,905 - INFO - Processing Batch ID: 256 with 76 records.
+2026-01-26 14:58:24,500 - INFO - Batch ID: 256 written successfully.
+2026-01-26 14:58:51,145 - INFO - Processing Batch ID: 257 with 85 records.
+2026-01-26 14:58:51,578 - INFO - Batch ID: 257 written successfully.
+2026-01-26 14:59:16,241 - INFO - Processing Batch ID: 258 with 80 records.
+2026-01-26 14:59:16,628 - INFO - Batch ID: 258 written successfully.
+2026-01-26 14:59:39,806 - INFO - Processing Batch ID: 259 with 72 records.
+2026-01-26 14:59:40,192 - INFO - Batch ID: 259 written successfully.
+2026-01-26 15:00:03,222 - INFO - Processing Batch ID: 260 with 98 records.
+2026-01-26 15:00:03,704 - INFO - Batch ID: 260 written successfully.
+2026-01-26 15:09:05,901 - INFO - >>> Spark Session Initialized. Starting Stream...
+2026-01-26 15:09:05,906 - INFO - Monitoring input directory: /app/data/input
+2026-01-26 15:09:42,592 - INFO - >>> Spark Session Initialized. Starting Stream...
+2026-01-26 15:09:42,605 - INFO - Monitoring input directory: /app/data/input
+2026-01-26 15:11:24,184 - INFO - Batch ID: 261 is empty. Skipping write.
+2026-01-26 15:11:24,727 - CRITICAL - Spark Streaming Job Crashed: [STREAM_FAILED] Query [id = f6b8b2f0-1292-488d-97a9-2bc2379a41d9, runId = fd4db9a5-ff01-42ff-be65-ff38136b43b4] terminated with exception: [CONCURRENT_STREAM_LOG_UPDATE] Concurrent update to the log. Multiple streaming jobs detected for 261.
+Please make sure only one streaming job runs on a specific checkpoint location at a time.
+Traceback (most recent call last):
+  File "/app/src/spark_streaming_to_postgres.py", line 89, in main
+    query.awaitTermination()
+  File "/opt/spark/python/lib/pyspark.zip/pyspark/sql/streaming/query.py", line 221, in awaitTermination
+    return self._jsq.awaitTermination()
+  File "/opt/spark/python/lib/py4j-0.10.9.7-src.zip/py4j/java_gateway.py", line 1322, in __call__
+    return_value = get_return_value(
+  File "/opt/spark/python/lib/pyspark.zip/pyspark/errors/exceptions/captured.py", line 185, in deco
+    raise converted from None
+pyspark.errors.exceptions.captured.StreamingQueryException: [STREAM_FAILED] Query [id = f6b8b2f0-1292-488d-97a9-2bc2379a41d9, runId = fd4db9a5-ff01-42ff-be65-ff38136b43b4] terminated with exception: [CONCURRENT_STREAM_LOG_UPDATE] Concurrent update to the log. Multiple streaming jobs detected for 261.
+Please make sure only one streaming job runs on a specific checkpoint location at a time.
+2026-01-26 15:12:06,821 - INFO - >>> Spark Session Initialized. Starting Stream...
+2026-01-26 15:12:06,822 - INFO - Monitoring input directory: /app/data/input
+2026-01-26 15:12:50,850 - CRITICAL - Spark Streaming Job Crashed: [STREAM_FAILED] Query [id = f6b8b2f0-1292-488d-97a9-2bc2379a41d9, runId = 7e7546ac-0e4f-46cc-b1cd-9ad734d40fa3] terminated with exception: File file:/app/data/checkpoints/postgres_sink/offsets does not exist
+Traceback (most recent call last):
+  File "/app/src/spark_streaming_to_postgres.py", line 89, in main
+    query.awaitTermination()
+  File "/opt/spark/python/lib/pyspark.zip/pyspark/sql/streaming/query.py", line 221, in awaitTermination
+    return self._jsq.awaitTermination()
+  File "/opt/spark/python/lib/py4j-0.10.9.7-src.zip/py4j/java_gateway.py", line 1322, in __call__
+    return_value = get_return_value(
+  File "/opt/spark/python/lib/pyspark.zip/pyspark/errors/exceptions/captured.py", line 185, in deco
+    raise converted from None
+pyspark.errors.exceptions.captured.StreamingQueryException: [STREAM_FAILED] Query [id = f6b8b2f0-1292-488d-97a9-2bc2379a41d9, runId = 7e7546ac-0e4f-46cc-b1cd-9ad734d40fa3] terminated with exception: File file:/app/data/checkpoints/postgres_sink/offsets does not exist
+2026-01-26 15:13:12,707 - INFO - >>> Spark Session Initialized. Starting Stream...
+2026-01-26 15:13:12,707 - INFO - Monitoring input directory: /app/data/input
+2026-01-26 15:13:31,677 - INFO - Processing Batch ID: 0 with 84 records.
+2026-01-26 15:13:37,381 - INFO - Batch ID: 0 written successfully.
+2026-01-26 15:13:39,901 - INFO - Processing Batch ID: 1 with 55 records.
+2026-01-26 15:13:40,868 - INFO - Batch ID: 1 written successfully.
+2026-01-26 15:13:43,636 - INFO - Processing Batch ID: 2 with 76 records.
+2026-01-26 15:13:44,381 - INFO - Batch ID: 2 written successfully.
+2026-01-26 15:13:48,409 - INFO - Processing Batch ID: 3 with 68 records.
+2026-01-26 15:13:48,982 - INFO - Batch ID: 3 written successfully.
+2026-01-26 15:13:51,271 - CRITICAL - Spark Streaming Job Crashed: An error occurred while calling o44.awaitTermination
+Traceback (most recent call last):
+  File "/app/src/spark_streaming_to_postgres.py", line 89, in main
+    query.awaitTermination()
+  File "/opt/spark/python/lib/pyspark.zip/pyspark/sql/streaming/query.py", line 221, in awaitTermination
+    return self._jsq.awaitTermination()
+  File "/opt/spark/python/lib/py4j-0.10.9.7-src.zip/py4j/java_gateway.py", line 1322, in __call__
+    return_value = get_return_value(
+  File "/opt/spark/python/lib/pyspark.zip/pyspark/errors/exceptions/captured.py", line 179, in deco
+    return f(*a, **kw)
+  File "/opt/spark/python/lib/py4j-0.10.9.7-src.zip/py4j/protocol.py", line 334, in get_return_value
+    raise Py4JError(
+py4j.protocol.Py4JError: An error occurred while calling o44.awaitTermination
+2026-01-26 16:08:43,365 - INFO - >>> Spark Session Initialized. Starting Stream...
+2026-01-26 16:08:43,387 - INFO - Monitoring input directory: /app/data/input
+2026-01-26 16:09:31,797 - INFO - Processing Batch ID: 0 with 79 records.
+2026-01-26 16:09:41,846 - INFO - Batch ID: 0 - Success: Wrote 79 valid records.
+2026-01-26 16:09:50,321 - INFO - Processing Batch ID: 1 with 68 records.
+2026-01-26 16:09:52,996 - INFO - Batch ID: 1 - Success: Wrote 68 valid records.
+2026-01-26 16:09:57,805 - INFO - Processing Batch ID: 2 with 55 records.
+2026-01-26 16:09:59,204 - INFO - Batch ID: 2 - Success: Wrote 55 valid records.
+2026-01-26 16:10:03,243 - INFO - Processing Batch ID: 3 with 67 records.
+2026-01-26 16:10:04,685 - INFO - Batch ID: 3 - Success: Wrote 67 valid records.
+2026-01-26 16:10:09,220 - INFO - Processing Batch ID: 4 with 88 records.
+2026-01-26 16:10:10,878 - INFO - Batch ID: 4 - Success: Wrote 88 valid records.
+2026-01-26 16:10:15,322 - INFO - Processing Batch ID: 5 with 65 records.
+2026-01-26 16:10:16,609 - INFO - Batch ID: 5 - Success: Wrote 65 valid records.
+2026-01-26 16:10:23,563 - INFO - Processing Batch ID: 6 with 56 records.
+2026-01-26 16:10:24,290 - INFO - Batch ID: 6 - Success: Wrote 56 valid records.
+2026-01-26 16:10:31,568 - INFO - Processing Batch ID: 7 with 77 records.
+2026-01-26 16:10:32,203 - INFO - Batch ID: 7 - Success: Wrote 77 valid records.
+2026-01-26 16:10:36,013 - INFO - Processing Batch ID: 8 with 3 records.
+2026-01-26 16:10:36,691 - INFO - Batch ID: 8 - Success: Wrote 1 valid records.
+2026-01-26 16:10:36,973 - WARNING - Batch ID: 8 - Found 2 invalid records! Sending to DLQ.
+2026-01-26 16:10:37,899 - ERROR - FAILED to write Batch ID: 8. Error: [DATATYPE_MISMATCH.INVALID_JSON_SCHEMA] Cannot resolve "from_json(event_id)" due to data type mismatch: Input schema "STRING" must be a struct, an array or a map.;
+'Project [event_id#867, event_time#873, event_type#868, product_id#869, price#870, user_id#871, session_id#872, from_json(StringType, event_id#867, Some(Etc/UTC)) AS error_message#881]
++- Project [cast(event_id#0 as string) AS event_id#867, cast(event_time#1 as string) AS event_time#873, cast(event_type#2 as string) AS event_type#868, cast(product_id#3 as string) AS product_id#869, cast(price#4 as string) AS price#870, cast(user_id#5 as string) AS user_id#871, cast(session_id#6 as string) AS session_id#872]
+   +- Filter NOT ((((price#4 > cast(0 as double)) AND event_type#2 IN (view,purchase)) AND isnotnull(product_id#3)) AND isnotnull(user_id#5))
+      +- LogicalRDD [event_id#0, event_time#1, event_type#2, product_id#3, price#4, user_id#5, session_id#6], false
+Traceback (most recent call last):
+  File "/app/src/spark_streaming_to_postgres.py", line 82, in write_to_postgres
+    dlq_df = invalid_df.select(
+  File "/opt/spark/python/lib/pyspark.zip/pyspark/sql/dataframe.py", line 5170, in withColumn
+    return DataFrame(self._jdf.withColumn(colName, col._jc), self.sparkSession)
+  File "/opt/spark/python/lib/py4j-0.10.9.7-src.zip/py4j/java_gateway.py", line 1322, in __call__
+    return_value = get_return_value(
+  File "/opt/spark/python/lib/pyspark.zip/pyspark/errors/exceptions/captured.py", line 185, in deco
+    raise converted from None
+pyspark.errors.exceptions.captured.AnalysisException: [DATATYPE_MISMATCH.INVALID_JSON_SCHEMA] Cannot resolve "from_json(event_id)" due to data type mismatch: Input schema "STRING" must be a struct, an array or a map.;
+'Project [event_id#867, event_time#873, event_type#868, product_id#869, price#870, user_id#871, session_id#872, from_json(StringType, event_id#867, Some(Etc/UTC)) AS error_message#881]
++- Project [cast(event_id#0 as string) AS event_id#867, cast(event_time#1 as string) AS event_time#873, cast(event_type#2 as string) AS event_type#868, cast(product_id#3 as string) AS product_id#869, cast(price#4 as string) AS price#870, cast(user_id#5 as string) AS user_id#871, cast(session_id#6 as string) AS session_id#872]
+   +- Filter NOT ((((price#4 > cast(0 as double)) AND event_type#2 IN (view,purchase)) AND isnotnull(product_id#3)) AND isnotnull(user_id#5))
+      +- LogicalRDD [event_id#0, event_time#1, event_type#2, product_id#3, price#4, user_id#5, session_id#6], false
+
+2026-01-26 16:10:43,799 - INFO - Processing Batch ID: 9 with 50 records.
+2026-01-26 16:10:44,573 - INFO - Batch ID: 9 - Success: Wrote 50 valid records.
+2026-01-26 16:10:48,339 - INFO - Processing Batch ID: 10 with 69 records.
+2026-01-26 16:10:49,172 - INFO - Batch ID: 10 - Success: Wrote 69 valid records.
+2026-01-26 16:10:54,525 - INFO - Processing Batch ID: 11 with 97 records.
+2026-01-26 16:10:55,179 - INFO - Batch ID: 11 - Success: Wrote 97 valid records.
+2026-01-26 16:10:58,837 - INFO - Processing Batch ID: 12 with 99 records.
+2026-01-26 16:10:59,535 - INFO - Batch ID: 12 - Success: Wrote 99 valid records.
+2026-01-26 16:11:04,623 - INFO - Processing Batch ID: 13 with 61 records.
+2026-01-26 16:11:05,523 - INFO - Batch ID: 13 - Success: Wrote 61 valid records.
+2026-01-26 16:11:08,216 - INFO - Processing Batch ID: 14 with 68 records.
+2026-01-26 16:11:09,487 - INFO - Batch ID: 14 - Success: Wrote 68 valid records.
+2026-01-26 16:11:13,599 - INFO - Processing Batch ID: 15 with 90 records.
+2026-01-26 16:11:14,427 - INFO - Batch ID: 15 - Success: Wrote 90 valid records.
+2026-01-26 16:11:17,767 - INFO - Processing Batch ID: 16 with 51 records.
+2026-01-26 16:11:18,523 - INFO - Batch ID: 16 - Success: Wrote 51 valid records.
+2026-01-26 16:11:23,943 - INFO - Processing Batch ID: 17 with 58 records.
+2026-01-26 16:11:24,996 - INFO - Batch ID: 17 - Success: Wrote 58 valid records.
+2026-01-26 16:11:29,706 - INFO - Processing Batch ID: 18 with 51 records.
+2026-01-26 16:11:31,475 - INFO - Batch ID: 18 - Success: Wrote 51 valid records.
+2026-01-26 16:11:36,666 - INFO - Processing Batch ID: 19 with 52 records.
+2026-01-26 16:11:37,333 - INFO - Batch ID: 19 - Success: Wrote 52 valid records.
+2026-01-26 16:11:43,479 - INFO - Processing Batch ID: 20 with 97 records.
+2026-01-26 16:11:44,279 - INFO - Batch ID: 20 - Success: Wrote 97 valid records.
+2026-01-26 16:11:50,591 - INFO - Processing Batch ID: 21 with 56 records.
+2026-01-26 16:11:52,268 - INFO - Batch ID: 21 - Success: Wrote 56 valid records.
+2026-01-26 16:12:03,227 - INFO - Processing Batch ID: 22 with 53 records.
+2026-01-26 16:12:04,663 - INFO - Batch ID: 22 - Success: Wrote 53 valid records.
+2026-01-26 23:04:40,575 - INFO - >>> Spark Session Initialized. Starting Stream...
+2026-01-26 23:04:40,580 - INFO - Monitoring input directory: /app/data/input
+2026-01-26 23:04:42,297 - INFO - >>> Spark Session Initialized. Starting Stream...
+2026-01-26 23:04:42,298 - INFO - Monitoring input directory: /app/data/input
+2026-01-26 23:05:05,953 - INFO - Processing Batch ID: 23 with 148 records.
+2026-01-26 23:05:06,043 - INFO - Processing Batch ID: 23 with 148 records.
+2026-01-26 23:05:12,131 - INFO - Batch ID: 23 - Success: Wrote 148 valid records.
+2026-01-26 23:05:13,085 - ERROR - FAILED to write Batch ID: 23. Error: An error occurred while calling o69.jdbc.
+: org.apache.spark.SparkException: Job aborted due to stage failure: Task 0 in stage 5.0 failed 1 times, most recent failure: Lost task 0.0 in stage 5.0 (TID 7) (ce79a41474fd executor driver): java.sql.BatchUpdateException: Batch entry 0 INSERT INTO user_activity ("event_id","event_time","event_type","product_id","price","user_id","session_id") VALUES ('6635da18-b62f-443a-9302-b4925463de6e','2026-01-26 23:04:57+00'::timestamp,'view',149,230.57,2687,'80bad49e-61c7-4a5d-8034-87c5ccd7ec6a') was aborted: ERROR: duplicate key value violates unique constraint "user_activity_pkey"
+  Detail: Key (event_id)=(6635da18-b62f-443a-9302-b4925463de6e) already exists.  Call getNextException to see other errors in the batch.
+	at org.postgresql.jdbc.BatchResultHandler.handleError(BatchResultHandler.java:165)
+	at org.postgresql.core.v3.QueryExecutorImpl.processResults(QueryExecutorImpl.java:2402)
+	at org.postgresql.core.v3.QueryExecutorImpl.execute(QueryExecutorImpl.java:574)
+	at org.postgresql.jdbc.PgStatement.internalExecuteBatch(PgStatement.java:896)
+	at org.postgresql.jdbc.PgStatement.executeBatch(PgStatement.java:919)
+	at org.postgresql.jdbc.PgPreparedStatement.executeBatch(PgPreparedStatement.java:1685)
+	at org.apache.spark.sql.execution.datasources.jdbc.JdbcUtils$.savePartition(JdbcUtils.scala:751)
+	at org.apache.spark.sql.execution.datasources.jdbc.JdbcUtils$.$anonfun$saveTable$1(JdbcUtils.scala:902)
+	at org.apache.spark.sql.execution.datasources.jdbc.JdbcUtils$.$anonfun$saveTable$1$adapted(JdbcUtils.scala:901)
+	at org.apache.spark.rdd.RDD.$anonfun$foreachPartition$2(RDD.scala:1036)
+	at org.apache.spark.rdd.RDD.$anonfun$foreachPartition$2$adapted(RDD.scala:1036)
+	at org.apache.spark.SparkContext.$anonfun$runJob$5(SparkContext.scala:2438)
+	at org.apache.spark.scheduler.ResultTask.runTask(ResultTask.scala:93)
+	at org.apache.spark.TaskContext.runTaskWithListeners(TaskContext.scala:161)
+	at org.apache.spark.scheduler.Task.run(Task.scala:141)
+	at org.apache.spark.executor.Executor$TaskRunner.$anonfun$run$4(Executor.scala:620)
+	at org.apache.spark.util.SparkErrorUtils.tryWithSafeFinally(SparkErrorUtils.scala:64)
+	at org.apache.spark.util.SparkErrorUtils.tryWithSafeFinally$(SparkErrorUtils.scala:61)
+	at org.apache.spark.util.Utils$.tryWithSafeFinally(Utils.scala:94)
+	at org.apache.spark.executor.Executor$TaskRunner.run(Executor.scala:623)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(Unknown Source)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(Unknown Source)
+	at java.base/java.lang.Thread.run(Unknown Source)
+Caused by: org.postgresql.util.PSQLException: ERROR: duplicate key value violates unique constraint "user_activity_pkey"
+  Detail: Key (event_id)=(6635da18-b62f-443a-9302-b4925463de6e) already exists.
+	at org.postgresql.core.v3.QueryExecutorImpl.receiveErrorResponse(QueryExecutorImpl.java:2713)
+	at org.postgresql.core.v3.QueryExecutorImpl.processResults(QueryExecutorImpl.java:2401)
+	... 21 more
+
+Driver stacktrace:
+	at org.apache.spark.scheduler.DAGScheduler.failJobAndIndependentStages(DAGScheduler.scala:2844)
+	at org.apache.spark.scheduler.DAGScheduler.$anonfun$abortStage$2(DAGScheduler.scala:2780)
+	at org.apache.spark.scheduler.DAGScheduler.$anonfun$abortStage$2$adapted(DAGScheduler.scala:2779)
+	at scala.collection.mutable.ResizableArray.foreach(ResizableArray.scala:62)
+	at scala.collection.mutable.ResizableArray.foreach$(ResizableArray.scala:55)
+	at scala.collection.mutable.ArrayBuffer.foreach(ArrayBuffer.scala:49)
+	at org.apache.spark.scheduler.DAGScheduler.abortStage(DAGScheduler.scala:2779)
+	at org.apache.spark.scheduler.DAGScheduler.$anonfun$handleTaskSetFailed$1(DAGScheduler.scala:1242)
+	at org.apache.spark.scheduler.DAGScheduler.$anonfun$handleTaskSetFailed$1$adapted(DAGScheduler.scala:1242)
+	at scala.Option.foreach(Option.scala:407)
+	at org.apache.spark.scheduler.DAGScheduler.handleTaskSetFailed(DAGScheduler.scala:1242)
+	at org.apache.spark.scheduler.DAGSchedulerEventProcessLoop.doOnReceive(DAGScheduler.scala:3048)
+	at org.apache.spark.scheduler.DAGSchedulerEventProcessLoop.onReceive(DAGScheduler.scala:2982)
+	at org.apache.spark.scheduler.DAGSchedulerEventProcessLoop.onReceive(DAGScheduler.scala:2971)
+	at org.apache.spark.util.EventLoop$$anon$1.run(EventLoop.scala:49)
+	at org.apache.spark.scheduler.DAGScheduler.runJob(DAGScheduler.scala:984)
+	at org.apache.spark.SparkContext.runJob(SparkContext.scala:2398)
+	at org.apache.spark.SparkContext.runJob(SparkContext.scala:2419)
+	at org.apache.spark.SparkContext.runJob(SparkContext.scala:2438)
+	at org.apache.spark.SparkContext.runJob(SparkContext.scala:2463)
+	at org.apache.spark.rdd.RDD.$anonfun$foreachPartition$1(RDD.scala:1036)
+	at org.apache.spark.rdd.RDDOperationScope$.withScope(RDDOperationScope.scala:151)
+	at org.apache.spark.rdd.RDDOperationScope$.withScope(RDDOperationScope.scala:112)
+	at org.apache.spark.rdd.RDD.withScope(RDD.scala:407)
+	at org.apache.spark.rdd.RDD.foreachPartition(RDD.scala:1034)
+	at org.apache.spark.sql.execution.datasources.jdbc.JdbcUtils$.saveTable(JdbcUtils.scala:901)
+	at org.apache.spark.sql.execution.datasources.jdbc.JdbcRelationProvider.createRelation(JdbcRelationProvider.scala:70)
+	at org.apache.spark.sql.execution.datasources.SaveIntoDataSourceCommand.run(SaveIntoDataSourceCommand.scala:48)
+	at org.apache.spark.sql.execution.command.ExecutedCommandExec.sideEffectResult$lzycompute(commands.scala:75)
+	at org.apache.spark.sql.execution.command.ExecutedCommandExec.sideEffectResult(commands.scala:73)
+	at org.apache.spark.sql.execution.command.ExecutedCommandExec.executeCollect(commands.scala:84)
+	at org.apache.spark.sql.execution.QueryExecution$$anonfun$eagerlyExecuteCommands$1.$anonfun$applyOrElse$1(QueryExecution.scala:107)
+	at org.apache.spark.sql.execution.SQLExecution$.$anonfun$withNewExecutionId$6(SQLExecution.scala:125)
+	at org.apache.spark.sql.execution.SQLExecution$.withSQLConfPropagated(SQLExecution.scala:201)
+	at org.apache.spark.sql.execution.SQLExecution$.$anonfun$withNewExecutionId$1(SQLExecution.scala:108)
+	at org.apache.spark.sql.SparkSession.withActive(SparkSession.scala:900)
+	at org.apache.spark.sql.execution.SQLExecution$.withNewExecutionId(SQLExecution.scala:66)
+	at org.apache.spark.sql.execution.QueryExecution$$anonfun$eagerlyExecuteCommands$1.applyOrElse(QueryExecution.scala:107)
+	at org.apache.spark.sql.execution.QueryExecution$$anonfun$eagerlyExecuteCommands$1.applyOrElse(QueryExecution.scala:98)
+	at org.apache.spark.sql.catalyst.trees.TreeNode.$anonfun$transformDownWithPruning$1(TreeNode.scala:461)
+	at org.apache.spark.sql.catalyst.trees.CurrentOrigin$.withOrigin(origin.scala:76)
+	at org.apache.spark.sql.catalyst.trees.TreeNode.transformDownWithPruning(TreeNode.scala:461)
+	at org.apache.spark.sql.catalyst.plans.logical.LogicalPlan.org$apache$spark$sql$catalyst$plans$logical$AnalysisHelper$$super$transformDownWithPruning(LogicalPlan.scala:32)
+	at org.apache.spark.sql.catalyst.plans.logical.AnalysisHelper.transformDownWithPruning(AnalysisHelper.scala:267)
+	at org.apache.spark.sql.catalyst.plans.logical.AnalysisHelper.transformDownWithPruning$(AnalysisHelper.scala:263)
+	at org.apache.spark.sql.catalyst.plans.logical.LogicalPlan.transformDownWithPruning(LogicalPlan.scala:32)
+	at org.apache.spark.sql.catalyst.plans.logical.LogicalPlan.transformDownWithPruning(LogicalPlan.scala:32)
+	at org.apache.spark.sql.catalyst.trees.TreeNode.transformDown(TreeNode.scala:437)
+	at org.apache.spark.sql.execution.QueryExecution.eagerlyExecuteCommands(QueryExecution.scala:98)
+	at org.apache.spark.sql.execution.QueryExecution.commandExecuted$lzycompute(QueryExecution.scala:85)
+	at org.apache.spark.sql.execution.QueryExecution.commandExecuted(QueryExecution.scala:83)
+	at org.apache.spark.sql.execution.QueryExecution.assertCommandExecuted(QueryExecution.scala:142)
+	at org.apache.spark.sql.DataFrameWriter.runCommand(DataFrameWriter.scala:859)
+	at org.apache.spark.sql.DataFrameWriter.saveToV1Source(DataFrameWriter.scala:388)
+	at org.apache.spark.sql.DataFrameWriter.saveInternal(DataFrameWriter.scala:361)
+	at org.apache.spark.sql.DataFrameWriter.save(DataFrameWriter.scala:248)
+	at org.apache.spark.sql.DataFrameWriter.jdbc(DataFrameWriter.scala:756)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
+	at java.base/java.lang.reflect.Method.invoke(Unknown Source)
+	at py4j.reflection.MethodInvoker.invoke(MethodInvoker.java:244)
+	at py4j.reflection.ReflectionEngine.invoke(ReflectionEngine.java:374)
+	at py4j.Gateway.invoke(Gateway.java:282)
+	at py4j.commands.AbstractCommand.invokeMethod(AbstractCommand.java:132)
+	at py4j.commands.CallCommand.execute(CallCommand.java:79)
+	at py4j.ClientServerConnection.sendCommand(ClientServerConnection.java:244)
+	at py4j.CallbackClient.sendCommand(CallbackClient.java:384)
+	at py4j.CallbackClient.sendCommand(CallbackClient.java:356)
+	at py4j.reflection.PythonProxyHandler.invoke(PythonProxyHandler.java:106)
+	at com.sun.proxy.$Proxy31.call(Unknown Source)
+	at org.apache.spark.sql.execution.streaming.sources.PythonForeachBatchHelper$.$anonfun$callForeachBatch$1(ForeachBatchSink.scala:53)
+	at org.apache.spark.sql.execution.streaming.sources.PythonForeachBatchHelper$.$anonfun$callForeachBatch$1$adapted(ForeachBatchSink.scala:53)
+	at org.apache.spark.sql.execution.streaming.sources.ForeachBatchSink.addBatch(ForeachBatchSink.scala:34)
+	at org.apache.spark.sql.execution.streaming.MicroBatchExecution.$anonfun$runBatch$17(MicroBatchExecution.scala:732)
+	at org.apache.spark.sql.execution.SQLExecution$.$anonfun$withNewExecutionId$6(SQLExecution.scala:125)
+	at org.apache.spark.sql.execution.SQLExecution$.withSQLConfPropagated(SQLExecution.scala:201)
+	at org.apache.spark.sql.execution.SQLExecution$.$anonfun$withNewExecutionId$1(SQLExecution.scala:108)
+	at org.apache.spark.sql.SparkSession.withActive(SparkSession.scala:900)
+	at org.apache.spark.sql.execution.SQLExecution$.withNewExecutionId(SQLExecution.scala:66)
+	at org.apache.spark.sql.execution.streaming.MicroBatchExecution.$anonfun$runBatch$16(MicroBatchExecution.scala:729)
+	at org.apache.spark.sql.execution.streaming.ProgressReporter.reportTimeTaken(ProgressReporter.scala:427)
+	at org.apache.spark.sql.execution.streaming.ProgressReporter.reportTimeTaken$(ProgressReporter.scala:425)
+	at org.apache.spark.sql.execution.streaming.StreamExecution.reportTimeTaken(StreamExecution.scala:67)
+	at org.apache.spark.sql.execution.streaming.MicroBatchExecution.runBatch(MicroBatchExecution.scala:729)
+	at org.apache.spark.sql.execution.streaming.MicroBatchExecution.$anonfun$runActivatedStream$2(MicroBatchExecution.scala:286)
+	at scala.runtime.java8.JFunction0$mcV$sp.apply(JFunction0$mcV$sp.java:23)
+	at org.apache.spark.sql.execution.streaming.ProgressReporter.reportTimeTaken(ProgressReporter.scala:427)
+	at org.apache.spark.sql.execution.streaming.ProgressReporter.reportTimeTaken$(ProgressReporter.scala:425)
+	at org.apache.spark.sql.execution.streaming.StreamExecution.reportTimeTaken(StreamExecution.scala:67)
+	at org.apache.spark.sql.execution.streaming.MicroBatchExecution.$anonfun$runActivatedStream$1(MicroBatchExecution.scala:249)
+	at org.apache.spark.sql.execution.streaming.ProcessingTimeExecutor.execute(TriggerExecutor.scala:67)
+	at org.apache.spark.sql.execution.streaming.MicroBatchExecution.runActivatedStream(MicroBatchExecution.scala:239)
+	at org.apache.spark.sql.execution.streaming.StreamExecution.$anonfun$runStream$1(StreamExecution.scala:311)
+	at scala.runtime.java8.JFunction0$mcV$sp.apply(JFunction0$mcV$sp.java:23)
+	at org.apache.spark.sql.SparkSession.withActive(SparkSession.scala:900)
+	at org.apache.spark.sql.execution.streaming.StreamExecution.org$apache$spark$sql$execution$streaming$StreamExecution$$runStream(StreamExecution.scala:289)
+	at org.apache.spark.sql.execution.streaming.StreamExecution$$anon$1.$anonfun$run$1(StreamExecution.scala:211)
+	at scala.runtime.java8.JFunction0$mcV$sp.apply(JFunction0$mcV$sp.java:23)
+	at org.apache.spark.JobArtifactSet$.withActiveJobArtifactState(JobArtifactSet.scala:94)
+	at org.apache.spark.sql.execution.streaming.StreamExecution$$anon$1.run(StreamExecution.scala:211)
+Caused by: java.sql.BatchUpdateException: Batch entry 0 INSERT INTO user_activity ("event_id","event_time","event_type","product_id","price","user_id","session_id") VALUES ('6635da18-b62f-443a-9302-b4925463de6e','2026-01-26 23:04:57+00'::timestamp,'view',149,230.57,2687,'80bad49e-61c7-4a5d-8034-87c5ccd7ec6a') was aborted: ERROR: duplicate key value violates unique constraint "user_activity_pkey"
+  Detail: Key (event_id)=(6635da18-b62f-443a-9302-b4925463de6e) already exists.  Call getNextException to see other errors in the batch.
+	at org.postgresql.jdbc.BatchResultHandler.handleError(BatchResultHandler.java:165)
+	at org.postgresql.core.v3.QueryExecutorImpl.processResults(QueryExecutorImpl.java:2402)
+	at org.postgresql.core.v3.QueryExecutorImpl.execute(QueryExecutorImpl.java:574)
+	at org.postgresql.jdbc.PgStatement.internalExecuteBatch(PgStatement.java:896)
+	at org.postgresql.jdbc.PgStatement.executeBatch(PgStatement.java:919)
+	at org.postgresql.jdbc.PgPreparedStatement.executeBatch(PgPreparedStatement.java:1685)
+	at org.apache.spark.sql.execution.datasources.jdbc.JdbcUtils$.savePartition(JdbcUtils.scala:751)
+	at org.apache.spark.sql.execution.datasources.jdbc.JdbcUtils$.$anonfun$saveTable$1(JdbcUtils.scala:902)
+	at org.apache.spark.sql.execution.datasources.jdbc.JdbcUtils$.$anonfun$saveTable$1$adapted(JdbcUtils.scala:901)
+	at org.apache.spark.rdd.RDD.$anonfun$foreachPartition$2(RDD.scala:1036)
+	at org.apache.spark.rdd.RDD.$anonfun$foreachPartition$2$adapted(RDD.scala:1036)
+	at org.apache.spark.SparkContext.$anonfun$runJob$5(SparkContext.scala:2438)
+	at org.apache.spark.scheduler.ResultTask.runTask(ResultTask.scala:93)
+	at org.apache.spark.TaskContext.runTaskWithListeners(TaskContext.scala:161)
+	at org.apache.spark.scheduler.Task.run(Task.scala:141)
+	at org.apache.spark.executor.Executor$TaskRunner.$anonfun$run$4(Executor.scala:620)
+	at org.apache.spark.util.SparkErrorUtils.tryWithSafeFinally(SparkErrorUtils.scala:64)
+	at org.apache.spark.util.SparkErrorUtils.tryWithSafeFinally$(SparkErrorUtils.scala:61)
+	at org.apache.spark.util.Utils$.tryWithSafeFinally(Utils.scala:94)
+	at org.apache.spark.executor.Executor$TaskRunner.run(Executor.scala:623)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(Unknown Source)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(Unknown Source)
+	at java.base/java.lang.Thread.run(Unknown Source)
+Caused by: org.postgresql.util.PSQLException: ERROR: duplicate key value violates unique constraint "user_activity_pkey"
+  Detail: Key (event_id)=(6635da18-b62f-443a-9302-b4925463de6e) already exists.
+	at org.postgresql.core.v3.QueryExecutorImpl.receiveErrorResponse(QueryExecutorImpl.java:2713)
+	at org.postgresql.core.v3.QueryExecutorImpl.processResults(QueryExecutorImpl.java:2401)
+	... 21 more
+Traceback (most recent call last):
+  File "/app/src/spark_streaming_to_postgres.py", line 71, in write_to_postgres
+    valid_df.write \
+  File "/opt/spark/python/lib/pyspark.zip/pyspark/sql/readwriter.py", line 1984, in jdbc
+    self.mode(mode)._jwrite.jdbc(url, table, jprop)
+  File "/opt/spark/python/lib/py4j-0.10.9.7-src.zip/py4j/java_gateway.py", line 1322, in __call__
+    return_value = get_return_value(
+  File "/opt/spark/python/lib/pyspark.zip/pyspark/errors/exceptions/captured.py", line 179, in deco
+    return f(*a, **kw)
+  File "/opt/spark/python/lib/py4j-0.10.9.7-src.zip/py4j/protocol.py", line 326, in get_return_value
+    raise Py4JJavaError(
+py4j.protocol.Py4JJavaError: An error occurred while calling o69.jdbc.
+: org.apache.spark.SparkException: Job aborted due to stage failure: Task 0 in stage 5.0 failed 1 times, most recent failure: Lost task 0.0 in stage 5.0 (TID 7) (ce79a41474fd executor driver): java.sql.BatchUpdateException: Batch entry 0 INSERT INTO user_activity ("event_id","event_time","event_type","product_id","price","user_id","session_id") VALUES ('6635da18-b62f-443a-9302-b4925463de6e','2026-01-26 23:04:57+00'::timestamp,'view',149,230.57,2687,'80bad49e-61c7-4a5d-8034-87c5ccd7ec6a') was aborted: ERROR: duplicate key value violates unique constraint "user_activity_pkey"
+  Detail: Key (event_id)=(6635da18-b62f-443a-9302-b4925463de6e) already exists.  Call getNextException to see other errors in the batch.
+	at org.postgresql.jdbc.BatchResultHandler.handleError(BatchResultHandler.java:165)
+	at org.postgresql.core.v3.QueryExecutorImpl.processResults(QueryExecutorImpl.java:2402)
+	at org.postgresql.core.v3.QueryExecutorImpl.execute(QueryExecutorImpl.java:574)
+	at org.postgresql.jdbc.PgStatement.internalExecuteBatch(PgStatement.java:896)
+	at org.postgresql.jdbc.PgStatement.executeBatch(PgStatement.java:919)
+	at org.postgresql.jdbc.PgPreparedStatement.executeBatch(PgPreparedStatement.java:1685)
+	at org.apache.spark.sql.execution.datasources.jdbc.JdbcUtils$.savePartition(JdbcUtils.scala:751)
+	at org.apache.spark.sql.execution.datasources.jdbc.JdbcUtils$.$anonfun$saveTable$1(JdbcUtils.scala:902)
+	at org.apache.spark.sql.execution.datasources.jdbc.JdbcUtils$.$anonfun$saveTable$1$adapted(JdbcUtils.scala:901)
+	at org.apache.spark.rdd.RDD.$anonfun$foreachPartition$2(RDD.scala:1036)
+	at org.apache.spark.rdd.RDD.$anonfun$foreachPartition$2$adapted(RDD.scala:1036)
+	at org.apache.spark.SparkContext.$anonfun$runJob$5(SparkContext.scala:2438)
+	at org.apache.spark.scheduler.ResultTask.runTask(ResultTask.scala:93)
+	at org.apache.spark.TaskContext.runTaskWithListeners(TaskContext.scala:161)
+	at org.apache.spark.scheduler.Task.run(Task.scala:141)
+	at org.apache.spark.executor.Executor$TaskRunner.$anonfun$run$4(Executor.scala:620)
+	at org.apache.spark.util.SparkErrorUtils.tryWithSafeFinally(SparkErrorUtils.scala:64)
+	at org.apache.spark.util.SparkErrorUtils.tryWithSafeFinally$(SparkErrorUtils.scala:61)
+	at org.apache.spark.util.Utils$.tryWithSafeFinally(Utils.scala:94)
+	at org.apache.spark.executor.Executor$TaskRunner.run(Executor.scala:623)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(Unknown Source)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(Unknown Source)
+	at java.base/java.lang.Thread.run(Unknown Source)
+Caused by: org.postgresql.util.PSQLException: ERROR: duplicate key value violates unique constraint "user_activity_pkey"
+  Detail: Key (event_id)=(6635da18-b62f-443a-9302-b4925463de6e) already exists.
+	at org.postgresql.core.v3.QueryExecutorImpl.receiveErrorResponse(QueryExecutorImpl.java:2713)
+	at org.postgresql.core.v3.QueryExecutorImpl.processResults(QueryExecutorImpl.java:2401)
+	... 21 more
+
+Driver stacktrace:
+	at org.apache.spark.scheduler.DAGScheduler.failJobAndIndependentStages(DAGScheduler.scala:2844)
+	at org.apache.spark.scheduler.DAGScheduler.$anonfun$abortStage$2(DAGScheduler.scala:2780)
+	at org.apache.spark.scheduler.DAGScheduler.$anonfun$abortStage$2$adapted(DAGScheduler.scala:2779)
+	at scala.collection.mutable.ResizableArray.foreach(ResizableArray.scala:62)
+	at scala.collection.mutable.ResizableArray.foreach$(ResizableArray.scala:55)
+	at scala.collection.mutable.ArrayBuffer.foreach(ArrayBuffer.scala:49)
+	at org.apache.spark.scheduler.DAGScheduler.abortStage(DAGScheduler.scala:2779)
+	at org.apache.spark.scheduler.DAGScheduler.$anonfun$handleTaskSetFailed$1(DAGScheduler.scala:1242)
+	at org.apache.spark.scheduler.DAGScheduler.$anonfun$handleTaskSetFailed$1$adapted(DAGScheduler.scala:1242)
+	at scala.Option.foreach(Option.scala:407)
+	at org.apache.spark.scheduler.DAGScheduler.handleTaskSetFailed(DAGScheduler.scala:1242)
+	at org.apache.spark.scheduler.DAGSchedulerEventProcessLoop.doOnReceive(DAGScheduler.scala:3048)
+	at org.apache.spark.scheduler.DAGSchedulerEventProcessLoop.onReceive(DAGScheduler.scala:2982)
+	at org.apache.spark.scheduler.DAGSchedulerEventProcessLoop.onReceive(DAGScheduler.scala:2971)
+	at org.apache.spark.util.EventLoop$$anon$1.run(EventLoop.scala:49)
+	at org.apache.spark.scheduler.DAGScheduler.runJob(DAGScheduler.scala:984)
+	at org.apache.spark.SparkContext.runJob(SparkContext.scala:2398)
+	at org.apache.spark.SparkContext.runJob(SparkContext.scala:2419)
+	at org.apache.spark.SparkContext.runJob(SparkContext.scala:2438)
+	at org.apache.spark.SparkContext.runJob(SparkContext.scala:2463)
+	at org.apache.spark.rdd.RDD.$anonfun$foreachPartition$1(RDD.scala:1036)
+	at org.apache.spark.rdd.RDDOperationScope$.withScope(RDDOperationScope.scala:151)
+	at org.apache.spark.rdd.RDDOperationScope$.withScope(RDDOperationScope.scala:112)
+	at org.apache.spark.rdd.RDD.withScope(RDD.scala:407)
+	at org.apache.spark.rdd.RDD.foreachPartition(RDD.scala:1034)
+	at org.apache.spark.sql.execution.datasources.jdbc.JdbcUtils$.saveTable(JdbcUtils.scala:901)
+	at org.apache.spark.sql.execution.datasources.jdbc.JdbcRelationProvider.createRelation(JdbcRelationProvider.scala:70)
+	at org.apache.spark.sql.execution.datasources.SaveIntoDataSourceCommand.run(SaveIntoDataSourceCommand.scala:48)
+	at org.apache.spark.sql.execution.command.ExecutedCommandExec.sideEffectResult$lzycompute(commands.scala:75)
+	at org.apache.spark.sql.execution.command.ExecutedCommandExec.sideEffectResult(commands.scala:73)
+	at org.apache.spark.sql.execution.command.ExecutedCommandExec.executeCollect(commands.scala:84)
+	at org.apache.spark.sql.execution.QueryExecution$$anonfun$eagerlyExecuteCommands$1.$anonfun$applyOrElse$1(QueryExecution.scala:107)
+	at org.apache.spark.sql.execution.SQLExecution$.$anonfun$withNewExecutionId$6(SQLExecution.scala:125)
+	at org.apache.spark.sql.execution.SQLExecution$.withSQLConfPropagated(SQLExecution.scala:201)
+	at org.apache.spark.sql.execution.SQLExecution$.$anonfun$withNewExecutionId$1(SQLExecution.scala:108)
+	at org.apache.spark.sql.SparkSession.withActive(SparkSession.scala:900)
+	at org.apache.spark.sql.execution.SQLExecution$.withNewExecutionId(SQLExecution.scala:66)
+	at org.apache.spark.sql.execution.QueryExecution$$anonfun$eagerlyExecuteCommands$1.applyOrElse(QueryExecution.scala:107)
+	at org.apache.spark.sql.execution.QueryExecution$$anonfun$eagerlyExecuteCommands$1.applyOrElse(QueryExecution.scala:98)
+	at org.apache.spark.sql.catalyst.trees.TreeNode.$anonfun$transformDownWithPruning$1(TreeNode.scala:461)
+	at org.apache.spark.sql.catalyst.trees.CurrentOrigin$.withOrigin(origin.scala:76)
+	at org.apache.spark.sql.catalyst.trees.TreeNode.transformDownWithPruning(TreeNode.scala:461)
+	at org.apache.spark.sql.catalyst.plans.logical.LogicalPlan.org$apache$spark$sql$catalyst$plans$logical$AnalysisHelper$$super$transformDownWithPruning(LogicalPlan.scala:32)
+	at org.apache.spark.sql.catalyst.plans.logical.AnalysisHelper.transformDownWithPruning(AnalysisHelper.scala:267)
+	at org.apache.spark.sql.catalyst.plans.logical.AnalysisHelper.transformDownWithPruning$(AnalysisHelper.scala:263)
+	at org.apache.spark.sql.catalyst.plans.logical.LogicalPlan.transformDownWithPruning(LogicalPlan.scala:32)
+	at org.apache.spark.sql.catalyst.plans.logical.LogicalPlan.transformDownWithPruning(LogicalPlan.scala:32)
+	at org.apache.spark.sql.catalyst.trees.TreeNode.transformDown(TreeNode.scala:437)
+	at org.apache.spark.sql.execution.QueryExecution.eagerlyExecuteCommands(QueryExecution.scala:98)
+	at org.apache.spark.sql.execution.QueryExecution.commandExecuted$lzycompute(QueryExecution.scala:85)
+	at org.apache.spark.sql.execution.QueryExecution.commandExecuted(QueryExecution.scala:83)
+	at org.apache.spark.sql.execution.QueryExecution.assertCommandExecuted(QueryExecution.scala:142)
+	at org.apache.spark.sql.DataFrameWriter.runCommand(DataFrameWriter.scala:859)
+	at org.apache.spark.sql.DataFrameWriter.saveToV1Source(DataFrameWriter.scala:388)
+	at org.apache.spark.sql.DataFrameWriter.saveInternal(DataFrameWriter.scala:361)
+	at org.apache.spark.sql.DataFrameWriter.save(DataFrameWriter.scala:248)
+	at org.apache.spark.sql.DataFrameWriter.jdbc(DataFrameWriter.scala:756)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
+	at java.base/java.lang.reflect.Method.invoke(Unknown Source)
+	at py4j.reflection.MethodInvoker.invoke(MethodInvoker.java:244)
+	at py4j.reflection.ReflectionEngine.invoke(ReflectionEngine.java:374)
+	at py4j.Gateway.invoke(Gateway.java:282)
+	at py4j.commands.AbstractCommand.invokeMethod(AbstractCommand.java:132)
+	at py4j.commands.CallCommand.execute(CallCommand.java:79)
+	at py4j.ClientServerConnection.sendCommand(ClientServerConnection.java:244)
+	at py4j.CallbackClient.sendCommand(CallbackClient.java:384)
+	at py4j.CallbackClient.sendCommand(CallbackClient.java:356)
+	at py4j.reflection.PythonProxyHandler.invoke(PythonProxyHandler.java:106)
+	at com.sun.proxy.$Proxy31.call(Unknown Source)
+	at org.apache.spark.sql.execution.streaming.sources.PythonForeachBatchHelper$.$anonfun$callForeachBatch$1(ForeachBatchSink.scala:53)
+	at org.apache.spark.sql.execution.streaming.sources.PythonForeachBatchHelper$.$anonfun$callForeachBatch$1$adapted(ForeachBatchSink.scala:53)
+	at org.apache.spark.sql.execution.streaming.sources.ForeachBatchSink.addBatch(ForeachBatchSink.scala:34)
+	at org.apache.spark.sql.execution.streaming.MicroBatchExecution.$anonfun$runBatch$17(MicroBatchExecution.scala:732)
+	at org.apache.spark.sql.execution.SQLExecution$.$anonfun$withNewExecutionId$6(SQLExecution.scala:125)
+	at org.apache.spark.sql.execution.SQLExecution$.withSQLConfPropagated(SQLExecution.scala:201)
+	at org.apache.spark.sql.execution.SQLExecution$.$anonfun$withNewExecutionId$1(SQLExecution.scala:108)
+	at org.apache.spark.sql.SparkSession.withActive(SparkSession.scala:900)
+	at org.apache.spark.sql.execution.SQLExecution$.withNewExecutionId(SQLExecution.scala:66)
+	at org.apache.spark.sql.execution.streaming.MicroBatchExecution.$anonfun$runBatch$16(MicroBatchExecution.scala:729)
+	at org.apache.spark.sql.execution.streaming.ProgressReporter.reportTimeTaken(ProgressReporter.scala:427)
+	at org.apache.spark.sql.execution.streaming.ProgressReporter.reportTimeTaken$(ProgressReporter.scala:425)
+	at org.apache.spark.sql.execution.streaming.StreamExecution.reportTimeTaken(StreamExecution.scala:67)
+	at org.apache.spark.sql.execution.streaming.MicroBatchExecution.runBatch(MicroBatchExecution.scala:729)
+	at org.apache.spark.sql.execution.streaming.MicroBatchExecution.$anonfun$runActivatedStream$2(MicroBatchExecution.scala:286)
+	at scala.runtime.java8.JFunction0$mcV$sp.apply(JFunction0$mcV$sp.java:23)
+	at org.apache.spark.sql.execution.streaming.ProgressReporter.reportTimeTaken(ProgressReporter.scala:427)
+	at org.apache.spark.sql.execution.streaming.ProgressReporter.reportTimeTaken$(ProgressReporter.scala:425)
+	at org.apache.spark.sql.execution.streaming.StreamExecution.reportTimeTaken(StreamExecution.scala:67)
+	at org.apache.spark.sql.execution.streaming.MicroBatchExecution.$anonfun$runActivatedStream$1(MicroBatchExecution.scala:249)
+	at org.apache.spark.sql.execution.streaming.ProcessingTimeExecutor.execute(TriggerExecutor.scala:67)
+	at org.apache.spark.sql.execution.streaming.MicroBatchExecution.runActivatedStream(MicroBatchExecution.scala:239)
+	at org.apache.spark.sql.execution.streaming.StreamExecution.$anonfun$runStream$1(StreamExecution.scala:311)
+	at scala.runtime.java8.JFunction0$mcV$sp.apply(JFunction0$mcV$sp.java:23)
+	at org.apache.spark.sql.SparkSession.withActive(SparkSession.scala:900)
+	at org.apache.spark.sql.execution.streaming.StreamExecution.org$apache$spark$sql$execution$streaming$StreamExecution$$runStream(StreamExecution.scala:289)
+	at org.apache.spark.sql.execution.streaming.StreamExecution$$anon$1.$anonfun$run$1(StreamExecution.scala:211)
+	at scala.runtime.java8.JFunction0$mcV$sp.apply(JFunction0$mcV$sp.java:23)
+	at org.apache.spark.JobArtifactSet$.withActiveJobArtifactState(JobArtifactSet.scala:94)
+	at org.apache.spark.sql.execution.streaming.StreamExecution$$anon$1.run(StreamExecution.scala:211)
+Caused by: java.sql.BatchUpdateException: Batch entry 0 INSERT INTO user_activity ("event_id","event_time","event_type","product_id","price","user_id","session_id") VALUES ('6635da18-b62f-443a-9302-b4925463de6e','2026-01-26 23:04:57+00'::timestamp,'view',149,230.57,2687,'80bad49e-61c7-4a5d-8034-87c5ccd7ec6a') was aborted: ERROR: duplicate key value violates unique constraint "user_activity_pkey"
+  Detail: Key (event_id)=(6635da18-b62f-443a-9302-b4925463de6e) already exists.  Call getNextException to see other errors in the batch.
+	at org.postgresql.jdbc.BatchResultHandler.handleError(BatchResultHandler.java:165)
+	at org.postgresql.core.v3.QueryExecutorImpl.processResults(QueryExecutorImpl.java:2402)
+	at org.postgresql.core.v3.QueryExecutorImpl.execute(QueryExecutorImpl.java:574)
+	at org.postgresql.jdbc.PgStatement.internalExecuteBatch(PgStatement.java:896)
+	at org.postgresql.jdbc.PgStatement.executeBatch(PgStatement.java:919)
+	at org.postgresql.jdbc.PgPreparedStatement.executeBatch(PgPreparedStatement.java:1685)
+	at org.apache.spark.sql.execution.datasources.jdbc.JdbcUtils$.savePartition(JdbcUtils.scala:751)
+	at org.apache.spark.sql.execution.datasources.jdbc.JdbcUtils$.$anonfun$saveTable$1(JdbcUtils.scala:902)
+	at org.apache.spark.sql.execution.datasources.jdbc.JdbcUtils$.$anonfun$saveTable$1$adapted(JdbcUtils.scala:901)
+	at org.apache.spark.rdd.RDD.$anonfun$foreachPartition$2(RDD.scala:1036)
+	at org.apache.spark.rdd.RDD.$anonfun$foreachPartition$2$adapted(RDD.scala:1036)
+	at org.apache.spark.SparkContext.$anonfun$runJob$5(SparkContext.scala:2438)
+	at org.apache.spark.scheduler.ResultTask.runTask(ResultTask.scala:93)
+	at org.apache.spark.TaskContext.runTaskWithListeners(TaskContext.scala:161)
+	at org.apache.spark.scheduler.Task.run(Task.scala:141)
+	at org.apache.spark.executor.Executor$TaskRunner.$anonfun$run$4(Executor.scala:620)
+	at org.apache.spark.util.SparkErrorUtils.tryWithSafeFinally(SparkErrorUtils.scala:64)
+	at org.apache.spark.util.SparkErrorUtils.tryWithSafeFinally$(SparkErrorUtils.scala:61)
+	at org.apache.spark.util.Utils$.tryWithSafeFinally(Utils.scala:94)
+	at org.apache.spark.executor.Executor$TaskRunner.run(Executor.scala:623)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(Unknown Source)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(Unknown Source)
+	at java.base/java.lang.Thread.run(Unknown Source)
+Caused by: org.postgresql.util.PSQLException: ERROR: duplicate key value violates unique constraint "user_activity_pkey"
+  Detail: Key (event_id)=(6635da18-b62f-443a-9302-b4925463de6e) already exists.
+	at org.postgresql.core.v3.QueryExecutorImpl.receiveErrorResponse(QueryExecutorImpl.java:2713)
+	at org.postgresql.core.v3.QueryExecutorImpl.processResults(QueryExecutorImpl.java:2401)
+	... 21 more
+
+2026-01-26 23:05:15,461 - INFO - Processing Batch ID: 24 with 64 records.
+2026-01-26 23:05:15,614 - INFO - Processing Batch ID: 24 with 64 records.
+2026-01-26 23:05:17,130 - INFO - Batch ID: 24 - Success: Wrote 64 valid records.
+2026-01-26 23:05:18,280 - ERROR - FAILED to write Batch ID: 24. Error: An error occurred while calling o94.jdbc.
+: org.apache.spark.SparkException: Job aborted due to stage failure: Task 0 in stage 13.0 failed 1 times, most recent failure: Lost task 0.0 in stage 13.0 (TID 17) (ce79a41474fd executor driver): java.sql.BatchUpdateException: Batch entry 0 INSERT INTO user_activity ("event_id","event_time","event_type","product_id","price","user_id","session_id") VALUES ('09beebcd-3fa0-4c46-bbb4-09f3ea301fab','2026-01-26 23:05:07+00'::timestamp,'view',123,458.44,2420,'a44567f8-ffa4-47b0-bc6f-505b1b60a323') was aborted: ERROR: duplicate key value violates unique constraint "user_activity_pkey"
+  Detail: Key (event_id)=(09beebcd-3fa0-4c46-bbb4-09f3ea301fab) already exists.  Call getNextException to see other errors in the batch.
+	at org.postgresql.jdbc.BatchResultHandler.handleError(BatchResultHandler.java:165)
+	at org.postgresql.core.v3.QueryExecutorImpl.processResults(QueryExecutorImpl.java:2402)
+	at org.postgresql.core.v3.QueryExecutorImpl.execute(QueryExecutorImpl.java:574)
+	at org.postgresql.jdbc.PgStatement.internalExecuteBatch(PgStatement.java:896)
+	at org.postgresql.jdbc.PgStatement.executeBatch(PgStatement.java:919)
+	at org.postgresql.jdbc.PgPreparedStatement.executeBatch(PgPreparedStatement.java:1685)
+	at org.apache.spark.sql.execution.datasources.jdbc.JdbcUtils$.savePartition(JdbcUtils.scala:751)
+	at org.apache.spark.sql.execution.datasources.jdbc.JdbcUtils$.$anonfun$saveTable$1(JdbcUtils.scala:902)
+	at org.apache.spark.sql.execution.datasources.jdbc.JdbcUtils$.$anonfun$saveTable$1$adapted(JdbcUtils.scala:901)
+	at org.apache.spark.rdd.RDD.$anonfun$foreachPartition$2(RDD.scala:1036)
+	at org.apache.spark.rdd.RDD.$anonfun$foreachPartition$2$adapted(RDD.scala:1036)
+	at org.apache.spark.SparkContext.$anonfun$runJob$5(SparkContext.scala:2438)
+	at org.apache.spark.scheduler.ResultTask.runTask(ResultTask.scala:93)
+	at org.apache.spark.TaskContext.runTaskWithListeners(TaskContext.scala:161)
+	at org.apache.spark.scheduler.Task.run(Task.scala:141)
+	at org.apache.spark.executor.Executor$TaskRunner.$anonfun$run$4(Executor.scala:620)
+	at org.apache.spark.util.SparkErrorUtils.tryWithSafeFinally(SparkErrorUtils.scala:64)
+	at org.apache.spark.util.SparkErrorUtils.tryWithSafeFinally$(SparkErrorUtils.scala:61)
+	at org.apache.spark.util.Utils$.tryWithSafeFinally(Utils.scala:94)
+	at org.apache.spark.executor.Executor$TaskRunner.run(Executor.scala:623)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(Unknown Source)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(Unknown Source)
+	at java.base/java.lang.Thread.run(Unknown Source)
+Caused by: org.postgresql.util.PSQLException: ERROR: duplicate key value violates unique constraint "user_activity_pkey"
+  Detail: Key (event_id)=(09beebcd-3fa0-4c46-bbb4-09f3ea301fab) already exists.
+	at org.postgresql.core.v3.QueryExecutorImpl.receiveErrorResponse(QueryExecutorImpl.java:2713)
+	at org.postgresql.core.v3.QueryExecutorImpl.processResults(QueryExecutorImpl.java:2401)
+	... 21 more
+
+Driver stacktrace:
+	at org.apache.spark.scheduler.DAGScheduler.failJobAndIndependentStages(DAGScheduler.scala:2844)
+	at org.apache.spark.scheduler.DAGScheduler.$anonfun$abortStage$2(DAGScheduler.scala:2780)
+	at org.apache.spark.scheduler.DAGScheduler.$anonfun$abortStage$2$adapted(DAGScheduler.scala:2779)
+	at scala.collection.mutable.ResizableArray.foreach(ResizableArray.scala:62)
+	at scala.collection.mutable.ResizableArray.foreach$(ResizableArray.scala:55)
+	at scala.collection.mutable.ArrayBuffer.foreach(ArrayBuffer.scala:49)
+	at org.apache.spark.scheduler.DAGScheduler.abortStage(DAGScheduler.scala:2779)
+	at org.apache.spark.scheduler.DAGScheduler.$anonfun$handleTaskSetFailed$1(DAGScheduler.scala:1242)
+	at org.apache.spark.scheduler.DAGScheduler.$anonfun$handleTaskSetFailed$1$adapted(DAGScheduler.scala:1242)
+	at scala.Option.foreach(Option.scala:407)
+	at org.apache.spark.scheduler.DAGScheduler.handleTaskSetFailed(DAGScheduler.scala:1242)
+	at org.apache.spark.scheduler.DAGSchedulerEventProcessLoop.doOnReceive(DAGScheduler.scala:3048)
+	at org.apache.spark.scheduler.DAGSchedulerEventProcessLoop.onReceive(DAGScheduler.scala:2982)
+	at org.apache.spark.scheduler.DAGSchedulerEventProcessLoop.onReceive(DAGScheduler.scala:2971)
+	at org.apache.spark.util.EventLoop$$anon$1.run(EventLoop.scala:49)
+	at org.apache.spark.scheduler.DAGScheduler.runJob(DAGScheduler.scala:984)
+	at org.apache.spark.SparkContext.runJob(SparkContext.scala:2398)
+	at org.apache.spark.SparkContext.runJob(SparkContext.scala:2419)
+	at org.apache.spark.SparkContext.runJob(SparkContext.scala:2438)
+	at org.apache.spark.SparkContext.runJob(SparkContext.scala:2463)
+	at org.apache.spark.rdd.RDD.$anonfun$foreachPartition$1(RDD.scala:1036)
+	at org.apache.spark.rdd.RDDOperationScope$.withScope(RDDOperationScope.scala:151)
+	at org.apache.spark.rdd.RDDOperationScope$.withScope(RDDOperationScope.scala:112)
+	at org.apache.spark.rdd.RDD.withScope(RDD.scala:407)
+	at org.apache.spark.rdd.RDD.foreachPartition(RDD.scala:1034)
+	at org.apache.spark.sql.execution.datasources.jdbc.JdbcUtils$.saveTable(JdbcUtils.scala:901)
+	at org.apache.spark.sql.execution.datasources.jdbc.JdbcRelationProvider.createRelation(JdbcRelationProvider.scala:70)
+	at org.apache.spark.sql.execution.datasources.SaveIntoDataSourceCommand.run(SaveIntoDataSourceCommand.scala:48)
+	at org.apache.spark.sql.execution.command.ExecutedCommandExec.sideEffectResult$lzycompute(commands.scala:75)
+	at org.apache.spark.sql.execution.command.ExecutedCommandExec.sideEffectResult(commands.scala:73)
+	at org.apache.spark.sql.execution.command.ExecutedCommandExec.executeCollect(commands.scala:84)
+	at org.apache.spark.sql.execution.QueryExecution$$anonfun$eagerlyExecuteCommands$1.$anonfun$applyOrElse$1(QueryExecution.scala:107)
+	at org.apache.spark.sql.execution.SQLExecution$.$anonfun$withNewExecutionId$6(SQLExecution.scala:125)
+	at org.apache.spark.sql.execution.SQLExecution$.withSQLConfPropagated(SQLExecution.scala:201)
+	at org.apache.spark.sql.execution.SQLExecution$.$anonfun$withNewExecutionId$1(SQLExecution.scala:108)
+	at org.apache.spark.sql.SparkSession.withActive(SparkSession.scala:900)
+	at org.apache.spark.sql.execution.SQLExecution$.withNewExecutionId(SQLExecution.scala:66)
+	at org.apache.spark.sql.execution.QueryExecution$$anonfun$eagerlyExecuteCommands$1.applyOrElse(QueryExecution.scala:107)
+	at org.apache.spark.sql.execution.QueryExecution$$anonfun$eagerlyExecuteCommands$1.applyOrElse(QueryExecution.scala:98)
+	at org.apache.spark.sql.catalyst.trees.TreeNode.$anonfun$transformDownWithPruning$1(TreeNode.scala:461)
+	at org.apache.spark.sql.catalyst.trees.CurrentOrigin$.withOrigin(origin.scala:76)
+	at org.apache.spark.sql.catalyst.trees.TreeNode.transformDownWithPruning(TreeNode.scala:461)
+	at org.apache.spark.sql.catalyst.plans.logical.LogicalPlan.org$apache$spark$sql$catalyst$plans$logical$AnalysisHelper$$super$transformDownWithPruning(LogicalPlan.scala:32)
+	at org.apache.spark.sql.catalyst.plans.logical.AnalysisHelper.transformDownWithPruning(AnalysisHelper.scala:267)
+	at org.apache.spark.sql.catalyst.plans.logical.AnalysisHelper.transformDownWithPruning$(AnalysisHelper.scala:263)
+	at org.apache.spark.sql.catalyst.plans.logical.LogicalPlan.transformDownWithPruning(LogicalPlan.scala:32)
+	at org.apache.spark.sql.catalyst.plans.logical.LogicalPlan.transformDownWithPruning(LogicalPlan.scala:32)
+	at org.apache.spark.sql.catalyst.trees.TreeNode.transformDown(TreeNode.scala:437)
+	at org.apache.spark.sql.execution.QueryExecution.eagerlyExecuteCommands(QueryExecution.scala:98)
+	at org.apache.spark.sql.execution.QueryExecution.commandExecuted$lzycompute(QueryExecution.scala:85)
+	at org.apache.spark.sql.execution.QueryExecution.commandExecuted(QueryExecution.scala:83)
+	at org.apache.spark.sql.execution.QueryExecution.assertCommandExecuted(QueryExecution.scala:142)
+	at org.apache.spark.sql.DataFrameWriter.runCommand(DataFrameWriter.scala:859)
+	at org.apache.spark.sql.DataFrameWriter.saveToV1Source(DataFrameWriter.scala:388)
+	at org.apache.spark.sql.DataFrameWriter.saveInternal(DataFrameWriter.scala:361)
+	at org.apache.spark.sql.DataFrameWriter.save(DataFrameWriter.scala:248)
+	at org.apache.spark.sql.DataFrameWriter.jdbc(DataFrameWriter.scala:756)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
+	at java.base/java.lang.reflect.Method.invoke(Unknown Source)
+	at py4j.reflection.MethodInvoker.invoke(MethodInvoker.java:244)
+	at py4j.reflection.ReflectionEngine.invoke(ReflectionEngine.java:374)
+	at py4j.Gateway.invoke(Gateway.java:282)
+	at py4j.commands.AbstractCommand.invokeMethod(AbstractCommand.java:132)
+	at py4j.commands.CallCommand.execute(CallCommand.java:79)
+	at py4j.ClientServerConnection.sendCommand(ClientServerConnection.java:244)
+	at py4j.CallbackClient.sendCommand(CallbackClient.java:384)
+	at py4j.CallbackClient.sendCommand(CallbackClient.java:356)
+	at py4j.reflection.PythonProxyHandler.invoke(PythonProxyHandler.java:106)
+	at com.sun.proxy.$Proxy31.call(Unknown Source)
+	at org.apache.spark.sql.execution.streaming.sources.PythonForeachBatchHelper$.$anonfun$callForeachBatch$1(ForeachBatchSink.scala:53)
+	at org.apache.spark.sql.execution.streaming.sources.PythonForeachBatchHelper$.$anonfun$callForeachBatch$1$adapted(ForeachBatchSink.scala:53)
+	at org.apache.spark.sql.execution.streaming.sources.ForeachBatchSink.addBatch(ForeachBatchSink.scala:34)
+	at org.apache.spark.sql.execution.streaming.MicroBatchExecution.$anonfun$runBatch$17(MicroBatchExecution.scala:732)
+	at org.apache.spark.sql.execution.SQLExecution$.$anonfun$withNewExecutionId$6(SQLExecution.scala:125)
+	at org.apache.spark.sql.execution.SQLExecution$.withSQLConfPropagated(SQLExecution.scala:201)
+	at org.apache.spark.sql.execution.SQLExecution$.$anonfun$withNewExecutionId$1(SQLExecution.scala:108)
+	at org.apache.spark.sql.SparkSession.withActive(SparkSession.scala:900)
+	at org.apache.spark.sql.execution.SQLExecution$.withNewExecutionId(SQLExecution.scala:66)
+	at org.apache.spark.sql.execution.streaming.MicroBatchExecution.$anonfun$runBatch$16(MicroBatchExecution.scala:729)
+	at org.apache.spark.sql.execution.streaming.ProgressReporter.reportTimeTaken(ProgressReporter.scala:427)
+	at org.apache.spark.sql.execution.streaming.ProgressReporter.reportTimeTaken$(ProgressReporter.scala:425)
+	at org.apache.spark.sql.execution.streaming.StreamExecution.reportTimeTaken(StreamExecution.scala:67)
+	at org.apache.spark.sql.execution.streaming.MicroBatchExecution.runBatch(MicroBatchExecution.scala:729)
+	at org.apache.spark.sql.execution.streaming.MicroBatchExecution.$anonfun$runActivatedStream$2(MicroBatchExecution.scala:286)
+	at scala.runtime.java8.JFunction0$mcV$sp.apply(JFunction0$mcV$sp.java:23)
+	at org.apache.spark.sql.execution.streaming.ProgressReporter.reportTimeTaken(ProgressReporter.scala:427)
+	at org.apache.spark.sql.execution.streaming.ProgressReporter.reportTimeTaken$(ProgressReporter.scala:425)
+	at org.apache.spark.sql.execution.streaming.StreamExecution.reportTimeTaken(StreamExecution.scala:67)
+	at org.apache.spark.sql.execution.streaming.MicroBatchExecution.$anonfun$runActivatedStream$1(MicroBatchExecution.scala:249)
+	at org.apache.spark.sql.execution.streaming.ProcessingTimeExecutor.execute(TriggerExecutor.scala:67)
+	at org.apache.spark.sql.execution.streaming.MicroBatchExecution.runActivatedStream(MicroBatchExecution.scala:239)
+	at org.apache.spark.sql.execution.streaming.StreamExecution.$anonfun$runStream$1(StreamExecution.scala:311)
+	at scala.runtime.java8.JFunction0$mcV$sp.apply(JFunction0$mcV$sp.java:23)
+	at org.apache.spark.sql.SparkSession.withActive(SparkSession.scala:900)
+	at org.apache.spark.sql.execution.streaming.StreamExecution.org$apache$spark$sql$execution$streaming$StreamExecution$$runStream(StreamExecution.scala:289)
+	at org.apache.spark.sql.execution.streaming.StreamExecution$$anon$1.$anonfun$run$1(StreamExecution.scala:211)
+	at scala.runtime.java8.JFunction0$mcV$sp.apply(JFunction0$mcV$sp.java:23)
+	at org.apache.spark.JobArtifactSet$.withActiveJobArtifactState(JobArtifactSet.scala:94)
+	at org.apache.spark.sql.execution.streaming.StreamExecution$$anon$1.run(StreamExecution.scala:211)
+Caused by: java.sql.BatchUpdateException: Batch entry 0 INSERT INTO user_activity ("event_id","event_time","event_type","product_id","price","user_id","session_id") VALUES ('09beebcd-3fa0-4c46-bbb4-09f3ea301fab','2026-01-26 23:05:07+00'::timestamp,'view',123,458.44,2420,'a44567f8-ffa4-47b0-bc6f-505b1b60a323') was aborted: ERROR: duplicate key value violates unique constraint "user_activity_pkey"
+  Detail: Key (event_id)=(09beebcd-3fa0-4c46-bbb4-09f3ea301fab) already exists.  Call getNextException to see other errors in the batch.
+	at org.postgresql.jdbc.BatchResultHandler.handleError(BatchResultHandler.java:165)
+	at org.postgresql.core.v3.QueryExecutorImpl.processResults(QueryExecutorImpl.java:2402)
+	at org.postgresql.core.v3.QueryExecutorImpl.execute(QueryExecutorImpl.java:574)
+	at org.postgresql.jdbc.PgStatement.internalExecuteBatch(PgStatement.java:896)
+	at org.postgresql.jdbc.PgStatement.executeBatch(PgStatement.java:919)
+	at org.postgresql.jdbc.PgPreparedStatement.executeBatch(PgPreparedStatement.java:1685)
+	at org.apache.spark.sql.execution.datasources.jdbc.JdbcUtils$.savePartition(JdbcUtils.scala:751)
+	at org.apache.spark.sql.execution.datasources.jdbc.JdbcUtils$.$anonfun$saveTable$1(JdbcUtils.scala:902)
+	at org.apache.spark.sql.execution.datasources.jdbc.JdbcUtils$.$anonfun$saveTable$1$adapted(JdbcUtils.scala:901)
+	at org.apache.spark.rdd.RDD.$anonfun$foreachPartition$2(RDD.scala:1036)
+	at org.apache.spark.rdd.RDD.$anonfun$foreachPartition$2$adapted(RDD.scala:1036)
+	at org.apache.spark.SparkContext.$anonfun$runJob$5(SparkContext.scala:2438)
+	at org.apache.spark.scheduler.ResultTask.runTask(ResultTask.scala:93)
+	at org.apache.spark.TaskContext.runTaskWithListeners(TaskContext.scala:161)
+	at org.apache.spark.scheduler.Task.run(Task.scala:141)
+	at org.apache.spark.executor.Executor$TaskRunner.$anonfun$run$4(Executor.scala:620)
+	at org.apache.spark.util.SparkErrorUtils.tryWithSafeFinally(SparkErrorUtils.scala:64)
+	at org.apache.spark.util.SparkErrorUtils.tryWithSafeFinally$(SparkErrorUtils.scala:61)
+	at org.apache.spark.util.Utils$.tryWithSafeFinally(Utils.scala:94)
+	at org.apache.spark.executor.Executor$TaskRunner.run(Executor.scala:623)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(Unknown Source)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(Unknown Source)
+	at java.base/java.lang.Thread.run(Unknown Source)
+Caused by: org.postgresql.util.PSQLException: ERROR: duplicate key value violates unique constraint "user_activity_pkey"
+  Detail: Key (event_id)=(09beebcd-3fa0-4c46-bbb4-09f3ea301fab) already exists.
+	at org.postgresql.core.v3.QueryExecutorImpl.receiveErrorResponse(QueryExecutorImpl.java:2713)
+	at org.postgresql.core.v3.QueryExecutorImpl.processResults(QueryExecutorImpl.java:2401)
+	... 21 more
+Traceback (most recent call last):
+  File "/app/src/spark_streaming_to_postgres.py", line 71, in write_to_postgres
+    valid_df.write \
+  File "/opt/spark/python/lib/pyspark.zip/pyspark/sql/readwriter.py", line 1984, in jdbc
+    self.mode(mode)._jwrite.jdbc(url, table, jprop)
+  File "/opt/spark/python/lib/py4j-0.10.9.7-src.zip/py4j/java_gateway.py", line 1322, in __call__
+    return_value = get_return_value(
+  File "/opt/spark/python/lib/pyspark.zip/pyspark/errors/exceptions/captured.py", line 179, in deco
+    return f(*a, **kw)
+  File "/opt/spark/python/lib/py4j-0.10.9.7-src.zip/py4j/protocol.py", line 326, in get_return_value
+    raise Py4JJavaError(
+py4j.protocol.Py4JJavaError: An error occurred while calling o94.jdbc.
+: org.apache.spark.SparkException: Job aborted due to stage failure: Task 0 in stage 13.0 failed 1 times, most recent failure: Lost task 0.0 in stage 13.0 (TID 17) (ce79a41474fd executor driver): java.sql.BatchUpdateException: Batch entry 0 INSERT INTO user_activity ("event_id","event_time","event_type","product_id","price","user_id","session_id") VALUES ('09beebcd-3fa0-4c46-bbb4-09f3ea301fab','2026-01-26 23:05:07+00'::timestamp,'view',123,458.44,2420,'a44567f8-ffa4-47b0-bc6f-505b1b60a323') was aborted: ERROR: duplicate key value violates unique constraint "user_activity_pkey"
+  Detail: Key (event_id)=(09beebcd-3fa0-4c46-bbb4-09f3ea301fab) already exists.  Call getNextException to see other errors in the batch.
+	at org.postgresql.jdbc.BatchResultHandler.handleError(BatchResultHandler.java:165)
+	at org.postgresql.core.v3.QueryExecutorImpl.processResults(QueryExecutorImpl.java:2402)
+	at org.postgresql.core.v3.QueryExecutorImpl.execute(QueryExecutorImpl.java:574)
+	at org.postgresql.jdbc.PgStatement.internalExecuteBatch(PgStatement.java:896)
+	at org.postgresql.jdbc.PgStatement.executeBatch(PgStatement.java:919)
+	at org.postgresql.jdbc.PgPreparedStatement.executeBatch(PgPreparedStatement.java:1685)
+	at org.apache.spark.sql.execution.datasources.jdbc.JdbcUtils$.savePartition(JdbcUtils.scala:751)
+	at org.apache.spark.sql.execution.datasources.jdbc.JdbcUtils$.$anonfun$saveTable$1(JdbcUtils.scala:902)
+	at org.apache.spark.sql.execution.datasources.jdbc.JdbcUtils$.$anonfun$saveTable$1$adapted(JdbcUtils.scala:901)
+	at org.apache.spark.rdd.RDD.$anonfun$foreachPartition$2(RDD.scala:1036)
+	at org.apache.spark.rdd.RDD.$anonfun$foreachPartition$2$adapted(RDD.scala:1036)
+	at org.apache.spark.SparkContext.$anonfun$runJob$5(SparkContext.scala:2438)
+	at org.apache.spark.scheduler.ResultTask.runTask(ResultTask.scala:93)
+	at org.apache.spark.TaskContext.runTaskWithListeners(TaskContext.scala:161)
+	at org.apache.spark.scheduler.Task.run(Task.scala:141)
+	at org.apache.spark.executor.Executor$TaskRunner.$anonfun$run$4(Executor.scala:620)
+	at org.apache.spark.util.SparkErrorUtils.tryWithSafeFinally(SparkErrorUtils.scala:64)
+	at org.apache.spark.util.SparkErrorUtils.tryWithSafeFinally$(SparkErrorUtils.scala:61)
+	at org.apache.spark.util.Utils$.tryWithSafeFinally(Utils.scala:94)
+	at org.apache.spark.executor.Executor$TaskRunner.run(Executor.scala:623)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(Unknown Source)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(Unknown Source)
+	at java.base/java.lang.Thread.run(Unknown Source)
+Caused by: org.postgresql.util.PSQLException: ERROR: duplicate key value violates unique constraint "user_activity_pkey"
+  Detail: Key (event_id)=(09beebcd-3fa0-4c46-bbb4-09f3ea301fab) already exists.
+	at org.postgresql.core.v3.QueryExecutorImpl.receiveErrorResponse(QueryExecutorImpl.java:2713)
+	at org.postgresql.core.v3.QueryExecutorImpl.processResults(QueryExecutorImpl.java:2401)
+	... 21 more
+
+Driver stacktrace:
+	at org.apache.spark.scheduler.DAGScheduler.failJobAndIndependentStages(DAGScheduler.scala:2844)
+	at org.apache.spark.scheduler.DAGScheduler.$anonfun$abortStage$2(DAGScheduler.scala:2780)
+	at org.apache.spark.scheduler.DAGScheduler.$anonfun$abortStage$2$adapted(DAGScheduler.scala:2779)
+	at scala.collection.mutable.ResizableArray.foreach(ResizableArray.scala:62)
+	at scala.collection.mutable.ResizableArray.foreach$(ResizableArray.scala:55)
+	at scala.collection.mutable.ArrayBuffer.foreach(ArrayBuffer.scala:49)
+	at org.apache.spark.scheduler.DAGScheduler.abortStage(DAGScheduler.scala:2779)
+	at org.apache.spark.scheduler.DAGScheduler.$anonfun$handleTaskSetFailed$1(DAGScheduler.scala:1242)
+	at org.apache.spark.scheduler.DAGScheduler.$anonfun$handleTaskSetFailed$1$adapted(DAGScheduler.scala:1242)
+	at scala.Option.foreach(Option.scala:407)
+	at org.apache.spark.scheduler.DAGScheduler.handleTaskSetFailed(DAGScheduler.scala:1242)
+	at org.apache.spark.scheduler.DAGSchedulerEventProcessLoop.doOnReceive(DAGScheduler.scala:3048)
+	at org.apache.spark.scheduler.DAGSchedulerEventProcessLoop.onReceive(DAGScheduler.scala:2982)
+	at org.apache.spark.scheduler.DAGSchedulerEventProcessLoop.onReceive(DAGScheduler.scala:2971)
+	at org.apache.spark.util.EventLoop$$anon$1.run(EventLoop.scala:49)
+	at org.apache.spark.scheduler.DAGScheduler.runJob(DAGScheduler.scala:984)
+	at org.apache.spark.SparkContext.runJob(SparkContext.scala:2398)
+	at org.apache.spark.SparkContext.runJob(SparkContext.scala:2419)
+	at org.apache.spark.SparkContext.runJob(SparkContext.scala:2438)
+	at org.apache.spark.SparkContext.runJob(SparkContext.scala:2463)
+	at org.apache.spark.rdd.RDD.$anonfun$foreachPartition$1(RDD.scala:1036)
+	at org.apache.spark.rdd.RDDOperationScope$.withScope(RDDOperationScope.scala:151)
+	at org.apache.spark.rdd.RDDOperationScope$.withScope(RDDOperationScope.scala:112)
+	at org.apache.spark.rdd.RDD.withScope(RDD.scala:407)
+	at org.apache.spark.rdd.RDD.foreachPartition(RDD.scala:1034)
+	at org.apache.spark.sql.execution.datasources.jdbc.JdbcUtils$.saveTable(JdbcUtils.scala:901)
+	at org.apache.spark.sql.execution.datasources.jdbc.JdbcRelationProvider.createRelation(JdbcRelationProvider.scala:70)
+	at org.apache.spark.sql.execution.datasources.SaveIntoDataSourceCommand.run(SaveIntoDataSourceCommand.scala:48)
+	at org.apache.spark.sql.execution.command.ExecutedCommandExec.sideEffectResult$lzycompute(commands.scala:75)
+	at org.apache.spark.sql.execution.command.ExecutedCommandExec.sideEffectResult(commands.scala:73)
+	at org.apache.spark.sql.execution.command.ExecutedCommandExec.executeCollect(commands.scala:84)
+	at org.apache.spark.sql.execution.QueryExecution$$anonfun$eagerlyExecuteCommands$1.$anonfun$applyOrElse$1(QueryExecution.scala:107)
+	at org.apache.spark.sql.execution.SQLExecution$.$anonfun$withNewExecutionId$6(SQLExecution.scala:125)
+	at org.apache.spark.sql.execution.SQLExecution$.withSQLConfPropagated(SQLExecution.scala:201)
+	at org.apache.spark.sql.execution.SQLExecution$.$anonfun$withNewExecutionId$1(SQLExecution.scala:108)
+	at org.apache.spark.sql.SparkSession.withActive(SparkSession.scala:900)
+	at org.apache.spark.sql.execution.SQLExecution$.withNewExecutionId(SQLExecution.scala:66)
+	at org.apache.spark.sql.execution.QueryExecution$$anonfun$eagerlyExecuteCommands$1.applyOrElse(QueryExecution.scala:107)
+	at org.apache.spark.sql.execution.QueryExecution$$anonfun$eagerlyExecuteCommands$1.applyOrElse(QueryExecution.scala:98)
+	at org.apache.spark.sql.catalyst.trees.TreeNode.$anonfun$transformDownWithPruning$1(TreeNode.scala:461)
+	at org.apache.spark.sql.catalyst.trees.CurrentOrigin$.withOrigin(origin.scala:76)
+	at org.apache.spark.sql.catalyst.trees.TreeNode.transformDownWithPruning(TreeNode.scala:461)
+	at org.apache.spark.sql.catalyst.plans.logical.LogicalPlan.org$apache$spark$sql$catalyst$plans$logical$AnalysisHelper$$super$transformDownWithPruning(LogicalPlan.scala:32)
+	at org.apache.spark.sql.catalyst.plans.logical.AnalysisHelper.transformDownWithPruning(AnalysisHelper.scala:267)
+	at org.apache.spark.sql.catalyst.plans.logical.AnalysisHelper.transformDownWithPruning$(AnalysisHelper.scala:263)
+	at org.apache.spark.sql.catalyst.plans.logical.LogicalPlan.transformDownWithPruning(LogicalPlan.scala:32)
+	at org.apache.spark.sql.catalyst.plans.logical.LogicalPlan.transformDownWithPruning(LogicalPlan.scala:32)
+	at org.apache.spark.sql.catalyst.trees.TreeNode.transformDown(TreeNode.scala:437)
+	at org.apache.spark.sql.execution.QueryExecution.eagerlyExecuteCommands(QueryExecution.scala:98)
+	at org.apache.spark.sql.execution.QueryExecution.commandExecuted$lzycompute(QueryExecution.scala:85)
+	at org.apache.spark.sql.execution.QueryExecution.commandExecuted(QueryExecution.scala:83)
+	at org.apache.spark.sql.execution.QueryExecution.assertCommandExecuted(QueryExecution.scala:142)
+	at org.apache.spark.sql.DataFrameWriter.runCommand(DataFrameWriter.scala:859)
+	at org.apache.spark.sql.DataFrameWriter.saveToV1Source(DataFrameWriter.scala:388)
+	at org.apache.spark.sql.DataFrameWriter.saveInternal(DataFrameWriter.scala:361)
+	at org.apache.spark.sql.DataFrameWriter.save(DataFrameWriter.scala:248)
+	at org.apache.spark.sql.DataFrameWriter.jdbc(DataFrameWriter.scala:756)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
+	at java.base/java.lang.reflect.Method.invoke(Unknown Source)
+	at py4j.reflection.MethodInvoker.invoke(MethodInvoker.java:244)
+	at py4j.reflection.ReflectionEngine.invoke(ReflectionEngine.java:374)
+	at py4j.Gateway.invoke(Gateway.java:282)
+	at py4j.commands.AbstractCommand.invokeMethod(AbstractCommand.java:132)
+	at py4j.commands.CallCommand.execute(CallCommand.java:79)
+	at py4j.ClientServerConnection.sendCommand(ClientServerConnection.java:244)
+	at py4j.CallbackClient.sendCommand(CallbackClient.java:384)
+	at py4j.CallbackClient.sendCommand(CallbackClient.java:356)
+	at py4j.reflection.PythonProxyHandler.invoke(PythonProxyHandler.java:106)
+	at com.sun.proxy.$Proxy31.call(Unknown Source)
+	at org.apache.spark.sql.execution.streaming.sources.PythonForeachBatchHelper$.$anonfun$callForeachBatch$1(ForeachBatchSink.scala:53)
+	at org.apache.spark.sql.execution.streaming.sources.PythonForeachBatchHelper$.$anonfun$callForeachBatch$1$adapted(ForeachBatchSink.scala:53)
+	at org.apache.spark.sql.execution.streaming.sources.ForeachBatchSink.addBatch(ForeachBatchSink.scala:34)
+	at org.apache.spark.sql.execution.streaming.MicroBatchExecution.$anonfun$runBatch$17(MicroBatchExecution.scala:732)
+	at org.apache.spark.sql.execution.SQLExecution$.$anonfun$withNewExecutionId$6(SQLExecution.scala:125)
+	at org.apache.spark.sql.execution.SQLExecution$.withSQLConfPropagated(SQLExecution.scala:201)
+	at org.apache.spark.sql.execution.SQLExecution$.$anonfun$withNewExecutionId$1(SQLExecution.scala:108)
+	at org.apache.spark.sql.SparkSession.withActive(SparkSession.scala:900)
+	at org.apache.spark.sql.execution.SQLExecution$.withNewExecutionId(SQLExecution.scala:66)
+	at org.apache.spark.sql.execution.streaming.MicroBatchExecution.$anonfun$runBatch$16(MicroBatchExecution.scala:729)
+	at org.apache.spark.sql.execution.streaming.ProgressReporter.reportTimeTaken(ProgressReporter.scala:427)
+	at org.apache.spark.sql.execution.streaming.ProgressReporter.reportTimeTaken$(ProgressReporter.scala:425)
+	at org.apache.spark.sql.execution.streaming.StreamExecution.reportTimeTaken(StreamExecution.scala:67)
+	at org.apache.spark.sql.execution.streaming.MicroBatchExecution.runBatch(MicroBatchExecution.scala:729)
+	at org.apache.spark.sql.execution.streaming.MicroBatchExecution.$anonfun$runActivatedStream$2(MicroBatchExecution.scala:286)
+	at scala.runtime.java8.JFunction0$mcV$sp.apply(JFunction0$mcV$sp.java:23)
+	at org.apache.spark.sql.execution.streaming.ProgressReporter.reportTimeTaken(ProgressReporter.scala:427)
+	at org.apache.spark.sql.execution.streaming.ProgressReporter.reportTimeTaken$(ProgressReporter.scala:425)
+	at org.apache.spark.sql.execution.streaming.StreamExecution.reportTimeTaken(StreamExecution.scala:67)
+	at org.apache.spark.sql.execution.streaming.MicroBatchExecution.$anonfun$runActivatedStream$1(MicroBatchExecution.scala:249)
+	at org.apache.spark.sql.execution.streaming.ProcessingTimeExecutor.execute(TriggerExecutor.scala:67)
+	at org.apache.spark.sql.execution.streaming.MicroBatchExecution.runActivatedStream(MicroBatchExecution.scala:239)
+	at org.apache.spark.sql.execution.streaming.StreamExecution.$anonfun$runStream$1(StreamExecution.scala:311)
+	at scala.runtime.java8.JFunction0$mcV$sp.apply(JFunction0$mcV$sp.java:23)
+	at org.apache.spark.sql.SparkSession.withActive(SparkSession.scala:900)
+	at org.apache.spark.sql.execution.streaming.StreamExecution.org$apache$spark$sql$execution$streaming$StreamExecution$$runStream(StreamExecution.scala:289)
+	at org.apache.spark.sql.execution.streaming.StreamExecution$$anon$1.$anonfun$run$1(StreamExecution.scala:211)
+	at scala.runtime.java8.JFunction0$mcV$sp.apply(JFunction0$mcV$sp.java:23)
+	at org.apache.spark.JobArtifactSet$.withActiveJobArtifactState(JobArtifactSet.scala:94)
+	at org.apache.spark.sql.execution.streaming.StreamExecution$$anon$1.run(StreamExecution.scala:211)
+Caused by: java.sql.BatchUpdateException: Batch entry 0 INSERT INTO user_activity ("event_id","event_time","event_type","product_id","price","user_id","session_id") VALUES ('09beebcd-3fa0-4c46-bbb4-09f3ea301fab','2026-01-26 23:05:07+00'::timestamp,'view',123,458.44,2420,'a44567f8-ffa4-47b0-bc6f-505b1b60a323') was aborted: ERROR: duplicate key value violates unique constraint "user_activity_pkey"
+  Detail: Key (event_id)=(09beebcd-3fa0-4c46-bbb4-09f3ea301fab) already exists.  Call getNextException to see other errors in the batch.
+	at org.postgresql.jdbc.BatchResultHandler.handleError(BatchResultHandler.java:165)
+	at org.postgresql.core.v3.QueryExecutorImpl.processResults(QueryExecutorImpl.java:2402)
+	at org.postgresql.core.v3.QueryExecutorImpl.execute(QueryExecutorImpl.java:574)
+	at org.postgresql.jdbc.PgStatement.internalExecuteBatch(PgStatement.java:896)
+	at org.postgresql.jdbc.PgStatement.executeBatch(PgStatement.java:919)
+	at org.postgresql.jdbc.PgPreparedStatement.executeBatch(PgPreparedStatement.java:1685)
+	at org.apache.spark.sql.execution.datasources.jdbc.JdbcUtils$.savePartition(JdbcUtils.scala:751)
+	at org.apache.spark.sql.execution.datasources.jdbc.JdbcUtils$.$anonfun$saveTable$1(JdbcUtils.scala:902)
+	at org.apache.spark.sql.execution.datasources.jdbc.JdbcUtils$.$anonfun$saveTable$1$adapted(JdbcUtils.scala:901)
+	at org.apache.spark.rdd.RDD.$anonfun$foreachPartition$2(RDD.scala:1036)
+	at org.apache.spark.rdd.RDD.$anonfun$foreachPartition$2$adapted(RDD.scala:1036)
+	at org.apache.spark.SparkContext.$anonfun$runJob$5(SparkContext.scala:2438)
+	at org.apache.spark.scheduler.ResultTask.runTask(ResultTask.scala:93)
+	at org.apache.spark.TaskContext.runTaskWithListeners(TaskContext.scala:161)
+	at org.apache.spark.scheduler.Task.run(Task.scala:141)
+	at org.apache.spark.executor.Executor$TaskRunner.$anonfun$run$4(Executor.scala:620)
+	at org.apache.spark.util.SparkErrorUtils.tryWithSafeFinally(SparkErrorUtils.scala:64)
+	at org.apache.spark.util.SparkErrorUtils.tryWithSafeFinally$(SparkErrorUtils.scala:61)
+	at org.apache.spark.util.Utils$.tryWithSafeFinally(Utils.scala:94)
+	at org.apache.spark.executor.Executor$TaskRunner.run(Executor.scala:623)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(Unknown Source)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(Unknown Source)
+	at java.base/java.lang.Thread.run(Unknown Source)
+Caused by: org.postgresql.util.PSQLException: ERROR: duplicate key value violates unique constraint "user_activity_pkey"
+  Detail: Key (event_id)=(09beebcd-3fa0-4c46-bbb4-09f3ea301fab) already exists.
+	at org.postgresql.core.v3.QueryExecutorImpl.receiveErrorResponse(QueryExecutorImpl.java:2713)
+	at org.postgresql.core.v3.QueryExecutorImpl.processResults(QueryExecutorImpl.java:2401)
+	... 21 more
+
+2026-01-26 23:05:19,546 - CRITICAL - Spark Streaming Job Crashed: [STREAM_FAILED] Query [id = 1a8585a0-03d5-4587-98a1-a0e90e5cd532, runId = 8a6492c8-655f-40b8-832b-a05e51a8ab6f] terminated with exception: Multiple streaming queries are concurrently using file:/app/data/checkpoints/postgres_sink/sources/0.
+Traceback (most recent call last):
+  File "/app/src/spark_streaming_to_postgres.py", line 153, in main
+    query.awaitTermination()
+  File "/opt/spark/python/lib/pyspark.zip/pyspark/sql/streaming/query.py", line 221, in awaitTermination
+    return self._jsq.awaitTermination()
+  File "/opt/spark/python/lib/py4j-0.10.9.7-src.zip/py4j/java_gateway.py", line 1322, in __call__
+    return_value = get_return_value(
+  File "/opt/spark/python/lib/pyspark.zip/pyspark/errors/exceptions/captured.py", line 185, in deco
+    raise converted from None
+pyspark.errors.exceptions.captured.StreamingQueryException: [STREAM_FAILED] Query [id = 1a8585a0-03d5-4587-98a1-a0e90e5cd532, runId = 8a6492c8-655f-40b8-832b-a05e51a8ab6f] terminated with exception: Multiple streaming queries are concurrently using file:/app/data/checkpoints/postgres_sink/sources/0.
+2026-01-26 23:05:20,859 - INFO - Processing Batch ID: 25 with 59 records.
+2026-01-26 23:05:21,901 - INFO - Batch ID: 25 - Success: Wrote 59 valid records.
+2026-01-26 23:05:24,796 - INFO - Processing Batch ID: 26 with 80 records.
+2026-01-26 23:05:25,714 - INFO - Batch ID: 26 - Success: Wrote 80 valid records.
+2026-01-26 23:05:30,237 - INFO - Processing Batch ID: 27 with 60 records.
+2026-01-26 23:05:30,750 - INFO - Batch ID: 27 - Success: Wrote 60 valid records.
+2026-01-26 23:05:33,730 - INFO - Processing Batch ID: 28 with 51 records.
+2026-01-26 23:05:34,587 - INFO - Batch ID: 28 - Success: Wrote 51 valid records.
+2026-01-26 23:05:38,826 - INFO - Processing Batch ID: 29 with 88 records.
+2026-01-26 23:05:39,358 - INFO - Batch ID: 29 - Success: Wrote 88 valid records.
+2026-01-26 23:05:42,447 - INFO - Processing Batch ID: 30 with 65 records.
+2026-01-26 23:05:42,982 - INFO - Batch ID: 30 - Success: Wrote 65 valid records.
+2026-01-26 23:05:46,576 - INFO - Processing Batch ID: 31 with 67 records.
+2026-01-26 23:05:47,097 - INFO - Batch ID: 31 - Success: Wrote 67 valid records.
+2026-01-26 23:05:51,150 - INFO - Processing Batch ID: 32 with 93 records.
+2026-01-26 23:05:51,711 - INFO - Batch ID: 32 - Success: Wrote 93 valid records.
+2026-01-26 23:05:54,845 - INFO - Processing Batch ID: 33 with 81 records.
+2026-01-26 23:05:55,788 - INFO - Batch ID: 33 - Success: Wrote 80 valid records.
+2026-01-26 23:05:59,518 - INFO - Processing Batch ID: 34 with 66 records.
+2026-01-26 23:06:00,071 - INFO - Batch ID: 34 - Success: Wrote 66 valid records.
+2026-01-26 23:06:04,196 - INFO - Processing Batch ID: 35 with 65 records.
+2026-01-26 23:06:04,938 - INFO - Batch ID: 35 - Success: Wrote 65 valid records.
+2026-01-26 23:06:08,092 - INFO - Processing Batch ID: 36 with 72 records.
+2026-01-26 23:06:08,713 - INFO - Batch ID: 36 - Success: Wrote 72 valid records.
+2026-01-26 23:06:15,453 - INFO - Processing Batch ID: 37 with 69 records.
+2026-01-26 23:06:15,930 - INFO - Batch ID: 37 - Success: Wrote 69 valid records.
+2026-01-26 23:06:19,114 - INFO - Processing Batch ID: 38 with 67 records.
+2026-01-26 23:06:19,875 - INFO - Batch ID: 38 - Success: Wrote 67 valid records.
+2026-01-26 23:06:23,108 - INFO - Processing Batch ID: 39 with 79 records.
+2026-01-26 23:06:23,550 - INFO - Batch ID: 39 - Success: Wrote 79 valid records.
+2026-01-26 23:06:26,831 - INFO - Processing Batch ID: 40 with 71 records.
+2026-01-26 23:06:27,318 - INFO - >>> Spark Session Initialized. Starting Stream...
+2026-01-26 23:06:27,319 - INFO - Monitoring input directory: /app/data/input
+2026-01-26 23:06:27,418 - INFO - Batch ID: 40 - Success: Wrote 71 valid records.
+2026-01-26 23:06:32,009 - INFO - Processing Batch ID: 41 with 63 records.
+2026-01-26 23:06:32,496 - INFO - Batch ID: 41 - Success: Wrote 63 valid records.
+2026-01-26 23:06:35,423 - INFO - Processing Batch ID: 42 with 64 records.
+2026-01-26 23:06:36,198 - INFO - Batch ID: 42 - Success: Wrote 64 valid records.
+2026-01-26 23:06:39,149 - INFO - Processing Batch ID: 43 with 86 records.
+2026-01-26 23:06:39,650 - INFO - Batch ID: 43 - Success: Wrote 86 valid records.
+2026-01-26 23:06:42,613 - INFO - Processing Batch ID: 44 with 81 records.
+2026-01-26 23:06:43,113 - INFO - Batch ID: 44 - Success: Wrote 81 valid records.
+2026-01-26 23:06:47,896 - INFO - Processing Batch ID: 45 with 54 records.
+2026-01-26 23:06:48,518 - INFO - Batch ID: 45 - Success: Wrote 54 valid records.
+2026-01-26 23:06:52,846 - INFO - Processing Batch ID: 46 with 96 records.
+2026-01-26 23:06:53,340 - INFO - Batch ID: 46 - Success: Wrote 96 valid records.
+2026-01-26 23:06:58,370 - INFO - Processing Batch ID: 47 with 93 records.
+2026-01-26 23:06:58,936 - INFO - Batch ID: 47 - Success: Wrote 93 valid records.
+2026-01-26 23:07:07,017 - INFO - Processing Batch ID: 45 with 54 records.
+2026-01-26 23:07:07,345 - INFO - Processing Batch ID: 48 with 54 records.
+2026-01-26 23:07:07,846 - INFO - Batch ID: 48 - Success: Wrote 54 valid records.
+2026-01-26 23:07:10,776 - INFO - Processing Batch ID: 49 with 83 records.
+2026-01-26 23:07:11,383 - INFO - Batch ID: 49 - Success: Wrote 83 valid records.
+2026-01-26 23:07:11,755 - INFO - Batch ID: 45 - Success: Wrote 54 valid records.
+2026-01-26 23:07:13,299 - CRITICAL - Spark Streaming Job Crashed: [STREAM_FAILED] Query [id = 1a8585a0-03d5-4587-98a1-a0e90e5cd532, runId = 60b39017-533d-4fc0-95ad-4e16863b6586] terminated with exception: [CONCURRENT_STREAM_LOG_UPDATE] Concurrent update to the log. Multiple streaming jobs detected for 45.
+Please make sure only one streaming job runs on a specific checkpoint location at a time.
+Traceback (most recent call last):
+  File "/app/src/spark_streaming_to_postgres.py", line 153, in main
+    query.awaitTermination()
+  File "/opt/spark/python/lib/pyspark.zip/pyspark/sql/streaming/query.py", line 221, in awaitTermination
+    return self._jsq.awaitTermination()
+  File "/opt/spark/python/lib/py4j-0.10.9.7-src.zip/py4j/java_gateway.py", line 1322, in __call__
+    return_value = get_return_value(
+  File "/opt/spark/python/lib/pyspark.zip/pyspark/errors/exceptions/captured.py", line 185, in deco
+    raise converted from None
+pyspark.errors.exceptions.captured.StreamingQueryException: [STREAM_FAILED] Query [id = 1a8585a0-03d5-4587-98a1-a0e90e5cd532, runId = 60b39017-533d-4fc0-95ad-4e16863b6586] terminated with exception: [CONCURRENT_STREAM_LOG_UPDATE] Concurrent update to the log. Multiple streaming jobs detected for 45.
+Please make sure only one streaming job runs on a specific checkpoint location at a time.
+2026-01-26 23:07:16,294 - INFO - Processing Batch ID: 50 with 70 records.
+2026-01-26 23:07:16,799 - INFO - Batch ID: 50 - Success: Wrote 70 valid records.
+2026-01-26 23:07:20,929 - INFO - Processing Batch ID: 51 with 98 records.
+2026-01-26 23:07:21,720 - INFO - Batch ID: 51 - Success: Wrote 98 valid records.
+2026-01-26 23:07:25,389 - INFO - Processing Batch ID: 52 with 77 records.
+2026-01-26 23:07:25,979 - INFO - Batch ID: 52 - Success: Wrote 77 valid records.
+2026-01-26 23:07:30,884 - INFO - Processing Batch ID: 53 with 98 records.
+2026-01-26 23:07:31,422 - INFO - Batch ID: 53 - Success: Wrote 98 valid records.
+2026-01-26 23:07:38,879 - INFO - Processing Batch ID: 54 with 60 records.
+2026-01-26 23:07:39,263 - INFO - Batch ID: 54 - Success: Wrote 60 valid records.
+2026-01-26 23:07:42,875 - INFO - Processing Batch ID: 55 with 71 records.
+2026-01-26 23:07:43,402 - INFO - Batch ID: 55 - Success: Wrote 71 valid records.
+2026-01-26 23:07:48,419 - INFO - Processing Batch ID: 56 with 94 records.
+2026-01-26 23:07:48,945 - INFO - Batch ID: 56 - Success: Wrote 94 valid records.
+2026-01-26 23:07:52,555 - INFO - Processing Batch ID: 57 with 85 records.
+2026-01-26 23:07:52,968 - INFO - Batch ID: 57 - Success: Wrote 85 valid records.
+2026-01-26 23:07:58,708 - INFO - Processing Batch ID: 58 with 89 records.
+2026-01-26 23:07:59,218 - INFO - Batch ID: 58 - Success: Wrote 89 valid records.
+2026-01-26 23:08:03,338 - INFO - Processing Batch ID: 59 with 79 records.
+2026-01-26 23:08:04,073 - INFO - Batch ID: 59 - Success: Wrote 79 valid records.
+2026-01-26 23:08:09,990 - INFO - Processing Batch ID: 60 with 96 records.
+2026-01-26 23:08:10,575 - INFO - Batch ID: 60 - Success: Wrote 96 valid records.
+2026-01-26 23:08:14,469 - INFO - Processing Batch ID: 61 with 50 records.
+2026-01-26 23:08:14,939 - INFO - Batch ID: 61 - Success: Wrote 50 valid records.
+2026-01-26 23:08:19,822 - INFO - Processing Batch ID: 62 with 65 records.
+2026-01-26 23:08:20,209 - INFO - Batch ID: 62 - Success: Wrote 65 valid records.
+2026-01-26 23:08:25,682 - INFO - Processing Batch ID: 63 with 64 records.
+2026-01-26 23:08:26,298 - INFO - Batch ID: 63 - Success: Wrote 64 valid records.

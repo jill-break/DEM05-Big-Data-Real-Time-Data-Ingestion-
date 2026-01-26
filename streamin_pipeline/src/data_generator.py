@@ -4,39 +4,21 @@ import uuid
 import random
 import os
 import shutil
-import logging
 import sys
 from datetime import datetime
 from faker import Faker
 
-# --- Configuration ---
-DATA_DIR = "/app/data"
-INPUT_DIR = os.path.join(DATA_DIR, "input")   # Where Spark looks for files
-TEMP_DIR = os.path.join(DATA_DIR, "temp")     # Where we write files initially
+# Import configuration and logging
+import config
+from logger_utils import setup_logger
 
 # --- Logging Setup ---
-# Define log directory relative to the project root
-# If running in Docker, this maps to the volume mounted at /app/logs
-LOG_DIR = "/app/logs"
-os.makedirs(LOG_DIR, exist_ok=True)
-LOG_FILE = os.path.join(LOG_DIR, "data_generator.log")
-
-# Configure logger
-logging.basicConfig(
-    level=logging.INFO,
-    format='%(asctime)s - %(levelname)s - %(message)s',
-    handlers=[
-        # Added mode='a' (append) and encoding='utf-8' for safety
-        logging.FileHandler(LOG_FILE, mode='a', encoding='utf-8'),
-        logging.StreamHandler()  # Write to console
-    ],
-    force=True  # <--- CRITICAL: Forces this config to override any previous defaults
-)
-logger = logging.getLogger(__name__)
+LOG_FILE = os.path.join(config.LOG_DIR, "data_generator.log")
+logger = setup_logger("DataGenerator", LOG_FILE)
 
 # Ensure data directories exist
-os.makedirs(INPUT_DIR, exist_ok=True)
-os.makedirs(TEMP_DIR, exist_ok=True)
+os.makedirs(config.INPUT_DIR, exist_ok=True)
+os.makedirs(config.TEMP_DIR, exist_ok=True)
 
 fake = Faker()
 
@@ -58,8 +40,8 @@ def generate_event():
 def generate_batch(batch_id):
     """Generates a CSV file with 50-100 random events."""
     file_name = f"events_{batch_id}.csv"
-    temp_path = os.path.join(TEMP_DIR, file_name)
-    final_path = os.path.join(INPUT_DIR, file_name)
+    temp_path = os.path.join(config.TEMP_DIR, file_name)
+    final_path = os.path.join(config.INPUT_DIR, file_name)
     
     try:
         # 1. Write to specific Temp path first (Safe from Spark)
@@ -88,7 +70,7 @@ if __name__ == "__main__":
     sys.stdout.reconfigure(line_buffering=True) # type: ignore
 
     logger.info("Starting Data Generator...")
-    logger.info(f"Writing data to: {INPUT_DIR}")
+    logger.info(f"Writing data to: {config.INPUT_DIR}")
     
     batch_counter = 1
     try:

@@ -10,15 +10,15 @@ from datetime import datetime
 
 # --- Configuration ---
 DB_CONFIG = {
-    "dbname": "ecommerce_db",
-    "user": "myuser",
-    "password": "mypassword",
-    "host": "localhost",
-    "port": "5433"
+    "dbname": os.getenv("TEST_DB_NAME", "ecommerce_db"),
+    "user": os.getenv("TEST_DB_USER", "myuser"),
+    "password": os.getenv("TEST_DB_PASSWORD", "mypassword"),
+    "host": os.getenv("TEST_DB_HOST", "localhost"),
+    "port": os.getenv("TEST_DB_PORT", "5433")
 }
 
-INPUT_DATA_DIR = "./data/input"
-LOG_DIR = "./logs"
+INPUT_DATA_DIR = os.getenv("TEST_INPUT_DIR", "./data/input")
+LOG_DIR = os.getenv("TEST_LOG_DIR", "./logs")
 LOG_FILE = os.path.join(LOG_DIR, "test_execution.log")
 
 # --- Logging Setup ---

@@ -21,12 +21,19 @@ services:
     container_name: spark_master
     # Command to start Master
     command: /opt/spark/bin/spark-class org.apache.spark.deploy.master.Master
+    environment:
+      - POSTGRES_USER=myuser
+      - POSTGRES_PASSWORD=mypassword
+      - POSTGRES_DB=ecommerce_db
+      - POSTGRES_HOST=postgres
+      - POSTGRES_PORT=5432
     ports:
       - "8080:8080"
       - "7077:7077"
     volumes:
       - ./src:/app/src
       - ./data:/app/data
+      - ./logs:/app/logs
     networks:
       - data-network
 
@@ -37,8 +44,37 @@ services:
     command: /opt/spark/bin/spark-class org.apache.spark.deploy.worker.Worker spark://spark-master:7077
     depends_on:
       - spark-master
+    environment:
+      - POSTGRES_USER=myuser
+      - POSTGRES_PASSWORD=mypassword
+      - POSTGRES_DB=ecommerce_db
+      - POSTGRES_HOST=postgres
+      - POSTGRES_PORT=5432
     volumes:
+      - ./src:/app/src
       - ./data:/app/data
+      - ./logs:/app/logs
+    networks:
+      - data-network
+
+  archiver:
+    build: .
+    container_name: file_archiver
+    # Run the python archiver script
+    command: python3 /app/src/archiver.py
+    environment:
+      - POSTGRES_USER=myuser
+      - POSTGRES_PASSWORD=mypassword
+      - POSTGRES_DB=ecommerce_db
+      - POSTGRES_HOST=postgres
+      - POSTGRES_PORT=5432
+      - INPUT_DIR=/app/data/input
+      - ARCHIVE_DIR=/app/data/archive
+      - ARCHIVE_AGE_MINUTES=1
+    volumes:
+      - ./src:/app/src
+      - ./data:/app/data
+      - ./logs:/app/logs
     networks:
       - data-network
 

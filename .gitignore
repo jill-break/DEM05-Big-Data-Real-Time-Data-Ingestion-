@@ -3,4 +3,4 @@ streamin_pipeline/__pycache__/
 streamin_pipeline/*.pyc
 streamin_pipeline/tests/__pycache__/
 streamin_pipeline/tests/*.pyc   
-streamin_pipeline/data/*.csv
+streamin_pipeline/data/*
