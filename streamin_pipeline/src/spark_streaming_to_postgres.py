@@ -87,7 +87,7 @@ def write_to_postgres(batch_df, batch_id):
                 col("price").cast(StringType()),
                 col("user_id").cast(StringType()),
                 col("session_id").cast(StringType())
-            ).withColumn("error_message", from_json(col("event_id"), StringType())) # Placeholder, normally we'd compute the reason
+            ).withColumn("error_message", from_json(col("event_id"), StringType())) # type: ignore # Placeholder, normally we'd compute the reason
             
             # Just set a generic error message for now since Spark column expressions for specific errors are complex
             from pyspark.sql.functions import lit
