@@ -9,7 +9,7 @@ import config
 from logger_utils import setup_logger
 import signal
 
-# --- Logging Setup ---
+#  Logging Setup 
 LOG_FILE = os.path.join(config.LOG_DIR, "spark_streaming.log")
 logger = setup_logger("SparkStreaming", LOG_FILE)
 
@@ -49,7 +49,7 @@ def write_to_postgres(batch_df, batch_id):
 
         logger.info(f"Processing Batch ID: {batch_id} with {batch_df.count()} records.")
 
-        # --- Validation Logic ---
+        #  Validation Logic 
         # 1. Price must be > 0
         # 2. Event Type must be valid
         # 3. Product ID and User ID must not be null
@@ -65,14 +65,14 @@ def write_to_postgres(batch_df, batch_id):
         valid_df = batch_df.filter(valid_condition)
         invalid_df = batch_df.filter(~valid_condition)
 
-        # --- Write Valid Rows ---
+        #  Write Valid Rows 
         valid_count = valid_df.count()
         if valid_count > 0:
             valid_df.write \
                 .jdbc(url=DB_URL, table="user_activity", mode="append", properties=DB_PROPERTIES)
             logger.info(f"Batch ID: {batch_id} - Success: Wrote {valid_count} valid records.")
 
-        # --- Write Invalid Rows (DLQ) ---
+        #  Write Invalid Rows (DLQ) 
         invalid_count = invalid_df.count()
         if invalid_count > 0:
             logger.warning(f"Batch ID: {batch_id} - Found {invalid_count} invalid records! Sending to DLQ.")

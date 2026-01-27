@@ -8,7 +8,7 @@ import logging
 import sys
 from datetime import datetime
 
-# --- Configuration ---
+#  Configuration 
 DB_CONFIG = {
     "dbname": os.getenv("TEST_DB_NAME", "ecommerce_db"),
     "user": os.getenv("TEST_DB_USER", "myuser"),
@@ -21,7 +21,7 @@ INPUT_DATA_DIR = os.getenv("TEST_INPUT_DIR", "./data/input")
 LOG_DIR = os.getenv("TEST_LOG_DIR", "./logs")
 LOG_FILE = os.path.join(LOG_DIR, "test_execution.log")
 
-# --- Logging Setup ---
+#  Logging Setup 
 os.makedirs(LOG_DIR, exist_ok=True)
 
 logging.basicConfig(
@@ -35,7 +35,7 @@ logging.basicConfig(
 )
 logger = logging.getLogger(__name__)
 
-# --- Fixtures ---
+#  Fixtures 
 @pytest.fixture(scope="module")
 def db_cursor():
     logger.info("Setting up Database Connection...")
@@ -53,7 +53,7 @@ def db_cursor():
             conn.close()
             logger.info("Database Connection Closed.")
 
-# --- Test Cases ---
+#  Test Cases 
 
 def test_tc001_verify_database_initialization(db_cursor):
     """

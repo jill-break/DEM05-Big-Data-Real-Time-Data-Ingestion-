@@ -23,7 +23,7 @@ LOG_DIR = os.getenv("LOG_DIR", "/app/logs")
 DATA_DIR = os.getenv("DATA_DIR", "/app/data")
 TEMP_DIR = os.path.join(DATA_DIR, "temp")
 ARCHIVE_DIR = os.path.join(DATA_DIR, "archive")
-ARCHIVE_AGE_MINUTES = int(os.getenv("ARCHIVE_AGE_MINUTES", "1")) # Archive quickly for demo
+ARCHIVE_AGE_MINUTES = int(os.getenv("ARCHIVE_AGE_MINUTES", "1")) # 
 
 # Data Generation Configuration
 BATCH_SIZE_MIN = int(os.getenv("BATCH_SIZE_MIN", "50"))
