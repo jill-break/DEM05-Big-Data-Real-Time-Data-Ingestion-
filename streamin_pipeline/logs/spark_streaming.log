@@ -1441,3 +1441,5 @@ Please make sure only one streaming job runs on a specific checkpoint location a
 2026-01-26 23:08:20,209 - INFO - Batch ID: 62 - Success: Wrote 65 valid records.
 2026-01-26 23:08:25,682 - INFO - Processing Batch ID: 63 with 64 records.
 2026-01-26 23:08:26,298 - INFO - Batch ID: 63 - Success: Wrote 64 valid records.
+2026-01-26 23:28:03,862 - INFO - >>> Spark Session Initialized. Starting Stream...
+2026-01-26 23:28:03,863 - INFO - Monitoring input directory: /app/data/input

@@ -1,15 +1,45 @@
-# Manual Test Plan
+# Comprehensive Test Plan
 
-| Test Case ID | Description | Steps to Reproduce | Expected Outcome | Actual Outcome | Status |
+This document outlines the manual and automated test strategies used to verify the Spark Streaming Pipeline.
+
+## 1. Functional Testing (Happy Path)
+
+| Test Case ID | Feature | Description | Steps to Reproduce | Expected Outcome | Status |
 | :--- | :--- | :--- | :--- | :--- | :--- |
-| **TC-001** | Verify Database Initialization | 1. Run `docker-compose up`.<br>2. Check Postgres tables. | Table `user_activity` should exist with correct schema. | Table exists with all columns. | PASS |
-| **TC-002** | Data Generation | 1. Run `data_generator.py`.<br>2. Check `data/input` folder. | CSV files should appear every 5 seconds. | Files `events_1.csv`, `events_2.csv` created. | PASS |
-| **TC-003** | Spark Job Execution | 1. Submit Spark job.<br>2. Check terminal logs. | Logs show "Processing Batch ID: X". | Logs confirmed batch processing. | PASS |
-| **TC-004** | Data Persistence | 1. Query Postgres count.<br>2. Wait 10 seconds.<br>3. Query count again. | Row count should increase. | Count increased from 0 to 2012. | PASS |
-| **TC-005** | Data Integrity | 1. Select one row from DB.<br>2. Compare `event_type`. | `event_type` should be 'view' or 'purchase'. | Valid data found. | PASS |
+| **TC-001** | **Initialization** | Verify all containers start correctly. | 1. Run `docker-compose up -d`<br>2. Run `docker ps` | Containers `postgres_db`, `spark_master`, `spark_worker`, `file_archiver` are UP. | PASS |
+| **TC-002** | **Schema Creation** | Verify Postgres tables exist. | 1. `docker exec -it postgres_db psql ...`<br>2. `\dt` | Tables `user_activity` and `user_activity_errors` exist. | PASS |
+| **TC-003** | **Data Ingestion** | Verify valid events are ingested. | 1. Run `data_generator.py` (default config).<br>2. Wait 30s.<br>3. Query `user_activity`. | Row count increases. `event_type` is valid ('view', 'purchase'). | PASS |
 
+## 2. Data Quality & Error Handling
 
-### Test command
+| Test Case ID | Feature | Description | Steps to Reproduce | Expected Outcome | Status |
+| :--- | :--- | :--- | :--- | :--- | :--- |
+| **TC-004** | **DLQ Routing** | Verify invalid data is sent to DLQ. | 1. Run `python3 src/inject_bad_data.py`<br>2. Query `user_activity_errors`. | Rows with `price < 0` or invalid `event_type` appear in error table. | PASS |
+| **TC-005** | **Null Handling** | Verify missing fields are handled. | 1. Inject row with `user_id=NULL`. | Row is rejected and sent to DLQ (or filtered based on logic). | PASS |
+
+## 3. Operational Features
+
+| Test Case ID | Feature | Description | Steps to Reproduce | Expected Outcome | Status |
+| :--- | :--- | :--- | :--- | :--- | :--- |
+| **TC-006** | **File Archiving** | Verify processed files are moved. | 1. Check `data/input` count.<br>2. Wait > `ARCHIVE_AGE_MINUTES`.<br>3. Check `data/archive`. | Files move from Input -> Archive. Input folder stays clean. | PASS |
+| **TC-007** | **Graceful Shutdown** | Verify clean exit on stop. | 1. Run `docker-compose stop spark_master`. | Logs show `Stopping Spark Query...` and no lock files remain. | PASS |
+
+## 4. Performance & Scalability
+
+| Test Case ID | Feature | Description | Steps to Reproduce | Expected Outcome | Status |
+| :--- | :--- | :--- | :--- | :--- | :--- |
+| **TC-008** | **Stress Test** | Verify system stability under load. | 1. Set `BATCH_SIZE_MAX=5000` in docker-compose.<br>2. Run for 2 mins. | Ingestion rate > 3000 events/sec. No crash. DLQ empty (if data valid). | PASS |
+
+---
+
+## Automated Testing
+
+To run the end-to-end integration tests (which cover TC-001 to TC-004 automatically):
+
 ```bash
-    pytest tests/test_end_to_end.py -v -s
+# Windows
+run_tests.bat
+
+# Linux/Mac
+pytest tests/test_end_to_end.py -v -s
 ```

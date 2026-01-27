@@ -99,3 +99,133 @@
 2026-01-26 23:07:44,799 - INFO - Archived: events_27.csv
 2026-01-26 23:07:44,819 - INFO - Archived: events_28.csv
 2026-01-26 23:07:44,898 - INFO - Run Complete: Archived 12 files.
+2026-01-26 23:27:28,658 - INFO - Starting Archiver Service...
+2026-01-26 23:27:28,664 - INFO - Monitoring: /app/data/input
+2026-01-26 23:27:28,672 - INFO - Archiving to: /app/data/archive
+2026-01-26 23:27:28,686 - INFO - Scanning for files older than 1 minutes (before 2026-01-26 23:26:28.686456)...
+2026-01-26 23:27:28,746 - INFO - Archived: events_29.csv
+2026-01-26 23:27:28,790 - INFO - Archived: events_30.csv
+2026-01-26 23:27:28,825 - INFO - Archived: events_31.csv
+2026-01-26 23:27:28,910 - INFO - Archived: events_32.csv
+2026-01-26 23:27:28,942 - INFO - Archived: events_33.csv
+2026-01-26 23:27:28,974 - INFO - Archived: events_34.csv
+2026-01-26 23:27:29,070 - INFO - Archived: events_35.csv
+2026-01-26 23:27:29,176 - INFO - Archived: events_36.csv
+2026-01-26 23:27:29,226 - INFO - Archived: events_37.csv
+2026-01-26 23:27:29,311 - INFO - Archived: events_38.csv
+2026-01-26 23:27:29,443 - INFO - Archived: events_39.csv
+2026-01-26 23:27:29,609 - INFO - Archived: events_40.csv
+2026-01-26 23:27:29,667 - INFO - Archived: events_41.csv
+2026-01-26 23:27:29,726 - INFO - Archived: events_42.csv
+2026-01-26 23:27:29,777 - INFO - Archived: events_43.csv
+2026-01-26 23:27:29,864 - INFO - Archived: events_44.csv
+2026-01-26 23:27:29,945 - INFO - Archived: events_45.csv
+2026-01-26 23:27:30,150 - INFO - Archived: events_46.csv
+2026-01-26 23:27:30,272 - INFO - Archived: events_47.csv
+2026-01-26 23:27:30,347 - INFO - Archived: events_48.csv
+2026-01-26 23:27:30,374 - INFO - Archived: events_49.csv
+2026-01-26 23:27:30,419 - INFO - Archived: events_50.csv
+2026-01-26 23:27:30,481 - INFO - Archived: events_51.csv
+2026-01-26 23:27:30,595 - INFO - Archived: events_52.csv
+2026-01-26 23:27:30,624 - INFO - Archived: events_53.csv
+2026-01-26 23:27:30,672 - INFO - Archived: events_54.csv
+2026-01-26 23:27:30,713 - INFO - Archived: events_55.csv
+2026-01-26 23:27:30,734 - INFO - Archived: events_56.csv
+2026-01-26 23:27:30,752 - INFO - Archived: events_57.csv
+2026-01-26 23:27:30,788 - INFO - Archived: events_58.csv
+2026-01-26 23:27:30,824 - INFO - Archived: events_59.csv
+2026-01-26 23:27:30,851 - INFO - Archived: events_60.csv
+2026-01-26 23:27:31,032 - INFO - Archived: events_61.csv
+2026-01-26 23:27:31,094 - INFO - Archived: events_62.csv
+2026-01-26 23:27:31,135 - INFO - Archived: events_63.csv
+2026-01-26 23:27:31,172 - INFO - Archived: events_64.csv
+2026-01-26 23:27:31,199 - INFO - Archived: events_65.csv
+2026-01-26 23:27:31,200 - INFO - Run Complete: Archived 37 files.
+2026-01-26 23:28:35,073 - INFO - Scanning for files older than 1 minutes (before 2026-01-26 23:27:35.073051)...
+2026-01-26 23:28:35,302 - INFO - No files to archive.
+2026-01-26 23:29:39,272 - INFO - Scanning for files older than 1 minutes (before 2026-01-26 23:28:39.272817)...
+2026-01-26 23:29:39,318 - INFO - Archived: events_1.csv
+2026-01-26 23:29:39,353 - INFO - Archived: events_10.csv
+2026-01-26 23:29:39,388 - INFO - Archived: events_11.csv
+2026-01-26 23:29:39,426 - INFO - Archived: events_12.csv
+2026-01-26 23:29:39,453 - INFO - Archived: events_13.csv
+2026-01-26 23:29:39,480 - INFO - Archived: events_14.csv
+2026-01-26 23:29:39,505 - INFO - Archived: events_15.csv
+2026-01-26 23:29:39,533 - INFO - Archived: events_16.csv
+2026-01-26 23:29:39,562 - INFO - Archived: events_17.csv
+2026-01-26 23:29:39,587 - INFO - Archived: events_18.csv
+2026-01-26 23:29:39,614 - INFO - Archived: events_19.csv
+2026-01-26 23:29:39,639 - INFO - Archived: events_2.csv
+2026-01-26 23:29:39,666 - INFO - Archived: events_20.csv
+2026-01-26 23:29:39,690 - INFO - Archived: events_21.csv
+2026-01-26 23:29:39,715 - INFO - Archived: events_22.csv
+2026-01-26 23:29:39,741 - INFO - Archived: events_23.csv
+2026-01-26 23:29:39,764 - INFO - Archived: events_24.csv
+2026-01-26 23:29:39,790 - INFO - Archived: events_25.csv
+2026-01-26 23:29:39,819 - INFO - Archived: events_26.csv
+2026-01-26 23:29:39,844 - INFO - Archived: events_27.csv
+2026-01-26 23:29:39,868 - INFO - Archived: events_28.csv
+2026-01-26 23:29:39,893 - INFO - Archived: events_29.csv
+2026-01-26 23:29:39,916 - INFO - Archived: events_3.csv
+2026-01-26 23:29:39,945 - INFO - Archived: events_30.csv
+2026-01-26 23:29:40,029 - INFO - Archived: events_31.csv
+2026-01-26 23:29:40,090 - INFO - Archived: events_32.csv
+2026-01-26 23:29:40,110 - INFO - Archived: events_4.csv
+2026-01-26 23:29:40,146 - INFO - Archived: events_5.csv
+2026-01-26 23:29:40,162 - INFO - Archived: events_6.csv
+2026-01-26 23:29:40,176 - INFO - Archived: events_7.csv
+2026-01-26 23:29:40,194 - INFO - Archived: events_8.csv
+2026-01-26 23:29:40,211 - INFO - Archived: events_9.csv
+2026-01-26 23:29:40,211 - INFO - Run Complete: Archived 32 files.
+2026-01-26 23:30:43,982 - INFO - Scanning for files older than 1 minutes (before 2026-01-26 23:29:43.981963)...
+2026-01-26 23:30:43,995 - INFO - No files to archive.
+2026-01-26 23:31:48,180 - INFO - Scanning for files older than 1 minutes (before 2026-01-26 23:30:48.179994)...
+2026-01-26 23:31:48,186 - INFO - No files to archive.
+2026-01-26 23:32:52,237 - INFO - Scanning for files older than 1 minutes (before 2026-01-26 23:31:52.237213)...
+2026-01-26 23:32:52,252 - INFO - No files to archive.
+2026-01-26 23:33:56,156 - INFO - Scanning for files older than 1 minutes (before 2026-01-26 23:32:56.156806)...
+2026-01-26 23:33:56,168 - INFO - No files to archive.
+2026-01-26 23:35:00,105 - INFO - Scanning for files older than 1 minutes (before 2026-01-26 23:34:00.105220)...
+2026-01-26 23:35:00,110 - INFO - No files to archive.
+2026-01-26 23:36:04,093 - INFO - Scanning for files older than 1 minutes (before 2026-01-26 23:35:04.093156)...
+2026-01-26 23:36:04,104 - INFO - No files to archive.
+2026-01-26 23:37:08,184 - INFO - Scanning for files older than 1 minutes (before 2026-01-26 23:36:08.184674)...
+2026-01-26 23:37:08,219 - INFO - No files to archive.
+2026-01-26 23:38:12,249 - INFO - Scanning for files older than 1 minutes (before 2026-01-26 23:37:12.249338)...
+2026-01-26 23:38:12,256 - INFO - No files to archive.
+2026-01-26 23:39:16,321 - INFO - Scanning for files older than 1 minutes (before 2026-01-26 23:38:16.321433)...
+2026-01-26 23:39:16,333 - INFO - No files to archive.
+2026-01-26 23:40:21,307 - INFO - Scanning for files older than 1 minutes (before 2026-01-26 23:39:21.307369)...
+2026-01-26 23:40:21,320 - INFO - No files to archive.
+2026-01-26 23:41:24,386 - INFO - Scanning for files older than 1 minutes (before 2026-01-26 23:40:24.386451)...
+2026-01-26 23:41:24,394 - INFO - No files to archive.
+2026-01-26 23:42:28,484 - INFO - Scanning for files older than 1 minutes (before 2026-01-26 23:41:28.483916)...
+2026-01-26 23:42:28,506 - INFO - No files to archive.
+2026-01-26 23:43:32,761 - INFO - Scanning for files older than 1 minutes (before 2026-01-26 23:42:32.761837)...
+2026-01-26 23:43:32,769 - INFO - No files to archive.
+2026-01-26 23:44:36,607 - INFO - Scanning for files older than 1 minutes (before 2026-01-26 23:43:36.607296)...
+2026-01-26 23:44:36,621 - INFO - No files to archive.
+2026-01-26 23:45:40,907 - INFO - Scanning for files older than 1 minutes (before 2026-01-26 23:44:40.906989)...
+2026-01-26 23:45:40,914 - INFO - No files to archive.
+2026-01-26 23:46:44,976 - INFO - Scanning for files older than 1 minutes (before 2026-01-26 23:45:44.975999)...
+2026-01-26 23:46:44,981 - INFO - No files to archive.
+2026-01-26 23:47:49,448 - INFO - Scanning for files older than 1 minutes (before 2026-01-26 23:46:49.448148)...
+2026-01-26 23:47:49,458 - INFO - No files to archive.
+2026-01-26 23:48:53,673 - INFO - Scanning for files older than 1 minutes (before 2026-01-26 23:47:53.672984)...
+2026-01-26 23:48:53,685 - INFO - No files to archive.
+2026-01-26 23:49:57,958 - INFO - Scanning for files older than 1 minutes (before 2026-01-26 23:48:57.958502)...
+2026-01-26 23:49:57,972 - INFO - No files to archive.
+2026-01-26 23:51:49,604 - INFO - Scanning for files older than 1 minutes (before 2026-01-26 23:50:49.604516)...
+2026-01-26 23:51:49,617 - INFO - No files to archive.
+2026-01-26 23:52:49,682 - INFO - Scanning for files older than 1 minutes (before 2026-01-26 23:51:49.682247)...
+2026-01-26 23:52:49,689 - INFO - No files to archive.
+2026-01-26 23:53:53,065 - INFO - Scanning for files older than 1 minutes (before 2026-01-26 23:52:53.065664)...
+2026-01-26 23:53:53,072 - INFO - No files to archive.
+2026-01-26 23:54:55,961 - INFO - Scanning for files older than 1 minutes (before 2026-01-26 23:53:55.961429)...
+2026-01-26 23:54:55,968 - INFO - No files to archive.
+2026-01-27 07:11:35,212 - INFO - Scanning for files older than 1 minutes (before 2026-01-27 07:10:35.212680)...
+2026-01-27 07:11:35,216 - INFO - No files to archive.
+2026-01-27 07:12:36,495 - INFO - Scanning for files older than 1 minutes (before 2026-01-27 07:11:36.494989)...
+2026-01-27 07:12:36,497 - INFO - No files to archive.
+2026-01-27 07:13:37,896 - INFO - Scanning for files older than 1 minutes (before 2026-01-27 07:12:37.896677)...
+2026-01-27 07:13:37,898 - INFO - No files to archive.

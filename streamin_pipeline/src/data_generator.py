@@ -52,7 +52,7 @@ def generate_batch(batch_id):
             writer.writeheader()
             
             # Generate random number of rows
-            rows = random.randint(50, 100)
+            rows = random.randint(config.BATCH_SIZE_MIN, config.BATCH_SIZE_MAX)
             for _ in range(rows):
                 writer.writerow(generate_event())
                 
@@ -71,14 +71,15 @@ if __name__ == "__main__":
 
     logger.info("Starting Data Generator...")
     logger.info(f"Writing data to: {config.INPUT_DIR}")
+    logger.info(f"Configuration: Batch Size [{config.BATCH_SIZE_MIN}-{config.BATCH_SIZE_MAX}], Interval {config.BATCH_INTERVAL}s")
     
     batch_counter = 1
     try:
         while True:
             generate_batch(batch_counter)
             batch_counter += 1
-            # Wait 5 seconds before next batch
-            time.sleep(5)
+            # Wait configurable time before next batch
+            time.sleep(config.BATCH_INTERVAL)
     except KeyboardInterrupt:
         logger.info("Generator stopped by user.")
     except Exception as e:

@@ -849,3 +849,38 @@
 2026-01-26 23:08:25,491 - INFO - Generated Batch #50: events_50.csv with 68 rows.
 2026-01-26 23:08:26,470 - INFO - Generated Batch #65: events_65.csv with 96 rows.
 2026-01-26 23:08:27,236 - INFO - Generated Batch #48: events_48.csv with 67 rows.
+2026-01-26 23:27:47,946 - INFO - Starting Data Generator...
+2026-01-26 23:27:47,947 - INFO - Writing data to: /app/data/input
+2026-01-26 23:27:47,948 - INFO - Configuration: Batch Size [2000-5000], Interval 1s
+2026-01-26 23:27:48,259 - INFO - Generated Batch #1: events_1.csv with 4015 rows.
+2026-01-26 23:27:49,746 - INFO - Generated Batch #2: events_2.csv with 2998 rows.
+2026-01-26 23:27:51,182 - INFO - Generated Batch #3: events_3.csv with 2532 rows.
+2026-01-26 23:27:52,708 - INFO - Generated Batch #4: events_4.csv with 4861 rows.
+2026-01-26 23:27:54,105 - INFO - Generated Batch #5: events_5.csv with 3793 rows.
+2026-01-26 23:27:55,461 - INFO - Generated Batch #6: events_6.csv with 4505 rows.
+2026-01-26 23:27:56,757 - INFO - Generated Batch #7: events_7.csv with 3239 rows.
+2026-01-26 23:27:57,955 - INFO - Generated Batch #8: events_8.csv with 2674 rows.
+2026-01-26 23:27:59,634 - INFO - Generated Batch #9: events_9.csv with 3373 rows.
+2026-01-26 23:28:00,844 - INFO - Generated Batch #10: events_10.csv with 2156 rows.
+2026-01-26 23:28:02,530 - INFO - Generated Batch #11: events_11.csv with 4365 rows.
+2026-01-26 23:28:03,806 - INFO - Generated Batch #12: events_12.csv with 3058 rows.
+2026-01-26 23:28:05,134 - INFO - Generated Batch #13: events_13.csv with 2251 rows.
+2026-01-26 23:28:06,342 - INFO - Generated Batch #14: events_14.csv with 2443 rows.
+2026-01-26 23:28:07,587 - INFO - Generated Batch #15: events_15.csv with 2402 rows.
+2026-01-26 23:28:09,106 - INFO - Generated Batch #16: events_16.csv with 4415 rows.
+2026-01-26 23:28:10,579 - INFO - Generated Batch #17: events_17.csv with 3369 rows.
+2026-01-26 23:28:14,054 - INFO - Generated Batch #18: events_18.csv with 4057 rows.
+2026-01-26 23:28:15,330 - INFO - Generated Batch #19: events_19.csv with 3681 rows.
+2026-01-26 23:28:16,680 - INFO - Generated Batch #20: events_20.csv with 3241 rows.
+2026-01-26 23:28:17,997 - INFO - Generated Batch #21: events_21.csv with 2984 rows.
+2026-01-26 23:28:19,450 - INFO - Generated Batch #22: events_22.csv with 3058 rows.
+2026-01-26 23:28:20,713 - INFO - Generated Batch #23: events_23.csv with 3181 rows.
+2026-01-26 23:28:21,993 - INFO - Generated Batch #24: events_24.csv with 2414 rows.
+2026-01-26 23:28:23,461 - INFO - Generated Batch #25: events_25.csv with 4139 rows.
+2026-01-26 23:28:25,152 - INFO - Generated Batch #26: events_26.csv with 4463 rows.
+2026-01-26 23:28:26,565 - INFO - Generated Batch #27: events_27.csv with 3097 rows.
+2026-01-26 23:28:27,851 - INFO - Generated Batch #28: events_28.csv with 2496 rows.
+2026-01-26 23:28:29,569 - INFO - Generated Batch #29: events_29.csv with 4111 rows.
+2026-01-26 23:28:30,788 - INFO - Generated Batch #30: events_30.csv with 2736 rows.
+2026-01-26 23:28:32,170 - INFO - Generated Batch #31: events_31.csv with 3509 rows.
+2026-01-26 23:28:33,412 - INFO - Generated Batch #32: events_32.csv with 2791 rows.
