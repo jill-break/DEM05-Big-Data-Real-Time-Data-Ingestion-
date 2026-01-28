@@ -1443,3 +1443,2352 @@ Please make sure only one streaming job runs on a specific checkpoint location a
 2026-01-26 23:08:26,298 - INFO - Batch ID: 63 - Success: Wrote 64 valid records.
 2026-01-26 23:28:03,862 - INFO - >>> Spark Session Initialized. Starting Stream...
 2026-01-26 23:28:03,863 - INFO - Monitoring input directory: /app/data/input
+2026-01-28 09:26:59,568 - INFO - >>> Spark Session Initialized. Starting Stream...
+2026-01-28 09:26:59,568 - INFO - Monitoring input directory: /app/data/input
+2026-01-28 09:29:50,736 - INFO - >>> Spark Session Initialized. Starting Stream...
+2026-01-28 09:29:50,736 - INFO - Monitoring input directory: /app/data/input
+2026-01-28 09:30:03,190 - INFO - Processing Batch ID: 0 with 66 records.
+2026-01-28 09:30:08,277 - ERROR - FAILED to write Batch ID: 0. Error: An error occurred while calling o69.jdbc.
+: org.apache.spark.SparkException: Job aborted due to stage failure: Task 0 in stage 5.0 failed 1 times, most recent failure: Lost task 0.0 in stage 5.0 (TID 5) (e49c811c3bf2 executor driver): org.apache.spark.SparkFileNotFoundException: File file:/app/data/input/events_17.csv does not exist
+It is possible the underlying files have been updated. You can explicitly invalidate the cache in Spark by running 'REFRESH TABLE tableName' command in SQL or by recreating the Dataset/DataFrame involved.
+	at org.apache.spark.sql.errors.QueryExecutionErrors$.readCurrentFileNotFoundError(QueryExecutionErrors.scala:780)
+	at org.apache.spark.sql.execution.datasources.FileScanRDD$$anon$1.org$apache$spark$sql$execution$datasources$FileScanRDD$$anon$$readCurrentFile(FileScanRDD.scala:220)
+	at org.apache.spark.sql.execution.datasources.FileScanRDD$$anon$1.nextIterator(FileScanRDD.scala:279)
+	at org.apache.spark.sql.execution.datasources.FileScanRDD$$anon$1.hasNext(FileScanRDD.scala:129)
+	at scala.collection.Iterator$$anon$10.hasNext(Iterator.scala:460)
+	at org.apache.spark.sql.catalyst.expressions.GeneratedClass$GeneratedIteratorForCodegenStage1.processNext(Unknown Source)
+	at org.apache.spark.sql.execution.BufferedRowIterator.hasNext(BufferedRowIterator.java:43)
+	at org.apache.spark.sql.execution.WholeStageCodegenEvaluatorFactory$WholeStageCodegenPartitionEvaluator$$anon$1.hasNext(WholeStageCodegenEvaluatorFactory.scala:43)
+	at scala.collection.Iterator$$anon$10.hasNext(Iterator.scala:460)
+	at scala.collection.Iterator$$anon$10.hasNext(Iterator.scala:460)
+	at scala.collection.Iterator.isEmpty(Iterator.scala:387)
+	at scala.collection.Iterator.isEmpty$(Iterator.scala:387)
+	at scala.collection.AbstractIterator.isEmpty(Iterator.scala:1431)
+	at org.apache.spark.sql.execution.datasources.jdbc.JdbcUtils$.savePartition(JdbcUtils.scala:682)
+	at org.apache.spark.sql.execution.datasources.jdbc.JdbcUtils$.$anonfun$saveTable$1(JdbcUtils.scala:902)
+	at org.apache.spark.sql.execution.datasources.jdbc.JdbcUtils$.$anonfun$saveTable$1$adapted(JdbcUtils.scala:901)
+	at org.apache.spark.rdd.RDD.$anonfun$foreachPartition$2(RDD.scala:1036)
+	at org.apache.spark.rdd.RDD.$anonfun$foreachPartition$2$adapted(RDD.scala:1036)
+	at org.apache.spark.SparkContext.$anonfun$runJob$5(SparkContext.scala:2438)
+	at org.apache.spark.scheduler.ResultTask.runTask(ResultTask.scala:93)
+	at org.apache.spark.TaskContext.runTaskWithListeners(TaskContext.scala:161)
+	at org.apache.spark.scheduler.Task.run(Task.scala:141)
+	at org.apache.spark.executor.Executor$TaskRunner.$anonfun$run$4(Executor.scala:620)
+	at org.apache.spark.util.SparkErrorUtils.tryWithSafeFinally(SparkErrorUtils.scala:64)
+	at org.apache.spark.util.SparkErrorUtils.tryWithSafeFinally$(SparkErrorUtils.scala:61)
+	at org.apache.spark.util.Utils$.tryWithSafeFinally(Utils.scala:94)
+	at org.apache.spark.executor.Executor$TaskRunner.run(Executor.scala:623)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(Unknown Source)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(Unknown Source)
+	at java.base/java.lang.Thread.run(Unknown Source)
+
+Driver stacktrace:
+	at org.apache.spark.scheduler.DAGScheduler.failJobAndIndependentStages(DAGScheduler.scala:2844)
+	at org.apache.spark.scheduler.DAGScheduler.$anonfun$abortStage$2(DAGScheduler.scala:2780)
+	at org.apache.spark.scheduler.DAGScheduler.$anonfun$abortStage$2$adapted(DAGScheduler.scala:2779)
+	at scala.collection.mutable.ResizableArray.foreach(ResizableArray.scala:62)
+	at scala.collection.mutable.ResizableArray.foreach$(ResizableArray.scala:55)
+	at scala.collection.mutable.ArrayBuffer.foreach(ArrayBuffer.scala:49)
+	at org.apache.spark.scheduler.DAGScheduler.abortStage(DAGScheduler.scala:2779)
+	at org.apache.spark.scheduler.DAGScheduler.$anonfun$handleTaskSetFailed$1(DAGScheduler.scala:1242)
+	at org.apache.spark.scheduler.DAGScheduler.$anonfun$handleTaskSetFailed$1$adapted(DAGScheduler.scala:1242)
+	at scala.Option.foreach(Option.scala:407)
+	at org.apache.spark.scheduler.DAGScheduler.handleTaskSetFailed(DAGScheduler.scala:1242)
+	at org.apache.spark.scheduler.DAGSchedulerEventProcessLoop.doOnReceive(DAGScheduler.scala:3048)
+	at org.apache.spark.scheduler.DAGSchedulerEventProcessLoop.onReceive(DAGScheduler.scala:2982)
+	at org.apache.spark.scheduler.DAGSchedulerEventProcessLoop.onReceive(DAGScheduler.scala:2971)
+	at org.apache.spark.util.EventLoop$$anon$1.run(EventLoop.scala:49)
+	at org.apache.spark.scheduler.DAGScheduler.runJob(DAGScheduler.scala:984)
+	at org.apache.spark.SparkContext.runJob(SparkContext.scala:2398)
+	at org.apache.spark.SparkContext.runJob(SparkContext.scala:2419)
+	at org.apache.spark.SparkContext.runJob(SparkContext.scala:2438)
+	at org.apache.spark.SparkContext.runJob(SparkContext.scala:2463)
+	at org.apache.spark.rdd.RDD.$anonfun$foreachPartition$1(RDD.scala:1036)
+	at org.apache.spark.rdd.RDDOperationScope$.withScope(RDDOperationScope.scala:151)
+	at org.apache.spark.rdd.RDDOperationScope$.withScope(RDDOperationScope.scala:112)
+	at org.apache.spark.rdd.RDD.withScope(RDD.scala:407)
+	at org.apache.spark.rdd.RDD.foreachPartition(RDD.scala:1034)
+	at org.apache.spark.sql.execution.datasources.jdbc.JdbcUtils$.saveTable(JdbcUtils.scala:901)
+	at org.apache.spark.sql.execution.datasources.jdbc.JdbcRelationProvider.createRelation(JdbcRelationProvider.scala:70)
+	at org.apache.spark.sql.execution.datasources.SaveIntoDataSourceCommand.run(SaveIntoDataSourceCommand.scala:48)
+	at org.apache.spark.sql.execution.command.ExecutedCommandExec.sideEffectResult$lzycompute(commands.scala:75)
+	at org.apache.spark.sql.execution.command.ExecutedCommandExec.sideEffectResult(commands.scala:73)
+	at org.apache.spark.sql.execution.command.ExecutedCommandExec.executeCollect(commands.scala:84)
+	at org.apache.spark.sql.execution.QueryExecution$$anonfun$eagerlyExecuteCommands$1.$anonfun$applyOrElse$1(QueryExecution.scala:107)
+	at org.apache.spark.sql.execution.SQLExecution$.$anonfun$withNewExecutionId$6(SQLExecution.scala:125)
+	at org.apache.spark.sql.execution.SQLExecution$.withSQLConfPropagated(SQLExecution.scala:201)
+	at org.apache.spark.sql.execution.SQLExecution$.$anonfun$withNewExecutionId$1(SQLExecution.scala:108)
+	at org.apache.spark.sql.SparkSession.withActive(SparkSession.scala:900)
+	at org.apache.spark.sql.execution.SQLExecution$.withNewExecutionId(SQLExecution.scala:66)
+	at org.apache.spark.sql.execution.QueryExecution$$anonfun$eagerlyExecuteCommands$1.applyOrElse(QueryExecution.scala:107)
+	at org.apache.spark.sql.execution.QueryExecution$$anonfun$eagerlyExecuteCommands$1.applyOrElse(QueryExecution.scala:98)
+	at org.apache.spark.sql.catalyst.trees.TreeNode.$anonfun$transformDownWithPruning$1(TreeNode.scala:461)
+	at org.apache.spark.sql.catalyst.trees.CurrentOrigin$.withOrigin(origin.scala:76)
+	at org.apache.spark.sql.catalyst.trees.TreeNode.transformDownWithPruning(TreeNode.scala:461)
+	at org.apache.spark.sql.catalyst.plans.logical.LogicalPlan.org$apache$spark$sql$catalyst$plans$logical$AnalysisHelper$$super$transformDownWithPruning(LogicalPlan.scala:32)
+	at org.apache.spark.sql.catalyst.plans.logical.AnalysisHelper.transformDownWithPruning(AnalysisHelper.scala:267)
+	at org.apache.spark.sql.catalyst.plans.logical.AnalysisHelper.transformDownWithPruning$(AnalysisHelper.scala:263)
+	at org.apache.spark.sql.catalyst.plans.logical.LogicalPlan.transformDownWithPruning(LogicalPlan.scala:32)
+	at org.apache.spark.sql.catalyst.plans.logical.LogicalPlan.transformDownWithPruning(LogicalPlan.scala:32)
+	at org.apache.spark.sql.catalyst.trees.TreeNode.transformDown(TreeNode.scala:437)
+	at org.apache.spark.sql.execution.QueryExecution.eagerlyExecuteCommands(QueryExecution.scala:98)
+	at org.apache.spark.sql.execution.QueryExecution.commandExecuted$lzycompute(QueryExecution.scala:85)
+	at org.apache.spark.sql.execution.QueryExecution.commandExecuted(QueryExecution.scala:83)
+	at org.apache.spark.sql.execution.QueryExecution.assertCommandExecuted(QueryExecution.scala:142)
+	at org.apache.spark.sql.DataFrameWriter.runCommand(DataFrameWriter.scala:859)
+	at org.apache.spark.sql.DataFrameWriter.saveToV1Source(DataFrameWriter.scala:388)
+	at org.apache.spark.sql.DataFrameWriter.saveInternal(DataFrameWriter.scala:361)
+	at org.apache.spark.sql.DataFrameWriter.save(DataFrameWriter.scala:248)
+	at org.apache.spark.sql.DataFrameWriter.jdbc(DataFrameWriter.scala:756)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
+	at java.base/java.lang.reflect.Method.invoke(Unknown Source)
+	at py4j.reflection.MethodInvoker.invoke(MethodInvoker.java:244)
+	at py4j.reflection.ReflectionEngine.invoke(ReflectionEngine.java:374)
+	at py4j.Gateway.invoke(Gateway.java:282)
+	at py4j.commands.AbstractCommand.invokeMethod(AbstractCommand.java:132)
+	at py4j.commands.CallCommand.execute(CallCommand.java:79)
+	at py4j.ClientServerConnection.sendCommand(ClientServerConnection.java:244)
+	at py4j.CallbackClient.sendCommand(CallbackClient.java:384)
+	at py4j.CallbackClient.sendCommand(CallbackClient.java:356)
+	at py4j.reflection.PythonProxyHandler.invoke(PythonProxyHandler.java:106)
+	at com.sun.proxy.$Proxy31.call(Unknown Source)
+	at org.apache.spark.sql.execution.streaming.sources.PythonForeachBatchHelper$.$anonfun$callForeachBatch$1(ForeachBatchSink.scala:53)
+	at org.apache.spark.sql.execution.streaming.sources.PythonForeachBatchHelper$.$anonfun$callForeachBatch$1$adapted(ForeachBatchSink.scala:53)
+	at org.apache.spark.sql.execution.streaming.sources.ForeachBatchSink.addBatch(ForeachBatchSink.scala:34)
+	at org.apache.spark.sql.execution.streaming.MicroBatchExecution.$anonfun$runBatch$17(MicroBatchExecution.scala:732)
+	at org.apache.spark.sql.execution.SQLExecution$.$anonfun$withNewExecutionId$6(SQLExecution.scala:125)
+	at org.apache.spark.sql.execution.SQLExecution$.withSQLConfPropagated(SQLExecution.scala:201)
+	at org.apache.spark.sql.execution.SQLExecution$.$anonfun$withNewExecutionId$1(SQLExecution.scala:108)
+	at org.apache.spark.sql.SparkSession.withActive(SparkSession.scala:900)
+	at org.apache.spark.sql.execution.SQLExecution$.withNewExecutionId(SQLExecution.scala:66)
+	at org.apache.spark.sql.execution.streaming.MicroBatchExecution.$anonfun$runBatch$16(MicroBatchExecution.scala:729)
+	at org.apache.spark.sql.execution.streaming.ProgressReporter.reportTimeTaken(ProgressReporter.scala:427)
+	at org.apache.spark.sql.execution.streaming.ProgressReporter.reportTimeTaken$(ProgressReporter.scala:425)
+	at org.apache.spark.sql.execution.streaming.StreamExecution.reportTimeTaken(StreamExecution.scala:67)
+	at org.apache.spark.sql.execution.streaming.MicroBatchExecution.runBatch(MicroBatchExecution.scala:729)
+	at org.apache.spark.sql.execution.streaming.MicroBatchExecution.$anonfun$runActivatedStream$2(MicroBatchExecution.scala:286)
+	at scala.runtime.java8.JFunction0$mcV$sp.apply(JFunction0$mcV$sp.java:23)
+	at org.apache.spark.sql.execution.streaming.ProgressReporter.reportTimeTaken(ProgressReporter.scala:427)
+	at org.apache.spark.sql.execution.streaming.ProgressReporter.reportTimeTaken$(ProgressReporter.scala:425)
+	at org.apache.spark.sql.execution.streaming.StreamExecution.reportTimeTaken(StreamExecution.scala:67)
+	at org.apache.spark.sql.execution.streaming.MicroBatchExecution.$anonfun$runActivatedStream$1(MicroBatchExecution.scala:249)
+	at org.apache.spark.sql.execution.streaming.ProcessingTimeExecutor.execute(TriggerExecutor.scala:67)
+	at org.apache.spark.sql.execution.streaming.MicroBatchExecution.runActivatedStream(MicroBatchExecution.scala:239)
+	at org.apache.spark.sql.execution.streaming.StreamExecution.$anonfun$runStream$1(StreamExecution.scala:311)
+	at scala.runtime.java8.JFunction0$mcV$sp.apply(JFunction0$mcV$sp.java:23)
+	at org.apache.spark.sql.SparkSession.withActive(SparkSession.scala:900)
+	at org.apache.spark.sql.execution.streaming.StreamExecution.org$apache$spark$sql$execution$streaming$StreamExecution$$runStream(StreamExecution.scala:289)
+	at org.apache.spark.sql.execution.streaming.StreamExecution$$anon$1.$anonfun$run$1(StreamExecution.scala:211)
+	at scala.runtime.java8.JFunction0$mcV$sp.apply(JFunction0$mcV$sp.java:23)
+	at org.apache.spark.JobArtifactSet$.withActiveJobArtifactState(JobArtifactSet.scala:94)
+	at org.apache.spark.sql.execution.streaming.StreamExecution$$anon$1.run(StreamExecution.scala:211)
+Caused by: org.apache.spark.SparkFileNotFoundException: File file:/app/data/input/events_17.csv does not exist
+It is possible the underlying files have been updated. You can explicitly invalidate the cache in Spark by running 'REFRESH TABLE tableName' command in SQL or by recreating the Dataset/DataFrame involved.
+	at org.apache.spark.sql.errors.QueryExecutionErrors$.readCurrentFileNotFoundError(QueryExecutionErrors.scala:780)
+	at org.apache.spark.sql.execution.datasources.FileScanRDD$$anon$1.org$apache$spark$sql$execution$datasources$FileScanRDD$$anon$$readCurrentFile(FileScanRDD.scala:220)
+	at org.apache.spark.sql.execution.datasources.FileScanRDD$$anon$1.nextIterator(FileScanRDD.scala:279)
+	at org.apache.spark.sql.execution.datasources.FileScanRDD$$anon$1.hasNext(FileScanRDD.scala:129)
+	at scala.collection.Iterator$$anon$10.hasNext(Iterator.scala:460)
+	at org.apache.spark.sql.catalyst.expressions.GeneratedClass$GeneratedIteratorForCodegenStage1.processNext(Unknown Source)
+	at org.apache.spark.sql.execution.BufferedRowIterator.hasNext(BufferedRowIterator.java:43)
+	at org.apache.spark.sql.execution.WholeStageCodegenEvaluatorFactory$WholeStageCodegenPartitionEvaluator$$anon$1.hasNext(WholeStageCodegenEvaluatorFactory.scala:43)
+	at scala.collection.Iterator$$anon$10.hasNext(Iterator.scala:460)
+	at scala.collection.Iterator$$anon$10.hasNext(Iterator.scala:460)
+	at scala.collection.Iterator.isEmpty(Iterator.scala:387)
+	at scala.collection.Iterator.isEmpty$(Iterator.scala:387)
+	at scala.collection.AbstractIterator.isEmpty(Iterator.scala:1431)
+	at org.apache.spark.sql.execution.datasources.jdbc.JdbcUtils$.savePartition(JdbcUtils.scala:682)
+	at org.apache.spark.sql.execution.datasources.jdbc.JdbcUtils$.$anonfun$saveTable$1(JdbcUtils.scala:902)
+	at org.apache.spark.sql.execution.datasources.jdbc.JdbcUtils$.$anonfun$saveTable$1$adapted(JdbcUtils.scala:901)
+	at org.apache.spark.rdd.RDD.$anonfun$foreachPartition$2(RDD.scala:1036)
+	at org.apache.spark.rdd.RDD.$anonfun$foreachPartition$2$adapted(RDD.scala:1036)
+	at org.apache.spark.SparkContext.$anonfun$runJob$5(SparkContext.scala:2438)
+	at org.apache.spark.scheduler.ResultTask.runTask(ResultTask.scala:93)
+	at org.apache.spark.TaskContext.runTaskWithListeners(TaskContext.scala:161)
+	at org.apache.spark.scheduler.Task.run(Task.scala:141)
+	at org.apache.spark.executor.Executor$TaskRunner.$anonfun$run$4(Executor.scala:620)
+	at org.apache.spark.util.SparkErrorUtils.tryWithSafeFinally(SparkErrorUtils.scala:64)
+	at org.apache.spark.util.SparkErrorUtils.tryWithSafeFinally$(SparkErrorUtils.scala:61)
+	at org.apache.spark.util.Utils$.tryWithSafeFinally(Utils.scala:94)
+	at org.apache.spark.executor.Executor$TaskRunner.run(Executor.scala:623)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(Unknown Source)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(Unknown Source)
+	at java.base/java.lang.Thread.run(Unknown Source)
+Traceback (most recent call last):
+  File "/app/src/spark_streaming_to_postgres.py", line 71, in write_to_postgres
+    valid_df.write \
+  File "/opt/spark/python/lib/pyspark.zip/pyspark/sql/readwriter.py", line 1984, in jdbc
+    self.mode(mode)._jwrite.jdbc(url, table, jprop)
+  File "/opt/spark/python/lib/py4j-0.10.9.7-src.zip/py4j/java_gateway.py", line 1322, in __call__
+    return_value = get_return_value(
+  File "/opt/spark/python/lib/pyspark.zip/pyspark/errors/exceptions/captured.py", line 179, in deco
+    return f(*a, **kw)
+  File "/opt/spark/python/lib/py4j-0.10.9.7-src.zip/py4j/protocol.py", line 326, in get_return_value
+    raise Py4JJavaError(
+py4j.protocol.Py4JJavaError: An error occurred while calling o69.jdbc.
+: org.apache.spark.SparkException: Job aborted due to stage failure: Task 0 in stage 5.0 failed 1 times, most recent failure: Lost task 0.0 in stage 5.0 (TID 5) (e49c811c3bf2 executor driver): org.apache.spark.SparkFileNotFoundException: File file:/app/data/input/events_17.csv does not exist
+It is possible the underlying files have been updated. You can explicitly invalidate the cache in Spark by running 'REFRESH TABLE tableName' command in SQL or by recreating the Dataset/DataFrame involved.
+	at org.apache.spark.sql.errors.QueryExecutionErrors$.readCurrentFileNotFoundError(QueryExecutionErrors.scala:780)
+	at org.apache.spark.sql.execution.datasources.FileScanRDD$$anon$1.org$apache$spark$sql$execution$datasources$FileScanRDD$$anon$$readCurrentFile(FileScanRDD.scala:220)
+	at org.apache.spark.sql.execution.datasources.FileScanRDD$$anon$1.nextIterator(FileScanRDD.scala:279)
+	at org.apache.spark.sql.execution.datasources.FileScanRDD$$anon$1.hasNext(FileScanRDD.scala:129)
+	at scala.collection.Iterator$$anon$10.hasNext(Iterator.scala:460)
+	at org.apache.spark.sql.catalyst.expressions.GeneratedClass$GeneratedIteratorForCodegenStage1.processNext(Unknown Source)
+	at org.apache.spark.sql.execution.BufferedRowIterator.hasNext(BufferedRowIterator.java:43)
+	at org.apache.spark.sql.execution.WholeStageCodegenEvaluatorFactory$WholeStageCodegenPartitionEvaluator$$anon$1.hasNext(WholeStageCodegenEvaluatorFactory.scala:43)
+	at scala.collection.Iterator$$anon$10.hasNext(Iterator.scala:460)
+	at scala.collection.Iterator$$anon$10.hasNext(Iterator.scala:460)
+	at scala.collection.Iterator.isEmpty(Iterator.scala:387)
+	at scala.collection.Iterator.isEmpty$(Iterator.scala:387)
+	at scala.collection.AbstractIterator.isEmpty(Iterator.scala:1431)
+	at org.apache.spark.sql.execution.datasources.jdbc.JdbcUtils$.savePartition(JdbcUtils.scala:682)
+	at org.apache.spark.sql.execution.datasources.jdbc.JdbcUtils$.$anonfun$saveTable$1(JdbcUtils.scala:902)
+	at org.apache.spark.sql.execution.datasources.jdbc.JdbcUtils$.$anonfun$saveTable$1$adapted(JdbcUtils.scala:901)
+	at org.apache.spark.rdd.RDD.$anonfun$foreachPartition$2(RDD.scala:1036)
+	at org.apache.spark.rdd.RDD.$anonfun$foreachPartition$2$adapted(RDD.scala:1036)
+	at org.apache.spark.SparkContext.$anonfun$runJob$5(SparkContext.scala:2438)
+	at org.apache.spark.scheduler.ResultTask.runTask(ResultTask.scala:93)
+	at org.apache.spark.TaskContext.runTaskWithListeners(TaskContext.scala:161)
+	at org.apache.spark.scheduler.Task.run(Task.scala:141)
+	at org.apache.spark.executor.Executor$TaskRunner.$anonfun$run$4(Executor.scala:620)
+	at org.apache.spark.util.SparkErrorUtils.tryWithSafeFinally(SparkErrorUtils.scala:64)
+	at org.apache.spark.util.SparkErrorUtils.tryWithSafeFinally$(SparkErrorUtils.scala:61)
+	at org.apache.spark.util.Utils$.tryWithSafeFinally(Utils.scala:94)
+	at org.apache.spark.executor.Executor$TaskRunner.run(Executor.scala:623)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(Unknown Source)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(Unknown Source)
+	at java.base/java.lang.Thread.run(Unknown Source)
+
+Driver stacktrace:
+	at org.apache.spark.scheduler.DAGScheduler.failJobAndIndependentStages(DAGScheduler.scala:2844)
+	at org.apache.spark.scheduler.DAGScheduler.$anonfun$abortStage$2(DAGScheduler.scala:2780)
+	at org.apache.spark.scheduler.DAGScheduler.$anonfun$abortStage$2$adapted(DAGScheduler.scala:2779)
+	at scala.collection.mutable.ResizableArray.foreach(ResizableArray.scala:62)
+	at scala.collection.mutable.ResizableArray.foreach$(ResizableArray.scala:55)
+	at scala.collection.mutable.ArrayBuffer.foreach(ArrayBuffer.scala:49)
+	at org.apache.spark.scheduler.DAGScheduler.abortStage(DAGScheduler.scala:2779)
+	at org.apache.spark.scheduler.DAGScheduler.$anonfun$handleTaskSetFailed$1(DAGScheduler.scala:1242)
+	at org.apache.spark.scheduler.DAGScheduler.$anonfun$handleTaskSetFailed$1$adapted(DAGScheduler.scala:1242)
+	at scala.Option.foreach(Option.scala:407)
+	at org.apache.spark.scheduler.DAGScheduler.handleTaskSetFailed(DAGScheduler.scala:1242)
+	at org.apache.spark.scheduler.DAGSchedulerEventProcessLoop.doOnReceive(DAGScheduler.scala:3048)
+	at org.apache.spark.scheduler.DAGSchedulerEventProcessLoop.onReceive(DAGScheduler.scala:2982)
+	at org.apache.spark.scheduler.DAGSchedulerEventProcessLoop.onReceive(DAGScheduler.scala:2971)
+	at org.apache.spark.util.EventLoop$$anon$1.run(EventLoop.scala:49)
+	at org.apache.spark.scheduler.DAGScheduler.runJob(DAGScheduler.scala:984)
+	at org.apache.spark.SparkContext.runJob(SparkContext.scala:2398)
+	at org.apache.spark.SparkContext.runJob(SparkContext.scala:2419)
+	at org.apache.spark.SparkContext.runJob(SparkContext.scala:2438)
+	at org.apache.spark.SparkContext.runJob(SparkContext.scala:2463)
+	at org.apache.spark.rdd.RDD.$anonfun$foreachPartition$1(RDD.scala:1036)
+	at org.apache.spark.rdd.RDDOperationScope$.withScope(RDDOperationScope.scala:151)
+	at org.apache.spark.rdd.RDDOperationScope$.withScope(RDDOperationScope.scala:112)
+	at org.apache.spark.rdd.RDD.withScope(RDD.scala:407)
+	at org.apache.spark.rdd.RDD.foreachPartition(RDD.scala:1034)
+	at org.apache.spark.sql.execution.datasources.jdbc.JdbcUtils$.saveTable(JdbcUtils.scala:901)
+	at org.apache.spark.sql.execution.datasources.jdbc.JdbcRelationProvider.createRelation(JdbcRelationProvider.scala:70)
+	at org.apache.spark.sql.execution.datasources.SaveIntoDataSourceCommand.run(SaveIntoDataSourceCommand.scala:48)
+	at org.apache.spark.sql.execution.command.ExecutedCommandExec.sideEffectResult$lzycompute(commands.scala:75)
+	at org.apache.spark.sql.execution.command.ExecutedCommandExec.sideEffectResult(commands.scala:73)
+	at org.apache.spark.sql.execution.command.ExecutedCommandExec.executeCollect(commands.scala:84)
+	at org.apache.spark.sql.execution.QueryExecution$$anonfun$eagerlyExecuteCommands$1.$anonfun$applyOrElse$1(QueryExecution.scala:107)
+	at org.apache.spark.sql.execution.SQLExecution$.$anonfun$withNewExecutionId$6(SQLExecution.scala:125)
+	at org.apache.spark.sql.execution.SQLExecution$.withSQLConfPropagated(SQLExecution.scala:201)
+	at org.apache.spark.sql.execution.SQLExecution$.$anonfun$withNewExecutionId$1(SQLExecution.scala:108)
+	at org.apache.spark.sql.SparkSession.withActive(SparkSession.scala:900)
+	at org.apache.spark.sql.execution.SQLExecution$.withNewExecutionId(SQLExecution.scala:66)
+	at org.apache.spark.sql.execution.QueryExecution$$anonfun$eagerlyExecuteCommands$1.applyOrElse(QueryExecution.scala:107)
+	at org.apache.spark.sql.execution.QueryExecution$$anonfun$eagerlyExecuteCommands$1.applyOrElse(QueryExecution.scala:98)
+	at org.apache.spark.sql.catalyst.trees.TreeNode.$anonfun$transformDownWithPruning$1(TreeNode.scala:461)
+	at org.apache.spark.sql.catalyst.trees.CurrentOrigin$.withOrigin(origin.scala:76)
+	at org.apache.spark.sql.catalyst.trees.TreeNode.transformDownWithPruning(TreeNode.scala:461)
+	at org.apache.spark.sql.catalyst.plans.logical.LogicalPlan.org$apache$spark$sql$catalyst$plans$logical$AnalysisHelper$$super$transformDownWithPruning(LogicalPlan.scala:32)
+	at org.apache.spark.sql.catalyst.plans.logical.AnalysisHelper.transformDownWithPruning(AnalysisHelper.scala:267)
+	at org.apache.spark.sql.catalyst.plans.logical.AnalysisHelper.transformDownWithPruning$(AnalysisHelper.scala:263)
+	at org.apache.spark.sql.catalyst.plans.logical.LogicalPlan.transformDownWithPruning(LogicalPlan.scala:32)
+	at org.apache.spark.sql.catalyst.plans.logical.LogicalPlan.transformDownWithPruning(LogicalPlan.scala:32)
+	at org.apache.spark.sql.catalyst.trees.TreeNode.transformDown(TreeNode.scala:437)
+	at org.apache.spark.sql.execution.QueryExecution.eagerlyExecuteCommands(QueryExecution.scala:98)
+	at org.apache.spark.sql.execution.QueryExecution.commandExecuted$lzycompute(QueryExecution.scala:85)
+	at org.apache.spark.sql.execution.QueryExecution.commandExecuted(QueryExecution.scala:83)
+	at org.apache.spark.sql.execution.QueryExecution.assertCommandExecuted(QueryExecution.scala:142)
+	at org.apache.spark.sql.DataFrameWriter.runCommand(DataFrameWriter.scala:859)
+	at org.apache.spark.sql.DataFrameWriter.saveToV1Source(DataFrameWriter.scala:388)
+	at org.apache.spark.sql.DataFrameWriter.saveInternal(DataFrameWriter.scala:361)
+	at org.apache.spark.sql.DataFrameWriter.save(DataFrameWriter.scala:248)
+	at org.apache.spark.sql.DataFrameWriter.jdbc(DataFrameWriter.scala:756)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
+	at java.base/java.lang.reflect.Method.invoke(Unknown Source)
+	at py4j.reflection.MethodInvoker.invoke(MethodInvoker.java:244)
+	at py4j.reflection.ReflectionEngine.invoke(ReflectionEngine.java:374)
+	at py4j.Gateway.invoke(Gateway.java:282)
+	at py4j.commands.AbstractCommand.invokeMethod(AbstractCommand.java:132)
+	at py4j.commands.CallCommand.execute(CallCommand.java:79)
+	at py4j.ClientServerConnection.sendCommand(ClientServerConnection.java:244)
+	at py4j.CallbackClient.sendCommand(CallbackClient.java:384)
+	at py4j.CallbackClient.sendCommand(CallbackClient.java:356)
+	at py4j.reflection.PythonProxyHandler.invoke(PythonProxyHandler.java:106)
+	at com.sun.proxy.$Proxy31.call(Unknown Source)
+	at org.apache.spark.sql.execution.streaming.sources.PythonForeachBatchHelper$.$anonfun$callForeachBatch$1(ForeachBatchSink.scala:53)
+	at org.apache.spark.sql.execution.streaming.sources.PythonForeachBatchHelper$.$anonfun$callForeachBatch$1$adapted(ForeachBatchSink.scala:53)
+	at org.apache.spark.sql.execution.streaming.sources.ForeachBatchSink.addBatch(ForeachBatchSink.scala:34)
+	at org.apache.spark.sql.execution.streaming.MicroBatchExecution.$anonfun$runBatch$17(MicroBatchExecution.scala:732)
+	at org.apache.spark.sql.execution.SQLExecution$.$anonfun$withNewExecutionId$6(SQLExecution.scala:125)
+	at org.apache.spark.sql.execution.SQLExecution$.withSQLConfPropagated(SQLExecution.scala:201)
+	at org.apache.spark.sql.execution.SQLExecution$.$anonfun$withNewExecutionId$1(SQLExecution.scala:108)
+	at org.apache.spark.sql.SparkSession.withActive(SparkSession.scala:900)
+	at org.apache.spark.sql.execution.SQLExecution$.withNewExecutionId(SQLExecution.scala:66)
+	at org.apache.spark.sql.execution.streaming.MicroBatchExecution.$anonfun$runBatch$16(MicroBatchExecution.scala:729)
+	at org.apache.spark.sql.execution.streaming.ProgressReporter.reportTimeTaken(ProgressReporter.scala:427)
+	at org.apache.spark.sql.execution.streaming.ProgressReporter.reportTimeTaken$(ProgressReporter.scala:425)
+	at org.apache.spark.sql.execution.streaming.StreamExecution.reportTimeTaken(StreamExecution.scala:67)
+	at org.apache.spark.sql.execution.streaming.MicroBatchExecution.runBatch(MicroBatchExecution.scala:729)
+	at org.apache.spark.sql.execution.streaming.MicroBatchExecution.$anonfun$runActivatedStream$2(MicroBatchExecution.scala:286)
+	at scala.runtime.java8.JFunction0$mcV$sp.apply(JFunction0$mcV$sp.java:23)
+	at org.apache.spark.sql.execution.streaming.ProgressReporter.reportTimeTaken(ProgressReporter.scala:427)
+	at org.apache.spark.sql.execution.streaming.ProgressReporter.reportTimeTaken$(ProgressReporter.scala:425)
+	at org.apache.spark.sql.execution.streaming.StreamExecution.reportTimeTaken(StreamExecution.scala:67)
+	at org.apache.spark.sql.execution.streaming.MicroBatchExecution.$anonfun$runActivatedStream$1(MicroBatchExecution.scala:249)
+	at org.apache.spark.sql.execution.streaming.ProcessingTimeExecutor.execute(TriggerExecutor.scala:67)
+	at org.apache.spark.sql.execution.streaming.MicroBatchExecution.runActivatedStream(MicroBatchExecution.scala:239)
+	at org.apache.spark.sql.execution.streaming.StreamExecution.$anonfun$runStream$1(StreamExecution.scala:311)
+	at scala.runtime.java8.JFunction0$mcV$sp.apply(JFunction0$mcV$sp.java:23)
+	at org.apache.spark.sql.SparkSession.withActive(SparkSession.scala:900)
+	at org.apache.spark.sql.execution.streaming.StreamExecution.org$apache$spark$sql$execution$streaming$StreamExecution$$runStream(StreamExecution.scala:289)
+	at org.apache.spark.sql.execution.streaming.StreamExecution$$anon$1.$anonfun$run$1(StreamExecution.scala:211)
+	at scala.runtime.java8.JFunction0$mcV$sp.apply(JFunction0$mcV$sp.java:23)
+	at org.apache.spark.JobArtifactSet$.withActiveJobArtifactState(JobArtifactSet.scala:94)
+	at org.apache.spark.sql.execution.streaming.StreamExecution$$anon$1.run(StreamExecution.scala:211)
+Caused by: org.apache.spark.SparkFileNotFoundException: File file:/app/data/input/events_17.csv does not exist
+It is possible the underlying files have been updated. You can explicitly invalidate the cache in Spark by running 'REFRESH TABLE tableName' command in SQL or by recreating the Dataset/DataFrame involved.
+	at org.apache.spark.sql.errors.QueryExecutionErrors$.readCurrentFileNotFoundError(QueryExecutionErrors.scala:780)
+	at org.apache.spark.sql.execution.datasources.FileScanRDD$$anon$1.org$apache$spark$sql$execution$datasources$FileScanRDD$$anon$$readCurrentFile(FileScanRDD.scala:220)
+	at org.apache.spark.sql.execution.datasources.FileScanRDD$$anon$1.nextIterator(FileScanRDD.scala:279)
+	at org.apache.spark.sql.execution.datasources.FileScanRDD$$anon$1.hasNext(FileScanRDD.scala:129)
+	at scala.collection.Iterator$$anon$10.hasNext(Iterator.scala:460)
+	at org.apache.spark.sql.catalyst.expressions.GeneratedClass$GeneratedIteratorForCodegenStage1.processNext(Unknown Source)
+	at org.apache.spark.sql.execution.BufferedRowIterator.hasNext(BufferedRowIterator.java:43)
+	at org.apache.spark.sql.execution.WholeStageCodegenEvaluatorFactory$WholeStageCodegenPartitionEvaluator$$anon$1.hasNext(WholeStageCodegenEvaluatorFactory.scala:43)
+	at scala.collection.Iterator$$anon$10.hasNext(Iterator.scala:460)
+	at scala.collection.Iterator$$anon$10.hasNext(Iterator.scala:460)
+	at scala.collection.Iterator.isEmpty(Iterator.scala:387)
+	at scala.collection.Iterator.isEmpty$(Iterator.scala:387)
+	at scala.collection.AbstractIterator.isEmpty(Iterator.scala:1431)
+	at org.apache.spark.sql.execution.datasources.jdbc.JdbcUtils$.savePartition(JdbcUtils.scala:682)
+	at org.apache.spark.sql.execution.datasources.jdbc.JdbcUtils$.$anonfun$saveTable$1(JdbcUtils.scala:902)
+	at org.apache.spark.sql.execution.datasources.jdbc.JdbcUtils$.$anonfun$saveTable$1$adapted(JdbcUtils.scala:901)
+	at org.apache.spark.rdd.RDD.$anonfun$foreachPartition$2(RDD.scala:1036)
+	at org.apache.spark.rdd.RDD.$anonfun$foreachPartition$2$adapted(RDD.scala:1036)
+	at org.apache.spark.SparkContext.$anonfun$runJob$5(SparkContext.scala:2438)
+	at org.apache.spark.scheduler.ResultTask.runTask(ResultTask.scala:93)
+	at org.apache.spark.TaskContext.runTaskWithListeners(TaskContext.scala:161)
+	at org.apache.spark.scheduler.Task.run(Task.scala:141)
+	at org.apache.spark.executor.Executor$TaskRunner.$anonfun$run$4(Executor.scala:620)
+	at org.apache.spark.util.SparkErrorUtils.tryWithSafeFinally(SparkErrorUtils.scala:64)
+	at org.apache.spark.util.SparkErrorUtils.tryWithSafeFinally$(SparkErrorUtils.scala:61)
+	at org.apache.spark.util.Utils$.tryWithSafeFinally(Utils.scala:94)
+	at org.apache.spark.executor.Executor$TaskRunner.run(Executor.scala:623)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(Unknown Source)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(Unknown Source)
+	at java.base/java.lang.Thread.run(Unknown Source)
+
+2026-01-28 09:30:09,737 - INFO - Batch ID: 1 is empty. Skipping write.
+2026-01-28 09:30:10,994 - INFO - Batch ID: 2 is empty. Skipping write.
+2026-01-28 09:30:12,579 - INFO - Batch ID: 3 is empty. Skipping write.
+2026-01-28 09:30:14,562 - INFO - Batch ID: 4 is empty. Skipping write.
+2026-01-28 09:30:16,095 - INFO - Batch ID: 5 is empty. Skipping write.
+2026-01-28 09:30:17,695 - INFO - Batch ID: 6 is empty. Skipping write.
+2026-01-28 09:30:19,509 - INFO - Batch ID: 7 is empty. Skipping write.
+2026-01-28 09:30:21,085 - INFO - Batch ID: 8 is empty. Skipping write.
+2026-01-28 09:30:22,801 - INFO - Batch ID: 9 is empty. Skipping write.
+2026-01-28 09:30:24,542 - INFO - Batch ID: 10 is empty. Skipping write.
+2026-01-28 09:30:25,743 - INFO - Batch ID: 11 is empty. Skipping write.
+2026-01-28 09:30:27,382 - INFO - Processing Batch ID: 12 with 98 records.
+2026-01-28 09:30:28,469 - INFO - Batch ID: 12 - Success: Wrote 98 valid records.
+2026-01-28 09:30:31,770 - INFO - Processing Batch ID: 13 with 89 records.
+2026-01-28 09:31:39,851 - INFO - >>> Spark Session Initialized. Starting Stream...
+2026-01-28 09:31:39,852 - INFO - Monitoring input directory: /app/data/input
+2026-01-28 09:31:48,388 - INFO - Processing Batch ID: 0 with 84 records.
+2026-01-28 09:31:51,807 - INFO - Batch ID: 0 - Success: Wrote 84 valid records.
+2026-01-28 09:31:53,869 - INFO - Processing Batch ID: 1 with 87 records.
+2026-01-28 09:31:54,759 - INFO - Batch ID: 1 - Success: Wrote 87 valid records.
+2026-01-28 09:31:57,598 - INFO - Processing Batch ID: 2 with 58 records.
+2026-01-28 09:31:58,550 - INFO - Batch ID: 2 - Success: Wrote 58 valid records.
+2026-01-28 09:32:01,416 - INFO - Processing Batch ID: 3 with 81 records.
+2026-01-28 09:32:02,229 - INFO - Batch ID: 3 - Success: Wrote 81 valid records.
+2026-01-28 09:32:03,846 - INFO - Processing Batch ID: 4 with 72 records.
+2026-01-28 09:32:04,410 - INFO - Batch ID: 4 - Success: Wrote 72 valid records.
+2026-01-28 09:32:06,548 - INFO - Processing Batch ID: 5 with 83 records.
+2026-01-28 09:32:06,916 - INFO - Batch ID: 5 - Success: Wrote 83 valid records.
+2026-01-28 09:32:08,226 - INFO - Processing Batch ID: 6 with 88 records.
+2026-01-28 09:32:08,654 - INFO - Batch ID: 6 - Success: Wrote 88 valid records.
+2026-01-28 09:32:10,229 - INFO - Processing Batch ID: 7 with 63 records.
+2026-01-28 09:32:10,601 - INFO - Batch ID: 7 - Success: Wrote 63 valid records.
+2026-01-28 09:32:11,977 - INFO - Processing Batch ID: 8 with 83 records.
+2026-01-28 09:32:12,314 - INFO - Batch ID: 8 - Success: Wrote 83 valid records.
+2026-01-28 09:32:15,769 - INFO - Processing Batch ID: 9 with 100 records.
+2026-01-28 09:32:16,503 - INFO - Batch ID: 9 - Success: Wrote 100 valid records.
+2026-01-28 09:32:20,463 - INFO - Processing Batch ID: 10 with 75 records.
+2026-01-28 09:32:20,807 - INFO - Batch ID: 10 - Success: Wrote 75 valid records.
+2026-01-28 09:32:25,451 - INFO - Processing Batch ID: 11 with 91 records.
+2026-01-28 09:32:26,134 - INFO - Batch ID: 11 - Success: Wrote 91 valid records.
+2026-01-28 09:32:31,664 - INFO - Processing Batch ID: 12 with 100 records.
+2026-01-28 09:32:32,073 - INFO - Batch ID: 12 - Success: Wrote 100 valid records.
+2026-01-28 09:32:35,594 - INFO - Processing Batch ID: 13 with 70 records.
+2026-01-28 09:32:36,451 - INFO - Batch ID: 13 - Success: Wrote 70 valid records.
+2026-01-28 09:32:40,440 - INFO - Processing Batch ID: 14 with 72 records.
+2026-01-28 09:32:40,762 - INFO - Batch ID: 14 - Success: Wrote 72 valid records.
+2026-01-28 09:32:45,510 - INFO - Processing Batch ID: 15 with 50 records.
+2026-01-28 09:32:46,014 - INFO - Batch ID: 15 - Success: Wrote 50 valid records.
+2026-01-28 09:32:50,603 - INFO - Processing Batch ID: 16 with 68 records.
+2026-01-28 09:32:50,945 - INFO - Batch ID: 16 - Success: Wrote 68 valid records.
+2026-01-28 09:32:55,537 - INFO - Processing Batch ID: 17 with 54 records.
+2026-01-28 09:32:56,188 - INFO - Batch ID: 17 - Success: Wrote 54 valid records.
+2026-01-28 09:33:00,892 - INFO - Processing Batch ID: 18 with 55 records.
+2026-01-28 09:33:01,338 - INFO - Batch ID: 18 - Success: Wrote 55 valid records.
+2026-01-28 09:33:07,084 - INFO - Processing Batch ID: 19 with 68 records.
+2026-01-28 09:33:07,527 - INFO - Batch ID: 19 - Success: Wrote 68 valid records.
+2026-01-28 09:33:10,856 - INFO - Processing Batch ID: 20 with 66 records.
+2026-01-28 09:33:11,238 - INFO - Batch ID: 20 - Success: Wrote 66 valid records.
+2026-01-28 09:33:15,886 - INFO - Processing Batch ID: 21 with 92 records.
+2026-01-28 09:33:16,625 - INFO - Batch ID: 21 - Success: Wrote 92 valid records.
+2026-01-28 09:33:20,651 - INFO - Processing Batch ID: 22 with 90 records.
+2026-01-28 09:33:21,019 - INFO - Batch ID: 22 - Success: Wrote 90 valid records.
+2026-01-28 09:33:26,667 - INFO - Processing Batch ID: 23 with 51 records.
+2026-01-28 09:33:27,064 - INFO - Batch ID: 23 - Success: Wrote 51 valid records.
+2026-01-28 09:33:31,331 - INFO - Processing Batch ID: 24 with 98 records.
+2026-01-28 09:33:31,742 - INFO - Batch ID: 24 - Success: Wrote 98 valid records.
+2026-01-28 09:33:36,420 - INFO - Processing Batch ID: 25 with 88 records.
+2026-01-28 09:33:36,929 - INFO - Batch ID: 25 - Success: Wrote 88 valid records.
+2026-01-28 09:33:41,399 - INFO - Processing Batch ID: 26 with 71 records.
+2026-01-28 09:33:41,788 - INFO - Batch ID: 26 - Success: Wrote 71 valid records.
+2026-01-28 09:33:48,864 - INFO - Processing Batch ID: 27 with 95 records.
+2026-01-28 09:33:49,264 - INFO - Batch ID: 27 - Success: Wrote 95 valid records.
+2026-01-28 09:33:51,063 - INFO - Processing Batch ID: 28 with 78 records.
+2026-01-28 09:33:51,497 - INFO - Batch ID: 28 - Success: Wrote 78 valid records.
+2026-01-28 09:33:56,264 - INFO - Processing Batch ID: 29 with 85 records.
+2026-01-28 09:33:56,673 - INFO - Batch ID: 29 - Success: Wrote 85 valid records.
+2026-01-28 09:34:01,060 - INFO - Processing Batch ID: 30 with 72 records.
+2026-01-28 09:34:01,461 - INFO - Batch ID: 30 - Success: Wrote 72 valid records.
+2026-01-28 09:34:06,287 - INFO - Processing Batch ID: 31 with 61 records.
+2026-01-28 09:34:06,715 - INFO - Batch ID: 31 - Success: Wrote 61 valid records.
+2026-01-28 09:34:11,208 - INFO - Processing Batch ID: 32 with 82 records.
+2026-01-28 09:34:11,659 - INFO - Batch ID: 32 - Success: Wrote 82 valid records.
+2026-01-28 09:34:16,636 - INFO - Processing Batch ID: 33 with 86 records.
+2026-01-28 09:34:17,071 - INFO - Batch ID: 33 - Success: Wrote 86 valid records.
+2026-01-28 09:34:20,923 - INFO - Processing Batch ID: 34 with 53 records.
+2026-01-28 09:34:21,207 - INFO - Batch ID: 34 - Success: Wrote 53 valid records.
+2026-01-28 09:34:26,300 - INFO - Processing Batch ID: 35 with 63 records.
+2026-01-28 09:34:26,630 - INFO - Batch ID: 35 - Success: Wrote 63 valid records.
+2026-01-28 09:34:32,557 - INFO - Processing Batch ID: 36 with 79 records.
+2026-01-28 09:34:33,604 - INFO - Batch ID: 36 - Success: Wrote 79 valid records.
+2026-01-28 09:34:36,392 - INFO - Processing Batch ID: 37 with 61 records.
+2026-01-28 09:34:36,672 - INFO - Batch ID: 37 - Success: Wrote 61 valid records.
+2026-01-28 09:34:41,858 - INFO - Processing Batch ID: 38 with 65 records.
+2026-01-28 09:34:42,311 - INFO - Batch ID: 38 - Success: Wrote 65 valid records.
+2026-01-28 09:34:46,656 - INFO - Processing Batch ID: 39 with 95 records.
+2026-01-28 09:34:46,978 - INFO - Batch ID: 39 - Success: Wrote 95 valid records.
+2026-01-28 09:34:51,125 - INFO - Processing Batch ID: 40 with 85 records.
+2026-01-28 09:34:51,411 - INFO - Batch ID: 40 - Success: Wrote 85 valid records.
+2026-01-28 09:34:56,612 - INFO - Processing Batch ID: 41 with 80 records.
+2026-01-28 09:34:56,971 - INFO - Batch ID: 41 - Success: Wrote 80 valid records.
+2026-01-28 09:35:02,706 - INFO - Processing Batch ID: 42 with 71 records.
+2026-01-28 09:35:03,578 - INFO - Batch ID: 42 - Success: Wrote 71 valid records.
+2026-01-28 09:35:06,683 - INFO - Processing Batch ID: 43 with 72 records.
+2026-01-28 09:35:07,541 - INFO - Batch ID: 43 - Success: Wrote 72 valid records.
+2026-01-28 09:35:11,694 - INFO - Processing Batch ID: 44 with 62 records.
+2026-01-28 09:35:12,156 - INFO - Batch ID: 44 - Success: Wrote 62 valid records.
+2026-01-28 09:35:17,198 - INFO - Processing Batch ID: 45 with 91 records.
+2026-01-28 09:35:17,644 - INFO - Batch ID: 45 - Success: Wrote 91 valid records.
+2026-01-28 09:35:21,364 - INFO - Processing Batch ID: 46 with 95 records.
+2026-01-28 09:35:21,880 - INFO - Batch ID: 46 - Success: Wrote 95 valid records.
+2026-01-28 09:35:26,646 - INFO - Processing Batch ID: 47 with 92 records.
+2026-01-28 09:35:26,944 - INFO - Batch ID: 47 - Success: Wrote 92 valid records.
+2026-01-28 09:35:31,202 - INFO - Processing Batch ID: 48 with 74 records.
+2026-01-28 09:35:31,435 - INFO - Batch ID: 48 - Success: Wrote 74 valid records.
+2026-01-28 09:35:36,707 - INFO - Processing Batch ID: 49 with 64 records.
+2026-01-28 09:35:36,977 - INFO - Batch ID: 49 - Success: Wrote 64 valid records.
+2026-01-28 09:35:41,353 - INFO - Processing Batch ID: 50 with 83 records.
+2026-01-28 09:35:41,647 - INFO - Batch ID: 50 - Success: Wrote 83 valid records.
+2026-01-28 09:35:46,549 - INFO - Processing Batch ID: 51 with 53 records.
+2026-01-28 09:35:46,905 - INFO - Batch ID: 51 - Success: Wrote 53 valid records.
+2026-01-28 09:35:51,354 - INFO - Processing Batch ID: 52 with 67 records.
+2026-01-28 09:35:51,628 - INFO - Batch ID: 52 - Success: Wrote 67 valid records.
+2026-01-28 09:35:56,743 - INFO - Processing Batch ID: 53 with 70 records.
+2026-01-28 09:35:57,023 - INFO - Batch ID: 53 - Success: Wrote 70 valid records.
+2026-01-28 09:36:01,373 - INFO - Processing Batch ID: 54 with 51 records.
+2026-01-28 09:36:01,641 - INFO - Batch ID: 54 - Success: Wrote 51 valid records.
+2026-01-28 09:36:06,911 - INFO - Processing Batch ID: 55 with 65 records.
+2026-01-28 09:36:07,157 - INFO - Batch ID: 55 - Success: Wrote 65 valid records.
+2026-01-28 09:36:11,666 - INFO - Processing Batch ID: 56 with 60 records.
+2026-01-28 09:36:12,210 - INFO - Batch ID: 56 - Success: Wrote 60 valid records.
+2026-01-28 09:36:16,727 - INFO - Processing Batch ID: 57 with 85 records.
+2026-01-28 09:36:17,025 - INFO - Batch ID: 57 - Success: Wrote 85 valid records.
+2026-01-28 09:36:21,285 - INFO - Processing Batch ID: 58 with 99 records.
+2026-01-28 09:36:21,564 - INFO - Batch ID: 58 - Success: Wrote 99 valid records.
+2026-01-28 09:36:27,100 - INFO - Processing Batch ID: 59 with 75 records.
+2026-01-28 09:36:27,394 - INFO - Batch ID: 59 - Success: Wrote 75 valid records.
+2026-01-28 09:36:31,441 - INFO - Processing Batch ID: 60 with 80 records.
+2026-01-28 09:36:31,723 - INFO - Batch ID: 60 - Success: Wrote 80 valid records.
+2026-01-28 09:36:36,888 - INFO - Processing Batch ID: 61 with 69 records.
+2026-01-28 09:36:37,164 - INFO - Batch ID: 61 - Success: Wrote 69 valid records.
+2026-01-28 09:36:41,484 - INFO - Processing Batch ID: 62 with 51 records.
+2026-01-28 09:36:41,734 - INFO - Batch ID: 62 - Success: Wrote 51 valid records.
+2026-01-28 09:36:46,811 - INFO - Processing Batch ID: 63 with 91 records.
+2026-01-28 09:36:47,184 - INFO - Batch ID: 63 - Success: Wrote 91 valid records.
+2026-01-28 09:36:51,555 - INFO - Processing Batch ID: 64 with 73 records.
+2026-01-28 09:36:51,821 - INFO - Batch ID: 64 - Success: Wrote 73 valid records.
+2026-01-28 09:36:57,033 - INFO - Processing Batch ID: 65 with 67 records.
+2026-01-28 09:36:57,277 - INFO - Batch ID: 65 - Success: Wrote 67 valid records.
+2026-01-28 09:37:01,612 - INFO - Processing Batch ID: 66 with 60 records.
+2026-01-28 09:37:01,864 - INFO - Batch ID: 66 - Success: Wrote 60 valid records.
+2026-01-28 09:37:07,051 - INFO - Processing Batch ID: 67 with 92 records.
+2026-01-28 09:37:07,301 - INFO - Batch ID: 67 - Success: Wrote 92 valid records.
+2026-01-28 09:37:11,807 - INFO - Processing Batch ID: 68 with 81 records.
+2026-01-28 09:37:12,265 - INFO - Batch ID: 68 - Success: Wrote 81 valid records.
+2026-01-28 09:37:17,067 - INFO - Processing Batch ID: 69 with 94 records.
+2026-01-28 09:37:17,421 - INFO - Batch ID: 69 - Success: Wrote 94 valid records.
+2026-01-28 09:37:21,615 - INFO - Processing Batch ID: 70 with 78 records.
+2026-01-28 09:37:21,936 - INFO - Batch ID: 70 - Success: Wrote 78 valid records.
+2026-01-28 09:37:26,983 - INFO - Processing Batch ID: 71 with 100 records.
+2026-01-28 09:37:27,272 - INFO - Batch ID: 71 - Success: Wrote 100 valid records.
+2026-01-28 09:37:31,774 - INFO - Processing Batch ID: 72 with 50 records.
+2026-01-28 09:37:32,127 - INFO - Batch ID: 72 - Success: Wrote 50 valid records.
+2026-01-28 09:37:37,110 - INFO - Processing Batch ID: 73 with 65 records.
+2026-01-28 09:37:37,376 - INFO - Batch ID: 73 - Success: Wrote 65 valid records.
+2026-01-28 09:37:41,737 - INFO - Processing Batch ID: 74 with 61 records.
+2026-01-28 09:37:42,019 - INFO - Batch ID: 74 - Success: Wrote 61 valid records.
+2026-01-28 09:37:47,015 - INFO - Processing Batch ID: 75 with 61 records.
+2026-01-28 09:37:47,435 - INFO - Batch ID: 75 - Success: Wrote 61 valid records.
+2026-01-28 09:37:51,734 - INFO - Processing Batch ID: 76 with 78 records.
+2026-01-28 09:37:52,026 - INFO - Batch ID: 76 - Success: Wrote 78 valid records.
+2026-01-28 09:37:57,255 - INFO - Processing Batch ID: 77 with 91 records.
+2026-01-28 09:37:57,522 - INFO - Batch ID: 77 - Success: Wrote 91 valid records.
+2026-01-28 09:38:01,816 - INFO - Processing Batch ID: 78 with 50 records.
+2026-01-28 09:38:02,115 - INFO - Batch ID: 78 - Success: Wrote 50 valid records.
+2026-01-28 09:38:09,201 - INFO - Processing Batch ID: 79 with 79 records.
+2026-01-28 09:38:09,624 - INFO - Batch ID: 79 - Success: Wrote 79 valid records.
+2026-01-28 09:38:12,239 - INFO - Processing Batch ID: 80 with 83 records.
+2026-01-28 09:38:12,608 - INFO - Batch ID: 80 - Success: Wrote 83 valid records.
+2026-01-28 09:38:17,644 - INFO - Processing Batch ID: 81 with 87 records.
+2026-01-28 09:38:17,994 - INFO - Batch ID: 81 - Success: Wrote 87 valid records.
+2026-01-28 09:38:22,369 - INFO - Processing Batch ID: 82 with 89 records.
+2026-01-28 09:38:22,803 - INFO - Batch ID: 82 - Success: Wrote 89 valid records.
+2026-01-28 09:38:27,407 - INFO - Processing Batch ID: 83 with 97 records.
+2026-01-28 09:38:27,781 - INFO - Batch ID: 83 - Success: Wrote 97 valid records.
+2026-01-28 09:38:32,204 - INFO - Processing Batch ID: 84 with 80 records.
+2026-01-28 09:38:32,510 - INFO - Batch ID: 84 - Success: Wrote 80 valid records.
+2026-01-28 09:38:37,921 - INFO - Processing Batch ID: 85 with 58 records.
+2026-01-28 09:38:38,271 - INFO - Batch ID: 85 - Success: Wrote 58 valid records.
+2026-01-28 09:38:42,642 - INFO - Processing Batch ID: 86 with 63 records.
+2026-01-28 09:38:43,030 - INFO - Batch ID: 86 - Success: Wrote 63 valid records.
+2026-01-28 09:38:47,915 - INFO - Processing Batch ID: 87 with 88 records.
+2026-01-28 09:38:48,485 - INFO - Batch ID: 87 - Success: Wrote 88 valid records.
+2026-01-28 09:38:52,463 - INFO - Processing Batch ID: 88 with 51 records.
+2026-01-28 09:38:52,847 - INFO - Batch ID: 88 - Success: Wrote 51 valid records.
+2026-01-28 09:38:57,658 - INFO - Processing Batch ID: 89 with 80 records.
+2026-01-28 09:38:57,959 - INFO - Batch ID: 89 - Success: Wrote 80 valid records.
+2026-01-28 09:39:02,285 - INFO - Processing Batch ID: 90 with 55 records.
+2026-01-28 09:39:02,539 - INFO - Batch ID: 90 - Success: Wrote 55 valid records.
+2026-01-28 09:39:07,487 - INFO - Processing Batch ID: 91 with 81 records.
+2026-01-28 09:39:07,771 - INFO - Batch ID: 91 - Success: Wrote 81 valid records.
+2026-01-28 09:39:12,575 - INFO - Processing Batch ID: 92 with 78 records.
+2026-01-28 09:39:12,865 - INFO - Batch ID: 92 - Success: Wrote 78 valid records.
+2026-01-28 09:39:17,430 - INFO - Processing Batch ID: 93 with 94 records.
+2026-01-28 09:39:17,660 - INFO - Batch ID: 93 - Success: Wrote 94 valid records.
+2026-01-28 09:39:22,388 - INFO - Processing Batch ID: 94 with 58 records.
+2026-01-28 09:39:22,610 - INFO - Batch ID: 94 - Success: Wrote 58 valid records.
+2026-01-28 09:39:27,487 - INFO - Processing Batch ID: 95 with 61 records.
+2026-01-28 09:39:27,800 - INFO - Batch ID: 95 - Success: Wrote 61 valid records.
+2026-01-28 09:39:32,441 - INFO - Processing Batch ID: 96 with 60 records.
+2026-01-28 09:39:32,696 - INFO - Batch ID: 96 - Success: Wrote 60 valid records.
+2026-01-28 09:39:38,760 - INFO - Processing Batch ID: 97 with 88 records.
+2026-01-28 09:39:39,268 - INFO - Batch ID: 97 - Success: Wrote 88 valid records.
+2026-01-28 09:39:42,641 - INFO - Processing Batch ID: 98 with 97 records.
+2026-01-28 09:39:42,937 - INFO - Batch ID: 98 - Success: Wrote 97 valid records.
+2026-01-28 09:39:48,622 - INFO - Processing Batch ID: 99 with 68 records.
+2026-01-28 09:39:48,954 - INFO - Batch ID: 99 - Success: Wrote 68 valid records.
+2026-01-28 09:39:52,951 - INFO - Processing Batch ID: 100 with 51 records.
+2026-01-28 09:39:53,350 - INFO - Batch ID: 100 - Success: Wrote 51 valid records.
+2026-01-28 09:39:59,656 - INFO - Processing Batch ID: 101 with 77 records.
+2026-01-28 09:40:00,053 - INFO - Batch ID: 101 - Success: Wrote 77 valid records.
+2026-01-28 09:40:04,217 - INFO - Processing Batch ID: 102 with 69 records.
+2026-01-28 09:40:04,696 - INFO - Batch ID: 102 - Success: Wrote 69 valid records.
+2026-01-28 09:40:09,293 - INFO - Processing Batch ID: 103 with 58 records.
+2026-01-28 09:40:09,696 - INFO - Batch ID: 103 - Success: Wrote 58 valid records.
+2026-01-28 09:40:15,095 - INFO - Processing Batch ID: 104 with 54 records.
+2026-01-28 09:40:15,490 - INFO - Batch ID: 104 - Success: Wrote 54 valid records.
+2026-01-28 09:40:19,431 - INFO - Processing Batch ID: 105 with 50 records.
+2026-01-28 09:40:19,859 - INFO - Batch ID: 105 - Success: Wrote 50 valid records.
+2026-01-28 09:40:23,922 - INFO - Processing Batch ID: 106 with 89 records.
+2026-01-28 09:40:24,233 - INFO - Batch ID: 106 - Success: Wrote 89 valid records.
+2026-01-28 09:40:28,633 - INFO - Processing Batch ID: 107 with 61 records.
+2026-01-28 09:40:28,970 - INFO - Batch ID: 107 - Success: Wrote 61 valid records.
+2026-01-28 09:40:33,988 - INFO - Processing Batch ID: 108 with 96 records.
+2026-01-28 09:40:34,278 - INFO - Batch ID: 108 - Success: Wrote 96 valid records.
+2026-01-28 09:40:43,773 - INFO - Processing Batch ID: 109 with 69 records.
+2026-01-28 09:40:44,076 - INFO - Batch ID: 109 - Success: Wrote 69 valid records.
+2026-01-28 09:47:28,355 - INFO - Processing Batch ID: 110 with 71 records.
+2026-01-28 09:47:28,629 - INFO - Batch ID: 110 - Success: Wrote 71 valid records.
+2026-01-28 09:47:34,928 - INFO - Processing Batch ID: 111 with 64 records.
+2026-01-28 09:47:35,381 - INFO - Batch ID: 111 - Success: Wrote 64 valid records.
+2026-01-28 09:47:43,695 - INFO - Processing Batch ID: 112 with 95 records.
+2026-01-28 09:47:44,195 - INFO - Batch ID: 112 - Success: Wrote 95 valid records.
+2026-01-28 09:47:50,893 - INFO - Processing Batch ID: 113 with 71 records.
+2026-01-28 09:47:51,209 - INFO - Batch ID: 113 - Success: Wrote 71 valid records.
+2026-01-28 09:47:58,405 - INFO - Processing Batch ID: 114 with 66 records.
+2026-01-28 09:47:58,853 - INFO - Batch ID: 114 - Success: Wrote 66 valid records.
+2026-01-28 09:48:05,246 - INFO - Processing Batch ID: 115 with 97 records.
+2026-01-28 09:48:05,496 - INFO - Batch ID: 115 - Success: Wrote 97 valid records.
+2026-01-28 09:48:10,381 - INFO - Processing Batch ID: 116 with 69 records.
+2026-01-28 09:48:10,635 - INFO - Batch ID: 116 - Success: Wrote 69 valid records.
+2026-01-28 09:48:15,807 - INFO - Processing Batch ID: 117 with 89 records.
+2026-01-28 09:48:16,013 - INFO - Batch ID: 117 - Success: Wrote 89 valid records.
+2026-01-28 09:48:21,454 - INFO - Processing Batch ID: 118 with 95 records.
+2026-01-28 09:48:21,688 - INFO - Batch ID: 118 - Success: Wrote 95 valid records.
+2026-01-28 09:48:33,882 - INFO - Processing Batch ID: 119 with 65 records.
+2026-01-28 09:48:34,184 - INFO - Batch ID: 119 - Success: Wrote 65 valid records.
+2026-01-28 09:48:40,228 - INFO - Processing Batch ID: 120 with 91 records.
+2026-01-28 09:48:40,467 - INFO - Batch ID: 120 - Success: Wrote 91 valid records.
+2026-01-28 09:48:46,960 - INFO - Processing Batch ID: 121 with 52 records.
+2026-01-28 09:48:47,216 - INFO - Batch ID: 121 - Success: Wrote 52 valid records.
+2026-01-28 09:48:52,214 - INFO - Processing Batch ID: 122 with 61 records.
+2026-01-28 09:48:53,068 - INFO - Batch ID: 122 - Success: Wrote 61 valid records.
+2026-01-28 09:48:58,330 - INFO - Processing Batch ID: 123 with 75 records.
+2026-01-28 09:48:58,623 - INFO - Batch ID: 123 - Success: Wrote 75 valid records.
+2026-01-28 09:49:05,645 - INFO - Processing Batch ID: 124 with 74 records.
+2026-01-28 09:49:05,839 - INFO - Batch ID: 124 - Success: Wrote 74 valid records.
+2026-01-28 09:49:11,734 - INFO - Processing Batch ID: 125 with 83 records.
+2026-01-28 09:49:11,948 - INFO - Batch ID: 125 - Success: Wrote 83 valid records.
+2026-01-28 09:49:18,616 - INFO - Processing Batch ID: 126 with 56 records.
+2026-01-28 09:49:18,867 - INFO - Batch ID: 126 - Success: Wrote 56 valid records.
+2026-01-28 09:49:25,693 - INFO - Processing Batch ID: 127 with 52 records.
+2026-01-28 09:49:25,995 - INFO - Batch ID: 127 - Success: Wrote 52 valid records.
+2026-01-28 09:49:31,297 - INFO - Processing Batch ID: 128 with 68 records.
+2026-01-28 09:49:31,479 - INFO - Batch ID: 128 - Success: Wrote 68 valid records.
+2026-01-28 09:49:40,450 - INFO - Processing Batch ID: 129 with 75 records.
+2026-01-28 09:49:40,770 - INFO - Batch ID: 129 - Success: Wrote 75 valid records.
+2026-01-28 09:49:47,366 - INFO - Processing Batch ID: 130 with 69 records.
+2026-01-28 09:49:47,590 - INFO - Batch ID: 130 - Success: Wrote 69 valid records.
+2026-01-28 09:49:52,983 - INFO - Processing Batch ID: 131 with 96 records.
+2026-01-28 09:49:53,231 - INFO - Batch ID: 131 - Success: Wrote 96 valid records.
+2026-01-28 09:49:58,094 - INFO - Processing Batch ID: 132 with 94 records.
+2026-01-28 09:49:58,323 - INFO - Batch ID: 132 - Success: Wrote 94 valid records.
+2026-01-28 09:50:03,738 - INFO - Processing Batch ID: 133 with 60 records.
+2026-01-28 09:50:03,956 - INFO - Batch ID: 133 - Success: Wrote 60 valid records.
+2026-01-28 09:50:09,972 - INFO - Processing Batch ID: 134 with 62 records.
+2026-01-28 09:50:10,180 - INFO - Batch ID: 134 - Success: Wrote 62 valid records.
+2026-01-28 09:50:15,894 - INFO - Processing Batch ID: 135 with 64 records.
+2026-01-28 09:50:16,099 - INFO - Batch ID: 135 - Success: Wrote 64 valid records.
+2026-01-28 09:50:21,584 - INFO - Processing Batch ID: 136 with 62 records.
+2026-01-28 09:50:21,784 - INFO - Batch ID: 136 - Success: Wrote 62 valid records.
+2026-01-28 09:50:27,110 - INFO - Processing Batch ID: 137 with 70 records.
+2026-01-28 09:50:27,304 - INFO - Batch ID: 137 - Success: Wrote 70 valid records.
+2026-01-28 09:50:32,537 - INFO - Processing Batch ID: 138 with 72 records.
+2026-01-28 09:50:32,858 - INFO - Batch ID: 138 - Success: Wrote 72 valid records.
+2026-01-28 09:50:38,906 - INFO - Processing Batch ID: 139 with 68 records.
+2026-01-28 09:50:39,263 - INFO - Batch ID: 139 - Success: Wrote 68 valid records.
+2026-01-28 09:50:44,922 - INFO - Processing Batch ID: 140 with 67 records.
+2026-01-28 09:50:45,155 - INFO - Batch ID: 140 - Success: Wrote 67 valid records.
+2026-01-28 09:50:52,365 - INFO - Processing Batch ID: 141 with 83 records.
+2026-01-28 09:50:52,750 - INFO - Batch ID: 141 - Success: Wrote 83 valid records.
+2026-01-28 09:50:57,712 - INFO - Processing Batch ID: 142 with 92 records.
+2026-01-28 09:50:57,903 - INFO - Batch ID: 142 - Success: Wrote 92 valid records.
+2026-01-28 09:51:02,858 - INFO - Processing Batch ID: 143 with 100 records.
+2026-01-28 09:51:03,149 - INFO - Batch ID: 143 - Success: Wrote 100 valid records.
+2026-01-28 09:51:08,233 - INFO - Processing Batch ID: 144 with 74 records.
+2026-01-28 09:51:08,458 - INFO - Batch ID: 144 - Success: Wrote 74 valid records.
+2026-01-28 09:51:13,477 - INFO - Processing Batch ID: 145 with 62 records.
+2026-01-28 09:51:13,747 - INFO - Batch ID: 145 - Success: Wrote 62 valid records.
+2026-01-28 09:51:21,677 - INFO - Processing Batch ID: 146 with 59 records.
+2026-01-28 09:51:22,005 - INFO - Batch ID: 146 - Success: Wrote 59 valid records.
+2026-01-28 09:51:28,415 - INFO - Processing Batch ID: 147 with 83 records.
+2026-01-28 09:51:28,663 - INFO - Batch ID: 147 - Success: Wrote 83 valid records.
+2026-01-28 09:51:34,744 - INFO - Processing Batch ID: 148 with 74 records.
+2026-01-28 09:51:34,976 - INFO - Batch ID: 148 - Success: Wrote 74 valid records.
+2026-01-28 09:51:41,093 - INFO - Processing Batch ID: 149 with 94 records.
+2026-01-28 09:51:41,319 - INFO - Batch ID: 149 - Success: Wrote 94 valid records.
+2026-01-28 09:51:46,480 - INFO - Processing Batch ID: 150 with 86 records.
+2026-01-28 09:51:46,692 - INFO - Batch ID: 150 - Success: Wrote 86 valid records.
+2026-01-28 09:51:51,563 - INFO - Processing Batch ID: 151 with 64 records.
+2026-01-28 09:51:51,777 - INFO - Batch ID: 151 - Success: Wrote 64 valid records.
+2026-01-28 09:51:58,021 - INFO - Batch ID: 152 is empty. Skipping write.
+2026-01-28 09:52:04,914 - INFO - Batch ID: 153 is empty. Skipping write.
+2026-01-28 09:52:10,099 - INFO - Processing Batch ID: 154 with 74 records.
+2026-01-28 09:52:10,346 - INFO - Batch ID: 154 - Success: Wrote 74 valid records.
+2026-01-28 09:52:15,664 - INFO - Processing Batch ID: 155 with 57 records.
+2026-01-28 09:52:15,869 - INFO - Batch ID: 155 - Success: Wrote 57 valid records.
+2026-01-28 09:52:21,997 - INFO - Processing Batch ID: 156 with 72 records.
+2026-01-28 09:52:22,239 - INFO - Batch ID: 156 - Success: Wrote 72 valid records.
+2026-01-28 09:52:27,907 - INFO - Processing Batch ID: 157 with 59 records.
+2026-01-28 09:52:28,142 - INFO - Batch ID: 157 - Success: Wrote 59 valid records.
+2026-01-28 09:52:33,849 - INFO - Processing Batch ID: 158 with 75 records.
+2026-01-28 09:52:34,055 - INFO - Batch ID: 158 - Success: Wrote 75 valid records.
+2026-01-28 09:52:40,711 - INFO - Processing Batch ID: 159 with 58 records.
+2026-01-28 09:52:41,168 - INFO - Batch ID: 159 - Success: Wrote 58 valid records.
+2026-01-28 09:52:47,017 - INFO - Processing Batch ID: 160 with 58 records.
+2026-01-28 09:52:47,234 - INFO - Batch ID: 160 - Success: Wrote 58 valid records.
+2026-01-28 09:52:52,601 - INFO - Processing Batch ID: 161 with 95 records.
+2026-01-28 09:52:52,919 - INFO - Batch ID: 161 - Success: Wrote 95 valid records.
+2026-01-28 09:52:58,765 - INFO - Batch ID: 162 is empty. Skipping write.
+2026-01-28 09:53:04,884 - INFO - Batch ID: 163 is empty. Skipping write.
+2026-01-28 09:53:10,185 - INFO - Batch ID: 164 is empty. Skipping write.
+2026-01-28 09:53:15,116 - INFO - Batch ID: 165 is empty. Skipping write.
+2026-01-28 09:53:20,558 - INFO - Processing Batch ID: 166 with 54 records.
+2026-01-28 09:53:20,777 - INFO - Batch ID: 166 - Success: Wrote 54 valid records.
+2026-01-28 09:53:27,444 - INFO - Processing Batch ID: 167 with 79 records.
+2026-01-28 09:53:27,676 - INFO - Batch ID: 167 - Success: Wrote 79 valid records.
+2026-01-28 09:53:33,505 - INFO - Processing Batch ID: 168 with 70 records.
+2026-01-28 09:53:33,777 - INFO - Batch ID: 168 - Success: Wrote 70 valid records.
+2026-01-28 09:53:40,435 - INFO - Processing Batch ID: 169 with 79 records.
+2026-01-28 09:53:40,689 - INFO - Batch ID: 169 - Success: Wrote 79 valid records.
+2026-01-28 09:53:46,363 - INFO - Processing Batch ID: 170 with 60 records.
+2026-01-28 09:53:46,661 - INFO - Batch ID: 170 - Success: Wrote 60 valid records.
+2026-01-28 09:53:51,841 - INFO - Processing Batch ID: 171 with 62 records.
+2026-01-28 09:53:52,034 - INFO - Batch ID: 171 - Success: Wrote 62 valid records.
+2026-01-28 09:53:57,558 - INFO - Batch ID: 172 is empty. Skipping write.
+2026-01-28 09:54:02,592 - INFO - Batch ID: 173 is empty. Skipping write.
+2026-01-28 09:54:08,302 - INFO - Batch ID: 174 is empty. Skipping write.
+2026-01-28 09:54:13,974 - INFO - Batch ID: 175 is empty. Skipping write.
+2026-01-28 09:54:18,799 - INFO - Batch ID: 176 is empty. Skipping write.
+2026-01-28 09:54:24,718 - INFO - Batch ID: 177 is empty. Skipping write.
+2026-01-28 09:54:29,888 - INFO - Processing Batch ID: 178 with 67 records.
+2026-01-28 09:54:30,109 - INFO - Batch ID: 178 - Success: Wrote 67 valid records.
+2026-01-28 09:54:36,842 - INFO - Processing Batch ID: 179 with 88 records.
+2026-01-28 09:54:37,088 - INFO - Batch ID: 179 - Success: Wrote 88 valid records.
+2026-01-28 09:54:43,174 - INFO - Processing Batch ID: 180 with 53 records.
+2026-01-28 09:54:43,377 - INFO - Batch ID: 180 - Success: Wrote 53 valid records.
+2026-01-28 09:54:48,953 - INFO - Processing Batch ID: 181 with 56 records.
+2026-01-28 09:54:49,221 - INFO - Batch ID: 181 - Success: Wrote 56 valid records.
+2026-01-28 09:54:54,755 - INFO - Batch ID: 182 is empty. Skipping write.
+2026-01-28 09:55:00,400 - INFO - Batch ID: 183 is empty. Skipping write.
+2026-01-28 09:55:06,003 - INFO - Batch ID: 184 is empty. Skipping write.
+2026-01-28 09:55:11,670 - INFO - Batch ID: 185 is empty. Skipping write.
+2026-01-28 09:55:18,243 - INFO - Batch ID: 186 is empty. Skipping write.
+2026-01-28 09:55:25,215 - INFO - Processing Batch ID: 187 with 89 records.
+2026-01-28 09:55:25,534 - INFO - Batch ID: 187 - Success: Wrote 89 valid records.
+2026-01-28 09:55:31,049 - INFO - Processing Batch ID: 188 with 63 records.
+2026-01-28 09:55:31,260 - INFO - Batch ID: 188 - Success: Wrote 63 valid records.
+2026-01-28 09:55:37,671 - INFO - Processing Batch ID: 189 with 84 records.
+2026-01-28 09:55:37,882 - INFO - Batch ID: 189 - Success: Wrote 84 valid records.
+2026-01-28 09:55:43,915 - INFO - Processing Batch ID: 190 with 90 records.
+2026-01-28 09:55:44,161 - INFO - Batch ID: 190 - Success: Wrote 90 valid records.
+2026-01-28 09:55:48,985 - INFO - Processing Batch ID: 191 with 100 records.
+2026-01-28 09:55:49,172 - INFO - Batch ID: 191 - Success: Wrote 100 valid records.
+2026-01-28 09:55:54,674 - INFO - Processing Batch ID: 192 with 70 records.
+2026-01-28 09:55:55,209 - ERROR - FAILED to write Batch ID: 192. Error: An error occurred while calling o4512.jdbc.
+: org.apache.spark.SparkException: Job aborted due to stage failure: Task 0 in stage 1405.0 failed 1 times, most recent failure: Lost task 0.0 in stage 1405.0 (TID 1405) (60640705d4e8 executor driver): org.apache.spark.SparkFileNotFoundException: File file:/app/data/input/events_196.csv does not exist
+It is possible the underlying files have been updated. You can explicitly invalidate the cache in Spark by running 'REFRESH TABLE tableName' command in SQL or by recreating the Dataset/DataFrame involved.
+	at org.apache.spark.sql.errors.QueryExecutionErrors$.readCurrentFileNotFoundError(QueryExecutionErrors.scala:780)
+	at org.apache.spark.sql.execution.datasources.FileScanRDD$$anon$1.org$apache$spark$sql$execution$datasources$FileScanRDD$$anon$$readCurrentFile(FileScanRDD.scala:220)
+	at org.apache.spark.sql.execution.datasources.FileScanRDD$$anon$1.nextIterator(FileScanRDD.scala:279)
+	at org.apache.spark.sql.execution.datasources.FileScanRDD$$anon$1.hasNext(FileScanRDD.scala:129)
+	at scala.collection.Iterator$$anon$10.hasNext(Iterator.scala:460)
+	at org.apache.spark.sql.catalyst.expressions.GeneratedClass$GeneratedIteratorForCodegenStage1.processNext(Unknown Source)
+	at org.apache.spark.sql.execution.BufferedRowIterator.hasNext(BufferedRowIterator.java:43)
+	at org.apache.spark.sql.execution.WholeStageCodegenEvaluatorFactory$WholeStageCodegenPartitionEvaluator$$anon$1.hasNext(WholeStageCodegenEvaluatorFactory.scala:43)
+	at scala.collection.Iterator$$anon$10.hasNext(Iterator.scala:460)
+	at scala.collection.Iterator$$anon$10.hasNext(Iterator.scala:460)
+	at scala.collection.Iterator.isEmpty(Iterator.scala:387)
+	at scala.collection.Iterator.isEmpty$(Iterator.scala:387)
+	at scala.collection.AbstractIterator.isEmpty(Iterator.scala:1431)
+	at org.apache.spark.sql.execution.datasources.jdbc.JdbcUtils$.savePartition(JdbcUtils.scala:682)
+	at org.apache.spark.sql.execution.datasources.jdbc.JdbcUtils$.$anonfun$saveTable$1(JdbcUtils.scala:902)
+	at org.apache.spark.sql.execution.datasources.jdbc.JdbcUtils$.$anonfun$saveTable$1$adapted(JdbcUtils.scala:901)
+	at org.apache.spark.rdd.RDD.$anonfun$foreachPartition$2(RDD.scala:1036)
+	at org.apache.spark.rdd.RDD.$anonfun$foreachPartition$2$adapted(RDD.scala:1036)
+	at org.apache.spark.SparkContext.$anonfun$runJob$5(SparkContext.scala:2438)
+	at org.apache.spark.scheduler.ResultTask.runTask(ResultTask.scala:93)
+	at org.apache.spark.TaskContext.runTaskWithListeners(TaskContext.scala:161)
+	at org.apache.spark.scheduler.Task.run(Task.scala:141)
+	at org.apache.spark.executor.Executor$TaskRunner.$anonfun$run$4(Executor.scala:620)
+	at org.apache.spark.util.SparkErrorUtils.tryWithSafeFinally(SparkErrorUtils.scala:64)
+	at org.apache.spark.util.SparkErrorUtils.tryWithSafeFinally$(SparkErrorUtils.scala:61)
+	at org.apache.spark.util.Utils$.tryWithSafeFinally(Utils.scala:94)
+	at org.apache.spark.executor.Executor$TaskRunner.run(Executor.scala:623)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(Unknown Source)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(Unknown Source)
+	at java.base/java.lang.Thread.run(Unknown Source)
+
+Driver stacktrace:
+	at org.apache.spark.scheduler.DAGScheduler.failJobAndIndependentStages(DAGScheduler.scala:2844)
+	at org.apache.spark.scheduler.DAGScheduler.$anonfun$abortStage$2(DAGScheduler.scala:2780)
+	at org.apache.spark.scheduler.DAGScheduler.$anonfun$abortStage$2$adapted(DAGScheduler.scala:2779)
+	at scala.collection.mutable.ResizableArray.foreach(ResizableArray.scala:62)
+	at scala.collection.mutable.ResizableArray.foreach$(ResizableArray.scala:55)
+	at scala.collection.mutable.ArrayBuffer.foreach(ArrayBuffer.scala:49)
+	at org.apache.spark.scheduler.DAGScheduler.abortStage(DAGScheduler.scala:2779)
+	at org.apache.spark.scheduler.DAGScheduler.$anonfun$handleTaskSetFailed$1(DAGScheduler.scala:1242)
+	at org.apache.spark.scheduler.DAGScheduler.$anonfun$handleTaskSetFailed$1$adapted(DAGScheduler.scala:1242)
+	at scala.Option.foreach(Option.scala:407)
+	at org.apache.spark.scheduler.DAGScheduler.handleTaskSetFailed(DAGScheduler.scala:1242)
+	at org.apache.spark.scheduler.DAGSchedulerEventProcessLoop.doOnReceive(DAGScheduler.scala:3048)
+	at org.apache.spark.scheduler.DAGSchedulerEventProcessLoop.onReceive(DAGScheduler.scala:2982)
+	at org.apache.spark.scheduler.DAGSchedulerEventProcessLoop.onReceive(DAGScheduler.scala:2971)
+	at org.apache.spark.util.EventLoop$$anon$1.run(EventLoop.scala:49)
+	at org.apache.spark.scheduler.DAGScheduler.runJob(DAGScheduler.scala:984)
+	at org.apache.spark.SparkContext.runJob(SparkContext.scala:2398)
+	at org.apache.spark.SparkContext.runJob(SparkContext.scala:2419)
+	at org.apache.spark.SparkContext.runJob(SparkContext.scala:2438)
+	at org.apache.spark.SparkContext.runJob(SparkContext.scala:2463)
+	at org.apache.spark.rdd.RDD.$anonfun$foreachPartition$1(RDD.scala:1036)
+	at org.apache.spark.rdd.RDDOperationScope$.withScope(RDDOperationScope.scala:151)
+	at org.apache.spark.rdd.RDDOperationScope$.withScope(RDDOperationScope.scala:112)
+	at org.apache.spark.rdd.RDD.withScope(RDD.scala:407)
+	at org.apache.spark.rdd.RDD.foreachPartition(RDD.scala:1034)
+	at org.apache.spark.sql.execution.datasources.jdbc.JdbcUtils$.saveTable(JdbcUtils.scala:901)
+	at org.apache.spark.sql.execution.datasources.jdbc.JdbcRelationProvider.createRelation(JdbcRelationProvider.scala:70)
+	at org.apache.spark.sql.execution.datasources.SaveIntoDataSourceCommand.run(SaveIntoDataSourceCommand.scala:48)
+	at org.apache.spark.sql.execution.command.ExecutedCommandExec.sideEffectResult$lzycompute(commands.scala:75)
+	at org.apache.spark.sql.execution.command.ExecutedCommandExec.sideEffectResult(commands.scala:73)
+	at org.apache.spark.sql.execution.command.ExecutedCommandExec.executeCollect(commands.scala:84)
+	at org.apache.spark.sql.execution.QueryExecution$$anonfun$eagerlyExecuteCommands$1.$anonfun$applyOrElse$1(QueryExecution.scala:107)
+	at org.apache.spark.sql.execution.SQLExecution$.$anonfun$withNewExecutionId$6(SQLExecution.scala:125)
+	at org.apache.spark.sql.execution.SQLExecution$.withSQLConfPropagated(SQLExecution.scala:201)
+	at org.apache.spark.sql.execution.SQLExecution$.$anonfun$withNewExecutionId$1(SQLExecution.scala:108)
+	at org.apache.spark.sql.SparkSession.withActive(SparkSession.scala:900)
+	at org.apache.spark.sql.execution.SQLExecution$.withNewExecutionId(SQLExecution.scala:66)
+	at org.apache.spark.sql.execution.QueryExecution$$anonfun$eagerlyExecuteCommands$1.applyOrElse(QueryExecution.scala:107)
+	at org.apache.spark.sql.execution.QueryExecution$$anonfun$eagerlyExecuteCommands$1.applyOrElse(QueryExecution.scala:98)
+	at org.apache.spark.sql.catalyst.trees.TreeNode.$anonfun$transformDownWithPruning$1(TreeNode.scala:461)
+	at org.apache.spark.sql.catalyst.trees.CurrentOrigin$.withOrigin(origin.scala:76)
+	at org.apache.spark.sql.catalyst.trees.TreeNode.transformDownWithPruning(TreeNode.scala:461)
+	at org.apache.spark.sql.catalyst.plans.logical.LogicalPlan.org$apache$spark$sql$catalyst$plans$logical$AnalysisHelper$$super$transformDownWithPruning(LogicalPlan.scala:32)
+	at org.apache.spark.sql.catalyst.plans.logical.AnalysisHelper.transformDownWithPruning(AnalysisHelper.scala:267)
+	at org.apache.spark.sql.catalyst.plans.logical.AnalysisHelper.transformDownWithPruning$(AnalysisHelper.scala:263)
+	at org.apache.spark.sql.catalyst.plans.logical.LogicalPlan.transformDownWithPruning(LogicalPlan.scala:32)
+	at org.apache.spark.sql.catalyst.plans.logical.LogicalPlan.transformDownWithPruning(LogicalPlan.scala:32)
+	at org.apache.spark.sql.catalyst.trees.TreeNode.transformDown(TreeNode.scala:437)
+	at org.apache.spark.sql.execution.QueryExecution.eagerlyExecuteCommands(QueryExecution.scala:98)
+	at org.apache.spark.sql.execution.QueryExecution.commandExecuted$lzycompute(QueryExecution.scala:85)
+	at org.apache.spark.sql.execution.QueryExecution.commandExecuted(QueryExecution.scala:83)
+	at org.apache.spark.sql.execution.QueryExecution.assertCommandExecuted(QueryExecution.scala:142)
+	at org.apache.spark.sql.DataFrameWriter.runCommand(DataFrameWriter.scala:859)
+	at org.apache.spark.sql.DataFrameWriter.saveToV1Source(DataFrameWriter.scala:388)
+	at org.apache.spark.sql.DataFrameWriter.saveInternal(DataFrameWriter.scala:361)
+	at org.apache.spark.sql.DataFrameWriter.save(DataFrameWriter.scala:248)
+	at org.apache.spark.sql.DataFrameWriter.jdbc(DataFrameWriter.scala:756)
+	at jdk.internal.reflect.GeneratedMethodAccessor84.invoke(Unknown Source)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
+	at java.base/java.lang.reflect.Method.invoke(Unknown Source)
+	at py4j.reflection.MethodInvoker.invoke(MethodInvoker.java:244)
+	at py4j.reflection.ReflectionEngine.invoke(ReflectionEngine.java:374)
+	at py4j.Gateway.invoke(Gateway.java:282)
+	at py4j.commands.AbstractCommand.invokeMethod(AbstractCommand.java:132)
+	at py4j.commands.CallCommand.execute(CallCommand.java:79)
+	at py4j.ClientServerConnection.sendCommand(ClientServerConnection.java:244)
+	at py4j.CallbackClient.sendCommand(CallbackClient.java:384)
+	at py4j.CallbackClient.sendCommand(CallbackClient.java:356)
+	at py4j.reflection.PythonProxyHandler.invoke(PythonProxyHandler.java:106)
+	at com.sun.proxy.$Proxy31.call(Unknown Source)
+	at org.apache.spark.sql.execution.streaming.sources.PythonForeachBatchHelper$.$anonfun$callForeachBatch$1(ForeachBatchSink.scala:53)
+	at org.apache.spark.sql.execution.streaming.sources.PythonForeachBatchHelper$.$anonfun$callForeachBatch$1$adapted(ForeachBatchSink.scala:53)
+	at org.apache.spark.sql.execution.streaming.sources.ForeachBatchSink.addBatch(ForeachBatchSink.scala:34)
+	at org.apache.spark.sql.execution.streaming.MicroBatchExecution.$anonfun$runBatch$17(MicroBatchExecution.scala:732)
+	at org.apache.spark.sql.execution.SQLExecution$.$anonfun$withNewExecutionId$6(SQLExecution.scala:125)
+	at org.apache.spark.sql.execution.SQLExecution$.withSQLConfPropagated(SQLExecution.scala:201)
+	at org.apache.spark.sql.execution.SQLExecution$.$anonfun$withNewExecutionId$1(SQLExecution.scala:108)
+	at org.apache.spark.sql.SparkSession.withActive(SparkSession.scala:900)
+	at org.apache.spark.sql.execution.SQLExecution$.withNewExecutionId(SQLExecution.scala:66)
+	at org.apache.spark.sql.execution.streaming.MicroBatchExecution.$anonfun$runBatch$16(MicroBatchExecution.scala:729)
+	at org.apache.spark.sql.execution.streaming.ProgressReporter.reportTimeTaken(ProgressReporter.scala:427)
+	at org.apache.spark.sql.execution.streaming.ProgressReporter.reportTimeTaken$(ProgressReporter.scala:425)
+	at org.apache.spark.sql.execution.streaming.StreamExecution.reportTimeTaken(StreamExecution.scala:67)
+	at org.apache.spark.sql.execution.streaming.MicroBatchExecution.runBatch(MicroBatchExecution.scala:729)
+	at org.apache.spark.sql.execution.streaming.MicroBatchExecution.$anonfun$runActivatedStream$2(MicroBatchExecution.scala:286)
+	at scala.runtime.java8.JFunction0$mcV$sp.apply(JFunction0$mcV$sp.java:23)
+	at org.apache.spark.sql.execution.streaming.ProgressReporter.reportTimeTaken(ProgressReporter.scala:427)
+	at org.apache.spark.sql.execution.streaming.ProgressReporter.reportTimeTaken$(ProgressReporter.scala:425)
+	at org.apache.spark.sql.execution.streaming.StreamExecution.reportTimeTaken(StreamExecution.scala:67)
+	at org.apache.spark.sql.execution.streaming.MicroBatchExecution.$anonfun$runActivatedStream$1(MicroBatchExecution.scala:249)
+	at org.apache.spark.sql.execution.streaming.ProcessingTimeExecutor.execute(TriggerExecutor.scala:67)
+	at org.apache.spark.sql.execution.streaming.MicroBatchExecution.runActivatedStream(MicroBatchExecution.scala:239)
+	at org.apache.spark.sql.execution.streaming.StreamExecution.$anonfun$runStream$1(StreamExecution.scala:311)
+	at scala.runtime.java8.JFunction0$mcV$sp.apply(JFunction0$mcV$sp.java:23)
+	at org.apache.spark.sql.SparkSession.withActive(SparkSession.scala:900)
+	at org.apache.spark.sql.execution.streaming.StreamExecution.org$apache$spark$sql$execution$streaming$StreamExecution$$runStream(StreamExecution.scala:289)
+	at org.apache.spark.sql.execution.streaming.StreamExecution$$anon$1.$anonfun$run$1(StreamExecution.scala:211)
+	at scala.runtime.java8.JFunction0$mcV$sp.apply(JFunction0$mcV$sp.java:23)
+	at org.apache.spark.JobArtifactSet$.withActiveJobArtifactState(JobArtifactSet.scala:94)
+	at org.apache.spark.sql.execution.streaming.StreamExecution$$anon$1.run(StreamExecution.scala:211)
+Caused by: org.apache.spark.SparkFileNotFoundException: File file:/app/data/input/events_196.csv does not exist
+It is possible the underlying files have been updated. You can explicitly invalidate the cache in Spark by running 'REFRESH TABLE tableName' command in SQL or by recreating the Dataset/DataFrame involved.
+	at org.apache.spark.sql.errors.QueryExecutionErrors$.readCurrentFileNotFoundError(QueryExecutionErrors.scala:780)
+	at org.apache.spark.sql.execution.datasources.FileScanRDD$$anon$1.org$apache$spark$sql$execution$datasources$FileScanRDD$$anon$$readCurrentFile(FileScanRDD.scala:220)
+	at org.apache.spark.sql.execution.datasources.FileScanRDD$$anon$1.nextIterator(FileScanRDD.scala:279)
+	at org.apache.spark.sql.execution.datasources.FileScanRDD$$anon$1.hasNext(FileScanRDD.scala:129)
+	at scala.collection.Iterator$$anon$10.hasNext(Iterator.scala:460)
+	at org.apache.spark.sql.catalyst.expressions.GeneratedClass$GeneratedIteratorForCodegenStage1.processNext(Unknown Source)
+	at org.apache.spark.sql.execution.BufferedRowIterator.hasNext(BufferedRowIterator.java:43)
+	at org.apache.spark.sql.execution.WholeStageCodegenEvaluatorFactory$WholeStageCodegenPartitionEvaluator$$anon$1.hasNext(WholeStageCodegenEvaluatorFactory.scala:43)
+	at scala.collection.Iterator$$anon$10.hasNext(Iterator.scala:460)
+	at scala.collection.Iterator$$anon$10.hasNext(Iterator.scala:460)
+	at scala.collection.Iterator.isEmpty(Iterator.scala:387)
+	at scala.collection.Iterator.isEmpty$(Iterator.scala:387)
+	at scala.collection.AbstractIterator.isEmpty(Iterator.scala:1431)
+	at org.apache.spark.sql.execution.datasources.jdbc.JdbcUtils$.savePartition(JdbcUtils.scala:682)
+	at org.apache.spark.sql.execution.datasources.jdbc.JdbcUtils$.$anonfun$saveTable$1(JdbcUtils.scala:902)
+	at org.apache.spark.sql.execution.datasources.jdbc.JdbcUtils$.$anonfun$saveTable$1$adapted(JdbcUtils.scala:901)
+	at org.apache.spark.rdd.RDD.$anonfun$foreachPartition$2(RDD.scala:1036)
+	at org.apache.spark.rdd.RDD.$anonfun$foreachPartition$2$adapted(RDD.scala:1036)
+	at org.apache.spark.SparkContext.$anonfun$runJob$5(SparkContext.scala:2438)
+	at org.apache.spark.scheduler.ResultTask.runTask(ResultTask.scala:93)
+	at org.apache.spark.TaskContext.runTaskWithListeners(TaskContext.scala:161)
+	at org.apache.spark.scheduler.Task.run(Task.scala:141)
+	at org.apache.spark.executor.Executor$TaskRunner.$anonfun$run$4(Executor.scala:620)
+	at org.apache.spark.util.SparkErrorUtils.tryWithSafeFinally(SparkErrorUtils.scala:64)
+	at org.apache.spark.util.SparkErrorUtils.tryWithSafeFinally$(SparkErrorUtils.scala:61)
+	at org.apache.spark.util.Utils$.tryWithSafeFinally(Utils.scala:94)
+	at org.apache.spark.executor.Executor$TaskRunner.run(Executor.scala:623)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(Unknown Source)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(Unknown Source)
+	at java.base/java.lang.Thread.run(Unknown Source)
+Traceback (most recent call last):
+  File "/app/src/spark_streaming_to_postgres.py", line 71, in write_to_postgres
+    valid_df.write \
+  File "/opt/spark/python/lib/pyspark.zip/pyspark/sql/readwriter.py", line 1984, in jdbc
+    self.mode(mode)._jwrite.jdbc(url, table, jprop)
+  File "/opt/spark/python/lib/py4j-0.10.9.7-src.zip/py4j/java_gateway.py", line 1322, in __call__
+    return_value = get_return_value(
+  File "/opt/spark/python/lib/pyspark.zip/pyspark/errors/exceptions/captured.py", line 179, in deco
+    return f(*a, **kw)
+  File "/opt/spark/python/lib/py4j-0.10.9.7-src.zip/py4j/protocol.py", line 326, in get_return_value
+    raise Py4JJavaError(
+py4j.protocol.Py4JJavaError: An error occurred while calling o4512.jdbc.
+: org.apache.spark.SparkException: Job aborted due to stage failure: Task 0 in stage 1405.0 failed 1 times, most recent failure: Lost task 0.0 in stage 1405.0 (TID 1405) (60640705d4e8 executor driver): org.apache.spark.SparkFileNotFoundException: File file:/app/data/input/events_196.csv does not exist
+It is possible the underlying files have been updated. You can explicitly invalidate the cache in Spark by running 'REFRESH TABLE tableName' command in SQL or by recreating the Dataset/DataFrame involved.
+	at org.apache.spark.sql.errors.QueryExecutionErrors$.readCurrentFileNotFoundError(QueryExecutionErrors.scala:780)
+	at org.apache.spark.sql.execution.datasources.FileScanRDD$$anon$1.org$apache$spark$sql$execution$datasources$FileScanRDD$$anon$$readCurrentFile(FileScanRDD.scala:220)
+	at org.apache.spark.sql.execution.datasources.FileScanRDD$$anon$1.nextIterator(FileScanRDD.scala:279)
+	at org.apache.spark.sql.execution.datasources.FileScanRDD$$anon$1.hasNext(FileScanRDD.scala:129)
+	at scala.collection.Iterator$$anon$10.hasNext(Iterator.scala:460)
+	at org.apache.spark.sql.catalyst.expressions.GeneratedClass$GeneratedIteratorForCodegenStage1.processNext(Unknown Source)
+	at org.apache.spark.sql.execution.BufferedRowIterator.hasNext(BufferedRowIterator.java:43)
+	at org.apache.spark.sql.execution.WholeStageCodegenEvaluatorFactory$WholeStageCodegenPartitionEvaluator$$anon$1.hasNext(WholeStageCodegenEvaluatorFactory.scala:43)
+	at scala.collection.Iterator$$anon$10.hasNext(Iterator.scala:460)
+	at scala.collection.Iterator$$anon$10.hasNext(Iterator.scala:460)
+	at scala.collection.Iterator.isEmpty(Iterator.scala:387)
+	at scala.collection.Iterator.isEmpty$(Iterator.scala:387)
+	at scala.collection.AbstractIterator.isEmpty(Iterator.scala:1431)
+	at org.apache.spark.sql.execution.datasources.jdbc.JdbcUtils$.savePartition(JdbcUtils.scala:682)
+	at org.apache.spark.sql.execution.datasources.jdbc.JdbcUtils$.$anonfun$saveTable$1(JdbcUtils.scala:902)
+	at org.apache.spark.sql.execution.datasources.jdbc.JdbcUtils$.$anonfun$saveTable$1$adapted(JdbcUtils.scala:901)
+	at org.apache.spark.rdd.RDD.$anonfun$foreachPartition$2(RDD.scala:1036)
+	at org.apache.spark.rdd.RDD.$anonfun$foreachPartition$2$adapted(RDD.scala:1036)
+	at org.apache.spark.SparkContext.$anonfun$runJob$5(SparkContext.scala:2438)
+	at org.apache.spark.scheduler.ResultTask.runTask(ResultTask.scala:93)
+	at org.apache.spark.TaskContext.runTaskWithListeners(TaskContext.scala:161)
+	at org.apache.spark.scheduler.Task.run(Task.scala:141)
+	at org.apache.spark.executor.Executor$TaskRunner.$anonfun$run$4(Executor.scala:620)
+	at org.apache.spark.util.SparkErrorUtils.tryWithSafeFinally(SparkErrorUtils.scala:64)
+	at org.apache.spark.util.SparkErrorUtils.tryWithSafeFinally$(SparkErrorUtils.scala:61)
+	at org.apache.spark.util.Utils$.tryWithSafeFinally(Utils.scala:94)
+	at org.apache.spark.executor.Executor$TaskRunner.run(Executor.scala:623)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(Unknown Source)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(Unknown Source)
+	at java.base/java.lang.Thread.run(Unknown Source)
+
+Driver stacktrace:
+	at org.apache.spark.scheduler.DAGScheduler.failJobAndIndependentStages(DAGScheduler.scala:2844)
+	at org.apache.spark.scheduler.DAGScheduler.$anonfun$abortStage$2(DAGScheduler.scala:2780)
+	at org.apache.spark.scheduler.DAGScheduler.$anonfun$abortStage$2$adapted(DAGScheduler.scala:2779)
+	at scala.collection.mutable.ResizableArray.foreach(ResizableArray.scala:62)
+	at scala.collection.mutable.ResizableArray.foreach$(ResizableArray.scala:55)
+	at scala.collection.mutable.ArrayBuffer.foreach(ArrayBuffer.scala:49)
+	at org.apache.spark.scheduler.DAGScheduler.abortStage(DAGScheduler.scala:2779)
+	at org.apache.spark.scheduler.DAGScheduler.$anonfun$handleTaskSetFailed$1(DAGScheduler.scala:1242)
+	at org.apache.spark.scheduler.DAGScheduler.$anonfun$handleTaskSetFailed$1$adapted(DAGScheduler.scala:1242)
+	at scala.Option.foreach(Option.scala:407)
+	at org.apache.spark.scheduler.DAGScheduler.handleTaskSetFailed(DAGScheduler.scala:1242)
+	at org.apache.spark.scheduler.DAGSchedulerEventProcessLoop.doOnReceive(DAGScheduler.scala:3048)
+	at org.apache.spark.scheduler.DAGSchedulerEventProcessLoop.onReceive(DAGScheduler.scala:2982)
+	at org.apache.spark.scheduler.DAGSchedulerEventProcessLoop.onReceive(DAGScheduler.scala:2971)
+	at org.apache.spark.util.EventLoop$$anon$1.run(EventLoop.scala:49)
+	at org.apache.spark.scheduler.DAGScheduler.runJob(DAGScheduler.scala:984)
+	at org.apache.spark.SparkContext.runJob(SparkContext.scala:2398)
+	at org.apache.spark.SparkContext.runJob(SparkContext.scala:2419)
+	at org.apache.spark.SparkContext.runJob(SparkContext.scala:2438)
+	at org.apache.spark.SparkContext.runJob(SparkContext.scala:2463)
+	at org.apache.spark.rdd.RDD.$anonfun$foreachPartition$1(RDD.scala:1036)
+	at org.apache.spark.rdd.RDDOperationScope$.withScope(RDDOperationScope.scala:151)
+	at org.apache.spark.rdd.RDDOperationScope$.withScope(RDDOperationScope.scala:112)
+	at org.apache.spark.rdd.RDD.withScope(RDD.scala:407)
+	at org.apache.spark.rdd.RDD.foreachPartition(RDD.scala:1034)
+	at org.apache.spark.sql.execution.datasources.jdbc.JdbcUtils$.saveTable(JdbcUtils.scala:901)
+	at org.apache.spark.sql.execution.datasources.jdbc.JdbcRelationProvider.createRelation(JdbcRelationProvider.scala:70)
+	at org.apache.spark.sql.execution.datasources.SaveIntoDataSourceCommand.run(SaveIntoDataSourceCommand.scala:48)
+	at org.apache.spark.sql.execution.command.ExecutedCommandExec.sideEffectResult$lzycompute(commands.scala:75)
+	at org.apache.spark.sql.execution.command.ExecutedCommandExec.sideEffectResult(commands.scala:73)
+	at org.apache.spark.sql.execution.command.ExecutedCommandExec.executeCollect(commands.scala:84)
+	at org.apache.spark.sql.execution.QueryExecution$$anonfun$eagerlyExecuteCommands$1.$anonfun$applyOrElse$1(QueryExecution.scala:107)
+	at org.apache.spark.sql.execution.SQLExecution$.$anonfun$withNewExecutionId$6(SQLExecution.scala:125)
+	at org.apache.spark.sql.execution.SQLExecution$.withSQLConfPropagated(SQLExecution.scala:201)
+	at org.apache.spark.sql.execution.SQLExecution$.$anonfun$withNewExecutionId$1(SQLExecution.scala:108)
+	at org.apache.spark.sql.SparkSession.withActive(SparkSession.scala:900)
+	at org.apache.spark.sql.execution.SQLExecution$.withNewExecutionId(SQLExecution.scala:66)
+	at org.apache.spark.sql.execution.QueryExecution$$anonfun$eagerlyExecuteCommands$1.applyOrElse(QueryExecution.scala:107)
+	at org.apache.spark.sql.execution.QueryExecution$$anonfun$eagerlyExecuteCommands$1.applyOrElse(QueryExecution.scala:98)
+	at org.apache.spark.sql.catalyst.trees.TreeNode.$anonfun$transformDownWithPruning$1(TreeNode.scala:461)
+	at org.apache.spark.sql.catalyst.trees.CurrentOrigin$.withOrigin(origin.scala:76)
+	at org.apache.spark.sql.catalyst.trees.TreeNode.transformDownWithPruning(TreeNode.scala:461)
+	at org.apache.spark.sql.catalyst.plans.logical.LogicalPlan.org$apache$spark$sql$catalyst$plans$logical$AnalysisHelper$$super$transformDownWithPruning(LogicalPlan.scala:32)
+	at org.apache.spark.sql.catalyst.plans.logical.AnalysisHelper.transformDownWithPruning(AnalysisHelper.scala:267)
+	at org.apache.spark.sql.catalyst.plans.logical.AnalysisHelper.transformDownWithPruning$(AnalysisHelper.scala:263)
+	at org.apache.spark.sql.catalyst.plans.logical.LogicalPlan.transformDownWithPruning(LogicalPlan.scala:32)
+	at org.apache.spark.sql.catalyst.plans.logical.LogicalPlan.transformDownWithPruning(LogicalPlan.scala:32)
+	at org.apache.spark.sql.catalyst.trees.TreeNode.transformDown(TreeNode.scala:437)
+	at org.apache.spark.sql.execution.QueryExecution.eagerlyExecuteCommands(QueryExecution.scala:98)
+	at org.apache.spark.sql.execution.QueryExecution.commandExecuted$lzycompute(QueryExecution.scala:85)
+	at org.apache.spark.sql.execution.QueryExecution.commandExecuted(QueryExecution.scala:83)
+	at org.apache.spark.sql.execution.QueryExecution.assertCommandExecuted(QueryExecution.scala:142)
+	at org.apache.spark.sql.DataFrameWriter.runCommand(DataFrameWriter.scala:859)
+	at org.apache.spark.sql.DataFrameWriter.saveToV1Source(DataFrameWriter.scala:388)
+	at org.apache.spark.sql.DataFrameWriter.saveInternal(DataFrameWriter.scala:361)
+	at org.apache.spark.sql.DataFrameWriter.save(DataFrameWriter.scala:248)
+	at org.apache.spark.sql.DataFrameWriter.jdbc(DataFrameWriter.scala:756)
+	at jdk.internal.reflect.GeneratedMethodAccessor84.invoke(Unknown Source)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
+	at java.base/java.lang.reflect.Method.invoke(Unknown Source)
+	at py4j.reflection.MethodInvoker.invoke(MethodInvoker.java:244)
+	at py4j.reflection.ReflectionEngine.invoke(ReflectionEngine.java:374)
+	at py4j.Gateway.invoke(Gateway.java:282)
+	at py4j.commands.AbstractCommand.invokeMethod(AbstractCommand.java:132)
+	at py4j.commands.CallCommand.execute(CallCommand.java:79)
+	at py4j.ClientServerConnection.sendCommand(ClientServerConnection.java:244)
+	at py4j.CallbackClient.sendCommand(CallbackClient.java:384)
+	at py4j.CallbackClient.sendCommand(CallbackClient.java:356)
+	at py4j.reflection.PythonProxyHandler.invoke(PythonProxyHandler.java:106)
+	at com.sun.proxy.$Proxy31.call(Unknown Source)
+	at org.apache.spark.sql.execution.streaming.sources.PythonForeachBatchHelper$.$anonfun$callForeachBatch$1(ForeachBatchSink.scala:53)
+	at org.apache.spark.sql.execution.streaming.sources.PythonForeachBatchHelper$.$anonfun$callForeachBatch$1$adapted(ForeachBatchSink.scala:53)
+	at org.apache.spark.sql.execution.streaming.sources.ForeachBatchSink.addBatch(ForeachBatchSink.scala:34)
+	at org.apache.spark.sql.execution.streaming.MicroBatchExecution.$anonfun$runBatch$17(MicroBatchExecution.scala:732)
+	at org.apache.spark.sql.execution.SQLExecution$.$anonfun$withNewExecutionId$6(SQLExecution.scala:125)
+	at org.apache.spark.sql.execution.SQLExecution$.withSQLConfPropagated(SQLExecution.scala:201)
+	at org.apache.spark.sql.execution.SQLExecution$.$anonfun$withNewExecutionId$1(SQLExecution.scala:108)
+	at org.apache.spark.sql.SparkSession.withActive(SparkSession.scala:900)
+	at org.apache.spark.sql.execution.SQLExecution$.withNewExecutionId(SQLExecution.scala:66)
+	at org.apache.spark.sql.execution.streaming.MicroBatchExecution.$anonfun$runBatch$16(MicroBatchExecution.scala:729)
+	at org.apache.spark.sql.execution.streaming.ProgressReporter.reportTimeTaken(ProgressReporter.scala:427)
+	at org.apache.spark.sql.execution.streaming.ProgressReporter.reportTimeTaken$(ProgressReporter.scala:425)
+	at org.apache.spark.sql.execution.streaming.StreamExecution.reportTimeTaken(StreamExecution.scala:67)
+	at org.apache.spark.sql.execution.streaming.MicroBatchExecution.runBatch(MicroBatchExecution.scala:729)
+	at org.apache.spark.sql.execution.streaming.MicroBatchExecution.$anonfun$runActivatedStream$2(MicroBatchExecution.scala:286)
+	at scala.runtime.java8.JFunction0$mcV$sp.apply(JFunction0$mcV$sp.java:23)
+	at org.apache.spark.sql.execution.streaming.ProgressReporter.reportTimeTaken(ProgressReporter.scala:427)
+	at org.apache.spark.sql.execution.streaming.ProgressReporter.reportTimeTaken$(ProgressReporter.scala:425)
+	at org.apache.spark.sql.execution.streaming.StreamExecution.reportTimeTaken(StreamExecution.scala:67)
+	at org.apache.spark.sql.execution.streaming.MicroBatchExecution.$anonfun$runActivatedStream$1(MicroBatchExecution.scala:249)
+	at org.apache.spark.sql.execution.streaming.ProcessingTimeExecutor.execute(TriggerExecutor.scala:67)
+	at org.apache.spark.sql.execution.streaming.MicroBatchExecution.runActivatedStream(MicroBatchExecution.scala:239)
+	at org.apache.spark.sql.execution.streaming.StreamExecution.$anonfun$runStream$1(StreamExecution.scala:311)
+	at scala.runtime.java8.JFunction0$mcV$sp.apply(JFunction0$mcV$sp.java:23)
+	at org.apache.spark.sql.SparkSession.withActive(SparkSession.scala:900)
+	at org.apache.spark.sql.execution.streaming.StreamExecution.org$apache$spark$sql$execution$streaming$StreamExecution$$runStream(StreamExecution.scala:289)
+	at org.apache.spark.sql.execution.streaming.StreamExecution$$anon$1.$anonfun$run$1(StreamExecution.scala:211)
+	at scala.runtime.java8.JFunction0$mcV$sp.apply(JFunction0$mcV$sp.java:23)
+	at org.apache.spark.JobArtifactSet$.withActiveJobArtifactState(JobArtifactSet.scala:94)
+	at org.apache.spark.sql.execution.streaming.StreamExecution$$anon$1.run(StreamExecution.scala:211)
+Caused by: org.apache.spark.SparkFileNotFoundException: File file:/app/data/input/events_196.csv does not exist
+It is possible the underlying files have been updated. You can explicitly invalidate the cache in Spark by running 'REFRESH TABLE tableName' command in SQL or by recreating the Dataset/DataFrame involved.
+	at org.apache.spark.sql.errors.QueryExecutionErrors$.readCurrentFileNotFoundError(QueryExecutionErrors.scala:780)
+	at org.apache.spark.sql.execution.datasources.FileScanRDD$$anon$1.org$apache$spark$sql$execution$datasources$FileScanRDD$$anon$$readCurrentFile(FileScanRDD.scala:220)
+	at org.apache.spark.sql.execution.datasources.FileScanRDD$$anon$1.nextIterator(FileScanRDD.scala:279)
+	at org.apache.spark.sql.execution.datasources.FileScanRDD$$anon$1.hasNext(FileScanRDD.scala:129)
+	at scala.collection.Iterator$$anon$10.hasNext(Iterator.scala:460)
+	at org.apache.spark.sql.catalyst.expressions.GeneratedClass$GeneratedIteratorForCodegenStage1.processNext(Unknown Source)
+	at org.apache.spark.sql.execution.BufferedRowIterator.hasNext(BufferedRowIterator.java:43)
+	at org.apache.spark.sql.execution.WholeStageCodegenEvaluatorFactory$WholeStageCodegenPartitionEvaluator$$anon$1.hasNext(WholeStageCodegenEvaluatorFactory.scala:43)
+	at scala.collection.Iterator$$anon$10.hasNext(Iterator.scala:460)
+	at scala.collection.Iterator$$anon$10.hasNext(Iterator.scala:460)
+	at scala.collection.Iterator.isEmpty(Iterator.scala:387)
+	at scala.collection.Iterator.isEmpty$(Iterator.scala:387)
+	at scala.collection.AbstractIterator.isEmpty(Iterator.scala:1431)
+	at org.apache.spark.sql.execution.datasources.jdbc.JdbcUtils$.savePartition(JdbcUtils.scala:682)
+	at org.apache.spark.sql.execution.datasources.jdbc.JdbcUtils$.$anonfun$saveTable$1(JdbcUtils.scala:902)
+	at org.apache.spark.sql.execution.datasources.jdbc.JdbcUtils$.$anonfun$saveTable$1$adapted(JdbcUtils.scala:901)
+	at org.apache.spark.rdd.RDD.$anonfun$foreachPartition$2(RDD.scala:1036)
+	at org.apache.spark.rdd.RDD.$anonfun$foreachPartition$2$adapted(RDD.scala:1036)
+	at org.apache.spark.SparkContext.$anonfun$runJob$5(SparkContext.scala:2438)
+	at org.apache.spark.scheduler.ResultTask.runTask(ResultTask.scala:93)
+	at org.apache.spark.TaskContext.runTaskWithListeners(TaskContext.scala:161)
+	at org.apache.spark.scheduler.Task.run(Task.scala:141)
+	at org.apache.spark.executor.Executor$TaskRunner.$anonfun$run$4(Executor.scala:620)
+	at org.apache.spark.util.SparkErrorUtils.tryWithSafeFinally(SparkErrorUtils.scala:64)
+	at org.apache.spark.util.SparkErrorUtils.tryWithSafeFinally$(SparkErrorUtils.scala:61)
+	at org.apache.spark.util.Utils$.tryWithSafeFinally(Utils.scala:94)
+	at org.apache.spark.executor.Executor$TaskRunner.run(Executor.scala:623)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(Unknown Source)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(Unknown Source)
+	at java.base/java.lang.Thread.run(Unknown Source)
+
+2026-01-28 09:56:00,718 - INFO - Batch ID: 193 is empty. Skipping write.
+2026-01-28 09:56:05,923 - INFO - Batch ID: 194 is empty. Skipping write.
+2026-01-28 09:56:13,419 - INFO - Batch ID: 195 is empty. Skipping write.
+2026-01-28 09:56:21,303 - INFO - Batch ID: 196 is empty. Skipping write.
+2026-01-28 09:56:27,299 - INFO - Batch ID: 197 is empty. Skipping write.
+2026-01-28 09:56:32,620 - INFO - Batch ID: 198 is empty. Skipping write.
+2026-01-28 09:56:38,735 - INFO - Processing Batch ID: 199 with 72 records.
+2026-01-28 09:56:38,953 - INFO - Batch ID: 199 - Success: Wrote 72 valid records.
+2026-01-28 09:56:44,561 - INFO - Processing Batch ID: 200 with 91 records.
+2026-01-28 09:56:44,750 - INFO - Batch ID: 200 - Success: Wrote 91 valid records.
+2026-01-28 09:56:49,786 - INFO - Processing Batch ID: 201 with 60 records.
+2026-01-28 09:56:50,270 - INFO - Batch ID: 201 - Success: Wrote 60 valid records.
+2026-01-28 09:56:55,763 - INFO - Batch ID: 202 is empty. Skipping write.
+2026-01-28 09:57:01,464 - INFO - Batch ID: 203 is empty. Skipping write.
+2026-01-28 09:57:07,262 - INFO - Processing Batch ID: 204 with 72 records.
+2026-01-28 09:57:07,575 - INFO - Batch ID: 204 - Success: Wrote 72 valid records.
+2026-01-28 09:57:13,614 - INFO - Processing Batch ID: 205 with 86 records.
+2026-01-28 09:57:13,912 - INFO - Batch ID: 205 - Success: Wrote 86 valid records.
+2026-01-28 09:57:20,214 - INFO - Processing Batch ID: 206 with 91 records.
+2026-01-28 09:57:20,626 - INFO - Batch ID: 206 - Success: Wrote 91 valid records.
+2026-01-28 09:57:26,310 - INFO - Processing Batch ID: 207 with 60 records.
+2026-01-28 09:57:26,496 - INFO - Batch ID: 207 - Success: Wrote 60 valid records.
+2026-01-28 09:57:33,424 - INFO - Processing Batch ID: 208 with 51 records.
+2026-01-28 09:57:33,656 - INFO - Batch ID: 208 - Success: Wrote 51 valid records.
+2026-01-28 09:57:39,812 - INFO - Processing Batch ID: 209 with 77 records.
+2026-01-28 09:57:40,519 - INFO - Batch ID: 209 - Success: Wrote 77 valid records.
+2026-01-28 09:57:46,299 - INFO - Processing Batch ID: 210 with 98 records.
+2026-01-28 09:57:46,521 - INFO - Batch ID: 210 - Success: Wrote 98 valid records.
+2026-01-28 09:57:52,229 - INFO - Processing Batch ID: 211 with 82 records.
+2026-01-28 09:57:52,432 - INFO - Batch ID: 211 - Success: Wrote 82 valid records.
+2026-01-28 09:57:58,001 - INFO - Batch ID: 212 is empty. Skipping write.
+2026-01-28 09:58:03,981 - INFO - Batch ID: 213 is empty. Skipping write.
+2026-01-28 09:58:09,239 - INFO - Batch ID: 214 is empty. Skipping write.
+2026-01-28 09:58:14,236 - INFO - Batch ID: 215 is empty. Skipping write.
+2026-01-28 09:58:19,416 - INFO - Processing Batch ID: 216 with 73 records.
+2026-01-28 09:58:19,847 - INFO - Batch ID: 216 - Success: Wrote 73 valid records.
+2026-01-28 09:58:25,348 - INFO - Processing Batch ID: 217 with 74 records.
+2026-01-28 09:58:25,594 - INFO - Batch ID: 217 - Success: Wrote 74 valid records.
+2026-01-28 09:58:30,612 - INFO - Processing Batch ID: 218 with 60 records.
+2026-01-28 09:58:30,813 - INFO - Batch ID: 218 - Success: Wrote 60 valid records.
+2026-01-28 09:58:37,440 - INFO - Processing Batch ID: 219 with 91 records.
+2026-01-28 09:58:37,695 - INFO - Batch ID: 219 - Success: Wrote 91 valid records.
+2026-01-28 09:58:43,124 - INFO - Processing Batch ID: 220 with 95 records.
+2026-01-28 09:58:43,394 - INFO - Batch ID: 220 - Success: Wrote 95 valid records.
+2026-01-28 09:58:48,259 - INFO - Processing Batch ID: 221 with 75 records.
+2026-01-28 09:58:48,458 - INFO - Batch ID: 221 - Success: Wrote 75 valid records.
+2026-01-28 09:58:53,615 - INFO - Processing Batch ID: 222 with 69 records.
+2026-01-28 09:58:53,807 - INFO - Batch ID: 222 - Success: Wrote 69 valid records.
+2026-01-28 09:58:58,767 - INFO - Batch ID: 223 is empty. Skipping write.
+2026-01-28 09:59:05,659 - INFO - Batch ID: 224 is empty. Skipping write.
+2026-01-28 09:59:11,855 - INFO - Batch ID: 225 is empty. Skipping write.
+2026-01-28 09:59:17,283 - INFO - Batch ID: 226 is empty. Skipping write.
+2026-01-28 09:59:23,459 - INFO - Batch ID: 227 is empty. Skipping write.
+2026-01-28 09:59:28,985 - INFO - Batch ID: 228 is empty. Skipping write.
+2026-01-28 09:59:35,351 - INFO - Processing Batch ID: 229 with 3 records.
+2026-01-28 09:59:35,701 - INFO - Batch ID: 229 - Success: Wrote 1 valid records.
+2026-01-28 09:59:35,798 - WARNING - Batch ID: 229 - Found 2 invalid records! Sending to DLQ.
+2026-01-28 09:59:36,007 - ERROR - FAILED to write Batch ID: 229. Error: [DATATYPE_MISMATCH.INVALID_JSON_SCHEMA] Cannot resolve "from_json(event_id)" due to data type mismatch: Input schema "STRING" must be a struct, an array or a map.;
+'Project [event_id#19592, event_time#19598, event_type#19593, product_id#19594, price#19595, user_id#19596, session_id#19597, from_json(StringType, event_id#19592, Some(Etc/UTC)) AS error_message#19606]
++- Project [cast(event_id#0 as string) AS event_id#19592, cast(event_time#1 as string) AS event_time#19598, cast(event_type#2 as string) AS event_type#19593, cast(product_id#3 as string) AS product_id#19594, cast(price#4 as string) AS price#19595, cast(user_id#5 as string) AS user_id#19596, cast(session_id#6 as string) AS session_id#19597]
+   +- Filter NOT ((((price#4 > cast(0 as double)) AND event_type#2 IN (view,purchase)) AND isnotnull(product_id#3)) AND isnotnull(user_id#5))
+      +- LogicalRDD [event_id#0, event_time#1, event_type#2, product_id#3, price#4, user_id#5, session_id#6], false
+Traceback (most recent call last):
+  File "/app/src/spark_streaming_to_postgres.py", line 81, in write_to_postgres
+    dlq_df = invalid_df.select(
+  File "/opt/spark/python/lib/pyspark.zip/pyspark/sql/dataframe.py", line 5170, in withColumn
+    return DataFrame(self._jdf.withColumn(colName, col._jc), self.sparkSession)
+  File "/opt/spark/python/lib/py4j-0.10.9.7-src.zip/py4j/java_gateway.py", line 1322, in __call__
+    return_value = get_return_value(
+  File "/opt/spark/python/lib/pyspark.zip/pyspark/errors/exceptions/captured.py", line 185, in deco
+    raise converted from None
+pyspark.errors.exceptions.captured.AnalysisException: [DATATYPE_MISMATCH.INVALID_JSON_SCHEMA] Cannot resolve "from_json(event_id)" due to data type mismatch: Input schema "STRING" must be a struct, an array or a map.;
+'Project [event_id#19592, event_time#19598, event_type#19593, product_id#19594, price#19595, user_id#19596, session_id#19597, from_json(StringType, event_id#19592, Some(Etc/UTC)) AS error_message#19606]
++- Project [cast(event_id#0 as string) AS event_id#19592, cast(event_time#1 as string) AS event_time#19598, cast(event_type#2 as string) AS event_type#19593, cast(product_id#3 as string) AS product_id#19594, cast(price#4 as string) AS price#19595, cast(user_id#5 as string) AS user_id#19596, cast(session_id#6 as string) AS session_id#19597]
+   +- Filter NOT ((((price#4 > cast(0 as double)) AND event_type#2 IN (view,purchase)) AND isnotnull(product_id#3)) AND isnotnull(user_id#5))
+      +- LogicalRDD [event_id#0, event_time#1, event_type#2, product_id#3, price#4, user_id#5, session_id#6], false
+
+2026-01-28 09:59:41,350 - INFO - Processing Batch ID: 230 with 93 records.
+2026-01-28 09:59:41,648 - INFO - Batch ID: 230 - Success: Wrote 93 valid records.
+2026-01-28 09:59:48,008 - INFO - Processing Batch ID: 231 with 87 records.
+2026-01-28 09:59:48,325 - INFO - Batch ID: 231 - Success: Wrote 87 valid records.
+2026-01-28 09:59:53,982 - INFO - Processing Batch ID: 232 with 56 records.
+2026-01-28 09:59:54,188 - INFO - Batch ID: 232 - Success: Wrote 56 valid records.
+2026-01-28 09:59:59,737 - INFO - Batch ID: 233 is empty. Skipping write.
+2026-01-28 10:00:05,049 - INFO - Batch ID: 234 is empty. Skipping write.
+2026-01-28 10:00:10,979 - INFO - Processing Batch ID: 235 with 92 records.
+2026-01-28 10:00:11,268 - INFO - Batch ID: 235 - Success: Wrote 92 valid records.
+2026-01-28 10:00:16,733 - INFO - Processing Batch ID: 236 with 63 records.
+2026-01-28 10:00:16,946 - INFO - Batch ID: 236 - Success: Wrote 63 valid records.
+2026-01-28 10:00:23,156 - INFO - Processing Batch ID: 237 with 76 records.
+2026-01-28 10:00:23,373 - INFO - Batch ID: 237 - Success: Wrote 76 valid records.
+2026-01-28 10:00:28,356 - INFO - Processing Batch ID: 238 with 97 records.
+2026-01-28 10:00:28,584 - INFO - Batch ID: 238 - Success: Wrote 97 valid records.
+2026-01-28 10:00:35,205 - INFO - Processing Batch ID: 239 with 87 records.
+2026-01-28 10:00:35,443 - INFO - Batch ID: 239 - Success: Wrote 87 valid records.
+2026-01-28 10:00:40,980 - INFO - Processing Batch ID: 240 with 84 records.
+2026-01-28 10:00:41,200 - INFO - Batch ID: 240 - Success: Wrote 84 valid records.
+2026-01-28 10:00:46,982 - INFO - Processing Batch ID: 241 with 100 records.
+2026-01-28 10:00:47,230 - INFO - Batch ID: 241 - Success: Wrote 100 valid records.
+2026-01-28 10:00:54,135 - INFO - Processing Batch ID: 242 with 79 records.
+2026-01-28 10:00:54,349 - INFO - Batch ID: 242 - Success: Wrote 79 valid records.
+2026-01-28 10:00:59,982 - INFO - Batch ID: 243 is empty. Skipping write.
+2026-01-28 10:01:04,979 - INFO - Batch ID: 244 is empty. Skipping write.
+2026-01-28 10:01:09,643 - INFO - Batch ID: 245 is empty. Skipping write.
+2026-01-28 10:01:15,183 - INFO - Batch ID: 246 is empty. Skipping write.
+2026-01-28 10:01:20,925 - INFO - Batch ID: 247 is empty. Skipping write.
+2026-01-28 10:01:26,617 - INFO - Processing Batch ID: 248 with 61 records.
+2026-01-28 10:01:26,858 - INFO - Batch ID: 248 - Success: Wrote 61 valid records.
+2026-01-28 10:01:33,744 - INFO - Processing Batch ID: 249 with 94 records.
+2026-01-28 10:01:34,070 - INFO - Batch ID: 249 - Success: Wrote 94 valid records.
+2026-01-28 10:01:39,686 - INFO - Processing Batch ID: 250 with 90 records.
+2026-01-28 10:01:39,890 - INFO - Batch ID: 250 - Success: Wrote 90 valid records.
+2026-01-28 10:01:46,791 - INFO - Processing Batch ID: 251 with 83 records.
+2026-01-28 10:01:47,041 - INFO - Batch ID: 251 - Success: Wrote 83 valid records.
+2026-01-28 10:01:52,299 - INFO - Processing Batch ID: 252 with 3 records.
+2026-01-28 10:01:52,495 - INFO - Batch ID: 252 - Success: Wrote 1 valid records.
+2026-01-28 10:01:52,573 - WARNING - Batch ID: 252 - Found 2 invalid records! Sending to DLQ.
+2026-01-28 10:01:52,715 - ERROR - FAILED to write Batch ID: 252. Error: [DATATYPE_MISMATCH.INVALID_JSON_SCHEMA] Cannot resolve "from_json(event_id)" due to data type mismatch: Input schema "STRING" must be a struct, an array or a map.;
+'Project [event_id#21363, event_time#21369, event_type#21364, product_id#21365, price#21366, user_id#21367, session_id#21368, from_json(StringType, event_id#21363, Some(Etc/UTC)) AS error_message#21377]
++- Project [cast(event_id#0 as string) AS event_id#21363, cast(event_time#1 as string) AS event_time#21369, cast(event_type#2 as string) AS event_type#21364, cast(product_id#3 as string) AS product_id#21365, cast(price#4 as string) AS price#21366, cast(user_id#5 as string) AS user_id#21367, cast(session_id#6 as string) AS session_id#21368]
+   +- Filter NOT ((((price#4 > cast(0 as double)) AND event_type#2 IN (view,purchase)) AND isnotnull(product_id#3)) AND isnotnull(user_id#5))
+      +- LogicalRDD [event_id#0, event_time#1, event_type#2, product_id#3, price#4, user_id#5, session_id#6], false
+Traceback (most recent call last):
+  File "/app/src/spark_streaming_to_postgres.py", line 81, in write_to_postgres
+    dlq_df = invalid_df.select(
+  File "/opt/spark/python/lib/pyspark.zip/pyspark/sql/dataframe.py", line 5170, in withColumn
+    return DataFrame(self._jdf.withColumn(colName, col._jc), self.sparkSession)
+  File "/opt/spark/python/lib/py4j-0.10.9.7-src.zip/py4j/java_gateway.py", line 1322, in __call__
+    return_value = get_return_value(
+  File "/opt/spark/python/lib/pyspark.zip/pyspark/errors/exceptions/captured.py", line 185, in deco
+    raise converted from None
+pyspark.errors.exceptions.captured.AnalysisException: [DATATYPE_MISMATCH.INVALID_JSON_SCHEMA] Cannot resolve "from_json(event_id)" due to data type mismatch: Input schema "STRING" must be a struct, an array or a map.;
+'Project [event_id#21363, event_time#21369, event_type#21364, product_id#21365, price#21366, user_id#21367, session_id#21368, from_json(StringType, event_id#21363, Some(Etc/UTC)) AS error_message#21377]
++- Project [cast(event_id#0 as string) AS event_id#21363, cast(event_time#1 as string) AS event_time#21369, cast(event_type#2 as string) AS event_type#21364, cast(product_id#3 as string) AS product_id#21365, cast(price#4 as string) AS price#21366, cast(user_id#5 as string) AS user_id#21367, cast(session_id#6 as string) AS session_id#21368]
+   +- Filter NOT ((((price#4 > cast(0 as double)) AND event_type#2 IN (view,purchase)) AND isnotnull(product_id#3)) AND isnotnull(user_id#5))
+      +- LogicalRDD [event_id#0, event_time#1, event_type#2, product_id#3, price#4, user_id#5, session_id#6], false
+
+2026-01-28 10:02:00,084 - INFO - Batch ID: 253 is empty. Skipping write.
+2026-01-28 10:02:05,927 - INFO - Batch ID: 254 is empty. Skipping write.
+2026-01-28 10:02:12,376 - INFO - Batch ID: 255 is empty. Skipping write.
+2026-01-28 10:02:18,204 - INFO - Batch ID: 256 is empty. Skipping write.
+2026-01-28 10:02:25,384 - INFO - Batch ID: 257 is empty. Skipping write.
+2026-01-28 10:02:33,159 - INFO - Batch ID: 258 is empty. Skipping write.
+2026-01-28 10:02:39,606 - INFO - Batch ID: 259 is empty. Skipping write.
+2026-01-28 10:02:45,171 - INFO - Batch ID: 260 is empty. Skipping write.
+2026-01-28 10:02:49,974 - INFO - Batch ID: 261 is empty. Skipping write.
+2026-01-28 10:02:55,145 - INFO - Batch ID: 262 is empty. Skipping write.
+2026-01-28 10:03:00,830 - INFO - Batch ID: 263 is empty. Skipping write.
+2026-01-28 10:03:07,564 - INFO - Batch ID: 264 is empty. Skipping write.
+2026-01-28 10:03:13,708 - INFO - Batch ID: 265 is empty. Skipping write.
+2026-01-28 10:03:18,820 - INFO - Batch ID: 266 is empty. Skipping write.
+2026-01-28 10:03:25,146 - INFO - Batch ID: 267 is empty. Skipping write.
+2026-01-28 10:03:32,411 - INFO - Batch ID: 268 is empty. Skipping write.
+2026-01-28 10:03:39,442 - INFO - Batch ID: 269 is empty. Skipping write.
+2026-01-28 10:03:44,519 - INFO - Batch ID: 270 is empty. Skipping write.
+2026-01-28 10:03:49,325 - INFO - Batch ID: 271 is empty. Skipping write.
+2026-01-28 10:03:54,610 - INFO - Batch ID: 272 is empty. Skipping write.
+2026-01-28 10:03:59,953 - INFO - Batch ID: 273 is empty. Skipping write.
+2026-01-28 10:04:04,934 - INFO - Batch ID: 274 is empty. Skipping write.
+2026-01-28 10:04:10,455 - INFO - Batch ID: 275 is empty. Skipping write.
+2026-01-28 10:04:16,111 - INFO - Batch ID: 276 is empty. Skipping write.
+2026-01-28 10:04:21,294 - INFO - Batch ID: 277 is empty. Skipping write.
+2026-01-28 10:04:27,073 - INFO - Processing Batch ID: 278 with 51 records.
+2026-01-28 10:04:27,309 - INFO - Batch ID: 278 - Success: Wrote 51 valid records.
+2026-01-28 10:04:34,823 - INFO - Processing Batch ID: 279 with 63 records.
+2026-01-28 10:04:35,145 - INFO - Batch ID: 279 - Success: Wrote 63 valid records.
+2026-01-28 10:04:40,388 - INFO - Processing Batch ID: 280 with 54 records.
+2026-01-28 10:04:40,613 - INFO - Batch ID: 280 - Success: Wrote 54 valid records.
+2026-01-28 10:04:45,938 - INFO - Processing Batch ID: 281 with 74 records.
+2026-01-28 10:04:46,155 - INFO - Batch ID: 281 - Success: Wrote 74 valid records.
+2026-01-28 10:04:51,574 - INFO - Processing Batch ID: 282 with 95 records.
+2026-01-28 10:04:51,782 - INFO - Batch ID: 282 - Success: Wrote 95 valid records.
+2026-01-28 10:04:57,475 - INFO - Batch ID: 283 is empty. Skipping write.
+2026-01-28 10:05:03,493 - INFO - Batch ID: 284 is empty. Skipping write.
+2026-01-28 10:05:08,994 - INFO - Batch ID: 285 is empty. Skipping write.
+2026-01-28 10:05:15,311 - INFO - Batch ID: 286 is empty. Skipping write.
+2026-01-28 10:05:22,016 - INFO - Batch ID: 287 is empty. Skipping write.
+2026-01-28 10:05:27,689 - INFO - Batch ID: 288 is empty. Skipping write.
+2026-01-28 10:05:34,114 - INFO - Batch ID: 289 is empty. Skipping write.
+2026-01-28 10:05:38,945 - INFO - Processing Batch ID: 290 with 89 records.
+2026-01-28 10:05:39,141 - INFO - Batch ID: 290 - Success: Wrote 89 valid records.
+2026-01-28 10:05:44,733 - INFO - Processing Batch ID: 291 with 86 records.
+2026-01-28 10:05:44,937 - INFO - Batch ID: 291 - Success: Wrote 86 valid records.
+2026-01-28 10:05:49,855 - INFO - Processing Batch ID: 292 with 76 records.
+2026-01-28 10:05:50,062 - INFO - Batch ID: 292 - Success: Wrote 76 valid records.
+2026-01-28 10:05:55,277 - INFO - Processing Batch ID: 293 with 98 records.
+2026-01-28 10:05:55,485 - INFO - Batch ID: 293 - Success: Wrote 98 valid records.
+2026-01-28 10:06:00,662 - INFO - Batch ID: 294 is empty. Skipping write.
+2026-01-28 10:06:05,863 - INFO - Processing Batch ID: 295 with 75 records.
+2026-01-28 10:06:06,054 - INFO - Batch ID: 295 - Success: Wrote 75 valid records.
+2026-01-28 10:06:11,091 - INFO - Processing Batch ID: 296 with 70 records.
+2026-01-28 10:06:11,268 - INFO - Batch ID: 296 - Success: Wrote 70 valid records.
+2026-01-28 10:06:17,092 - INFO - Processing Batch ID: 297 with 75 records.
+2026-01-28 10:06:17,329 - INFO - Batch ID: 297 - Success: Wrote 75 valid records.
+2026-01-28 10:06:23,624 - INFO - Processing Batch ID: 298 with 91 records.
+2026-01-28 10:06:23,901 - INFO - Batch ID: 298 - Success: Wrote 91 valid records.
+2026-01-28 10:06:30,130 - INFO - Processing Batch ID: 299 with 100 records.
+2026-01-28 10:06:30,344 - INFO - Batch ID: 299 - Success: Wrote 100 valid records.
+2026-01-28 10:06:35,618 - INFO - Processing Batch ID: 300 with 64 records.
+2026-01-28 10:06:35,823 - INFO - Batch ID: 300 - Success: Wrote 64 valid records.
+2026-01-28 10:06:40,682 - INFO - Processing Batch ID: 301 with 59 records.
+2026-01-28 10:06:40,869 - INFO - Batch ID: 301 - Success: Wrote 59 valid records.
+2026-01-28 10:06:45,972 - INFO - Processing Batch ID: 302 with 99 records.
+2026-01-28 10:06:46,152 - INFO - Batch ID: 302 - Success: Wrote 99 valid records.
+2026-01-28 10:06:51,215 - INFO - Processing Batch ID: 303 with 59 records.
+2026-01-28 10:06:51,409 - INFO - Batch ID: 303 - Success: Wrote 59 valid records.
+2026-01-28 10:06:56,578 - INFO - Processing Batch ID: 304 with 72 records.
+2026-01-28 10:06:56,768 - INFO - Batch ID: 304 - Success: Wrote 72 valid records.
+2026-01-28 10:07:01,760 - INFO - Batch ID: 305 is empty. Skipping write.
+2026-01-28 10:07:06,861 - INFO - Batch ID: 306 is empty. Skipping write.
+2026-01-28 10:07:12,046 - INFO - Processing Batch ID: 307 with 88 records.
+2026-01-28 10:07:12,268 - INFO - Batch ID: 307 - Success: Wrote 88 valid records.
+2026-01-28 10:07:17,454 - INFO - Processing Batch ID: 308 with 58 records.
+2026-01-28 10:07:17,633 - INFO - Batch ID: 308 - Success: Wrote 58 valid records.
+2026-01-28 10:07:24,247 - INFO - Processing Batch ID: 309 with 87 records.
+2026-01-28 10:07:24,454 - INFO - Batch ID: 309 - Success: Wrote 87 valid records.
+2026-01-28 10:07:29,823 - INFO - Processing Batch ID: 310 with 56 records.
+2026-01-28 10:07:30,037 - INFO - Batch ID: 310 - Success: Wrote 56 valid records.
+2026-01-28 10:07:36,530 - INFO - Processing Batch ID: 311 with 81 records.
+2026-01-28 10:07:36,756 - INFO - Batch ID: 311 - Success: Wrote 81 valid records.
+2026-01-28 10:07:41,763 - INFO - Processing Batch ID: 312 with 63 records.
+2026-01-28 10:07:41,959 - INFO - Batch ID: 312 - Success: Wrote 63 valid records.
+2026-01-28 10:07:47,018 - INFO - Processing Batch ID: 313 with 95 records.
+2026-01-28 10:07:47,222 - INFO - Batch ID: 313 - Success: Wrote 95 valid records.
+2026-01-28 10:07:52,080 - INFO - Processing Batch ID: 314 with 76 records.
+2026-01-28 10:07:52,303 - INFO - Batch ID: 314 - Success: Wrote 76 valid records.
+2026-01-28 10:07:57,520 - INFO - Processing Batch ID: 315 with 90 records.
+2026-01-28 10:07:57,726 - INFO - Batch ID: 315 - Success: Wrote 90 valid records.
+2026-01-28 10:08:02,830 - INFO - Batch ID: 316 is empty. Skipping write.
+2026-01-28 10:08:07,742 - INFO - Batch ID: 317 is empty. Skipping write.
+2026-01-28 10:08:12,892 - INFO - Batch ID: 318 is empty. Skipping write.
+2026-01-28 10:08:18,726 - INFO - Processing Batch ID: 319 with 70 records.
+2026-01-28 10:08:19,000 - INFO - Batch ID: 319 - Success: Wrote 70 valid records.
+2026-01-28 10:08:24,937 - INFO - Processing Batch ID: 320 with 70 records.
+2026-01-28 10:08:25,207 - INFO - Batch ID: 320 - Success: Wrote 70 valid records.
+2026-01-28 10:08:30,405 - INFO - Processing Batch ID: 321 with 97 records.
+2026-01-28 10:08:30,634 - INFO - Batch ID: 321 - Success: Wrote 97 valid records.
+2026-01-28 10:08:36,935 - INFO - Processing Batch ID: 322 with 81 records.
+2026-01-28 10:08:37,205 - INFO - Batch ID: 322 - Success: Wrote 81 valid records.
+2026-01-28 10:08:42,854 - INFO - Processing Batch ID: 323 with 62 records.
+2026-01-28 10:08:43,175 - INFO - Batch ID: 323 - Success: Wrote 62 valid records.
+2026-01-28 10:08:48,675 - INFO - Processing Batch ID: 324 with 51 records.
+2026-01-28 10:08:48,947 - INFO - Batch ID: 324 - Success: Wrote 51 valid records.
+2026-01-28 10:08:55,292 - INFO - Processing Batch ID: 325 with 98 records.
+2026-01-28 10:08:55,636 - INFO - Batch ID: 325 - Success: Wrote 98 valid records.
+2026-01-28 10:09:00,907 - INFO - Batch ID: 326 is empty. Skipping write.
+2026-01-28 10:09:07,993 - INFO - Batch ID: 327 is empty. Skipping write.
+2026-01-28 10:09:13,119 - INFO - Batch ID: 328 is empty. Skipping write.
+2026-01-28 10:09:18,684 - INFO - Batch ID: 329 is empty. Skipping write.
+2026-01-28 10:09:24,005 - INFO - Batch ID: 330 is empty. Skipping write.
+2026-01-28 10:09:28,918 - INFO - Processing Batch ID: 331 with 63 records.
+2026-01-28 10:09:29,133 - INFO - Batch ID: 331 - Success: Wrote 63 valid records.
+2026-01-28 10:09:34,930 - INFO - Processing Batch ID: 332 with 58 records.
+2026-01-28 10:09:35,163 - INFO - Batch ID: 332 - Success: Wrote 58 valid records.
+2026-01-28 10:09:40,068 - INFO - Processing Batch ID: 333 with 51 records.
+2026-01-28 10:09:40,271 - INFO - Batch ID: 333 - Success: Wrote 51 valid records.
+2026-01-28 10:09:46,530 - INFO - Processing Batch ID: 334 with 78 records.
+2026-01-28 10:09:46,774 - INFO - Batch ID: 334 - Success: Wrote 78 valid records.
+2026-01-28 10:09:51,845 - INFO - Processing Batch ID: 335 with 88 records.
+2026-01-28 10:09:52,067 - INFO - Batch ID: 335 - Success: Wrote 88 valid records.
+2026-01-28 10:09:57,433 - INFO - Processing Batch ID: 336 with 71 records.
+2026-01-28 10:09:57,648 - INFO - Batch ID: 336 - Success: Wrote 71 valid records.
+2026-01-28 10:10:02,820 - INFO - Batch ID: 337 is empty. Skipping write.
+2026-01-28 10:10:07,820 - INFO - Batch ID: 338 is empty. Skipping write.
+2026-01-28 10:10:13,143 - INFO - Batch ID: 339 is empty. Skipping write.
+2026-01-28 10:10:18,234 - INFO - Batch ID: 340 is empty. Skipping write.
+2026-01-28 10:10:23,434 - INFO - Batch ID: 341 is empty. Skipping write.
+2026-01-28 10:10:28,319 - INFO - Batch ID: 342 is empty. Skipping write.
+2026-01-28 10:10:33,580 - INFO - Processing Batch ID: 343 with 59 records.
+2026-01-28 10:10:33,829 - INFO - Batch ID: 343 - Success: Wrote 59 valid records.
+2026-01-28 10:10:39,041 - INFO - Processing Batch ID: 344 with 98 records.
+2026-01-28 10:10:39,290 - INFO - Batch ID: 344 - Success: Wrote 98 valid records.
+2026-01-28 10:10:44,252 - INFO - Processing Batch ID: 345 with 51 records.
+2026-01-28 10:10:44,639 - INFO - Batch ID: 345 - Success: Wrote 51 valid records.
+2026-01-28 10:10:50,203 - INFO - Processing Batch ID: 346 with 77 records.
+2026-01-28 10:10:50,498 - INFO - Batch ID: 346 - Success: Wrote 77 valid records.
+2026-01-28 10:10:56,102 - INFO - Processing Batch ID: 347 with 91 records.
+2026-01-28 10:10:56,305 - INFO - Batch ID: 347 - Success: Wrote 91 valid records.
+2026-01-28 10:11:01,463 - INFO - Batch ID: 348 is empty. Skipping write.
+2026-01-28 10:11:07,110 - INFO - Batch ID: 349 is empty. Skipping write.
+2026-01-28 10:11:11,782 - INFO - Batch ID: 350 is empty. Skipping write.
+2026-01-28 10:11:17,883 - INFO - Batch ID: 351 is empty. Skipping write.
+2026-01-28 10:11:24,183 - INFO - Batch ID: 352 is empty. Skipping write.
+2026-01-28 10:11:29,313 - INFO - Processing Batch ID: 353 with 81 records.
+2026-01-28 10:11:29,550 - INFO - Batch ID: 353 - Success: Wrote 81 valid records.
+2026-01-28 10:11:35,301 - INFO - Processing Batch ID: 354 with 91 records.
+2026-01-28 10:11:35,514 - INFO - Batch ID: 354 - Success: Wrote 91 valid records.
+2026-01-28 10:11:41,158 - INFO - Processing Batch ID: 355 with 67 records.
+2026-01-28 10:11:41,561 - INFO - Batch ID: 355 - Success: Wrote 67 valid records.
+2026-01-28 10:11:47,959 - INFO - Processing Batch ID: 356 with 80 records.
+2026-01-28 10:11:48,152 - INFO - Batch ID: 356 - Success: Wrote 80 valid records.
+2026-01-28 10:11:54,082 - INFO - Processing Batch ID: 357 with 84 records.
+2026-01-28 10:11:54,467 - INFO - Batch ID: 357 - Success: Wrote 84 valid records.
+2026-01-28 10:12:01,026 - INFO - Batch ID: 358 is empty. Skipping write.
+2026-01-28 10:12:06,521 - INFO - Batch ID: 359 is empty. Skipping write.
+2026-01-28 10:12:11,558 - INFO - Batch ID: 360 is empty. Skipping write.
+2026-01-28 10:12:16,414 - INFO - Batch ID: 361 is empty. Skipping write.
+2026-01-28 10:12:22,745 - INFO - Batch ID: 362 is empty. Skipping write.
+2026-01-28 10:12:28,242 - INFO - Batch ID: 363 is empty. Skipping write.
+2026-01-28 10:12:32,958 - INFO - Batch ID: 364 is empty. Skipping write.
+2026-01-28 10:12:38,003 - INFO - Processing Batch ID: 365 with 63 records.
+2026-01-28 10:12:38,206 - INFO - Batch ID: 365 - Success: Wrote 63 valid records.
+2026-01-28 10:12:43,216 - INFO - Processing Batch ID: 366 with 88 records.
+2026-01-28 10:12:43,467 - INFO - Batch ID: 366 - Success: Wrote 88 valid records.
+2026-01-28 10:12:48,802 - INFO - Processing Batch ID: 367 with 96 records.
+2026-01-28 10:12:49,137 - INFO - Batch ID: 367 - Success: Wrote 96 valid records.
+2026-01-28 10:12:54,400 - INFO - Processing Batch ID: 368 with 78 records.
+2026-01-28 10:12:54,660 - INFO - Batch ID: 368 - Success: Wrote 78 valid records.
+2026-01-28 10:13:00,340 - INFO - Batch ID: 369 is empty. Skipping write.
+2026-01-28 10:13:06,807 - INFO - Processing Batch ID: 370 with 59 records.
+2026-01-28 10:13:07,046 - INFO - Batch ID: 370 - Success: Wrote 59 valid records.
+2026-01-28 10:13:12,014 - INFO - Processing Batch ID: 371 with 56 records.
+2026-01-28 10:13:12,215 - INFO - Batch ID: 371 - Success: Wrote 56 valid records.
+2026-01-28 10:13:17,452 - INFO - Processing Batch ID: 372 with 98 records.
+2026-01-28 10:13:17,780 - INFO - Batch ID: 372 - Success: Wrote 98 valid records.
+2026-01-28 10:13:23,371 - INFO - Processing Batch ID: 373 with 86 records.
+2026-01-28 10:13:23,607 - INFO - Batch ID: 373 - Success: Wrote 86 valid records.
+2026-01-28 10:13:28,908 - INFO - Processing Batch ID: 374 with 79 records.
+2026-01-28 10:13:29,116 - INFO - Batch ID: 374 - Success: Wrote 79 valid records.
+2026-01-28 10:13:34,159 - INFO - Processing Batch ID: 375 with 94 records.
+2026-01-28 10:13:34,518 - INFO - Batch ID: 375 - Success: Wrote 94 valid records.
+2026-01-28 10:13:39,601 - INFO - Processing Batch ID: 376 with 57 records.
+2026-01-28 10:13:39,819 - INFO - Batch ID: 376 - Success: Wrote 57 valid records.
+2026-01-28 10:13:44,984 - INFO - Processing Batch ID: 377 with 67 records.
+2026-01-28 10:13:45,230 - INFO - Batch ID: 377 - Success: Wrote 67 valid records.
+2026-01-28 10:13:50,481 - INFO - Processing Batch ID: 378 with 90 records.
+2026-01-28 10:13:50,733 - INFO - Batch ID: 378 - Success: Wrote 90 valid records.
+2026-01-28 10:13:56,238 - INFO - Processing Batch ID: 379 with 54 records.
+2026-01-28 10:13:56,457 - INFO - Batch ID: 379 - Success: Wrote 54 valid records.
+2026-01-28 10:14:01,621 - INFO - Batch ID: 380 is empty. Skipping write.
+2026-01-28 10:14:06,811 - INFO - Batch ID: 381 is empty. Skipping write.
+2026-01-28 10:14:12,963 - INFO - Processing Batch ID: 382 with 74 records.
+2026-01-28 10:14:13,216 - INFO - Batch ID: 382 - Success: Wrote 74 valid records.
+2026-01-28 10:14:18,963 - INFO - Processing Batch ID: 383 with 85 records.
+2026-01-28 10:14:19,219 - INFO - Batch ID: 383 - Success: Wrote 85 valid records.
+2026-01-28 10:14:25,202 - INFO - Processing Batch ID: 384 with 91 records.
+2026-01-28 10:14:25,422 - INFO - Batch ID: 384 - Success: Wrote 91 valid records.
+2026-01-28 10:14:30,437 - INFO - Processing Batch ID: 385 with 77 records.
+2026-01-28 10:14:30,647 - INFO - Batch ID: 385 - Success: Wrote 77 valid records.
+2026-01-28 10:14:35,647 - INFO - Processing Batch ID: 386 with 69 records.
+2026-01-28 10:14:35,912 - INFO - Batch ID: 386 - Success: Wrote 69 valid records.
+2026-01-28 10:14:40,869 - INFO - Processing Batch ID: 387 with 75 records.
+2026-01-28 10:14:41,068 - INFO - Batch ID: 387 - Success: Wrote 75 valid records.
+2026-01-28 10:14:46,472 - INFO - Processing Batch ID: 388 with 84 records.
+2026-01-28 10:14:46,685 - INFO - Batch ID: 388 - Success: Wrote 84 valid records.
+2026-01-28 10:14:52,464 - INFO - Processing Batch ID: 389 with 81 records.
+2026-01-28 10:14:52,688 - INFO - Batch ID: 389 - Success: Wrote 81 valid records.
+2026-01-28 10:14:57,931 - INFO - Processing Batch ID: 390 with 80 records.
+2026-01-28 10:14:58,104 - INFO - Batch ID: 390 - Success: Wrote 80 valid records.
+2026-01-28 10:15:03,232 - INFO - Batch ID: 391 is empty. Skipping write.
+2026-01-28 10:15:08,316 - INFO - Batch ID: 392 is empty. Skipping write.
+2026-01-28 10:15:13,510 - INFO - Batch ID: 393 is empty. Skipping write.
+2026-01-28 10:15:19,949 - INFO - Processing Batch ID: 394 with 54 records.
+2026-01-28 10:15:20,189 - INFO - Batch ID: 394 - Success: Wrote 54 valid records.
+2026-01-28 10:15:25,652 - INFO - Processing Batch ID: 395 with 76 records.
+2026-01-28 10:15:25,886 - INFO - Batch ID: 395 - Success: Wrote 76 valid records.
+2026-01-28 10:15:30,831 - INFO - Processing Batch ID: 396 with 86 records.
+2026-01-28 10:15:31,035 - INFO - Batch ID: 396 - Success: Wrote 86 valid records.
+2026-01-28 10:15:36,141 - INFO - Processing Batch ID: 397 with 98 records.
+2026-01-28 10:15:36,351 - INFO - Batch ID: 397 - Success: Wrote 98 valid records.
+2026-01-28 10:15:41,268 - INFO - Processing Batch ID: 398 with 82 records.
+2026-01-28 10:15:41,442 - INFO - Batch ID: 398 - Success: Wrote 82 valid records.
+2026-01-28 10:15:47,002 - INFO - Processing Batch ID: 399 with 88 records.
+2026-01-28 10:15:47,276 - INFO - Batch ID: 399 - Success: Wrote 88 valid records.
+2026-01-28 10:15:52,377 - INFO - Processing Batch ID: 400 with 68 records.
+2026-01-28 10:15:52,625 - INFO - Batch ID: 400 - Success: Wrote 68 valid records.
+2026-01-28 10:15:57,847 - INFO - Processing Batch ID: 401 with 61 records.
+2026-01-28 10:15:58,066 - INFO - Batch ID: 401 - Success: Wrote 61 valid records.
+2026-01-28 10:16:03,219 - INFO - Batch ID: 402 is empty. Skipping write.
+2026-01-28 10:16:08,346 - INFO - Batch ID: 403 is empty. Skipping write.
+2026-01-28 10:16:13,154 - INFO - Batch ID: 404 is empty. Skipping write.
+2026-01-28 10:16:18,899 - INFO - Batch ID: 405 is empty. Skipping write.
+2026-01-28 10:16:26,360 - INFO - Processing Batch ID: 406 with 95 records.
+2026-01-28 10:16:26,583 - INFO - Batch ID: 406 - Success: Wrote 95 valid records.
+2026-01-28 10:16:31,544 - INFO - Processing Batch ID: 407 with 83 records.
+2026-01-28 10:16:31,769 - INFO - Batch ID: 407 - Success: Wrote 83 valid records.
+2026-01-28 10:16:37,071 - INFO - Processing Batch ID: 408 with 92 records.
+2026-01-28 10:16:37,250 - INFO - Batch ID: 408 - Success: Wrote 92 valid records.
+2026-01-28 10:16:42,701 - INFO - Processing Batch ID: 409 with 99 records.
+2026-01-28 10:16:42,915 - INFO - Batch ID: 409 - Success: Wrote 99 valid records.
+2026-01-28 10:16:48,312 - INFO - Processing Batch ID: 410 with 99 records.
+2026-01-28 10:16:48,503 - INFO - Batch ID: 410 - Success: Wrote 99 valid records.
+2026-01-28 10:16:53,595 - INFO - Processing Batch ID: 411 with 85 records.
+2026-01-28 10:16:53,799 - INFO - Batch ID: 411 - Success: Wrote 85 valid records.
+2026-01-28 10:16:59,063 - INFO - Processing Batch ID: 412 with 80 records.
+2026-01-28 10:16:59,268 - INFO - Batch ID: 412 - Success: Wrote 80 valid records.
+2026-01-28 10:17:04,432 - INFO - Batch ID: 413 is empty. Skipping write.
+2026-01-28 10:17:09,736 - INFO - Batch ID: 414 is empty. Skipping write.
+2026-01-28 10:17:14,742 - INFO - Batch ID: 415 is empty. Skipping write.
+2026-01-28 10:17:20,488 - INFO - Batch ID: 416 is empty. Skipping write.
+2026-01-28 10:17:25,443 - INFO - Batch ID: 417 is empty. Skipping write.
+2026-01-28 10:17:31,335 - INFO - Processing Batch ID: 418 with 95 records.
+2026-01-28 10:17:31,556 - INFO - Batch ID: 418 - Success: Wrote 95 valid records.
+2026-01-28 10:17:37,081 - INFO - Processing Batch ID: 419 with 52 records.
+2026-01-28 10:17:37,294 - INFO - Batch ID: 419 - Success: Wrote 52 valid records.
+2026-01-28 10:17:42,577 - INFO - Processing Batch ID: 420 with 78 records.
+2026-01-28 10:17:42,768 - INFO - Batch ID: 420 - Success: Wrote 78 valid records.
+2026-01-28 10:17:48,563 - INFO - Processing Batch ID: 421 with 64 records.
+2026-01-28 10:17:48,748 - INFO - Batch ID: 421 - Success: Wrote 64 valid records.
+2026-01-28 10:17:53,974 - INFO - Processing Batch ID: 422 with 74 records.
+2026-01-28 10:17:54,175 - INFO - Batch ID: 422 - Success: Wrote 74 valid records.
+2026-01-28 10:18:01,168 - INFO - Batch ID: 423 is empty. Skipping write.
+2026-01-28 10:18:07,602 - INFO - Batch ID: 424 is empty. Skipping write.
+2026-01-28 10:18:13,120 - INFO - Batch ID: 425 is empty. Skipping write.
+2026-01-28 10:18:18,360 - INFO - Processing Batch ID: 426 with 93 records.
+2026-01-28 10:18:18,551 - INFO - Batch ID: 426 - Success: Wrote 93 valid records.
+2026-01-28 10:18:24,305 - INFO - Processing Batch ID: 427 with 95 records.
+2026-01-28 10:18:24,518 - INFO - Batch ID: 427 - Success: Wrote 95 valid records.
+2026-01-28 10:18:30,070 - INFO - Processing Batch ID: 428 with 86 records.
+2026-01-28 10:18:30,259 - INFO - Batch ID: 428 - Success: Wrote 86 valid records.
+2026-01-28 10:18:36,776 - INFO - Processing Batch ID: 429 with 92 records.
+2026-01-28 10:18:37,003 - INFO - Batch ID: 429 - Success: Wrote 92 valid records.
+2026-01-28 10:18:42,452 - INFO - Processing Batch ID: 430 with 73 records.
+2026-01-28 10:18:42,673 - INFO - Batch ID: 430 - Success: Wrote 73 valid records.
+2026-01-28 10:18:47,697 - INFO - Processing Batch ID: 431 with 60 records.
+2026-01-28 10:18:47,891 - INFO - Batch ID: 431 - Success: Wrote 60 valid records.
+2026-01-28 10:18:52,936 - INFO - Processing Batch ID: 432 with 75 records.
+2026-01-28 10:18:53,137 - INFO - Batch ID: 432 - Success: Wrote 75 valid records.
+2026-01-28 10:18:58,193 - INFO - Processing Batch ID: 433 with 87 records.
+2026-01-28 10:18:58,424 - INFO - Batch ID: 433 - Success: Wrote 87 valid records.
+2026-01-28 10:19:06,415 - INFO - Batch ID: 434 is empty. Skipping write.
+2026-01-28 10:19:11,838 - INFO - Batch ID: 435 is empty. Skipping write.
+2026-01-28 10:19:16,769 - INFO - Batch ID: 436 is empty. Skipping write.
+2026-01-28 10:19:22,104 - INFO - Batch ID: 437 is empty. Skipping write.
+2026-01-28 10:19:27,175 - INFO - Processing Batch ID: 438 with 78 records.
+2026-01-28 10:19:27,358 - INFO - Batch ID: 438 - Success: Wrote 78 valid records.
+2026-01-28 10:19:33,608 - INFO - Processing Batch ID: 439 with 54 records.
+2026-01-28 10:19:33,847 - INFO - Batch ID: 439 - Success: Wrote 54 valid records.
+2026-01-28 10:19:39,540 - INFO - Processing Batch ID: 440 with 97 records.
+2026-01-28 10:19:39,767 - INFO - Batch ID: 440 - Success: Wrote 97 valid records.
+2026-01-28 10:19:45,721 - INFO - Processing Batch ID: 441 with 89 records.
+2026-01-28 10:19:46,048 - INFO - Batch ID: 441 - Success: Wrote 89 valid records.
+2026-01-28 10:19:51,113 - INFO - Processing Batch ID: 442 with 54 records.
+2026-01-28 10:19:51,306 - INFO - Batch ID: 442 - Success: Wrote 54 valid records.
+2026-01-28 10:19:57,222 - INFO - Processing Batch ID: 443 with 78 records.
+2026-01-28 10:19:57,456 - INFO - Batch ID: 443 - Success: Wrote 78 valid records.
+2026-01-28 10:20:02,635 - INFO - Batch ID: 444 is empty. Skipping write.
+2026-01-28 10:20:07,693 - INFO - Batch ID: 445 is empty. Skipping write.
+2026-01-28 10:20:12,404 - INFO - Batch ID: 446 is empty. Skipping write.
+2026-01-28 10:20:17,306 - INFO - Batch ID: 447 is empty. Skipping write.
+2026-01-28 10:20:22,934 - INFO - Batch ID: 448 is empty. Skipping write.
+2026-01-28 10:20:28,270 - INFO - Batch ID: 449 is empty. Skipping write.
+2026-01-28 10:20:33,395 - INFO - Processing Batch ID: 450 with 57 records.
+2026-01-28 10:20:33,578 - INFO - Batch ID: 450 - Success: Wrote 57 valid records.
+2026-01-28 10:20:38,683 - INFO - Processing Batch ID: 451 with 52 records.
+2026-01-28 10:20:38,869 - INFO - Batch ID: 451 - Success: Wrote 52 valid records.
+2026-01-28 10:20:44,543 - INFO - Processing Batch ID: 452 with 94 records.
+2026-01-28 10:20:44,770 - INFO - Batch ID: 452 - Success: Wrote 94 valid records.
+2026-01-28 10:20:51,369 - INFO - Processing Batch ID: 453 with 67 records.
+2026-01-28 10:20:51,598 - INFO - Batch ID: 453 - Success: Wrote 67 valid records.
+2026-01-28 10:20:56,723 - INFO - Processing Batch ID: 454 with 81 records.
+2026-01-28 10:20:56,931 - INFO - Batch ID: 454 - Success: Wrote 81 valid records.
+2026-01-28 10:21:02,305 - INFO - Batch ID: 455 is empty. Skipping write.
+2026-01-28 10:21:07,508 - INFO - Processing Batch ID: 456 with 88 records.
+2026-01-28 10:21:07,701 - INFO - Batch ID: 456 - Success: Wrote 88 valid records.
+2026-01-28 10:21:12,604 - INFO - Processing Batch ID: 457 with 81 records.
+2026-01-28 10:21:12,790 - INFO - Batch ID: 457 - Success: Wrote 81 valid records.
+2026-01-28 10:21:17,756 - INFO - Processing Batch ID: 458 with 90 records.
+2026-01-28 10:21:17,931 - INFO - Batch ID: 458 - Success: Wrote 90 valid records.
+2026-01-28 10:21:25,321 - INFO - Processing Batch ID: 459 with 78 records.
+2026-01-28 10:21:25,528 - INFO - Batch ID: 459 - Success: Wrote 78 valid records.
+2026-01-28 10:21:30,656 - INFO - Processing Batch ID: 460 with 84 records.
+2026-01-28 10:21:30,890 - INFO - Batch ID: 460 - Success: Wrote 84 valid records.
+2026-01-28 10:21:36,011 - INFO - Processing Batch ID: 461 with 100 records.
+2026-01-28 10:21:36,287 - INFO - Batch ID: 461 - Success: Wrote 100 valid records.
+2026-01-28 10:21:41,190 - INFO - Processing Batch ID: 462 with 72 records.
+2026-01-28 10:21:41,380 - INFO - Batch ID: 462 - Success: Wrote 72 valid records.
+2026-01-28 10:21:46,551 - INFO - Processing Batch ID: 463 with 70 records.
+2026-01-28 10:21:46,802 - INFO - Batch ID: 463 - Success: Wrote 70 valid records.
+2026-01-28 10:21:51,941 - INFO - Processing Batch ID: 464 with 92 records.
+2026-01-28 10:21:52,256 - INFO - Batch ID: 464 - Success: Wrote 92 valid records.
+2026-01-28 10:21:58,518 - INFO - Processing Batch ID: 465 with 98 records.
+2026-01-28 10:21:58,698 - INFO - Batch ID: 465 - Success: Wrote 98 valid records.
+2026-01-28 10:22:05,163 - INFO - Batch ID: 466 is empty. Skipping write.
+2026-01-28 10:22:10,227 - INFO - Batch ID: 467 is empty. Skipping write.
+2026-01-28 10:22:15,175 - INFO - Processing Batch ID: 468 with 96 records.
+2026-01-28 10:22:15,342 - INFO - Batch ID: 468 - Success: Wrote 96 valid records.
+2026-01-28 10:22:21,427 - INFO - Processing Batch ID: 469 with 69 records.
+2026-01-28 10:22:21,695 - INFO - Batch ID: 469 - Success: Wrote 69 valid records.
+2026-01-28 10:22:27,158 - INFO - Processing Batch ID: 470 with 65 records.
+2026-01-28 10:22:27,369 - INFO - Batch ID: 470 - Success: Wrote 65 valid records.
+2026-01-28 10:22:32,429 - INFO - Processing Batch ID: 471 with 69 records.
+2026-01-28 10:22:32,606 - INFO - Batch ID: 471 - Success: Wrote 69 valid records.
+2026-01-28 10:22:38,031 - INFO - Processing Batch ID: 472 with 97 records.
+2026-01-28 10:22:38,246 - INFO - Batch ID: 472 - Success: Wrote 97 valid records.
+2026-01-28 10:22:43,112 - INFO - Processing Batch ID: 473 with 86 records.
+2026-01-28 10:22:43,306 - INFO - Batch ID: 473 - Success: Wrote 86 valid records.
+2026-01-28 10:22:48,354 - INFO - Processing Batch ID: 474 with 82 records.
+2026-01-28 10:22:48,541 - INFO - Batch ID: 474 - Success: Wrote 82 valid records.
+2026-01-28 10:22:53,432 - INFO - Processing Batch ID: 475 with 80 records.
+2026-01-28 10:22:53,630 - INFO - Batch ID: 475 - Success: Wrote 80 valid records.
+2026-01-28 10:22:59,073 - INFO - Processing Batch ID: 476 with 65 records.
+2026-01-28 10:22:59,301 - INFO - Batch ID: 476 - Success: Wrote 65 valid records.
+2026-01-28 10:23:05,270 - INFO - Batch ID: 477 is empty. Skipping write.
+2026-01-28 10:23:10,244 - INFO - Batch ID: 478 is empty. Skipping write.
+2026-01-28 10:23:15,229 - INFO - Batch ID: 479 is empty. Skipping write.
+2026-01-28 10:23:21,159 - INFO - Processing Batch ID: 480 with 89 records.
+2026-01-28 10:23:21,337 - INFO - Batch ID: 480 - Success: Wrote 89 valid records.
+2026-01-28 10:23:26,715 - INFO - Processing Batch ID: 481 with 56 records.
+2026-01-28 10:23:26,915 - INFO - Batch ID: 481 - Success: Wrote 56 valid records.
+2026-01-28 10:23:32,560 - INFO - Processing Batch ID: 482 with 92 records.
+2026-01-28 10:23:32,781 - INFO - Batch ID: 482 - Success: Wrote 92 valid records.
+2026-01-28 10:23:37,854 - INFO - Processing Batch ID: 483 with 84 records.
+2026-01-28 10:23:38,032 - INFO - Batch ID: 483 - Success: Wrote 84 valid records.
+2026-01-28 10:23:43,895 - INFO - Processing Batch ID: 484 with 89 records.
+2026-01-28 10:23:44,110 - INFO - Batch ID: 484 - Success: Wrote 89 valid records.
+2026-01-28 10:23:49,239 - INFO - Processing Batch ID: 485 with 72 records.
+2026-01-28 10:23:49,459 - INFO - Batch ID: 485 - Success: Wrote 72 valid records.
+2026-01-28 10:23:55,170 - INFO - Processing Batch ID: 486 with 72 records.
+2026-01-28 10:23:55,405 - INFO - Batch ID: 486 - Success: Wrote 72 valid records.
+2026-01-28 10:24:00,823 - INFO - Processing Batch ID: 487 with 66 records.
+2026-01-28 10:24:01,005 - INFO - Batch ID: 487 - Success: Wrote 66 valid records.
+2026-01-28 10:24:06,927 - INFO - Batch ID: 488 is empty. Skipping write.
+2026-01-28 10:24:12,735 - INFO - Batch ID: 489 is empty. Skipping write.
+2026-01-28 10:24:17,608 - INFO - Batch ID: 490 is empty. Skipping write.
+2026-01-28 10:24:22,792 - INFO - Batch ID: 491 is empty. Skipping write.
+2026-01-28 10:24:27,769 - INFO - Processing Batch ID: 492 with 58 records.
+2026-01-28 10:24:28,019 - INFO - Batch ID: 492 - Success: Wrote 58 valid records.
+2026-01-28 10:24:33,200 - INFO - Processing Batch ID: 493 with 73 records.
+2026-01-28 10:24:33,390 - INFO - Batch ID: 493 - Success: Wrote 73 valid records.
+2026-01-28 10:24:38,825 - INFO - Processing Batch ID: 494 with 76 records.
+2026-01-28 10:24:39,012 - INFO - Batch ID: 494 - Success: Wrote 76 valid records.
+2026-01-28 10:24:44,018 - INFO - Processing Batch ID: 495 with 71 records.
+2026-01-28 10:24:44,218 - INFO - Batch ID: 495 - Success: Wrote 71 valid records.
+2026-01-28 10:24:49,623 - INFO - Processing Batch ID: 496 with 63 records.
+2026-01-28 10:24:49,823 - INFO - Batch ID: 496 - Success: Wrote 63 valid records.
+2026-01-28 10:24:54,825 - INFO - Processing Batch ID: 497 with 51 records.
+2026-01-28 10:24:55,018 - INFO - Batch ID: 497 - Success: Wrote 51 valid records.
+2026-01-28 10:25:00,337 - INFO - Processing Batch ID: 498 with 81 records.
+2026-01-28 10:25:00,518 - INFO - Batch ID: 498 - Success: Wrote 81 valid records.
+2026-01-28 10:25:05,980 - INFO - Batch ID: 499 is empty. Skipping write.
+2026-01-28 10:25:11,007 - INFO - Batch ID: 500 is empty. Skipping write.
+2026-01-28 10:25:16,981 - INFO - Batch ID: 501 is empty. Skipping write.
+2026-01-28 10:25:22,373 - INFO - Batch ID: 502 is empty. Skipping write.
+2026-01-28 10:25:27,215 - INFO - Batch ID: 503 is empty. Skipping write.
+2026-01-28 10:25:32,199 - INFO - Processing Batch ID: 504 with 89 records.
+2026-01-28 10:25:32,367 - INFO - Batch ID: 504 - Success: Wrote 89 valid records.
+2026-01-28 10:25:37,573 - INFO - Processing Batch ID: 505 with 54 records.
+2026-01-28 10:25:37,783 - INFO - Batch ID: 505 - Success: Wrote 54 valid records.
+2026-01-28 10:25:42,733 - INFO - Processing Batch ID: 506 with 93 records.
+2026-01-28 10:25:42,923 - INFO - Batch ID: 506 - Success: Wrote 93 valid records.
+2026-01-28 10:25:47,954 - INFO - Processing Batch ID: 507 with 66 records.
+2026-01-28 10:25:48,122 - INFO - Batch ID: 507 - Success: Wrote 66 valid records.
+2026-01-28 10:25:53,027 - INFO - Processing Batch ID: 508 with 72 records.
+2026-01-28 10:25:53,213 - INFO - Batch ID: 508 - Success: Wrote 72 valid records.
+2026-01-28 10:25:58,701 - INFO - Processing Batch ID: 509 with 81 records.
+2026-01-28 10:25:58,911 - INFO - Batch ID: 509 - Success: Wrote 81 valid records.
+2026-01-28 10:26:04,337 - INFO - Batch ID: 510 is empty. Skipping write.
+2026-01-28 10:26:09,492 - INFO - Processing Batch ID: 511 with 50 records.
+2026-01-28 10:26:09,698 - INFO - Batch ID: 511 - Success: Wrote 50 valid records.
+2026-01-28 10:26:14,536 - INFO - Processing Batch ID: 512 with 63 records.
+2026-01-28 10:26:14,703 - INFO - Batch ID: 512 - Success: Wrote 63 valid records.
+2026-01-28 10:26:21,851 - INFO - Processing Batch ID: 513 with 59 records.
+2026-01-28 10:26:22,126 - INFO - Batch ID: 513 - Success: Wrote 59 valid records.
+2026-01-28 10:26:28,368 - INFO - Processing Batch ID: 514 with 83 records.
+2026-01-28 10:26:28,558 - INFO - Batch ID: 514 - Success: Wrote 83 valid records.
+2026-01-28 10:26:33,521 - INFO - Processing Batch ID: 515 with 83 records.
+2026-01-28 10:26:33,713 - INFO - Batch ID: 515 - Success: Wrote 83 valid records.
+2026-01-28 10:26:38,985 - INFO - Processing Batch ID: 516 with 64 records.
+2026-01-28 10:26:39,172 - INFO - Batch ID: 516 - Success: Wrote 64 valid records.
+2026-01-28 10:26:45,202 - INFO - Processing Batch ID: 517 with 95 records.
+2026-01-28 10:26:45,440 - INFO - Batch ID: 517 - Success: Wrote 95 valid records.
+2026-01-28 10:26:52,118 - INFO - Processing Batch ID: 518 with 91 records.
+2026-01-28 10:26:52,507 - INFO - Batch ID: 518 - Success: Wrote 91 valid records.
+2026-01-28 10:27:06,007 - INFO - Processing Batch ID: 519 with 72 records.
+2026-01-28 10:27:06,189 - INFO - Batch ID: 519 - Success: Wrote 72 valid records.
+2026-01-28 10:27:12,034 - INFO - Batch ID: 520 is empty. Skipping write.
+2026-01-28 10:27:16,780 - INFO - Batch ID: 521 is empty. Skipping write.
+2026-01-28 10:27:22,046 - INFO - Batch ID: 522 is empty. Skipping write.
+2026-01-28 10:27:28,455 - INFO - Processing Batch ID: 523 with 75 records.
+2026-01-28 10:27:28,678 - INFO - Batch ID: 523 - Success: Wrote 75 valid records.
+2026-01-28 10:27:37,408 - INFO - Processing Batch ID: 524 with 60 records.
+2026-01-28 10:27:37,646 - INFO - Batch ID: 524 - Success: Wrote 60 valid records.
+2026-01-28 10:27:43,620 - INFO - Processing Batch ID: 525 with 83 records.
+2026-01-28 10:27:43,801 - INFO - Batch ID: 525 - Success: Wrote 83 valid records.
+2026-01-28 10:27:48,935 - INFO - Processing Batch ID: 526 with 77 records.
+2026-01-28 10:27:49,121 - INFO - Batch ID: 526 - Success: Wrote 77 valid records.
+2026-01-28 10:27:54,286 - INFO - Processing Batch ID: 527 with 68 records.
+2026-01-28 10:27:54,455 - INFO - Batch ID: 527 - Success: Wrote 68 valid records.
+2026-01-28 10:27:59,709 - INFO - Processing Batch ID: 528 with 72 records.
+2026-01-28 10:27:59,940 - INFO - Batch ID: 528 - Success: Wrote 72 valid records.
+2026-01-28 10:28:05,698 - INFO - Processing Batch ID: 529 with 74 records.
+2026-01-28 10:28:05,913 - INFO - Batch ID: 529 - Success: Wrote 74 valid records.
+2026-01-28 10:28:10,877 - INFO - Batch ID: 530 is empty. Skipping write.
+2026-01-28 10:28:15,577 - INFO - Batch ID: 531 is empty. Skipping write.
+2026-01-28 10:28:21,634 - INFO - Batch ID: 532 is empty. Skipping write.
+2026-01-28 10:28:27,881 - INFO - Processing Batch ID: 533 with 95 records.
+2026-01-28 10:28:28,104 - INFO - Batch ID: 533 - Success: Wrote 95 valid records.
+2026-01-28 10:28:35,093 - INFO - Processing Batch ID: 534 with 67 records.
+2026-01-28 10:28:35,323 - INFO - Batch ID: 534 - Success: Wrote 67 valid records.
+2026-01-28 10:28:41,958 - INFO - Processing Batch ID: 535 with 71 records.
+2026-01-28 10:28:42,144 - INFO - Batch ID: 535 - Success: Wrote 71 valid records.
+2026-01-28 10:28:48,935 - INFO - Processing Batch ID: 536 with 52 records.
+2026-01-28 10:28:49,266 - INFO - Batch ID: 536 - Success: Wrote 52 valid records.
+2026-01-28 10:28:55,821 - INFO - Processing Batch ID: 537 with 90 records.
+2026-01-28 10:28:56,044 - INFO - Batch ID: 537 - Success: Wrote 90 valid records.
+2026-01-28 10:29:02,351 - INFO - Processing Batch ID: 538 with 73 records.
+2026-01-28 10:29:02,564 - INFO - Batch ID: 538 - Success: Wrote 73 valid records.
+2026-01-28 10:29:11,739 - INFO - Batch ID: 539 is empty. Skipping write.
+2026-01-28 10:29:16,981 - INFO - Batch ID: 540 is empty. Skipping write.
+2026-01-28 10:29:22,457 - INFO - Batch ID: 541 is empty. Skipping write.
+2026-01-28 10:29:27,299 - INFO - Batch ID: 542 is empty. Skipping write.
+2026-01-28 10:29:31,838 - INFO - Batch ID: 543 is empty. Skipping write.
+2026-01-28 10:29:36,347 - INFO - Batch ID: 544 is empty. Skipping write.
+2026-01-28 10:29:41,377 - INFO - Processing Batch ID: 545 with 87 records.
+2026-01-28 10:29:41,624 - INFO - Batch ID: 545 - Success: Wrote 87 valid records.
+2026-01-28 10:29:47,648 - INFO - Processing Batch ID: 546 with 72 records.
+2026-01-28 10:29:47,862 - INFO - Batch ID: 546 - Success: Wrote 72 valid records.
+2026-01-28 10:29:52,890 - INFO - Processing Batch ID: 547 with 63 records.
+2026-01-28 10:29:53,093 - INFO - Batch ID: 547 - Success: Wrote 63 valid records.
+2026-01-28 10:29:58,144 - INFO - Processing Batch ID: 548 with 99 records.
+2026-01-28 10:29:58,362 - INFO - Batch ID: 548 - Success: Wrote 99 valid records.
+2026-01-28 10:30:03,891 - INFO - Processing Batch ID: 549 with 87 records.
+2026-01-28 10:30:04,070 - INFO - Batch ID: 549 - Success: Wrote 87 valid records.
+2026-01-28 10:30:08,939 - INFO - Processing Batch ID: 550 with 53 records.
+2026-01-28 10:30:09,162 - INFO - Batch ID: 550 - Success: Wrote 53 valid records.
+2026-01-28 10:30:14,024 - INFO - Batch ID: 551 is empty. Skipping write.
+2026-01-28 10:30:18,967 - INFO - Processing Batch ID: 552 with 84 records.
+2026-01-28 10:30:19,140 - INFO - Batch ID: 552 - Success: Wrote 84 valid records.
+2026-01-28 10:30:24,541 - INFO - Processing Batch ID: 553 with 87 records.
+2026-01-28 10:30:24,715 - INFO - Batch ID: 553 - Success: Wrote 87 valid records.
+2026-01-28 10:30:29,805 - INFO - Processing Batch ID: 554 with 67 records.
+2026-01-28 10:30:29,978 - INFO - Batch ID: 554 - Success: Wrote 67 valid records.
+2026-01-28 10:30:34,682 - INFO - Processing Batch ID: 555 with 64 records.
+2026-01-28 10:30:34,892 - INFO - Batch ID: 555 - Success: Wrote 64 valid records.
+2026-01-28 10:30:39,902 - INFO - Processing Batch ID: 556 with 85 records.
+2026-01-28 10:30:40,078 - INFO - Batch ID: 556 - Success: Wrote 85 valid records.
+2026-01-28 10:30:45,028 - INFO - Processing Batch ID: 557 with 60 records.
+2026-01-28 10:30:45,215 - INFO - Batch ID: 557 - Success: Wrote 60 valid records.
+2026-01-28 10:30:50,898 - INFO - Processing Batch ID: 558 with 83 records.
+2026-01-28 10:30:51,101 - INFO - Batch ID: 558 - Success: Wrote 83 valid records.
+2026-01-28 10:30:57,637 - INFO - Processing Batch ID: 559 with 96 records.
+2026-01-28 10:30:57,823 - INFO - Batch ID: 559 - Success: Wrote 96 valid records.
+2026-01-28 10:31:03,191 - INFO - Processing Batch ID: 560 with 62 records.
+2026-01-28 10:31:03,398 - INFO - Batch ID: 560 - Success: Wrote 62 valid records.
+2026-01-28 10:31:08,679 - INFO - Processing Batch ID: 561 with 97 records.
+2026-01-28 10:31:08,865 - INFO - Batch ID: 561 - Success: Wrote 97 valid records.
+2026-01-28 10:31:13,836 - INFO - Batch ID: 562 is empty. Skipping write.
+2026-01-28 10:31:18,546 - INFO - Batch ID: 563 is empty. Skipping write.
+2026-01-28 10:31:24,963 - INFO - Processing Batch ID: 564 with 54 records.
+2026-01-28 10:31:25,149 - INFO - Batch ID: 564 - Success: Wrote 54 valid records.
+2026-01-28 10:31:30,237 - INFO - Processing Batch ID: 565 with 95 records.
+2026-01-28 10:31:30,421 - INFO - Batch ID: 565 - Success: Wrote 95 valid records.
+2026-01-28 10:31:35,323 - INFO - Processing Batch ID: 566 with 71 records.
+2026-01-28 10:31:35,499 - INFO - Batch ID: 566 - Success: Wrote 71 valid records.
+2026-01-28 10:31:40,706 - INFO - Processing Batch ID: 567 with 64 records.
+2026-01-28 10:31:40,877 - INFO - Batch ID: 567 - Success: Wrote 64 valid records.
+2026-01-28 10:31:45,898 - INFO - Processing Batch ID: 568 with 70 records.
+2026-01-28 10:31:46,111 - INFO - Batch ID: 568 - Success: Wrote 70 valid records.
+2026-01-28 10:31:51,753 - INFO - Processing Batch ID: 569 with 75 records.
+2026-01-28 10:31:51,941 - INFO - Batch ID: 569 - Success: Wrote 75 valid records.
+2026-01-28 10:31:57,745 - INFO - Processing Batch ID: 570 with 94 records.
+2026-01-28 10:31:57,963 - INFO - Batch ID: 570 - Success: Wrote 94 valid records.
+2026-01-28 10:32:03,524 - INFO - Processing Batch ID: 571 with 55 records.
+2026-01-28 10:32:03,717 - INFO - Batch ID: 571 - Success: Wrote 55 valid records.
+2026-01-28 10:32:08,828 - INFO - Processing Batch ID: 572 with 76 records.
+2026-01-28 10:32:09,027 - INFO - Batch ID: 572 - Success: Wrote 76 valid records.
+2026-01-28 10:32:13,894 - INFO - Batch ID: 573 is empty. Skipping write.
+2026-01-28 10:32:18,811 - INFO - Batch ID: 574 is empty. Skipping write.
+2026-01-28 10:32:23,846 - INFO - Batch ID: 575 is empty. Skipping write.
+2026-01-28 10:32:28,652 - INFO - Processing Batch ID: 576 with 70 records.
+2026-01-28 10:32:28,855 - INFO - Batch ID: 576 - Success: Wrote 70 valid records.
+2026-01-28 10:32:33,658 - INFO - Processing Batch ID: 577 with 80 records.
+2026-01-28 10:32:33,867 - INFO - Batch ID: 577 - Success: Wrote 80 valid records.
+2026-01-28 10:32:38,774 - INFO - Processing Batch ID: 578 with 58 records.
+2026-01-28 10:32:38,964 - INFO - Batch ID: 578 - Success: Wrote 58 valid records.
+2026-01-28 10:32:44,172 - INFO - Processing Batch ID: 579 with 96 records.
+2026-01-28 10:32:44,357 - INFO - Batch ID: 579 - Success: Wrote 96 valid records.
+2026-01-28 10:32:49,344 - INFO - Processing Batch ID: 580 with 70 records.
+2026-01-28 10:32:49,587 - INFO - Batch ID: 580 - Success: Wrote 70 valid records.
+2026-01-28 10:32:54,412 - INFO - Processing Batch ID: 581 with 51 records.
+2026-01-28 10:32:54,612 - INFO - Batch ID: 581 - Success: Wrote 51 valid records.
+2026-01-28 10:32:59,594 - INFO - Processing Batch ID: 582 with 50 records.
+2026-01-28 10:32:59,777 - INFO - Batch ID: 582 - Success: Wrote 50 valid records.
+2026-01-28 10:33:05,705 - INFO - Processing Batch ID: 583 with 80 records.
+2026-01-28 10:33:05,918 - INFO - Batch ID: 583 - Success: Wrote 80 valid records.
+2026-01-28 10:33:10,936 - INFO - Processing Batch ID: 584 with 91 records.
+2026-01-28 10:33:11,139 - INFO - Batch ID: 584 - Success: Wrote 91 valid records.
+2026-01-28 10:33:16,003 - INFO - Batch ID: 585 is empty. Skipping write.
+2026-01-28 10:33:21,427 - INFO - Batch ID: 586 is empty. Skipping write.
+2026-01-28 10:33:26,194 - INFO - Processing Batch ID: 587 with 85 records.
+2026-01-28 10:33:26,396 - INFO - Batch ID: 587 - Success: Wrote 85 valid records.
+2026-01-28 10:33:31,526 - INFO - Processing Batch ID: 588 with 92 records.
+2026-01-28 10:33:31,698 - INFO - Batch ID: 588 - Success: Wrote 92 valid records.
+2026-01-28 10:33:37,037 - INFO - Processing Batch ID: 589 with 66 records.
+2026-01-28 10:33:37,309 - INFO - Batch ID: 589 - Success: Wrote 66 valid records.
+2026-01-28 10:33:42,282 - INFO - Processing Batch ID: 590 with 57 records.
+2026-01-28 10:33:42,449 - INFO - Batch ID: 590 - Success: Wrote 57 valid records.
+2026-01-28 10:33:47,665 - INFO - Processing Batch ID: 591 with 57 records.
+2026-01-28 10:33:47,857 - INFO - Batch ID: 591 - Success: Wrote 57 valid records.
+2026-01-28 10:33:52,734 - INFO - Processing Batch ID: 592 with 64 records.
+2026-01-28 10:33:52,945 - INFO - Batch ID: 592 - Success: Wrote 64 valid records.
+2026-01-28 10:33:57,858 - INFO - Processing Batch ID: 593 with 58 records.
+2026-01-28 10:33:58,041 - INFO - Batch ID: 593 - Success: Wrote 58 valid records.
+2026-01-28 10:34:03,100 - INFO - Processing Batch ID: 594 with 94 records.
+2026-01-28 10:34:03,271 - INFO - Batch ID: 594 - Success: Wrote 94 valid records.
+2026-01-28 10:34:08,739 - INFO - Processing Batch ID: 595 with 51 records.
+2026-01-28 10:34:08,943 - INFO - Batch ID: 595 - Success: Wrote 51 valid records.
+2026-01-28 10:34:14,478 - INFO - Batch ID: 596 is empty. Skipping write.
+2026-01-28 10:34:19,364 - INFO - Batch ID: 597 is empty. Skipping write.
+2026-01-28 10:34:24,298 - INFO - Batch ID: 598 is empty. Skipping write.
+2026-01-28 10:34:29,755 - INFO - Processing Batch ID: 599 with 61 records.
+2026-01-28 10:34:29,963 - INFO - Batch ID: 599 - Success: Wrote 61 valid records.
+2026-01-28 10:34:35,048 - INFO - Processing Batch ID: 600 with 98 records.
+2026-01-28 10:34:35,239 - INFO - Batch ID: 600 - Success: Wrote 98 valid records.
+2026-01-28 10:34:40,839 - INFO - Processing Batch ID: 601 with 78 records.
+2026-01-28 10:34:41,017 - INFO - Batch ID: 601 - Success: Wrote 78 valid records.
+2026-01-28 10:34:46,288 - INFO - Processing Batch ID: 602 with 83 records.
+2026-01-28 10:34:46,460 - INFO - Batch ID: 602 - Success: Wrote 83 valid records.
+2026-01-28 10:34:51,766 - INFO - Processing Batch ID: 603 with 80 records.
+2026-01-28 10:34:51,962 - INFO - Batch ID: 603 - Success: Wrote 80 valid records.
+2026-01-28 10:34:57,134 - INFO - Processing Batch ID: 604 with 81 records.
+2026-01-28 10:34:57,387 - INFO - Batch ID: 604 - Success: Wrote 81 valid records.
+2026-01-28 10:35:02,916 - INFO - Processing Batch ID: 605 with 76 records.
+2026-01-28 10:35:03,112 - INFO - Batch ID: 605 - Success: Wrote 76 valid records.
+2026-01-28 10:35:08,457 - INFO - Processing Batch ID: 606 with 76 records.
+2026-01-28 10:35:08,656 - INFO - Batch ID: 606 - Success: Wrote 76 valid records.
+2026-01-28 10:35:14,160 - INFO - Batch ID: 607 is empty. Skipping write.
+2026-01-28 10:35:20,604 - INFO - Batch ID: 608 is empty. Skipping write.
+2026-01-28 10:35:25,829 - INFO - Batch ID: 609 is empty. Skipping write.
+2026-01-28 10:35:30,964 - INFO - Batch ID: 610 is empty. Skipping write.
+2026-01-28 10:35:35,782 - INFO - Processing Batch ID: 611 with 69 records.
+2026-01-28 10:35:35,953 - INFO - Batch ID: 611 - Success: Wrote 69 valid records.
+2026-01-28 10:35:41,141 - INFO - Processing Batch ID: 612 with 94 records.
+2026-01-28 10:35:41,335 - INFO - Batch ID: 612 - Success: Wrote 94 valid records.
+2026-01-28 10:35:46,365 - INFO - Processing Batch ID: 613 with 73 records.
+2026-01-28 10:35:46,566 - INFO - Batch ID: 613 - Success: Wrote 73 valid records.
+2026-01-28 10:35:51,828 - INFO - Processing Batch ID: 614 with 73 records.
+2026-01-28 10:35:52,011 - INFO - Batch ID: 614 - Success: Wrote 73 valid records.
+2026-01-28 10:35:57,146 - INFO - Processing Batch ID: 615 with 89 records.
+2026-01-28 10:35:57,408 - INFO - Batch ID: 615 - Success: Wrote 89 valid records.
+2026-01-28 10:36:02,761 - INFO - Processing Batch ID: 616 with 93 records.
+2026-01-28 10:36:02,954 - INFO - Batch ID: 616 - Success: Wrote 93 valid records.
+2026-01-28 10:36:08,175 - INFO - Processing Batch ID: 617 with 63 records.
+2026-01-28 10:36:08,346 - INFO - Batch ID: 617 - Success: Wrote 63 valid records.
+2026-01-28 10:36:13,344 - INFO - Batch ID: 618 is empty. Skipping write.
+2026-01-28 10:36:19,136 - INFO - Batch ID: 619 is empty. Skipping write.
+2026-01-28 10:36:26,305 - INFO - Processing Batch ID: 620 with 71 records.
+2026-01-28 10:36:26,681 - INFO - Batch ID: 620 - Success: Wrote 71 valid records.
+2026-01-28 10:36:32,116 - INFO - Processing Batch ID: 621 with 62 records.
+2026-01-28 10:36:32,289 - INFO - Batch ID: 621 - Success: Wrote 62 valid records.
+2026-01-28 10:36:37,909 - INFO - Processing Batch ID: 622 with 65 records.
+2026-01-28 10:36:38,097 - INFO - Batch ID: 622 - Success: Wrote 65 valid records.
+2026-01-28 10:36:43,996 - INFO - Processing Batch ID: 623 with 81 records.
+2026-01-28 10:36:44,188 - INFO - Batch ID: 623 - Success: Wrote 81 valid records.
+2026-01-28 10:36:49,602 - INFO - Processing Batch ID: 624 with 95 records.
+2026-01-28 10:36:49,814 - INFO - Batch ID: 624 - Success: Wrote 95 valid records.
+2026-01-28 10:36:54,980 - INFO - Processing Batch ID: 625 with 100 records.
+2026-01-28 10:36:55,190 - INFO - Batch ID: 625 - Success: Wrote 100 valid records.
+2026-01-28 10:37:00,827 - INFO - Processing Batch ID: 626 with 55 records.
+2026-01-28 10:37:01,034 - INFO - Batch ID: 626 - Success: Wrote 55 valid records.
+2026-01-28 10:37:06,194 - INFO - Processing Batch ID: 627 with 80 records.
+2026-01-28 10:37:06,366 - INFO - Batch ID: 627 - Success: Wrote 80 valid records.
+2026-01-28 10:37:12,003 - INFO - Processing Batch ID: 628 with 55 records.
+2026-01-28 10:37:12,196 - INFO - Batch ID: 628 - Success: Wrote 55 valid records.
+2026-01-28 10:37:17,815 - INFO - Batch ID: 629 is empty. Skipping write.
+2026-01-28 10:37:23,075 - INFO - Batch ID: 630 is empty. Skipping write.
+2026-01-28 10:37:28,621 - INFO - Batch ID: 631 is empty. Skipping write.
+2026-01-28 10:37:34,282 - INFO - Processing Batch ID: 632 with 90 records.
+2026-01-28 10:37:34,468 - INFO - Batch ID: 632 - Success: Wrote 90 valid records.
+2026-01-28 10:37:40,097 - INFO - Processing Batch ID: 633 with 76 records.
+2026-01-28 10:37:40,313 - INFO - Batch ID: 633 - Success: Wrote 76 valid records.
+2026-01-28 10:37:46,604 - INFO - Processing Batch ID: 634 with 57 records.
+2026-01-28 10:37:46,781 - INFO - Batch ID: 634 - Success: Wrote 57 valid records.
+2026-01-28 10:37:52,117 - INFO - Processing Batch ID: 635 with 97 records.
+2026-01-28 10:37:52,290 - INFO - Batch ID: 635 - Success: Wrote 97 valid records.
+2026-01-28 10:37:57,670 - INFO - Processing Batch ID: 636 with 61 records.
+2026-01-28 10:37:57,883 - INFO - Batch ID: 636 - Success: Wrote 61 valid records.
+2026-01-28 10:38:03,299 - INFO - Processing Batch ID: 637 with 100 records.
+2026-01-28 10:38:03,511 - INFO - Batch ID: 637 - Success: Wrote 100 valid records.
+2026-01-28 10:38:08,911 - INFO - Processing Batch ID: 638 with 74 records.
+2026-01-28 10:38:09,101 - INFO - Batch ID: 638 - Success: Wrote 74 valid records.
+2026-01-28 10:38:14,511 - INFO - Batch ID: 639 is empty. Skipping write.
+2026-01-28 10:38:19,822 - INFO - Batch ID: 640 is empty. Skipping write.
+2026-01-28 10:38:25,358 - INFO - Batch ID: 641 is empty. Skipping write.
+2026-01-28 10:38:30,579 - INFO - Batch ID: 642 is empty. Skipping write.
+2026-01-28 10:38:36,685 - INFO - Batch ID: 643 is empty. Skipping write.
+2026-01-28 10:38:42,916 - INFO - Processing Batch ID: 644 with 54 records.
+2026-01-28 10:38:43,155 - INFO - Batch ID: 644 - Success: Wrote 54 valid records.
+2026-01-28 10:38:48,481 - INFO - Processing Batch ID: 645 with 85 records.
+2026-01-28 10:38:48,711 - INFO - Batch ID: 645 - Success: Wrote 85 valid records.
+2026-01-28 10:38:54,128 - INFO - Processing Batch ID: 646 with 67 records.
+2026-01-28 10:38:54,374 - INFO - Batch ID: 646 - Success: Wrote 67 valid records.
+2026-01-28 10:39:00,026 - INFO - Processing Batch ID: 647 with 100 records.
+2026-01-28 10:39:00,299 - INFO - Batch ID: 647 - Success: Wrote 100 valid records.
+2026-01-28 10:39:05,677 - INFO - Processing Batch ID: 648 with 62 records.
+2026-01-28 10:39:05,885 - INFO - Batch ID: 648 - Success: Wrote 62 valid records.
+2026-01-28 10:39:12,992 - INFO - Processing Batch ID: 649 with 74 records.
+2026-01-28 10:39:13,219 - INFO - Batch ID: 649 - Success: Wrote 74 valid records.
+2026-01-28 10:39:19,025 - INFO - Batch ID: 650 is empty. Skipping write.
+2026-01-28 10:39:24,685 - INFO - Batch ID: 651 is empty. Skipping write.
+2026-01-28 10:39:29,899 - INFO - Batch ID: 652 is empty. Skipping write.
+2026-01-28 10:39:36,827 - INFO - Batch ID: 653 is empty. Skipping write.
+2026-01-28 10:39:43,729 - INFO - Batch ID: 654 is empty. Skipping write.
+2026-01-28 10:39:49,687 - INFO - Batch ID: 655 is empty. Skipping write.
+2026-01-28 10:39:54,679 - INFO - Processing Batch ID: 656 with 91 records.
+2026-01-28 10:39:54,914 - INFO - Batch ID: 656 - Success: Wrote 91 valid records.
+2026-01-28 10:40:00,453 - INFO - Processing Batch ID: 657 with 52 records.
+2026-01-28 10:40:00,680 - INFO - Batch ID: 657 - Success: Wrote 52 valid records.
+2026-01-28 10:40:05,938 - INFO - Processing Batch ID: 658 with 70 records.
+2026-01-28 10:40:06,165 - INFO - Batch ID: 658 - Success: Wrote 70 valid records.
+2026-01-28 10:40:11,669 - INFO - Processing Batch ID: 659 with 65 records.
+2026-01-28 10:40:12,021 - INFO - Batch ID: 659 - Success: Wrote 65 valid records.
+2026-01-28 10:40:17,166 - INFO - Batch ID: 660 is empty. Skipping write.
+2026-01-28 10:40:22,867 - INFO - Batch ID: 661 is empty. Skipping write.
+2026-01-28 10:40:27,844 - INFO - Batch ID: 662 is empty. Skipping write.
+2026-01-28 10:40:32,777 - INFO - Batch ID: 663 is empty. Skipping write.
+2026-01-28 10:40:37,976 - INFO - Batch ID: 664 is empty. Skipping write.
+2026-01-28 10:40:42,998 - INFO - Batch ID: 665 is empty. Skipping write.
+2026-01-28 10:40:48,975 - INFO - Batch ID: 666 is empty. Skipping write.
+2026-01-28 10:40:54,342 - INFO - Batch ID: 667 is empty. Skipping write.
+2026-01-28 10:40:59,579 - INFO - Processing Batch ID: 668 with 73 records.
+2026-01-28 10:40:59,820 - INFO - Batch ID: 668 - Success: Wrote 73 valid records.
+2026-01-28 10:41:05,614 - INFO - Processing Batch ID: 669 with 89 records.
+2026-01-28 10:41:05,900 - INFO - Batch ID: 669 - Success: Wrote 89 valid records.
+2026-01-28 10:41:11,407 - INFO - Processing Batch ID: 670 with 55 records.
+2026-01-28 10:41:11,666 - INFO - Batch ID: 670 - Success: Wrote 55 valid records.
+2026-01-28 10:41:17,013 - INFO - Batch ID: 671 is empty. Skipping write.
+2026-01-28 10:41:23,604 - INFO - Batch ID: 672 is empty. Skipping write.
+2026-01-28 10:41:28,919 - INFO - Batch ID: 673 is empty. Skipping write.
+2026-01-28 10:41:34,407 - INFO - Batch ID: 674 is empty. Skipping write.
+2026-01-28 10:41:39,409 - INFO - Batch ID: 675 is empty. Skipping write.
+2026-01-28 10:41:45,248 - INFO - Batch ID: 676 is empty. Skipping write.
+2026-01-28 10:41:50,261 - INFO - Batch ID: 677 is empty. Skipping write.
+2026-01-28 10:41:56,004 - INFO - Batch ID: 678 is empty. Skipping write.
+2026-01-28 10:42:01,847 - INFO - Batch ID: 679 is empty. Skipping write.
+2026-01-28 10:42:07,063 - INFO - Processing Batch ID: 680 with 83 records.
+2026-01-28 10:42:07,356 - INFO - Batch ID: 680 - Success: Wrote 83 valid records.
+2026-01-28 10:42:12,762 - INFO - Processing Batch ID: 681 with 96 records.
+2026-01-28 10:42:12,995 - INFO - Batch ID: 681 - Success: Wrote 96 valid records.
+2026-01-28 10:42:18,175 - INFO - Batch ID: 682 is empty. Skipping write.
+2026-01-28 10:42:23,616 - INFO - Batch ID: 683 is empty. Skipping write.
+2026-01-28 10:42:28,830 - INFO - Batch ID: 684 is empty. Skipping write.
+2026-01-28 10:42:34,590 - INFO - Batch ID: 685 is empty. Skipping write.
+2026-01-28 10:42:40,370 - INFO - Batch ID: 686 is empty. Skipping write.
+2026-01-28 10:42:45,746 - INFO - Batch ID: 687 is empty. Skipping write.
+2026-01-28 10:42:51,101 - INFO - Processing Batch ID: 688 with 64 records.
+2026-01-28 10:42:51,301 - INFO - Batch ID: 688 - Success: Wrote 64 valid records.
+2026-01-28 10:42:56,939 - INFO - Processing Batch ID: 689 with 81 records.
+2026-01-28 10:42:57,191 - INFO - Batch ID: 689 - Success: Wrote 81 valid records.
+2026-01-28 10:43:03,981 - INFO - Processing Batch ID: 690 with 70 records.
+2026-01-28 10:43:04,184 - INFO - Batch ID: 690 - Success: Wrote 70 valid records.
+2026-01-28 10:43:09,655 - INFO - Processing Batch ID: 691 with 83 records.
+2026-01-28 10:43:09,888 - INFO - Batch ID: 691 - Success: Wrote 83 valid records.
+2026-01-28 10:43:15,082 - INFO - Batch ID: 692 is empty. Skipping write.
+2026-01-28 10:43:20,919 - INFO - Batch ID: 693 is empty. Skipping write.
+2026-01-28 10:43:25,966 - INFO - Batch ID: 694 is empty. Skipping write.
+2026-01-28 10:43:30,969 - INFO - Batch ID: 695 is empty. Skipping write.
+2026-01-28 10:43:35,855 - INFO - Batch ID: 696 is empty. Skipping write.
+2026-01-28 10:43:41,210 - INFO - Batch ID: 697 is empty. Skipping write.
+2026-01-28 10:43:46,397 - INFO - Batch ID: 698 is empty. Skipping write.
+2026-01-28 10:43:51,769 - INFO - Batch ID: 699 is empty. Skipping write.
+2026-01-28 10:43:56,672 - INFO - Processing Batch ID: 700 with 62 records.
+2026-01-28 10:43:56,921 - INFO - Batch ID: 700 - Success: Wrote 62 valid records.
+2026-01-28 10:44:02,455 - INFO - Processing Batch ID: 701 with 73 records.
+2026-01-28 10:44:02,754 - INFO - Batch ID: 701 - Success: Wrote 73 valid records.
+2026-01-28 10:44:09,180 - INFO - Processing Batch ID: 702 with 57 records.
+2026-01-28 10:44:09,445 - INFO - Batch ID: 702 - Success: Wrote 57 valid records.
+2026-01-28 10:44:14,750 - INFO - Processing Batch ID: 703 with 60 records.
+2026-01-28 10:44:14,955 - INFO - Batch ID: 703 - Success: Wrote 60 valid records.
+2026-01-28 10:44:21,011 - INFO - Batch ID: 704 is empty. Skipping write.
+2026-01-28 10:44:25,838 - INFO - Batch ID: 705 is empty. Skipping write.
+2026-01-28 10:44:30,997 - INFO - Batch ID: 706 is empty. Skipping write.
+2026-01-28 10:44:36,287 - INFO - Processing Batch ID: 707 with 69 records.
+2026-01-28 10:44:36,513 - INFO - Batch ID: 707 - Success: Wrote 69 valid records.
+2026-01-28 10:44:42,476 - INFO - Processing Batch ID: 708 with 59 records.
+2026-01-28 10:44:42,732 - INFO - Batch ID: 708 - Success: Wrote 59 valid records.
+2026-01-28 10:44:48,700 - INFO - Processing Batch ID: 709 with 61 records.
+2026-01-28 10:44:48,981 - INFO - Batch ID: 709 - Success: Wrote 61 valid records.
+2026-01-28 10:44:54,203 - INFO - Processing Batch ID: 710 with 92 records.
+2026-01-28 10:44:54,440 - INFO - Batch ID: 710 - Success: Wrote 92 valid records.
+2026-01-28 10:44:59,941 - INFO - Processing Batch ID: 711 with 93 records.
+2026-01-28 10:45:00,271 - INFO - Batch ID: 711 - Success: Wrote 93 valid records.
+2026-01-28 10:45:05,917 - INFO - Processing Batch ID: 712 with 94 records.
+2026-01-28 10:45:06,121 - INFO - Batch ID: 712 - Success: Wrote 94 valid records.
+2026-01-28 10:45:12,071 - INFO - Processing Batch ID: 713 with 64 records.
+2026-01-28 10:45:12,384 - INFO - Batch ID: 713 - Success: Wrote 64 valid records.
+2026-01-28 10:45:18,363 - INFO - Batch ID: 714 is empty. Skipping write.
+2026-01-28 10:45:23,739 - INFO - Batch ID: 715 is empty. Skipping write.
+2026-01-28 10:45:28,780 - INFO - Batch ID: 716 is empty. Skipping write.
+2026-01-28 10:45:33,651 - INFO - Batch ID: 717 is empty. Skipping write.
+2026-01-28 10:45:38,655 - INFO - Batch ID: 718 is empty. Skipping write.
+2026-01-28 10:45:44,743 - INFO - Processing Batch ID: 719 with 88 records.
+2026-01-28 10:45:44,937 - INFO - Batch ID: 719 - Success: Wrote 88 valid records.
+2026-01-28 10:45:50,294 - INFO - Processing Batch ID: 720 with 80 records.
+2026-01-28 10:45:50,488 - INFO - Batch ID: 720 - Success: Wrote 80 valid records.
+2026-01-28 10:45:55,618 - INFO - Processing Batch ID: 721 with 96 records.
+2026-01-28 10:45:55,857 - INFO - Batch ID: 721 - Success: Wrote 96 valid records.
+2026-01-28 10:46:01,980 - INFO - Processing Batch ID: 722 with 78 records.
+2026-01-28 10:46:02,165 - INFO - Batch ID: 722 - Success: Wrote 78 valid records.
+2026-01-28 10:46:07,526 - INFO - Processing Batch ID: 723 with 90 records.
+2026-01-28 10:46:07,903 - INFO - Batch ID: 723 - Success: Wrote 90 valid records.
+2026-01-28 10:46:13,240 - INFO - Processing Batch ID: 724 with 54 records.
+2026-01-28 10:46:13,443 - INFO - Batch ID: 724 - Success: Wrote 54 valid records.
+2026-01-28 10:46:19,047 - INFO - Batch ID: 725 is empty. Skipping write.
+2026-01-28 10:46:25,193 - INFO - Batch ID: 726 is empty. Skipping write.
+2026-01-28 10:46:30,502 - INFO - Batch ID: 727 is empty. Skipping write.
+2026-01-28 10:46:35,994 - INFO - Batch ID: 728 is empty. Skipping write.
+2026-01-28 10:46:41,496 - INFO - Batch ID: 729 is empty. Skipping write.
+2026-01-28 10:46:46,368 - INFO - Batch ID: 730 is empty. Skipping write.
+2026-01-28 10:46:51,987 - INFO - Processing Batch ID: 731 with 87 records.
+2026-01-28 10:46:52,192 - INFO - Batch ID: 731 - Success: Wrote 87 valid records.
+2026-01-28 10:46:57,366 - INFO - Processing Batch ID: 732 with 66 records.
+2026-01-28 10:46:57,547 - INFO - Batch ID: 732 - Success: Wrote 66 valid records.
+2026-01-28 10:47:07,403 - INFO - Processing Batch ID: 733 with 69 records.
+2026-01-28 10:47:08,567 - INFO - Batch ID: 733 - Success: Wrote 69 valid records.
+2026-01-28 10:47:21,669 - INFO - Batch ID: 734 is empty. Skipping write.
+2026-01-28 10:47:27,450 - INFO - Batch ID: 735 is empty. Skipping write.
+2026-01-28 10:47:32,709 - INFO - Batch ID: 736 is empty. Skipping write.
+2026-01-28 10:47:37,284 - INFO - Batch ID: 737 is empty. Skipping write.
+2026-01-28 10:47:42,183 - INFO - Batch ID: 738 is empty. Skipping write.
+2026-01-28 10:47:47,580 - INFO - Processing Batch ID: 739 with 82 records.
+2026-01-28 10:47:47,881 - INFO - Batch ID: 739 - Success: Wrote 82 valid records.
+2026-01-28 10:47:53,021 - INFO - Processing Batch ID: 740 with 73 records.
+2026-01-28 10:47:53,202 - INFO - Batch ID: 740 - Success: Wrote 73 valid records.
+2026-01-28 10:47:58,133 - INFO - Processing Batch ID: 741 with 88 records.
+2026-01-28 10:47:58,346 - INFO - Batch ID: 741 - Success: Wrote 88 valid records.
+2026-01-28 10:48:05,058 - INFO - Processing Batch ID: 742 with 72 records.
+2026-01-28 10:48:05,257 - INFO - Batch ID: 742 - Success: Wrote 72 valid records.
+2026-01-28 10:48:10,507 - INFO - Processing Batch ID: 743 with 67 records.
+2026-01-28 10:48:10,723 - INFO - Batch ID: 743 - Success: Wrote 67 valid records.
+2026-01-28 10:48:15,700 - INFO - Processing Batch ID: 744 with 87 records.
+2026-01-28 10:48:15,870 - INFO - Batch ID: 744 - Success: Wrote 87 valid records.
+2026-01-28 10:48:21,439 - INFO - Batch ID: 745 is empty. Skipping write.
+2026-01-28 10:48:26,044 - INFO - Batch ID: 746 is empty. Skipping write.
+2026-01-28 10:48:31,328 - INFO - Batch ID: 747 is empty. Skipping write.
+2026-01-28 10:48:36,847 - INFO - Batch ID: 748 is empty. Skipping write.
+2026-01-28 10:48:42,149 - INFO - Batch ID: 749 is empty. Skipping write.
+2026-01-28 10:48:46,911 - INFO - Batch ID: 750 is empty. Skipping write.
+2026-01-28 10:48:51,769 - INFO - Processing Batch ID: 751 with 52 records.
+2026-01-28 10:48:51,939 - INFO - Batch ID: 751 - Success: Wrote 52 valid records.
+2026-01-28 10:48:56,875 - INFO - Processing Batch ID: 752 with 62 records.
+2026-01-28 10:48:57,048 - INFO - Batch ID: 752 - Success: Wrote 62 valid records.
+2026-01-28 10:49:02,387 - INFO - Processing Batch ID: 753 with 58 records.
+2026-01-28 10:49:02,562 - INFO - Batch ID: 753 - Success: Wrote 58 valid records.
+2026-01-28 10:49:07,570 - INFO - Processing Batch ID: 754 with 56 records.
+2026-01-28 10:49:07,845 - INFO - Batch ID: 754 - Success: Wrote 56 valid records.
+2026-01-28 10:49:14,354 - INFO - Processing Batch ID: 755 with 63 records.
+2026-01-28 10:49:14,577 - INFO - Batch ID: 755 - Success: Wrote 63 valid records.
+2026-01-28 10:49:20,800 - INFO - Batch ID: 756 is empty. Skipping write.
+2026-01-28 10:49:25,598 - INFO - Batch ID: 757 is empty. Skipping write.
+2026-01-28 10:49:30,422 - INFO - Batch ID: 758 is empty. Skipping write.
+2026-01-28 10:49:35,481 - INFO - Batch ID: 759 is empty. Skipping write.
+2026-01-28 10:49:41,454 - INFO - Batch ID: 760 is empty. Skipping write.
+2026-01-28 10:49:46,737 - INFO - Batch ID: 761 is empty. Skipping write.
+2026-01-28 10:49:52,144 - INFO - Batch ID: 762 is empty. Skipping write.
+2026-01-28 10:49:57,331 - INFO - Processing Batch ID: 763 with 100 records.
+2026-01-28 10:49:57,536 - INFO - Batch ID: 763 - Success: Wrote 100 valid records.
+2026-01-28 10:50:02,884 - INFO - Processing Batch ID: 764 with 63 records.
+2026-01-28 10:50:03,070 - INFO - Batch ID: 764 - Success: Wrote 63 valid records.
+2026-01-28 10:50:08,266 - INFO - Processing Batch ID: 765 with 88 records.
+2026-01-28 10:50:08,474 - INFO - Batch ID: 765 - Success: Wrote 88 valid records.
+2026-01-28 10:50:13,580 - INFO - Processing Batch ID: 766 with 72 records.
+2026-01-28 10:50:13,771 - INFO - Batch ID: 766 - Success: Wrote 72 valid records.
+2026-01-28 10:50:18,791 - INFO - Batch ID: 767 is empty. Skipping write.
+2026-01-28 10:50:23,927 - INFO - Batch ID: 768 is empty. Skipping write.
+2026-01-28 10:50:29,371 - INFO - Batch ID: 769 is empty. Skipping write.
+2026-01-28 10:50:34,537 - INFO - Batch ID: 770 is empty. Skipping write.
+2026-01-28 10:50:39,989 - INFO - Batch ID: 771 is empty. Skipping write.
+2026-01-28 10:50:45,658 - INFO - Batch ID: 772 is empty. Skipping write.
+2026-01-28 10:50:51,154 - INFO - Batch ID: 773 is empty. Skipping write.
+2026-01-28 10:50:55,834 - INFO - Batch ID: 774 is empty. Skipping write.
+2026-01-28 10:51:01,720 - INFO - Processing Batch ID: 775 with 80 records.
+2026-01-28 10:51:01,904 - INFO - Batch ID: 775 - Success: Wrote 80 valid records.
+2026-01-28 10:51:07,242 - INFO - Processing Batch ID: 776 with 99 records.
+2026-01-28 10:51:07,457 - INFO - Batch ID: 776 - Success: Wrote 99 valid records.
+2026-01-28 10:51:14,029 - INFO - Processing Batch ID: 777 with 80 records.
+2026-01-28 10:51:14,227 - INFO - Batch ID: 777 - Success: Wrote 80 valid records.
+2026-01-28 10:51:21,297 - INFO - Batch ID: 778 is empty. Skipping write.
+2026-01-28 10:51:26,927 - INFO - Batch ID: 779 is empty. Skipping write.
+2026-01-28 10:51:32,137 - INFO - Batch ID: 780 is empty. Skipping write.
+2026-01-28 10:51:37,598 - INFO - Batch ID: 781 is empty. Skipping write.
+2026-01-28 10:51:43,133 - INFO - Batch ID: 782 is empty. Skipping write.
+2026-01-28 10:51:49,197 - INFO - Batch ID: 783 is empty. Skipping write.
+2026-01-28 10:51:55,501 - INFO - Batch ID: 784 is empty. Skipping write.
+2026-01-28 10:52:01,893 - INFO - Batch ID: 785 is empty. Skipping write.
+2026-01-28 10:52:07,499 - INFO - Batch ID: 786 is empty. Skipping write.
+2026-01-28 10:52:13,168 - INFO - Processing Batch ID: 787 with 70 records.
+2026-01-28 10:52:13,370 - INFO - Batch ID: 787 - Success: Wrote 70 valid records.
+2026-01-28 10:52:18,854 - INFO - Batch ID: 788 is empty. Skipping write.
+2026-01-28 10:52:25,430 - INFO - Batch ID: 789 is empty. Skipping write.
+2026-01-28 10:52:31,187 - INFO - Batch ID: 790 is empty. Skipping write.
+2026-01-28 10:52:36,245 - INFO - Batch ID: 791 is empty. Skipping write.
+2026-01-28 10:52:41,806 - INFO - Batch ID: 792 is empty. Skipping write.
+2026-01-28 10:52:46,903 - INFO - Batch ID: 793 is empty. Skipping write.
+2026-01-28 10:52:52,711 - INFO - Batch ID: 794 is empty. Skipping write.
+2026-01-28 10:52:59,132 - INFO - Processing Batch ID: 795 with 65 records.
+2026-01-28 10:52:59,356 - INFO - Batch ID: 795 - Success: Wrote 65 valid records.
+2026-01-28 10:53:05,326 - INFO - Processing Batch ID: 796 with 90 records.
+2026-01-28 10:53:05,534 - INFO - Batch ID: 796 - Success: Wrote 90 valid records.
+2026-01-28 10:53:11,085 - INFO - Processing Batch ID: 797 with 51 records.
+2026-01-28 10:53:11,325 - INFO - Batch ID: 797 - Success: Wrote 51 valid records.
+2026-01-28 10:53:16,977 - INFO - Processing Batch ID: 798 with 54 records.
+2026-01-28 10:53:17,173 - INFO - Batch ID: 798 - Success: Wrote 54 valid records.
+2026-01-28 10:53:24,482 - INFO - Batch ID: 799 is empty. Skipping write.
+2026-01-28 10:53:30,144 - INFO - Batch ID: 800 is empty. Skipping write.
+2026-01-28 10:53:35,499 - INFO - Batch ID: 801 is empty. Skipping write.
+2026-01-28 10:53:40,830 - INFO - Batch ID: 802 is empty. Skipping write.
+2026-01-28 10:53:45,776 - INFO - Batch ID: 803 is empty. Skipping write.
+2026-01-28 10:53:51,221 - INFO - Batch ID: 804 is empty. Skipping write.
+2026-01-28 10:53:56,176 - INFO - Batch ID: 805 is empty. Skipping write.
+2026-01-28 10:54:01,487 - INFO - Batch ID: 806 is empty. Skipping write.
+2026-01-28 10:54:07,788 - INFO - Processing Batch ID: 807 with 95 records.
+2026-01-28 10:54:08,053 - INFO - Batch ID: 807 - Success: Wrote 95 valid records.
+2026-01-28 10:54:13,527 - INFO - Processing Batch ID: 808 with 55 records.
+2026-01-28 10:54:13,830 - INFO - Batch ID: 808 - Success: Wrote 55 valid records.
+2026-01-28 10:54:20,754 - INFO - Batch ID: 809 is empty. Skipping write.
+2026-01-28 10:54:25,693 - INFO - Batch ID: 810 is empty. Skipping write.
+2026-01-28 10:54:31,014 - INFO - Batch ID: 811 is empty. Skipping write.
+2026-01-28 10:54:36,108 - INFO - Batch ID: 812 is empty. Skipping write.
+2026-01-28 10:54:42,126 - INFO - Batch ID: 813 is empty. Skipping write.
+2026-01-28 10:54:48,085 - INFO - Processing Batch ID: 814 with 97 records.
+2026-01-28 10:54:48,446 - INFO - Batch ID: 814 - Success: Wrote 97 valid records.
+2026-01-28 10:54:53,307 - INFO - Processing Batch ID: 815 with 100 records.
+2026-01-28 10:54:53,477 - INFO - Batch ID: 815 - Success: Wrote 100 valid records.
+2026-01-28 10:54:58,849 - INFO - Processing Batch ID: 816 with 64 records.
+2026-01-28 10:54:59,045 - INFO - Batch ID: 816 - Success: Wrote 64 valid records.
+2026-01-28 10:55:04,635 - INFO - Processing Batch ID: 817 with 81 records.
+2026-01-28 10:55:04,837 - INFO - Batch ID: 817 - Success: Wrote 81 valid records.
+2026-01-28 10:55:10,920 - INFO - Processing Batch ID: 818 with 93 records.
+2026-01-28 10:55:11,156 - INFO - Batch ID: 818 - Success: Wrote 93 valid records.
+2026-01-28 10:55:18,130 - INFO - Processing Batch ID: 819 with 68 records.
+2026-01-28 10:55:18,444 - INFO - Batch ID: 819 - Success: Wrote 68 valid records.
+2026-01-28 10:55:24,567 - INFO - Batch ID: 820 is empty. Skipping write.
+2026-01-28 10:55:29,827 - INFO - Batch ID: 821 is empty. Skipping write.
+2026-01-28 10:55:34,962 - INFO - Batch ID: 822 is empty. Skipping write.
+2026-01-28 10:55:40,158 - INFO - Batch ID: 823 is empty. Skipping write.
+2026-01-28 10:55:45,331 - INFO - Batch ID: 824 is empty. Skipping write.
+2026-01-28 10:55:50,197 - INFO - Batch ID: 825 is empty. Skipping write.
+2026-01-28 10:55:54,968 - INFO - Processing Batch ID: 826 with 73 records.
+2026-01-28 10:55:55,172 - INFO - Batch ID: 826 - Success: Wrote 73 valid records.
+2026-01-28 10:56:00,447 - INFO - Processing Batch ID: 827 with 93 records.
+2026-01-28 10:56:00,641 - INFO - Batch ID: 827 - Success: Wrote 93 valid records.
+2026-01-28 10:56:05,739 - INFO - Processing Batch ID: 828 with 57 records.
+2026-01-28 10:56:05,913 - INFO - Batch ID: 828 - Success: Wrote 57 valid records.
+2026-01-28 10:56:11,717 - INFO - Processing Batch ID: 829 with 68 records.
+2026-01-28 10:56:11,919 - INFO - Batch ID: 829 - Success: Wrote 68 valid records.
+2026-01-28 10:56:17,585 - INFO - Processing Batch ID: 830 with 67 records.
+2026-01-28 10:56:17,822 - INFO - Batch ID: 830 - Success: Wrote 67 valid records.
+2026-01-28 10:56:24,019 - INFO - Batch ID: 831 is empty. Skipping write.
+2026-01-28 10:56:28,922 - INFO - Batch ID: 832 is empty. Skipping write.
+2026-01-28 10:56:33,896 - INFO - Batch ID: 833 is empty. Skipping write.
+2026-01-28 10:56:39,292 - INFO - Batch ID: 834 is empty. Skipping write.
+2026-01-28 10:56:44,071 - INFO - Batch ID: 835 is empty. Skipping write.
+2026-01-28 10:56:49,030 - INFO - Batch ID: 836 is empty. Skipping write.
+2026-01-28 10:56:53,796 - INFO - Batch ID: 837 is empty. Skipping write.
+2026-01-28 10:56:58,932 - INFO - Processing Batch ID: 838 with 80 records.
+2026-01-28 10:56:59,108 - INFO - Batch ID: 838 - Success: Wrote 80 valid records.
+2026-01-28 10:57:04,942 - INFO - Processing Batch ID: 839 with 63 records.
+2026-01-28 10:57:05,126 - INFO - Batch ID: 839 - Success: Wrote 63 valid records.
+2026-01-28 10:57:10,561 - INFO - Processing Batch ID: 840 with 58 records.
+2026-01-28 10:57:10,723 - INFO - Batch ID: 840 - Success: Wrote 58 valid records.
+2026-01-28 10:57:15,765 - INFO - Processing Batch ID: 841 with 80 records.
+2026-01-28 10:57:15,943 - INFO - Batch ID: 841 - Success: Wrote 80 valid records.
+2026-01-28 10:57:22,626 - INFO - Batch ID: 842 is empty. Skipping write.
+2026-01-28 10:57:28,968 - INFO - Batch ID: 843 is empty. Skipping write.
+2026-01-28 10:57:34,046 - INFO - Batch ID: 844 is empty. Skipping write.
+2026-01-28 10:57:39,239 - INFO - Batch ID: 845 is empty. Skipping write.
+2026-01-28 10:57:44,252 - INFO - Batch ID: 846 is empty. Skipping write.
+2026-01-28 10:57:49,308 - INFO - Batch ID: 847 is empty. Skipping write.
+2026-01-28 10:57:54,217 - INFO - Batch ID: 848 is empty. Skipping write.
+2026-01-28 10:57:59,702 - INFO - Batch ID: 849 is empty. Skipping write.
+2026-01-28 10:58:05,005 - INFO - Processing Batch ID: 850 with 70 records.
+2026-01-28 10:58:05,193 - INFO - Batch ID: 850 - Success: Wrote 70 valid records.
+2026-01-28 10:58:10,647 - INFO - Processing Batch ID: 851 with 60 records.
+2026-01-28 10:58:10,830 - INFO - Batch ID: 851 - Success: Wrote 60 valid records.
+2026-01-28 10:58:15,953 - INFO - Processing Batch ID: 852 with 58 records.
+2026-01-28 10:58:16,133 - INFO - Batch ID: 852 - Success: Wrote 58 valid records.
+2026-01-28 10:58:22,493 - INFO - Batch ID: 853 is empty. Skipping write.
+2026-01-28 10:58:27,222 - INFO - Batch ID: 854 is empty. Skipping write.
+2026-01-28 10:58:33,332 - INFO - Batch ID: 855 is empty. Skipping write.
+2026-01-28 10:58:38,443 - INFO - Batch ID: 856 is empty. Skipping write.
+2026-01-28 10:58:43,421 - INFO - Batch ID: 857 is empty. Skipping write.
+2026-01-28 10:58:48,185 - INFO - Batch ID: 858 is empty. Skipping write.
+2026-01-28 10:58:53,380 - INFO - Batch ID: 859 is empty. Skipping write.
+2026-01-28 10:58:58,170 - INFO - Batch ID: 860 is empty. Skipping write.
+2026-01-28 10:59:03,278 - INFO - Batch ID: 861 is empty. Skipping write.
+2026-01-28 10:59:08,526 - INFO - Processing Batch ID: 862 with 56 records.
+2026-01-28 10:59:08,726 - INFO - Batch ID: 862 - Success: Wrote 56 valid records.
+2026-01-28 10:59:15,309 - INFO - Processing Batch ID: 863 with 96 records.
+2026-01-28 10:59:15,498 - INFO - Batch ID: 863 - Success: Wrote 96 valid records.
+2026-01-28 10:59:21,578 - INFO - Batch ID: 864 is empty. Skipping write.
+2026-01-28 10:59:26,486 - INFO - Batch ID: 865 is empty. Skipping write.
+2026-01-28 10:59:31,468 - INFO - Batch ID: 866 is empty. Skipping write.
+2026-01-28 10:59:36,753 - INFO - Batch ID: 867 is empty. Skipping write.
+2026-01-28 10:59:42,402 - INFO - Batch ID: 868 is empty. Skipping write.
+2026-01-28 10:59:47,626 - INFO - Batch ID: 869 is empty. Skipping write.
+2026-01-28 10:59:53,076 - INFO - Processing Batch ID: 870 with 91 records.
+2026-01-28 10:59:53,283 - INFO - Batch ID: 870 - Success: Wrote 91 valid records.
+2026-01-28 10:59:58,179 - INFO - Processing Batch ID: 871 with 68 records.
+2026-01-28 10:59:58,474 - INFO - Batch ID: 871 - Success: Wrote 68 valid records.
+2026-01-28 11:00:03,943 - INFO - Processing Batch ID: 872 with 58 records.
+2026-01-28 11:00:04,197 - INFO - Batch ID: 872 - Success: Wrote 58 valid records.
+2026-01-28 11:00:09,724 - INFO - Processing Batch ID: 873 with 97 records.
+2026-01-28 11:00:09,902 - INFO - Batch ID: 873 - Success: Wrote 97 valid records.
+2026-01-28 11:00:15,407 - INFO - Processing Batch ID: 874 with 80 records.
+2026-01-28 11:00:15,615 - INFO - Batch ID: 874 - Success: Wrote 80 valid records.
+2026-01-28 11:00:21,782 - INFO - Batch ID: 875 is empty. Skipping write.
+2026-01-28 11:00:26,599 - INFO - Batch ID: 876 is empty. Skipping write.
+2026-01-28 11:00:31,694 - INFO - Batch ID: 877 is empty. Skipping write.
+2026-01-28 11:00:36,595 - INFO - Batch ID: 878 is empty. Skipping write.
+2026-01-28 11:00:42,283 - INFO - Batch ID: 879 is empty. Skipping write.
+2026-01-28 11:00:47,816 - INFO - Batch ID: 880 is empty. Skipping write.
+2026-01-28 11:00:52,862 - INFO - Batch ID: 881 is empty. Skipping write.
+2026-01-28 11:00:57,646 - INFO - Processing Batch ID: 882 with 53 records.
+2026-01-28 11:00:57,826 - INFO - Batch ID: 882 - Success: Wrote 53 valid records.
+2026-01-28 11:01:03,108 - INFO - Processing Batch ID: 883 with 93 records.
+2026-01-28 11:01:03,281 - INFO - Batch ID: 883 - Success: Wrote 93 valid records.
+2026-01-28 11:01:08,963 - INFO - Processing Batch ID: 884 with 69 records.
+2026-01-28 11:01:09,190 - INFO - Batch ID: 884 - Success: Wrote 69 valid records.
+2026-01-28 11:01:14,814 - INFO - Processing Batch ID: 885 with 50 records.
+2026-01-28 11:01:15,059 - INFO - Batch ID: 885 - Success: Wrote 50 valid records.
+2026-01-28 15:05:11,263 - INFO - >>> Spark Session Initialized. Starting Stream...
+2026-01-28 15:05:11,292 - INFO - Monitoring input directory: /app/data/input
+2026-01-28 15:05:53,686 - INFO - Processing Batch ID: 0 with 56 records.
+2026-01-28 15:06:07,305 - INFO - Batch ID: 0 - Success: Wrote 56 valid records.
+2026-01-28 15:06:12,483 - INFO - Batch ID: 1 is empty. Skipping write.
+2026-01-28 15:06:17,744 - INFO - Batch ID: 2 is empty. Skipping write.
+2026-01-28 15:06:20,627 - INFO - Batch ID: 3 is empty. Skipping write.
+2026-01-28 15:06:30,316 - INFO - Batch ID: 4 is empty. Skipping write.
+2026-01-28 15:06:33,579 - INFO - Batch ID: 5 is empty. Skipping write.
+2026-01-28 15:06:39,400 - INFO - Batch ID: 6 is empty. Skipping write.
+2026-01-28 15:06:43,560 - INFO - Batch ID: 7 is empty. Skipping write.
+2026-01-28 15:06:47,791 - INFO - Batch ID: 8 is empty. Skipping write.
+2026-01-28 15:06:54,560 - INFO - Batch ID: 9 is empty. Skipping write.
+2026-01-28 15:06:58,434 - INFO - Batch ID: 10 is empty. Skipping write.
+2026-01-28 15:07:02,948 - INFO - Processing Batch ID: 11 with 58 records.
+2026-01-28 15:07:05,805 - INFO - Batch ID: 11 - Success: Wrote 58 valid records.
+2026-01-28 15:07:12,216 - INFO - Batch ID: 12 is empty. Skipping write.
+2026-01-28 15:07:18,481 - INFO - Batch ID: 13 is empty. Skipping write.
+2026-01-28 15:07:26,722 - INFO - Batch ID: 14 is empty. Skipping write.
+2026-01-28 15:07:34,719 - INFO - Processing Batch ID: 15 with 59 records.
+2026-01-28 15:07:36,121 - INFO - Batch ID: 15 - Success: Wrote 59 valid records.
+2026-01-28 15:07:43,205 - INFO - Processing Batch ID: 16 with 88 records.
+2026-01-28 15:07:44,942 - INFO - Batch ID: 16 - Success: Wrote 88 valid records.
+2026-01-28 15:07:49,316 - INFO - Processing Batch ID: 17 with 78 records.
+2026-01-28 15:07:51,228 - INFO - Batch ID: 17 - Success: Wrote 78 valid records.
+2026-01-28 15:07:58,935 - INFO - Processing Batch ID: 18 with 53 records.
+2026-01-28 15:08:00,429 - INFO - Batch ID: 18 - Success: Wrote 53 valid records.
+2026-01-28 15:08:07,789 - INFO - Processing Batch ID: 19 with 93 records.
+2026-01-28 15:08:08,994 - INFO - Batch ID: 19 - Success: Wrote 93 valid records.
+2026-01-28 15:08:14,852 - INFO - Batch ID: 20 is empty. Skipping write.
+2026-01-28 15:08:18,945 - INFO - Batch ID: 21 is empty. Skipping write.
+2026-01-28 15:08:26,058 - INFO - Batch ID: 22 is empty. Skipping write.
+2026-01-28 15:08:30,575 - INFO - Batch ID: 23 is empty. Skipping write.
+2026-01-28 15:08:37,294 - INFO - Batch ID: 24 is empty. Skipping write.
+2026-01-28 15:08:42,614 - INFO - Batch ID: 25 is empty. Skipping write.
+2026-01-28 15:08:47,120 - INFO - Batch ID: 26 is empty. Skipping write.
+2026-01-28 15:08:53,043 - INFO - Processing Batch ID: 27 with 54 records.
+2026-01-28 15:08:53,802 - INFO - Batch ID: 27 - Success: Wrote 54 valid records.
+2026-01-28 15:08:57,762 - INFO - Processing Batch ID: 28 with 68 records.
+2026-01-28 15:08:58,521 - INFO - Batch ID: 28 - Success: Wrote 68 valid records.
+2026-01-28 15:09:05,872 - INFO - Processing Batch ID: 29 with 97 records.
+2026-01-28 15:09:07,019 - INFO - Batch ID: 29 - Success: Wrote 97 valid records.
+2026-01-28 15:09:12,349 - INFO - Processing Batch ID: 30 with 100 records.
+2026-01-28 15:09:13,032 - INFO - Batch ID: 30 - Success: Wrote 100 valid records.
+2026-01-28 15:09:17,026 - INFO - Batch ID: 31 is empty. Skipping write.
+2026-01-28 15:09:22,931 - INFO - Batch ID: 32 is empty. Skipping write.
+2026-01-28 15:09:27,341 - INFO - Batch ID: 33 is empty. Skipping write.
+2026-01-28 15:09:30,198 - INFO - Batch ID: 34 is empty. Skipping write.
+2026-01-28 15:09:34,801 - INFO - Batch ID: 35 is empty. Skipping write.
+2026-01-28 15:09:39,461 - INFO - Batch ID: 36 is empty. Skipping write.
+2026-01-28 15:09:44,334 - INFO - Batch ID: 37 is empty. Skipping write.
+2026-01-28 15:09:48,916 - INFO - Batch ID: 38 is empty. Skipping write.
+2026-01-28 15:09:55,793 - INFO - Processing Batch ID: 39 with 81 records.
+2026-01-28 15:09:57,277 - INFO - Batch ID: 39 - Success: Wrote 81 valid records.
+2026-01-28 15:10:04,770 - INFO - Processing Batch ID: 40 with 92 records.
+2026-01-28 15:10:06,193 - INFO - Batch ID: 40 - Success: Wrote 92 valid records.
+2026-01-28 15:10:14,047 - INFO - Processing Batch ID: 41 with 94 records.
+2026-01-28 15:10:14,954 - INFO - Batch ID: 41 - Success: Wrote 94 valid records.
+2026-01-28 15:10:21,214 - INFO - Batch ID: 42 is empty. Skipping write.
+2026-01-28 15:10:27,498 - INFO - Batch ID: 43 is empty. Skipping write.
+2026-01-28 15:10:35,576 - INFO - Batch ID: 44 is empty. Skipping write.
+2026-01-28 15:10:39,347 - INFO - Batch ID: 45 is empty. Skipping write.
+2026-01-28 15:10:43,152 - INFO - Batch ID: 46 is empty. Skipping write.
+2026-01-28 15:10:47,981 - INFO - Batch ID: 47 is empty. Skipping write.
+2026-01-28 15:10:52,766 - INFO - Batch ID: 48 is empty. Skipping write.
+2026-01-28 15:11:08,146 - INFO - Processing Batch ID: 49 with 70 records.
+2026-01-28 15:11:10,500 - INFO - Batch ID: 49 - Success: Wrote 70 valid records.
+2026-01-28 15:11:19,583 - INFO - Batch ID: 50 is empty. Skipping write.
+2026-01-28 15:11:32,818 - INFO - Batch ID: 51 is empty. Skipping write.
+2026-01-28 15:11:45,648 - INFO - Batch ID: 52 is empty. Skipping write.
+2026-01-28 15:11:53,197 - INFO - Batch ID: 53 is empty. Skipping write.
+2026-01-28 15:11:58,990 - INFO - Batch ID: 54 is empty. Skipping write.
+2026-01-28 15:12:03,536 - INFO - Batch ID: 55 is empty. Skipping write.
+2026-01-28 15:12:10,644 - INFO - Batch ID: 56 is empty. Skipping write.
+2026-01-28 15:12:26,405 - INFO - Batch ID: 57 is empty. Skipping write.
+2026-01-28 15:12:34,523 - INFO - Batch ID: 58 is empty. Skipping write.
+2026-01-28 15:12:42,603 - INFO - Batch ID: 59 is empty. Skipping write.
+2026-01-28 15:12:57,202 - INFO - Batch ID: 60 is empty. Skipping write.
+2026-01-28 15:13:09,659 - INFO - Batch ID: 61 is empty. Skipping write.
+2026-01-28 15:13:23,366 - INFO - Batch ID: 62 is empty. Skipping write.
+2026-01-28 15:13:34,096 - INFO - Batch ID: 63 is empty. Skipping write.
+2026-01-28 15:13:46,742 - INFO - Batch ID: 64 is empty. Skipping write.
+2026-01-28 15:13:52,732 - INFO - Batch ID: 65 is empty. Skipping write.
+2026-01-28 15:13:59,409 - INFO - Batch ID: 66 is empty. Skipping write.
+2026-01-28 15:14:07,951 - INFO - Batch ID: 67 is empty. Skipping write.
+2026-01-28 15:14:11,896 - INFO - Batch ID: 68 is empty. Skipping write.
+2026-01-28 15:14:18,961 - INFO - Processing Batch ID: 69 with 68 records.
+2026-01-28 15:14:20,339 - INFO - Batch ID: 69 - Success: Wrote 68 valid records.
+2026-01-28 15:14:29,762 - INFO - Batch ID: 70 is empty. Skipping write.
+2026-01-28 15:14:36,156 - INFO - Batch ID: 71 is empty. Skipping write.
+2026-01-28 15:14:41,083 - INFO - Batch ID: 72 is empty. Skipping write.
+2026-01-28 15:14:46,383 - INFO - Batch ID: 73 is empty. Skipping write.
+2026-01-28 15:14:50,856 - INFO - Batch ID: 74 is empty. Skipping write.
+2026-01-28 15:14:56,064 - INFO - Batch ID: 75 is empty. Skipping write.
+2026-01-28 15:14:59,740 - INFO - Batch ID: 76 is empty. Skipping write.
+2026-01-28 15:15:05,120 - INFO - Batch ID: 77 is empty. Skipping write.
+2026-01-28 15:15:10,865 - INFO - Batch ID: 78 is empty. Skipping write.
+2026-01-28 15:15:18,685 - INFO - Batch ID: 79 is empty. Skipping write.
+2026-01-28 15:15:27,895 - INFO - Processing Batch ID: 80 with 83 records.
+2026-01-28 15:15:28,685 - INFO - Batch ID: 80 - Success: Wrote 83 valid records.
+2026-01-28 15:15:34,536 - INFO - Batch ID: 81 is empty. Skipping write.
+2026-01-28 15:15:40,233 - INFO - Batch ID: 82 is empty. Skipping write.
+2026-01-28 15:15:44,803 - INFO - Batch ID: 83 is empty. Skipping write.
+2026-01-28 15:15:54,672 - INFO - Batch ID: 84 is empty. Skipping write.
+2026-01-28 15:16:00,305 - INFO - Batch ID: 85 is empty. Skipping write.
+2026-01-28 15:16:07,773 - INFO - Batch ID: 86 is empty. Skipping write.
+2026-01-28 15:16:13,826 - INFO - Batch ID: 87 is empty. Skipping write.
+2026-01-28 15:16:18,227 - INFO - Batch ID: 88 is empty. Skipping write.
+2026-01-28 15:16:26,811 - INFO - Processing Batch ID: 89 with 59 records.
+2026-01-28 15:16:28,152 - INFO - Batch ID: 89 - Success: Wrote 59 valid records.
+2026-01-28 15:16:31,325 - INFO - Batch ID: 90 is empty. Skipping write.
+2026-01-28 15:16:40,278 - INFO - Batch ID: 91 is empty. Skipping write.
+2026-01-28 15:16:44,292 - INFO - Batch ID: 92 is empty. Skipping write.
+2026-01-28 15:16:49,629 - INFO - Batch ID: 93 is empty. Skipping write.
+2026-01-28 15:16:54,961 - INFO - Batch ID: 94 is empty. Skipping write.
+2026-01-28 15:17:00,930 - INFO - Batch ID: 95 is empty. Skipping write.
+2026-01-28 15:17:12,422 - INFO - Batch ID: 96 is empty. Skipping write.
+2026-01-28 15:17:18,702 - INFO - Batch ID: 97 is empty. Skipping write.
+2026-01-28 15:17:26,273 - INFO - Batch ID: 98 is empty. Skipping write.
+2026-01-28 15:17:33,966 - INFO - Batch ID: 99 is empty. Skipping write.
+2026-01-28 15:17:39,523 - INFO - Batch ID: 100 is empty. Skipping write.
+2026-01-28 15:17:44,433 - INFO - Batch ID: 101 is empty. Skipping write.
+2026-01-28 15:17:48,857 - INFO - Batch ID: 102 is empty. Skipping write.
+2026-01-28 15:17:53,161 - INFO - Batch ID: 103 is empty. Skipping write.
+2026-01-28 15:17:58,654 - INFO - Batch ID: 104 is empty. Skipping write.
+2026-01-28 15:18:04,409 - INFO - Batch ID: 105 is empty. Skipping write.
+2026-01-28 15:18:11,626 - INFO - Batch ID: 106 is empty. Skipping write.
+2026-01-28 15:18:21,172 - INFO - Batch ID: 107 is empty. Skipping write.
+2026-01-28 15:18:28,656 - INFO - Batch ID: 108 is empty. Skipping write.
+2026-01-28 15:19:22,540 - INFO - Batch ID: 109 is empty. Skipping write.
+2026-01-28 15:19:45,823 - INFO - Batch ID: 110 is empty. Skipping write.
+2026-01-28 15:20:11,691 - INFO - Batch ID: 111 is empty. Skipping write.
+2026-01-28 15:20:49,732 - INFO - Batch ID: 112 is empty. Skipping write.
+2026-01-28 15:21:19,720 - INFO - Batch ID: 113 is empty. Skipping write.
+2026-01-28 15:22:17,183 - INFO - Batch ID: 114 is empty. Skipping write.
+2026-01-28 15:22:47,473 - INFO - Batch ID: 115 is empty. Skipping write.
+2026-01-28 15:23:29,436 - INFO - Batch ID: 116 is empty. Skipping write.
+2026-01-28 15:24:43,050 - INFO - Batch ID: 117 is empty. Skipping write.
+2026-01-28 15:25:22,973 - INFO - Batch ID: 118 is empty. Skipping write.
+2026-01-28 15:26:24,445 - INFO - Batch ID: 119 is empty. Skipping write.
+2026-01-28 15:27:02,305 - INFO - Batch ID: 120 is empty. Skipping write.
+2026-01-28 15:27:27,737 - INFO - Batch ID: 121 is empty. Skipping write.
+2026-01-28 15:28:32,740 - INFO - Batch ID: 122 is empty. Skipping write.
+2026-01-28 15:29:11,261 - INFO - Batch ID: 123 is empty. Skipping write.
+2026-01-28 15:29:55,352 - INFO - Batch ID: 124 is empty. Skipping write.
+2026-01-28 15:30:42,541 - INFO - Batch ID: 125 is empty. Skipping write.
+2026-01-28 15:31:22,350 - INFO - Batch ID: 126 is empty. Skipping write.
+2026-01-28 15:32:06,576 - INFO - Batch ID: 127 is empty. Skipping write.
+2026-01-28 15:32:47,955 - INFO - Batch ID: 128 is empty. Skipping write.
+2026-01-28 15:33:13,870 - INFO - Batch ID: 129 is empty. Skipping write.
+2026-01-28 15:33:40,161 - INFO - Batch ID: 130 is empty. Skipping write.
+2026-01-28 15:34:18,390 - INFO - Batch ID: 131 is empty. Skipping write.
+2026-01-28 15:34:45,492 - INFO - Batch ID: 132 is empty. Skipping write.
+2026-01-28 15:35:08,443 - INFO - Batch ID: 133 is empty. Skipping write.
