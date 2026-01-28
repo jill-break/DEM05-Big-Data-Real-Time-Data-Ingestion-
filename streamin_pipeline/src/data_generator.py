@@ -12,7 +12,7 @@ from faker import Faker
 import config
 from logger_utils import setup_logger
 
-# --- Logging Setup ---
+#  Logging Setup 
 LOG_FILE = os.path.join(config.LOG_DIR, "data_generator.log")
 logger = setup_logger("DataGenerator", LOG_FILE)
 
@@ -44,7 +44,7 @@ def generate_batch(batch_id):
     final_path = os.path.join(config.INPUT_DIR, file_name)
     
     try:
-        # 1. Write to specific Temp path first (Safe from Spark)
+        # 1. Write to specific Temp path first  (to ensure atomicity)
         with open(temp_path, mode='w', newline='') as f:
             writer = csv.DictWriter(f, fieldnames=[
                 "event_id", "event_time", "event_type", "product_id", "price", "user_id", "session_id"
@@ -56,7 +56,7 @@ def generate_batch(batch_id):
             for _ in range(rows):
                 writer.writerow(generate_event())
                 
-        # 2. Atomic Move: Rename file to input folder (Spark sees it instantly)
+        # 2. Atomic Move: move file to input folder 
         shutil.move(temp_path, final_path)
         
         # Log success using the logger

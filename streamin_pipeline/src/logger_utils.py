@@ -10,7 +10,7 @@ def setup_logger(name, log_file):
     log_dir = os.path.dirname(log_file)
     os.makedirs(log_dir, exist_ok=True)
 
-    # Configure root logger or specific logger
+    # Configure root logger
     logger = logging.getLogger(name)
     logger.setLevel(logging.INFO)
     

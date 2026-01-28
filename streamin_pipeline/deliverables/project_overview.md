@@ -1,7 +1,7 @@
 # Project Overview: Real-Time Data Ingestion Pipeline
 
 ## Executive Summary
-This project implements a scalable, containerized data engineering pipeline designed to ingest, process, and store simulated e-commerce user events in real-time. The system mimics a production-grade ETL (Extract, Transform, Load) workflow, utilizing **Apache Spark Structured Streaming** for low-latency processing and **PostgreSQL** for persistent storage.
+This project implements a scalable, containerized data engineering pipeline designed to ingest, process, and store simulated e-commerce user events in real-time. The system mimics an ETL (Extract, Transform, Load) workflow, utilizing **Apache Spark Structured Streaming** for low-latency processing and **PostgreSQL** for persistent storage.
 
 ## Architectural Components
 
@@ -48,13 +48,23 @@ graph TD
     subgraph "Storage Layer (PostgreSQL)"
         DB[("PostgreSQL DB")]
         TABLE["Table: user_activity"]
+        DLQ["Table: user_activity_errors<br/>(Dead Letter Queue)"]
         
-        WORKER ==>|"5. JDBC Batch Insert"| DB
-        DB --- TABLE
+        WORKER ==>|"5. JDBC Batch Insert<br/>(Valid Rows)"| TABLE
+        WORKER -.->|"6. Filter & Redirect<br/>(Invalid Rows)"| DLQ
+    end
+
+    subgraph "Maintenance Layer"
+        ARCHIVER["Archiver Service"]
+        ARCHIVE_DIR["Archive Folder"]
+        
+        INPUT -.->|"7. Cleanup Processed Files"| ARCHIVER
+        ARCHIVER --> ARCHIVE_DIR
     end
 
     classDef distinct fill:#f9f,stroke:#333,stroke-width:2px;
-    class GEN,WORKER,DB distinct;
+    class GEN,WORKER,DB,ARCHIVER distinct;
+
 ```
 
 

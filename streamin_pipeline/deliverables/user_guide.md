@@ -14,7 +14,7 @@ Open your terminal (PowerShell or Command Prompt) and navigate to the project di
 
 ```bash
 # Navigate to the project root directory
-cd "c:\Users\CourageDei\Desktop\Moodle\DE\DE05\DEM05-Big-Data-Real-Time-Data-Ingestion-\streamin_pipeline"
+cd "\streamin_pipeline"
 ```
 
 ## 3. Starting the Infrastructure

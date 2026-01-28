@@ -1,8 +1,8 @@
 import sys
 import os
-from pyspark.sql import SparkSession
-from pyspark.sql.types import StructType, StructField, StringType, IntegerType, DoubleType, TimestampType
-from pyspark.sql.functions import col, from_json
+from pyspark.sql import SparkSession # type: ignore
+from pyspark.sql.types import StructType, StructField, StringType, IntegerType, DoubleType, TimestampType # type: ignore
+from pyspark.sql.functions import col, from_json # type: ignore
 
 # Import configuration and logging
 import config
@@ -77,8 +77,7 @@ def write_to_postgres(batch_df, batch_id):
         if invalid_count > 0:
             logger.warning(f"Batch ID: {batch_id} - Found {invalid_count} invalid records! Sending to DLQ.")
             
-            # Add error metadata (simple approach: cast all to string + error msg)
-            # In a real app, we'd map this more dynamically
+            # Prepare DLQ DataFrame with error messages
             dlq_df = invalid_df.select(
                 col("event_id").cast(StringType()),
                 col("event_time").cast(StringType()),
@@ -89,8 +88,8 @@ def write_to_postgres(batch_df, batch_id):
                 col("session_id").cast(StringType())
             ).withColumn("error_message", from_json(col("event_id"), StringType())) # type: ignore # Placeholder, normally we'd compute the reason
             
-            # Just set a generic error message for now since Spark column expressions for specific errors are complex
-            from pyspark.sql.functions import lit
+            # Add error message column
+            from pyspark.sql.functions import lit # type: ignore
             dlq_df = dlq_df.withColumn("error_message", lit("Validation Failed: Negative Price or Invalid Event Type or Null ID"))
 
             dlq_df.write \
@@ -135,7 +134,6 @@ def main():
             .load(config.INPUT_DIR)
 
         # 3. Write Stream using foreachBatch
-        # We assign to 'query' variable to control it
         query = streaming_df.writeStream \
             .foreachBatch(write_to_postgres) \
             .option("checkpointLocation", config.CHECKPOINT_DIR) \
